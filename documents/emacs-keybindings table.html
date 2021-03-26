@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang=zh>
+<head>
+<script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+<link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
+<style>
+    .pace .pace-progress {
+        background: #1E92FB; /*进度条颜色*/
+        height: 3px;
+    }
+    .pace .pace-progress-inner {
+         box-shadow: 0 0 10px #1E92FB, 0 0 5px     #1E92FB; /*阴影颜色*/
+    }
+    .pace .pace-activity {
+        border-top-color: #1E92FB;    /*上边框颜色*/
+        border-left-color: #1E92FB;    /*左边框颜色*/
+    }
+</style>
+
+<!-- Valine评论 -->
+<script src="/js/av-min.js"></script>
+<script src='/js/Valine.min.js'></script>
+<!-- Leancloud统计 -->
+<!-- <script src="/js/av-min-1.2.1.js"></script> -->
+<!--  <script>AV.initialize("rJeVBhWeHlb33cC9L26UE7y3-gzGzoHsz", "uU7rD0e4IaYyrk6vSdM6GoHX");</script> -->
+
+<meta name="google-site-verification" content="IneMsg5aBY2Vw5QuPukpMzm5ATzGfO0dg40QXgKIPkk" />
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="Cache-Control" content="no-transform" />
+  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="format-detection" content="telephone=no,email=no,adress=no">
+  <!-- Color theme for statusbar -->
+  <meta name="theme-color" content="#000000" />
+  <!-- 强制页面在当前窗口以独立页面显示,防止别人在框架里调用页面 -->
+  <meta http-equiv="window-target" content="_top" />
+  
+  
+  <title>linkfqy&#39;s Blog</title>
+  <meta name="description" content="Table�1.�emacs-keybindings table.Table�1.�emacs-keybindings table.FunctionnameKeysbindingFunctionnameKeysbindingFunctionnameKeysbindingControl-X-prefixC-xInfo-goto-emacs-command-nodeC-hC-fInfo-goto-em">
+<meta property="og:type" content="website">
+<meta property="og:title" content="linkfqy">
+<meta property="og:url" content="http://oi.linkfqy.top/documents/emacs-keybindings table.html">
+<meta property="og:site_name" content="linkfqy">
+<meta property="og:description" content="Table�1.�emacs-keybindings table.Table�1.�emacs-keybindings table.FunctionnameKeysbindingFunctionnameKeysbindingFunctionnameKeysbindingControl-X-prefixC-xInfo-goto-emacs-command-nodeC-hC-fInfo-goto-em">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2018-05-27T21:52:30.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="linkfqy">
+<meta name="twitter:description" content="Table�1.�emacs-keybindings table.Table�1.�emacs-keybindings table.FunctionnameKeysbindingFunctionnameKeysbindingFunctionnameKeysbindingControl-X-prefixC-xInfo-goto-emacs-command-nodeC-hC-fInfo-goto-em">
+  <!-- Canonical links -->
+  <link rel="canonical" href="http://oi.linkfqy.top/documents/emacs-keybindings table.html">
+  
+  
+    <link rel="icon" href="/favicon.png" type="image/x-icon">
+  
+  <!-- font-awesome CSS -->
+  <!-- <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"> -->
+  <link rel="stylesheet" href="/css/style.css">
+  
+    
+    
+
+</head>
+
+
+<body class="main-center theme-black" itemscope itemtype="http://schema.org/WebPage">
+  <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+  <div class="slimContent">
+    <div class="navbar-header">
+      
+      
+      <div class="profile-block text-center">
+        <a id="avatar" href="http://linkfqy.top" target="_blank">
+          <img class="img-circle img-rotate" src="/images/avatar.jpg" width="200" height="200">
+        </a>
+        <h2 id="name" class="hidden-xs hidden-sm">linkfqy</h2>
+        <h3 id="title" class="hidden-xs hidden-sm hidden-md">A link to the past.</h3>
+        <small id="location" class="text-muted hidden-xs hidden-sm"><i class="icon icon-map-marker"></i> Zhejiang, China</small>
+      </div>
+      
+      <div class="search" id="search-form-wrap">
+
+    <form class="search-form sidebar-form">
+        <div class="input-group">
+            <input type="text" class="search-form-input form-control" placeholder="搜索" />
+            <span class="input-group-btn">
+                <button type="submit" class="search-form-submit btn btn-flat" onclick="return false;"><i class="icon icon-search"></i></button>
+            </span>
+        </div>
+    </form>
+    <div class="ins-search">
+  <div class="ins-search-mask"></div>
+  <div class="ins-search-container">
+    <div class="ins-input-wrapper">
+      <input type="text" class="ins-search-input" placeholder="想要查找什么..." x-webkit-speech />
+      <button type="button" class="close ins-close ins-selectable" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+    </div>
+    <div class="ins-section-wrapper">
+      <div class="ins-section-container"></div>
+    </div>
+  </div>
+</div>
+
+
+</div>
+      <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+    <nav id="main-navbar" class="collapse navbar-collapse" itemscope itemtype="http://schema.org/SiteNavigationElement" role="navigation">
+      <ul class="nav navbar-nav main-nav">
+        
+        
+        
+        <li class="menu-item menu-item-home">
+          <a href="/.">
+            
+            <i class="icon icon-home-fill"></i>
+            
+            <span class="menu-title">首页</span>
+          </a>
+        </li>
+        
+        
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives">
+            
+            <i class="icon icon-archives-fill"></i>
+            
+            <span class="menu-title">归档</span>
+          </a>
+        </li>
+        
+        
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories">
+            
+            <i class="icon icon-folder"></i>
+            
+            <span class="menu-title">分类</span>
+          </a>
+        </li>
+        
+        
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags">
+            
+            <i class="icon icon-tags"></i>
+            
+            <span class="menu-title">标签</span>
+          </a>
+        </li>
+        
+        
+        
+        <li class="menu-item menu-item-links">
+          <a href="/links">
+            
+            <i class="icon icon-friendship"></i>
+            
+            <span class="menu-title">友链</span>
+          </a>
+        </li>
+        
+        
+        
+        <li class="menu-item menu-item-repository">
+          <a href="http://blog.csdn.net/linkfqy">
+            
+            <i class="icon icon-project"></i>
+            
+            <span class="menu-title">旧博客</span>
+          </a>
+        </li>
+        
+        
+        
+        <li class="menu-item menu-item-books">
+          <a href="https://linkfqy.github.io/my_bzoj/">
+            
+            <i class="icon icon-book-fill"></i>
+            
+            <span class="menu-title">BZOJ镜像</span>
+          </a>
+        </li>
+        
+        
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about">
+            
+            <i class="icon icon-cup-fill"></i>
+            
+            <span class="menu-title">关于</span>
+          </a>
+        </li>
+        
+      </ul>
+      
+	
+    <ul class="social-links">
+    	
+        <li><a href="https://github.com/linkfqy" target="_blank" title="Github" data-toggle=tooltip data-placement=top><i class="icon icon-github"></i></a></li>
+        
+        <li><a href="https://www.zhihu.com/people/linkfqy/activities" target="_blank" title="Zhihu" data-toggle=tooltip data-placement=top><i class="icon icon-zhihu"></i></a></li>
+        
+        <li><a href="https://twitter.com/linkfqy" target="_blank" title="Twitter" data-toggle=tooltip data-placement=top><i class="icon icon-twitter"></i></a></li>
+        
+        <li><a href="https://www.pinterest.com/linkfqy/" target="_blank" title="Pinterest" data-toggle=tooltip data-placement=top><i class="icon icon-pinterest"></i></a></li>
+        
+        <li><a href="/atom.xml" target="_blank" title="Rss" data-toggle=tooltip data-placement=top><i class="icon icon-rss"></i></a></li>
+        
+    </ul>
+
+    </nav>
+  </div>
+</header>
+
+  
+    <aside class="sidebar" itemscope itemtype="http://schema.org/WPSideBar">
+  <div class="slimContent">
+    
+      <div class="widget">
+    <h3 class="widget-title">公告</h3>
+    <div class="widget-body">
+        <div id="board">
+            
+			
+				<p>您好，您是第<span id="lalala">...</span>位访客</p>
+			
+
+            <div class="content">
+                <p>欢迎交流与分享经验!</p>
+            </div>
+            本博客的镜像： <br>
+            <a href="http://oi.linkfqy.top">oi.linkfqy.top</a> <br>
+            <a href="https://linkfqy.github.io">github</a>
+        </div>
+    </div>
+</div>
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget-body">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/学习笔记/">学习笔记</a><span class="category-list-count">12</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/实用/">实用</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/杂/">杂</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/题解/">题解</a><span class="category-list-count">255</span></li></ul>
+    </div>
+  </div>
+
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget-body tagcloud">
+      <a href="/tags/51Nod/" style="font-size: 14.17px; color: #6b6b6b">51Nod</a> <a href="/tags/A/" style="font-size: 11px; color: #808080">A*</a> <a href="/tags/AC自动机/" style="font-size: 11px; color: #808080">AC自动机</a> <a href="/tags/BFS/" style="font-size: 11px; color: #808080">BFS</a> <a href="/tags/BZOJ/" style="font-size: 30px; color: #000">BZOJ</a> <a href="/tags/Codeforces/" style="font-size: 28.94px; color: #070707">Codeforces</a> <a href="/tags/DP/" style="font-size: 26.83px; color: #151515">DP</a> <a href="/tags/FFT/" style="font-size: 13.11px; color: #727272">FFT</a> <a href="/tags/HDU/" style="font-size: 26.83px; color: #151515">HDU</a> <a href="/tags/KMP/" style="font-size: 11px; color: #808080">KMP</a> <a href="/tags/LCA/" style="font-size: 12.06px; color: #797979">LCA</a> <a href="/tags/LCT/" style="font-size: 16.28px; color: #5c5c5c">LCT</a> <a href="/tags/LIS/" style="font-size: 12.06px; color: #797979">LIS</a> <a href="/tags/LOJ/" style="font-size: 14.17px; color: #6b6b6b">LOJ</a> <a href="/tags/Manacher/" style="font-size: 11px; color: #808080">Manacher</a> <a href="/tags/POJ/" style="font-size: 13.11px; color: #727272">POJ</a> <a href="/tags/Python/" style="font-size: 11px; color: #808080">Python</a> <a href="/tags/Trie/" style="font-size: 11px; color: #808080">Trie</a> <a href="/tags/UOJ/" style="font-size: 11px; color: #808080">UOJ</a> <a href="/tags/WQS二分/" style="font-size: 13.11px; color: #727272">WQS二分</a> <a href="/tags/dsu-on-tree/" style="font-size: 14.17px; color: #6b6b6b">dsu on tree</a> <a href="/tags/hash/" style="font-size: 19.44px; color: #474747">hash</a> <a href="/tags/hihoCoder/" style="font-size: 11px; color: #808080">hihoCoder</a> <a href="/tags/kruskal重构树/" style="font-size: 12.06px; color: #797979">kruskal重构树</a> <a href="/tags/two-pointers/" style="font-size: 11px; color: #808080">two-pointers</a> <a href="/tags/三分/" style="font-size: 11px; color: #808080">三分</a> <a href="/tags/主席树/" style="font-size: 13.11px; color: #727272">主席树</a> <a href="/tags/乱搞/" style="font-size: 11px; color: #808080">乱搞</a> <a href="/tags/二分图/" style="font-size: 20.5px; color: #404040">二分图</a> <a href="/tags/交互题/" style="font-size: 12.06px; color: #797979">交互题</a> <a href="/tags/决策单调性/" style="font-size: 12.06px; color: #797979">决策单调性</a> <a href="/tags/凸包/" style="font-size: 11px; color: #808080">凸包</a> <a href="/tags/分块/" style="font-size: 11px; color: #808080">分块</a> <a href="/tags/分数规划/" style="font-size: 11px; color: #808080">分数规划</a> <a href="/tags/分治/" style="font-size: 12.06px; color: #797979">分治</a> <a href="/tags/单调栈/" style="font-size: 14.17px; color: #6b6b6b">单调栈</a> <a href="/tags/单调队列/" style="font-size: 14.17px; color: #6b6b6b">单调队列</a> <a href="/tags/博弈论/" style="font-size: 14.17px; color: #6b6b6b">博弈论</a> <a href="/tags/压位/" style="font-size: 11px; color: #808080">压位</a> <a href="/tags/双联通分量/" style="font-size: 15.22px; color: #646464">双联通分量</a> <a href="/tags/可并堆/" style="font-size: 13.11px; color: #727272">可并堆</a> <a href="/tags/后缀数组/" style="font-size: 15.22px; color: #646464">后缀数组</a> <a href="/tags/启发式分裂/" style="font-size: 12.06px; color: #797979">启发式分裂</a> <a href="/tags/启发式合并/" style="font-size: 11px; color: #808080">启发式合并</a> <a href="/tags/堆/" style="font-size: 12.06px; color: #797979">堆</a> <a href="/tags/复杂度分析/" style="font-size: 17.33px; color: #555">复杂度分析</a> <a href="/tags/妙题/" style="font-size: 19.44px; color: #474747">妙题</a> <a href="/tags/容斥/" style="font-size: 11px; color: #808080">容斥</a> <a href="/tags/对偶图/" style="font-size: 11px; color: #808080">对偶图</a> <a href="/tags/差分/" style="font-size: 14.17px; color: #6b6b6b">差分</a> <a href="/tags/差分约束系统/" style="font-size: 13.11px; color: #727272">差分约束系统</a> <a href="/tags/并查集/" style="font-size: 25.78px; color: #1c1c1c">并查集</a> <a href="/tags/强连通分量/" style="font-size: 12.06px; color: #797979">强连通分量</a> <a href="/tags/扫描线/" style="font-size: 12.06px; color: #797979">扫描线</a> <a href="/tags/拓扑排序/" style="font-size: 11px; color: #808080">拓扑排序</a> <a href="/tags/数位DP/" style="font-size: 11px; color: #808080">数位DP</a> <a href="/tags/数学/" style="font-size: 15.22px; color: #646464">数学</a> <a href="/tags/整体二分/" style="font-size: 12.06px; color: #797979">整体二分</a> <a href="/tags/最大权闭合子图/" style="font-size: 14.17px; color: #6b6b6b">最大权闭合子图</a> <a href="/tags/最小生成树/" style="font-size: 18.39px; color: #4e4e4e">最小生成树</a> <a href="/tags/最短路/" style="font-size: 21.56px; color: #393939">最短路</a> <a href="/tags/期望DP/" style="font-size: 14.17px; color: #6b6b6b">期望DP</a> <a href="/tags/构造/" style="font-size: 12.06px; color: #797979">构造</a> <a href="/tags/树形DP/" style="font-size: 15.22px; color: #646464">树形DP</a> <a href="/tags/树状数组/" style="font-size: 22.61px; color: #323232">树状数组</a> <a href="/tags/树链剖分/" style="font-size: 18.39px; color: #4e4e4e">树链剖分</a> <a href="/tags/概率DP/" style="font-size: 11px; color: #808080">概率DP</a> <a href="/tags/模拟/" style="font-size: 11px; color: #808080">模拟</a> <a href="/tags/水题/" style="font-size: 15.22px; color: #646464">水题</a> <a href="/tags/洛谷/" style="font-size: 11px; color: #808080">洛谷</a> <a href="/tags/点分治/" style="font-size: 11px; color: #808080">点分治</a> <a href="/tags/状压DP/" style="font-size: 16.28px; color: #5c5c5c">状压DP</a> <a href="/tags/矩阵/" style="font-size: 15.22px; color: #646464">矩阵</a> <a href="/tags/矩阵树定理/" style="font-size: 14.17px; color: #6b6b6b">矩阵树定理</a> <a href="/tags/离线/" style="font-size: 13.11px; color: #727272">离线</a> <a href="/tags/线性筛/" style="font-size: 11px; color: #808080">线性筛</a> <a href="/tags/线段树/" style="font-size: 27.89px; color: #0e0e0e">线段树</a> <a href="/tags/线段树分治/" style="font-size: 11px; color: #808080">线段树分治</a> <a href="/tags/结论题/" style="font-size: 11px; color: #808080">结论题</a> <a href="/tags/网络流/" style="font-size: 23.67px; color: #2b2b2b">网络流</a> <a href="/tags/莫队/" style="font-size: 15.22px; color: #646464">莫队</a> <a href="/tags/虚树/" style="font-size: 13.11px; color: #727272">虚树</a> <a href="/tags/计数题/" style="font-size: 11px; color: #808080">计数题</a> <a href="/tags/计蒜客/" style="font-size: 11px; color: #808080">计蒜客</a> <a href="/tags/贪心/" style="font-size: 24.72px; color: #242424">贪心</a> <a href="/tags/递推/" style="font-size: 11px; color: #808080">递推</a> <a href="/tags/链表/" style="font-size: 11px; color: #808080">链表</a> <a href="/tags/随机/" style="font-size: 14.17px; color: #6b6b6b">随机</a>
+    </div>
+  </div>
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget-body">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/03/">三月 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">十一月 2018</a><span class="archive-list-count">20</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">十月 2018</a><span class="archive-list-count">56</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/09/">九月 2018</a><span class="archive-list-count">50</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/">八月 2018</a><span class="archive-list-count">68</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/07/">七月 2018</a><span class="archive-list-count">45</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">五月 2018</a><span class="archive-list-count">15</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">四月 2018</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">三月 2018</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">二月 2018</a><span class="archive-list-count">4</span></li></ul>
+    </div>
+  </div>
+
+
+    
+  </div>
+</aside>
+  
+  
+<main class="main" role="main">
+  <div class="content">
+  <article id="page-" class="article article-type-page" itemscope itemtype="http://schema.org/BlogPosting">
+    
+    <div class="article-header">
+      
+      <div class="article-meta">
+        <span class="article-date">
+    <i class="icon icon-calendar-check"></i>
+	<a href="/documents/emacs-keybindings table.html" class="article-date">
+	  <time datetime="2020-11-12T16:15:20.220Z" itemprop="datePublished">2020-11-13</time>
+	</a>
+</span>
+        
+        
+
+        
+
+	<span class="article-read hidden-xs">
+    	<i class="icon icon-eye-fill" aria-hidden="true"></i>
+    	<span id="/documents/emacs-keybindings table.html" class="leancloud_visitors" data-flag-title=""></span>
+    </span>
+
+        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/documents/emacs-keybindings table.html#comments" class="article-comment-link">评论</a></span>
+        
+	
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 1,342(words)</span>
+	
+	
+
+      </div>
+    </div>
+    <div class="article-entry markdown-body" itemprop="articleBody">
+      
+        <html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Table�1.�emacs-keybindings table.</title><meta name="generator" content="DocBook XSL Stylesheets V1.62.4"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="table"><a name="id2802892"></a><p class="title"><b>Table�1.�emacs-keybindings table.</b></p><table summary="emacs-keybindings table." border="1"><colgroup><col><col><col><col><col><col></colgroup><thead valign="middle"><tr><th>Functionname</th><th>Keysbinding</th><th>Functionname</th><th>Keysbinding</th><th>Functionname</th><th>Keysbinding</th></tr></thead><tbody valign="middle"><tr><td align="left"><span><b class="command">Control-X-prefix</b></span></td><td align="center"><b class="userinput"><tt>C-x</tt></b></td><td align="left"><span><b class="command">Info-goto-emacs-command-node</b></span></td><td align="center"><b class="userinput"><tt>C-hC-f</tt></b></td><td align="left"><span><b class="command">Info-goto-emacs-key-command-node</b></span></td><td align="center"><b class="userinput"><tt>C-hC-k</tt></b></td></tr><tr><td align="left"><span><b class="command">abbrev-prefix-mark</b></span></td><td align="center"><b class="userinput"><tt>M-'</tt></b></td><td align="left"><span><b class="command">abort-recursive-edit</b></span></td><td align="center"><b class="userinput"><tt>C-]</tt></b></td><td align="left"><span><b class="command">add-change-log-entry-other-window</b></span></td><td align="center"><b class="userinput"><tt>C-x4a</tt></b></td></tr><tr><td align="left"><span><b class="command">add-global-abbrev</b></span></td><td align="center"><b class="userinput"><tt>C-xag</tt></b></td><td align="left"><span><b class="command">add-mode-abbrev</b></span></td><td align="center"><b class="userinput"><tt>C-xa+</tt></b></td><td align="left"><span><b class="command">add-mode-abbrev</b></span></td><td align="center"><b class="userinput"><tt>C-xaC-a</tt></b></td></tr><tr><td align="left"><span><b class="command">add-mode-abbrev</b></span></td><td align="center"><b class="userinput"><tt>C-xal</tt></b></td><td align="left"><span><b class="command">advertised-undo</b></span></td><td align="center"><b class="userinput"><tt>C-xu</tt></b></td><td align="left"><span><b class="command">append-next-kill</b></span></td><td align="center"><b class="userinput"><tt>M-C-w</tt></b></td></tr><tr><td align="left"><span><b class="command">apropos-command</b></span></td><td align="center"><b class="userinput"><tt>C-ha</tt></b></td><td align="left"><span><b class="command">back-to-indentation</b></span></td><td align="center"><b class="userinput"><tt>M-m</tt></b></td><td align="left"><span><b class="command">backward-char-mark</b></span></td><td align="center"><b class="userinput"><tt>&lt;S-left&gt;</tt></b></td></tr><tr><td align="left"><span><b class="command">backward-char-nomark</b></span></td><td align="center"><b class="userinput"><tt>&lt;left&gt;</tt></b></td><td align="left"><span><b class="command">backward-char</b></span></td><td align="center"><b class="userinput"><tt>C-b</tt></b></td><td align="left"><span><b class="command">backward-kill-sentence</b></span></td><td align="center"><b class="userinput"><tt>C-xDEL</tt></b></td></tr><tr><td align="left"><span><b class="command">backward-kill-sexp</b></span></td><td align="center"><b class="userinput"><tt>&lt;C-M-backspace&gt;</tt></b></td><td align="left"><span><b class="command">backward-kill-sexp</b></span></td><td align="center"><b class="userinput"><tt>M-&lt;C-backspace&gt;</tt></b></td><td align="left"><span><b class="command">backward-kill-sexp</b></span></td><td align="center"><b class="userinput"><tt>M-&lt;C-delete&gt;</tt></b></td></tr><tr><td align="left"><span><b class="command">backward-kill-word</b></span></td><td align="center"><b class="userinput"><tt>&lt;C-backspace&gt;</tt></b></td><td align="left"><span><b class="command">backward-line-mark</b></span></td><td align="center"><b class="userinput"><tt>&lt;M-S-up&gt;</tt></b></td><td align="left"><span><b class="command">backward-list</b></span></td><td align="center"><b class="userinput"><tt>M-C-p</tt></b></td></tr><tr><td align="left"><span><b class="command">backward-page</b></span></td><td align="center"><b class="userinput"><tt>C-x[</tt></b></td><td align="left"><span><b class="command">backward-paragraph-mark</b></span></td><td align="center"><b class="userinput"><tt>&lt;C-S-up&gt;</tt></b></td><td align="left"><span><b class="command">backward-paragraph-nomark</b></span></td><td align="center"><b class="userinput"><tt>&lt;C-up&gt;</tt></b></td></tr><tr><td align="left"><span><b class="command">backward-paragraph</b></span></td><td align="center"><b class="userinput"><tt>M-{</tt></b></td><td align="left"><span><b class="command">backward-sexp</b></span></td><td align="center"><b class="userinput"><tt>M-C-b</tt></b></td><td align="left"><span><b class="command">backward-up-list</b></span></td><td align="center"><b class="userinput"><tt>M-C-u</tt></b></td></tr><tr><td align="left"><span><b class="command">backward-word-mark</b></span></td><td align="center"><b class="userinput"><tt>&lt;C-S-left&gt;</tt></b></td><td align="left"><span><b class="command">backward-word-mark</b></span></td><td align="center"><b class="userinput"><tt>&lt;M-S-left&gt;</tt></b></td><td align="left"><span><b class="command">backward-word-nomark</b></span></td><td align="center"><b class="userinput"><tt>&lt;C-left&gt;</tt></b></td></tr><tr><td align="left"><span><b class="command">backward-word-nomark</b></span></td><td align="center"><b class="userinput"><tt>&lt;M-left&gt;</tt></b></td><td align="left"><span><b class="command">backward-word</b></span></td><td align="center"><b class="userinput"><tt>M-b</tt></b></td><td align="left"><span><b class="command">balance-windows</b></span></td><td align="center"><b class="userinput"><tt>C-x+</tt></b></td></tr><tr><td align="left"><span><b class="command">beginning-of-buffer-mark</b></span></td><td align="center"><b class="userinput"><tt>&lt;C-S-home&gt;</tt></b></td><td align="left"><span><b class="command">beginning-of-buffer-mark</b></span></td><td align="center"><b class="userinput"><tt>&lt;M-S-home&gt;</tt></b></td><td align="left"><span><b class="command">beginning-of-buffer-nomark</b></span></td><td align="center"><b class="userinput"><tt>&lt;M-home&gt;</tt></b></td></tr><tr><td align="left"><span><b class="command">beginning-of-buffer-other-window</b></span></td><td align="center"><b class="userinput"><tt>&lt;M-begin&gt;</tt></b></td><td align="left"><span><b class="command">beginning-of-buffer</b></span></td><td align="center"><b class="userinput"><tt>&lt;C-home&gt;</tt></b></td><td align="left"><span><b class="command">beginning-of-buffer</b></span></td><td align="center"><b class="userinput"><tt>M-&lt;</tt></b></td></tr><tr><td align="left"><span><b class="command">beginning-of-defun</b></span></td><td align="center"><b class="userinput"><tt>M-C-a</tt></b></td><td align="left"><span><b class="command">beginning-of-line-mark</b></span></td><td align="center"><b class="userinput"><tt>&lt;S-home&gt;</tt></b></td><td align="left"><span><b class="command">beginning-of-line</b></span></td><td align="center"><b class="userinput"><tt>&lt;home&gt;</tt></b></td></tr><tr><td align="left"><span><b class="command">beginning-of-line</b></span></td><td align="center"><b class="userinput"><tt>C-a</tt></b></td><td align="left"><span><b class="command">bookmark-bmenu-list</b></span></td><td align="center"><b class="userinput"><tt>C-xrl</tt></b></td><td align="left"><span><b class="command">bookmark-jump</b></span></td><td align="center"><b class="userinput"><tt>C-xrb</tt></b></td></tr><tr><td align="left"><span><b class="command">bookmark-set</b></span></td><td align="center"><b class="userinput"><tt>C-xrm</tt></b></td><td align="left"><span><b class="command">bs-cycle-next</b></span></td><td align="center"><b class="userinput"><tt>&lt;C-tab&gt;</tt></b></td><td align="left"><span><b class="command">bs-cycle-previous</b></span></td><td align="center"><b class="userinput"><tt>&lt;S-tab&gt;</tt></b></td></tr><tr><td align="left"><span><b class="command">buffer-menu</b></span></td><td align="center"><b class="userinput"><tt>&lt;f6&gt;</tt></b></td><td align="left"><span><b class="command">call-last-kbd-macro</b></span></td><td align="center"><b class="userinput"><tt>C-xe</tt></b></td><td align="left"><span><b class="command">capitalize-word</b></span></td><td align="center"><b class="userinput"><tt>M-c</tt></b></td></tr><tr><td align="left"><span><b class="command">clear-rectangle</b></span></td><td align="center"><b class="userinput"><tt>C-xrc</tt></b></td><td align="left"><span><b class="command">clipboard-kill-region</b></span></td><td align="center"><b class="userinput"><tt>&lt;cut&gt;</tt></b></td><td align="left"><span><b class="command">clipboard-kill-ring-save</b></span></td><td align="center"><b class="userinput"><tt>&lt;copy&gt;</tt></b></td></tr><tr><td align="left"><span><b class="command">clipboard-yank</b></span></td><td align="center"><b class="userinput"><tt>&lt;paste&gt;</tt></b></td><td align="left"><span><b class="command">clone-indirect-buffer-other-window</b></span></td><td align="center"><b class="userinput"><tt>C-x4c</tt></b></td><td align="left"><span><b class="command">comment-dwim</b></span></td><td align="center"><b class="userinput"><tt>M-;</tt></b></td></tr><tr><td align="left"><span><b class="command">comment-region</b></span></td><td align="center"><b class="userinput"><tt>C-cc</tt></b></td><td align="left"><span><b class="command">comment-set-column</b></span></td><td align="center"><b class="userinput"><tt>C-x;</tt></b></td><td align="left"><span><b class="command">complete-symbol</b></span></td><td align="center"><b class="userinput"><tt>M-TAB</tt></b></td></tr><tr><td align="left"><span><b class="command">compose-mail-other-frame</b></span></td><td align="center"><b class="userinput"><tt>C-x5m</tt></b></td><td align="left"><span><b class="command">compose-mail-other-window</b></span></td><td align="center"><b class="userinput"><tt>C-x4m</tt></b></td><td align="left"><span><b class="command">compose-mail</b></span></td><td align="center"><b class="userinput"><tt>C-xm</tt></b></td></tr><tr><td align="left"><span><b class="command">copy-rectangle-to-register</b></span></td><td align="center"><b class="userinput"><tt>C-xrr</tt></b></td><td align="left"><span><b class="command">copy-region-as-kill-nomark</b></span></td><td align="center"><b class="userinput"><tt>M-w</tt></b></td><td align="left"><span><b class="command">copy-region-as-kill</b></span></td><td align="center"><b class="userinput"><tt>&lt;C-insert&gt;</tt></b></td></tr><tr><td align="left"><span><b class="command">copy-to-register-compatibility-binding</b></span></td><td align="center"><b class="userinput"><tt>C-xx</tt></b></td><td align="left"><span><b class="command">copy-to-register</b></span></td><td align="center"><b class="userinput"><tt>C-xrs</tt></b></td><td align="left"><span><b class="command">copy-to-register</b></span></td><td align="center"><b class="userinput"><tt>C-xrx</tt></b></td></tr><tr><td align="left"><span><b class="command">count-lines-page</b></span></td><td align="center"><b class="userinput"><tt>C-xl</tt></b></td><td align="left"><span><b class="command">count-lines-region</b></span></td><td align="center"><b class="userinput"><tt>M-=</tt></b></td><td align="left"><span><b class="command">ctl-x-4-prefix</b></span></td><td align="center"><b class="userinput"><tt>C-x4</tt></b></td></tr><tr><td align="left"><span><b class="command">ctl-x-5-prefix</b></span></td><td align="center"><b class="userinput"><tt>C-x5</tt></b></td><td align="left"><span><b class="command">dabbrev-completion</b></span></td><td align="center"><b class="userinput"><tt>M-C-/</tt></b></td><td align="left"><span><b class="command">dabbrev-expand</b></span></td><td align="center"><b class="userinput"><tt>M-/</tt></b></td></tr><tr><td align="left"><span><b class="command">delete-blank-lines</b></span></td><td align="center"><b class="userinput"><tt>C-xC-o</tt></b></td><td align="left"><span><b class="command">delete-frame</b></span></td><td align="center"><b class="userinput"><tt>C-x50</tt></b></td><td align="left"><span><b class="command">delete-horizontal-space</b></span></td><td align="center"><b class="userinput"><tt>M-\</tt></b></td></tr><tr><td align="left"><span><b class="command">delete-indentation</b></span></td><td align="center"><b class="userinput"><tt>M-^</tt></b></td><td align="left"><span><b class="command">delete-other-frames</b></span></td><td align="center"><b class="userinput"><tt>C-x51</tt></b></td><td align="left"><span><b class="command">delete-other-windows</b></span></td><td align="center"><b class="userinput"><tt>C-x1</tt></b></td></tr><tr><td align="left"><span><b class="command">delete-rectangle</b></span></td><td align="center"><b class="userinput"><tt>C-xrd</tt></b></td><td align="left"><span><b class="command">delete-window</b></span></td><td align="center"><b class="userinput"><tt>C-x0</tt></b></td><td align="left"><span><b class="command">describe-bindings</b></span></td><td align="center"><b class="userinput"><tt>C-hb</tt></b></td></tr><tr><td align="left"><span><b class="command">describe-class</b></span></td><td align="center"><b class="userinput"><tt>C-hC</tt></b></td><td align="left"><span><b class="command">describe-copying</b></span></td><td align="center"><b class="userinput"><tt>C-hC-c</tt></b></td><td align="left"><span><b class="command">describe-distribution</b></span></td><td align="center"><b class="userinput"><tt>C-hC-d</tt></b></td></tr><tr><td align="left"><span><b class="command">describe-function</b></span></td><td align="center"><b class="userinput"><tt>C-hd</tt></b></td><td align="left"><span><b class="command">describe-function</b></span></td><td align="center"><b class="userinput"><tt>C-hf</tt></b></td><td align="left"><span><b class="command">describe-generic</b></span></td><td align="center"><b class="userinput"><tt>C-hg</tt></b></td></tr><tr><td align="left"><span><b class="command">describe-input-method</b></span></td><td align="center"><b class="userinput"><tt>C-hC-\</tt></b></td><td align="left"><span><b class="command">describe-input-method</b></span></td><td align="center"><b class="userinput"><tt>C-hI</tt></b></td><td align="left"><span><b class="command">describe-key-briefly</b></span></td><td align="center"><b class="userinput"><tt>C-hc</tt></b></td></tr><tr><td align="left"><span><b class="command">describe-key</b></span></td><td align="center"><b class="userinput"><tt>C-hk</tt></b></td><td align="left"><span><b class="command">describe-language-environment</b></span></td><td align="center"><b class="userinput"><tt>C-hC-l</tt></b></td><td align="left"><span><b class="command">describe-language-environment</b></span></td><td align="center"><b class="userinput"><tt>C-hL</tt></b></td></tr><tr><td align="left"><span><b class="command">describe-mode</b></span></td><td align="center"><b class="userinput"><tt>C-hm</tt></b></td><td align="left"><span><b class="command">describe-no-warranty</b></span></td><td align="center"><b class="userinput"><tt>C-hC-w</tt></b></td><td align="left"><span><b class="command">describe-project</b></span></td><td align="center"><b class="userinput"><tt>C-hC-p</tt></b></td></tr><tr><td align="left"><span><b class="command">describe-syntax</b></span></td><td align="center"><b class="userinput"><tt>C-hs</tt></b></td><td align="left"><span><b class="command">describe-variable</b></span></td><td align="center"><b class="userinput"><tt>C-hv</tt></b></td><td align="left"><span><b class="command">digit-argument</b></span></td><td align="center"><b class="userinput"><tt>C-0</tt></b></td></tr><tr><td align="left"><span><b class="command">digit-argument</b></span></td><td align="center"><b class="userinput"><tt>C-1</tt></b></td><td align="left"><span><b class="command">digit-argument</b></span></td><td align="center"><b class="userinput"><tt>C-2</tt></b></td><td align="left"><span><b class="command">digit-argument</b></span></td><td align="center"><b class="userinput"><tt>C-3</tt></b></td></tr><tr><td align="left"><span><b class="command">digit-argument</b></span></td><td align="center"><b class="userinput"><tt>C-4</tt></b></td><td align="left"><span><b class="command">digit-argument</b></span></td><td align="center"><b class="userinput"><tt>C-5</tt></b></td><td align="left"><span><b class="command">digit-argument</b></span></td><td align="center"><b class="userinput"><tt>C-6</tt></b></td></tr><tr><td align="left"><span><b class="command">digit-argument</b></span></td><td align="center"><b class="userinput"><tt>C-7</tt></b></td><td align="left"><span><b class="command">digit-argument</b></span></td><td align="center"><b class="userinput"><tt>C-8</tt></b></td><td align="left"><span><b class="command">digit-argument</b></span></td><td align="center"><b class="userinput"><tt>C-9</tt></b></td></tr><tr><td align="left"><span><b class="command">digit-argument</b></span></td><td align="center"><b class="userinput"><tt>M-0..M-9</tt></b></td><td align="left"><span><b class="command">digit-argument</b></span></td><td align="center"><b class="userinput"><tt>M-C-0</tt></b></td><td align="left"><span><b class="command">digit-argument</b></span></td><td align="center"><b class="userinput"><tt>M-C-1</tt></b></td></tr><tr><td align="left"><span><b class="command">digit-argument</b></span></td><td align="center"><b class="userinput"><tt>M-C-2</tt></b></td><td align="left"><span><b class="command">digit-argument</b></span></td><td align="center"><b class="userinput"><tt>M-C-3</tt></b></td><td align="left"><span><b class="command">digit-argument</b></span></td><td align="center"><b class="userinput"><tt>M-C-4</tt></b></td></tr><tr><td align="left"><span><b class="command">digit-argument</b></span></td><td align="center"><b class="userinput"><tt>M-C-5</tt></b></td><td align="left"><span><b class="command">digit-argument</b></span></td><td align="center"><b class="userinput"><tt>M-C-6</tt></b></td><td align="left"><span><b class="command">digit-argument</b></span></td><td align="center"><b class="userinput"><tt>M-C-7</tt></b></td></tr><tr><td align="left"><span><b class="command">digit-argument</b></span></td><td align="center"><b class="userinput"><tt>M-C-8</tt></b></td><td align="left"><span><b class="command">digit-argument</b></span></td><td align="center"><b class="userinput"><tt>M-C-9</tt></b></td><td align="left"><span><b class="command">dired-other-frame</b></span></td><td align="center"><b class="userinput"><tt>C-x5d</tt></b></td></tr><tr><td align="left"><span><b class="command">dired-other-window</b></span></td><td align="center"><b class="userinput"><tt>C-x4d</tt></b></td><td align="left"><span><b class="command">dired</b></span></td><td align="center"><b class="userinput"><tt>C-xd</tt></b></td><td align="left"><span><b class="command">display-buffer</b></span></td><td align="center"><b class="userinput"><tt>C-x4C-o</tt></b></td></tr><tr><td align="left"><span><b class="command">down-list</b></span></td><td align="center"><b class="userinput"><tt>M-C-d</tt></b></td><td align="left"><span><b class="command">downcase-region</b></span></td><td align="center"><b class="userinput"><tt>C-xC-l</tt></b></td><td align="left"><span><b class="command">downcase-word</b></span></td><td align="center"><b class="userinput"><tt>M-l</tt></b></td></tr><tr><td align="left"><span><b class="command">edit-kbd-macro</b></span></td><td align="center"><b class="userinput"><tt>C-xC-k</tt></b></td><td align="left"><span><b class="command">end-kbd-macro</b></span></td><td align="center"><b class="userinput"><tt>C-x)</tt></b></td><td align="left"><span><b class="command">end-of-buffer-mark</b></span></td><td align="center"><b class="userinput"><tt>&lt;C-S-end&gt;</tt></b></td></tr><tr><td align="left"><span><b class="command">end-of-buffer-mark</b></span></td><td align="center"><b class="userinput"><tt>&lt;M-S-end&gt;</tt></b></td><td align="left"><span><b class="command">end-of-buffer-nomark</b></span></td><td align="center"><b class="userinput"><tt>&lt;M-end&gt;</tt></b></td><td align="left"><span><b class="command">end-of-buffer</b></span></td><td align="center"><b class="userinput"><tt>&lt;C-end&gt;</tt></b></td></tr><tr><td align="left"><span><b class="command">end-of-buffer</b></span></td><td align="center"><b class="userinput"><tt>M-&gt;</tt></b></td><td align="left"><span><b class="command">end-of-defun</b></span></td><td align="center"><b class="userinput"><tt>M-C-e</tt></b></td><td align="left"><span><b class="command">end-of-line-mark</b></span></td><td align="center"><b class="userinput"><tt>&lt;S-end&gt;</tt></b></td></tr><tr><td align="left"><span><b class="command">end-of-line</b></span></td><td align="center"><b class="userinput"><tt>&lt;end&gt;</tt></b></td><td align="left"><span><b class="command">end-of-line</b></span></td><td align="center"><b class="userinput"><tt>C-e</tt></b></td><td align="left"><span><b class="command">enlarge-window-horizontally</b></span></td><td align="center"><b class="userinput"><tt>C-x}</tt></b></td></tr><tr><td align="left"><span><b class="command">enlarge-window</b></span></td><td align="center"><b class="userinput"><tt>C-x^</tt></b></td><td align="left"><span><b class="command">erc-track-switch-buffer</b></span></td><td align="center"><b class="userinput"><tt>C-cC-@</tt></b></td><td align="left"><span><b class="command">erc-track-switch-buffer</b></span></td><td align="center"><b class="userinput"><tt>C-cC-SPC</tt></b></td></tr><tr><td align="left"><span><b class="command">eval-expression</b></span></td><td align="center"><b class="userinput"><tt>M-:</tt></b></td><td align="left"><span><b class="command">eval-expression</b></span></td><td align="center"><b class="userinput"><tt>M-M-:</tt></b></td><td align="left"><span><b class="command">eval-last-sexp</b></span></td><td align="center"><b class="userinput"><tt>C-xC-e</tt></b></td></tr><tr><td align="left"><span><b class="command">event-apply-alt-modifier</b></span></td><td align="center"><b class="userinput"><tt>C-x@a</tt></b></td><td align="left"><span><b class="command">event-apply-control-modifier</b></span></td><td align="center"><b class="userinput"><tt>C-x@c</tt></b></td><td align="left"><span><b class="command">event-apply-hyper-modifier</b></span></td><td align="center"><b class="userinput"><tt>C-x@h</tt></b></td></tr><tr><td align="left"><span><b class="command">event-apply-meta-modifier</b></span></td><td align="center"><b class="userinput"><tt>C-x@m</tt></b></td><td align="left"><span><b class="command">event-apply-shift-modifier</b></span></td><td align="center"><b class="userinput"><tt>C-x@S</tt></b></td><td align="left"><span><b class="command">event-apply-super-modifier</b></span></td><td align="center"><b class="userinput"><tt>C-x@s</tt></b></td></tr><tr><td align="left"><span><b class="command">exchange-point-and-mark-nomark</b></span></td><td align="center"><b class="userinput"><tt>C-xC-x</tt></b></td><td align="left"><span><b class="command">execute-extended-command</b></span></td><td align="center"><b class="userinput"><tt>M-x</tt></b></td><td align="left"><span><b class="command">exit-recursive-edit</b></span></td><td align="center"><b class="userinput"><tt>M-C-c</tt></b></td></tr><tr><td align="left"><span><b class="command">expand-abbrev</b></span></td><td align="center"><b class="userinput"><tt>&lt;M-return&gt;</tt></b></td><td align="left"><span><b class="command">expand-abbrev</b></span></td><td align="center"><b class="userinput"><tt>C-x'</tt></b></td><td align="left"><span><b class="command">expand-abbrev</b></span></td><td align="center"><b class="userinput"><tt>C-xa'</tt></b></td></tr><tr><td align="left"><span><b class="command">expand-abbrev</b></span></td><td align="center"><b class="userinput"><tt>C-xae</tt></b></td><td align="left"><span><b class="command">expand-jump-to-next-slot</b></span></td><td align="center"><b class="userinput"><tt>C-xan</tt></b></td><td align="left"><span><b class="command">expand-jump-to-previous-slot</b></span></td><td align="center"><b class="userinput"><tt>C-xap</tt></b></td></tr><tr><td align="left"><span><b class="command">facemenu-keymap</b></span></td><td align="center"><b class="userinput"><tt>M-g</tt></b></td><td align="left"><span><b class="command">find-alternate-file</b></span></td><td align="center"><b class="userinput"><tt>C-xC-v</tt></b></td><td align="left"><span><b class="command">find-file-other-frame</b></span></td><td align="center"><b class="userinput"><tt>C-x5C-f</tt></b></td></tr><tr><td align="left"><span><b class="command">find-file-other-frame</b></span></td><td align="center"><b class="userinput"><tt>C-x5f</tt></b></td><td align="left"><span><b class="command">find-file-other-window</b></span></td><td align="center"><b class="userinput"><tt>C-x4C-f</tt></b></td><td align="left"><span><b class="command">find-file-other-window</b></span></td><td align="center"><b class="userinput"><tt>C-x4f</tt></b></td></tr><tr><td align="left"><span><b class="command">find-file-read-only-other-frame</b></span></td><td align="center"><b class="userinput"><tt>C-x5r</tt></b></td><td align="left"><span><b class="command">find-file-read-only-other-window</b></span></td><td align="center"><b class="userinput"><tt>C-x4r</tt></b></td><td align="left"><span><b class="command">find-file-read-only</b></span></td><td align="center"><b class="userinput"><tt>C-xC-r</tt></b></td></tr><tr><td align="left"><span><b class="command">find-file</b></span></td><td align="center"><b class="userinput"><tt>C-xC-f</tt></b></td><td align="left"><span><b class="command">find-tag-other-frame</b></span></td><td align="center"><b class="userinput"><tt>C-x5.</tt></b></td><td align="left"><span><b class="command">find-tag-other-window</b></span></td><td align="center"><b class="userinput"><tt>C-x4.</tt></b></td></tr><tr><td align="left"><span><b class="command">find-tag-regexp</b></span></td><td align="center"><b class="userinput"><tt>M-C-.</tt></b></td><td align="left"><span><b class="command">find-tag</b></span></td><td align="center"><b class="userinput"><tt>M-.</tt></b></td><td align="left"><span><b class="command">finder-by-keyword</b></span></td><td align="center"><b class="userinput"><tt>C-hp</tt></b></td></tr><tr><td align="left"><span><b class="command">font-lock-fontify-block</b></span></td><td align="center"><b class="userinput"><tt>M-gM-g</tt></b></td><td align="left"><span><b class="command">forward-char-mark</b></span></td><td align="center"><b class="userinput"><tt>&lt;S-right&gt;</tt></b></td><td align="left"><span><b class="command">forward-char-nomark</b></span></td><td align="center"><b class="userinput"><tt>&lt;right&gt;</tt></b></td></tr><tr><td align="left"><span><b class="command">forward-char</b></span></td><td align="center"><b class="userinput"><tt>C-f</tt></b></td><td align="left"><span><b class="command">forward-line-mark</b></span></td><td align="center"><b class="userinput"><tt>&lt;M-S-down&gt;</tt></b></td><td align="left"><span><b class="command">forward-list</b></span></td><td align="center"><b class="userinput"><tt>M-C-n</tt></b></td></tr><tr><td align="left"><span><b class="command">forward-page</b></span></td><td align="center"><b class="userinput"><tt>C-x]</tt></b></td><td align="left"><span><b class="command">forward-paragraph-mark</b></span></td><td align="center"><b class="userinput"><tt>&lt;C-S-down&gt;</tt></b></td><td align="left"><span><b class="command">forward-paragraph-nomark</b></span></td><td align="center"><b class="userinput"><tt>&lt;C-down&gt;</tt></b></td></tr><tr><td align="left"><span><b class="command">forward-paragraph</b></span></td><td align="center"><b class="userinput"><tt>M-}</tt></b></td><td align="left"><span><b class="command">forward-sexp</b></span></td><td align="center"><b class="userinput"><tt>M-C-f</tt></b></td><td align="left"><span><b class="command">forward-word-mark</b></span></td><td align="center"><b class="userinput"><tt>&lt;C-S-right&gt;</tt></b></td></tr><tr><td align="left"><span><b class="command">forward-word-mark</b></span></td><td align="center"><b class="userinput"><tt>&lt;M-S-right&gt;</tt></b></td><td align="left"><span><b class="command">forward-word-nomark</b></span></td><td align="center"><b class="userinput"><tt>&lt;C-right&gt;</tt></b></td><td align="left"><span><b class="command">forward-word-nomark</b></span></td><td align="center"><b class="userinput"><tt>&lt;M-right&gt;</tt></b></td></tr><tr><td align="left"><span><b class="command">forward-word</b></span></td><td align="center"><b class="userinput"><tt>M-f</tt></b></td><td align="left"><span><b class="command">frame-configuration-to-register</b></span></td><td align="center"><b class="userinput"><tt>C-xrf</tt></b></td><td align="left"><span><b class="command">help-command</b></span></td><td align="center"><b class="userinput"><tt>&lt;help&gt;</tt></b></td></tr><tr><td align="left"><span><b class="command">help-command</b></span></td><td align="center"><b class="userinput"><tt>C-h</tt></b></td><td align="left"><span><b class="command">help-for-help</b></span></td><td align="center"><b class="userinput"><tt>C-h&lt;f1&gt;</tt></b></td><td align="left"><span><b class="command">help-for-help</b></span></td><td align="center"><b class="userinput"><tt>C-h&lt;help&gt;</tt></b></td></tr><tr><td align="left"><span><b class="command">help-for-help</b></span></td><td align="center"><b class="userinput"><tt>C-h?</tt></b></td><td align="left"><span><b class="command">help-for-help</b></span></td><td align="center"><b class="userinput"><tt>C-hC-h</tt></b></td><td align="left"><span><b class="command">help-quit</b></span></td><td align="center"><b class="userinput"><tt>C-hq</tt></b></td></tr><tr><td align="left"><span><b class="command">help-with-tutorial</b></span></td><td align="center"><b class="userinput"><tt>C-ht</tt></b></td><td align="left"><span><b class="command">iconify-or-deiconify-frame</b></span></td><td align="center"><b class="userinput"><tt>C-xC-z</tt></b></td><td align="left"><span><b class="command">iconify-or-deiconify-frame</b></span></td><td align="center"><b class="userinput"><tt>C-z</tt></b></td></tr><tr><td align="left"><span><b class="command">increment-register</b></span></td><td align="center"><b class="userinput"><tt>C-xr+</tt></b></td><td align="left"><span><b class="command">indent-region</b></span></td><td align="center"><b class="userinput"><tt>M-C-\</tt></b></td><td align="left"><span><b class="command">indent-rigidly</b></span></td><td align="center"><b class="userinput"><tt>C-xTAB</tt></b></td></tr><tr><td align="left"><span><b class="command">info-lookup-symbol</b></span></td><td align="center"><b class="userinput"><tt>C-hTAB</tt></b></td><td align="left"><span><b class="command">info-other-window</b></span></td><td align="center"><b class="userinput"><tt>C-h4i</tt></b></td><td align="left"><span><b class="command">info</b></span></td><td align="center"><b class="userinput"><tt>C-hi</tt></b></td></tr><tr><td align="left"><span><b class="command">insert-file</b></span></td><td align="center"><b class="userinput"><tt>C-xi</tt></b></td><td align="left"><span><b class="command">insert-parentheses</b></span></td><td align="center"><b class="userinput"><tt>M-(</tt></b></td><td align="left"><span><b class="command">insert-register-compatibility-binding</b></span></td><td align="center"><b class="userinput"><tt>C-xg</tt></b></td></tr><tr><td align="left"><span><b class="command">insert-register</b></span></td><td align="center"><b class="userinput"><tt>C-xrg</tt></b></td><td align="left"><span><b class="command">insert-register</b></span></td><td align="center"><b class="userinput"><tt>C-xri</tt></b></td><td align="left"><span><b class="command">inverse-add-global-abbrev</b></span></td><td align="center"><b class="userinput"><tt>C-xa-</tt></b></td></tr><tr><td align="left"><span><b class="command">inverse-add-global-abbrev</b></span></td><td align="center"><b class="userinput"><tt>C-xai g</tt></b></td><td align="left"><span><b class="command">inverse-add-mode-abbrev</b></span></td><td align="center"><b class="userinput"><tt>C-xai l</tt></b></td><td align="left"><span><b class="command">isearch-backward-regexp</b></span></td><td align="center"><b class="userinput"><tt>M-C-r</tt></b></td></tr><tr><td align="left"><span><b class="command">isearch-backward</b></span></td><td align="center"><b class="userinput"><tt>C-r</tt></b></td><td align="left"><span><b class="command">isearch-forward-regexp</b></span></td><td align="center"><b class="userinput"><tt>M-C-s</tt></b></td><td align="left"><span><b class="command">isearch-forward</b></span></td><td align="center"><b class="userinput"><tt>C-s</tt></b></td></tr><tr><td align="left"><span><b class="command">ispell-word</b></span></td><td align="center"><b class="userinput"><tt>M-$</tt></b></td><td align="left"><span><b class="command">jump-to-register-compatibility-binding</b></span></td><td align="center"><b class="userinput"><tt>C-xj</tt></b></td><td align="left"><span><b class="command">jump-to-register</b></span></td><td align="center"><b class="userinput"><tt>C-xrj</tt></b></td></tr><tr><td align="left"><span><b class="command">just-one-space</b></span></td><td align="center"><b class="userinput"><tt>M-SPC</tt></b></td><td align="left"><span><b class="command">kbd-macro-query</b></span></td><td align="center"><b class="userinput"><tt>C-xq</tt></b></td><td align="left"><span><b class="command">keyboard-escape-quit</b></span></td><td align="center"><b class="userinput"><tt>M-M-ESC</tt></b></td></tr><tr><td align="left"><span><b class="command">keyboard-quit</b></span></td><td align="center"><b class="userinput"><tt>C-g</tt></b></td><td align="left"><span><b class="command">kill-buffer-and-window</b></span></td><td align="center"><b class="userinput"><tt>C-x40</tt></b></td><td align="left"><span><b class="command">kill-buffer</b></span></td><td align="center"><b class="userinput"><tt>C-xk</tt></b></td></tr><tr><td align="left"><span><b class="command">kill-rectangle</b></span></td><td align="center"><b class="userinput"><tt>C-xrk</tt></b></td><td align="left"><span><b class="command">kill-region</b></span></td><td align="center"><b class="userinput"><tt>&lt;S-delete&gt;</tt></b></td><td align="left"><span><b class="command">kill-region</b></span></td><td align="center"><b class="userinput"><tt>C-w</tt></b></td></tr><tr><td align="left"><span><b class="command">kill-sentence</b></span></td><td align="center"><b class="userinput"><tt>M-k</tt></b></td><td align="left"><span><b class="command">kill-sexp</b></span></td><td align="center"><b class="userinput"><tt>&lt;C-M-delete&gt;</tt></b></td><td align="left"><span><b class="command">kill-sexp</b></span></td><td align="center"><b class="userinput"><tt>M-C-k</tt></b></td></tr><tr><td align="left"><span><b class="command">kill-whole-line</b></span></td><td align="center"><b class="userinput"><tt>C-k</tt></b></td><td align="left"><span><b class="command">kill-word</b></span></td><td align="center"><b class="userinput"><tt>&lt;C-delete&gt;</tt></b></td><td align="left"><span><b class="command">kill-word</b></span></td><td align="center"><b class="userinput"><tt>M-d</tt></b></td></tr><tr><td align="left"><span><b class="command">list-buffers</b></span></td><td align="center"><b class="userinput"><tt>C-xC-b</tt></b></td><td align="left"><span><b class="command">list-directory</b></span></td><td align="center"><b class="userinput"><tt>C-xC-d</tt></b></td><td align="left"><span><b class="command">make-frame-command</b></span></td><td align="center"><b class="userinput"><tt>C-x52</tt></b></td></tr><tr><td align="left"><span><b class="command">man-follow</b></span></td><td align="center"><b class="userinput"><tt>&lt;f1&gt;</tt></b></td><td align="left"><span><b class="command">mark-page</b></span></td><td align="center"><b class="userinput"><tt>C-xC-p</tt></b></td><td align="left"><span><b class="command">mark-paragraph</b></span></td><td align="center"><b class="userinput"><tt>M-h</tt></b></td></tr><tr><td align="left"><span><b class="command">mark-sexp</b></span></td><td align="center"><b class="userinput"><tt>M-C-@</tt></b></td><td align="left"><span><b class="command">mark-sexp</b></span></td><td align="center"><b class="userinput"><tt>M-C-SPC</tt></b></td><td align="left"><span><b class="command">mark-whole-buffer</b></span></td><td align="center"><b class="userinput"><tt>C-xh</tt></b></td></tr><tr><td align="left"><span><b class="command">mark-word</b></span></td><td align="center"><b class="userinput"><tt>M-@</tt></b></td><td align="left"><span><b class="command">move-past-close-and-reindent</b></span></td><td align="center"><b class="userinput"><tt>M-)</tt></b></td><td align="left"><span><b class="command">move-to-window-line</b></span></td><td align="center"><b class="userinput"><tt>M-r</tt></b></td></tr><tr><td align="left"><span><b class="command">narrow-to-defun</b></span></td><td align="center"><b class="userinput"><tt>C-xnd</tt></b></td><td align="left"><span><b class="command">narrow-to-page</b></span></td><td align="center"><b class="userinput"><tt>C-xnp</tt></b></td><td align="left"><span><b class="command">narrow-to-region</b></span></td><td align="center"><b class="userinput"><tt>C-xnn</tt></b></td></tr><tr><td align="left"><span><b class="command">negative-argument</b></span></td><td align="center"><b class="userinput"><tt>C--</tt></b></td><td align="left"><span><b class="command">negative-argument</b></span></td><td align="center"><b class="userinput"><tt>M--</tt></b></td><td align="left"><span><b class="command">negative-argument</b></span></td><td align="center"><b class="userinput"><tt>M-C--</tt></b></td></tr><tr><td align="left"><span><b class="command">newline-and-indent</b></span></td><td align="center"><b class="userinput"><tt>C-j</tt></b></td><td align="left"><span><b class="command">next-error</b></span></td><td align="center"><b class="userinput"><tt>C-x`</tt></b></td><td align="left"><span><b class="command">next-line-mark</b></span></td><td align="center"><b class="userinput"><tt>&lt;S-down&gt;</tt></b></td></tr><tr><td align="left"><span><b class="command">next-line-nomark</b></span></td><td align="center"><b class="userinput"><tt>&lt;down&gt;</tt></b></td><td align="left"><span><b class="command">next-line</b></span></td><td align="center"><b class="userinput"><tt>C-n</tt></b></td><td align="left"><span><b class="command">not-modified</b></span></td><td align="center"><b class="userinput"><tt>M-~</tt></b></td></tr><tr><td align="left"><span><b class="command">number-to-register</b></span></td><td align="center"><b class="userinput"><tt>C-xrn</tt></b></td><td align="left"><span><b class="command">open-line</b></span></td><td align="center"><b class="userinput"><tt>C-o</tt></b></td><td align="left"><span><b class="command">open-rectangle</b></span></td><td align="center"><b class="userinput"><tt>C-xro</tt></b></td></tr><tr><td align="left"><span><b class="command">other-frame</b></span></td><td align="center"><b class="userinput"><tt>C-x5o</tt></b></td><td align="left"><span><b class="command">other-window</b></span></td><td align="center"><b class="userinput"><tt>C-xo</tt></b></td><td align="left"><span><b class="command">overwrite-mode</b></span></td><td align="center"><b class="userinput"><tt>&lt;insert&gt;</tt></b></td></tr><tr><td align="left"><span><b class="command">pager-page-down</b></span></td><td align="center"><b class="userinput"><tt>&lt;next&gt;</tt></b></td><td align="left"><span><b class="command">pager-page-up</b></span></td><td align="center"><b class="userinput"><tt>&lt;prior&gt;</tt></b></td><td align="left"><span><b class="command">pager-row-down</b></span></td><td align="center"><b class="userinput"><tt>&lt;M-down&gt;</tt></b></td></tr><tr><td align="left"><span><b class="command">pager-row-up</b></span></td><td align="center"><b class="userinput"><tt>&lt;M-up&gt;</tt></b></td><td align="left"><span><b class="command">point-to-register-compatibility-binding</b></span></td><td align="center"><b class="userinput"><tt>C-x/</tt></b></td><td align="left"><span><b class="command">point-to-register</b></span></td><td align="center"><b class="userinput"><tt>C-xrC-@</tt></b></td></tr><tr><td align="left"><span><b class="command">point-to-register</b></span></td><td align="center"><b class="userinput"><tt>C-xrC-SPC</tt></b></td><td align="left"><span><b class="command">point-to-register</b></span></td><td align="center"><b class="userinput"><tt>C-xrSPC</tt></b></td><td align="left"><span><b class="command">pop-global-mark</b></span></td><td align="center"><b class="userinput"><tt>C-xC-@</tt></b></td></tr><tr><td align="left"><span><b class="command">pop-global-mark</b></span></td><td align="center"><b class="userinput"><tt>C-xC-SPC</tt></b></td><td align="left"><span><b class="command">pop-tag-mark</b></span></td><td align="center"><b class="userinput"><tt>M-*</tt></b></td><td align="left"><span><b class="command">previous-line-mark</b></span></td><td align="center"><b class="userinput"><tt>&lt;S-up&gt;</tt></b></td></tr><tr><td align="left"><span><b class="command">previous-line-nomark</b></span></td><td align="center"><b class="userinput"><tt>&lt;up&gt;</tt></b></td><td align="left"><span><b class="command">previous-line</b></span></td><td align="center"><b class="userinput"><tt>C-p</tt></b></td><td align="left"><span><b class="command">query-replace-regexp</b></span></td><td align="center"><b class="userinput"><tt>M-C-%</tt></b></td></tr><tr><td align="left"><span><b class="command">query-replace</b></span></td><td align="center"><b class="userinput"><tt>M-%</tt></b></td><td align="left"><span><b class="command">quoted-insert</b></span></td><td align="center"><b class="userinput"><tt>C-q</tt></b></td><td align="left"><span><b class="command">recenter</b></span></td><td align="center"><b class="userinput"><tt>C-l</tt></b></td></tr><tr><td align="left"><span><b class="command">repeat-complex-command</b></span></td><td align="center"><b class="userinput"><tt>C-xM-:</tt></b></td><td align="left"><span><b class="command">repeat</b></span></td><td align="center"><b class="userinput"><tt>C-xz</tt></b></td><td align="left"><span><b class="command">reposition-window</b></span></td><td align="center"><b class="userinput"><tt>M-C-l</tt></b></td></tr><tr><td align="left"><span><b class="command">save-buffer</b></span></td><td align="center"><b class="userinput"><tt>C-xC-s</tt></b></td><td align="left"><span><b class="command">save-buffers-kill-emacs</b></span></td><td align="center"><b class="userinput"><tt>C-xC-c</tt></b></td><td align="left"><span><b class="command">save-some-buffers</b></span></td><td align="center"><b class="userinput"><tt>C-xs</tt></b></td></tr><tr><td align="left"><span><b class="command">scroll-down-mark</b></span></td><td align="center"><b class="userinput"><tt>&lt;S-prior&gt;</tt></b></td><td align="left"><span><b class="command">scroll-down</b></span></td><td align="center"><b class="userinput"><tt>M-v</tt></b></td><td align="left"><span><b class="command">scroll-left</b></span></td><td align="center"><b class="userinput"><tt>&lt;C-next&gt;</tt></b></td></tr><tr><td align="left"><span><b class="command">scroll-left</b></span></td><td align="center"><b class="userinput"><tt>C-x&lt;</tt></b></td><td align="left"><span><b class="command">scroll-other-window-down</b></span></td><td align="center"><b class="userinput"><tt>&lt;M-prior&gt;</tt></b></td><td align="left"><span><b class="command">scroll-other-window-down</b></span></td><td align="center"><b class="userinput"><tt>M-C-S-v</tt></b></td></tr><tr><td align="left"><span><b class="command">scroll-other-window</b></span></td><td align="center"><b class="userinput"><tt>&lt;M-next&gt;</tt></b></td><td align="left"><span><b class="command">scroll-other-window</b></span></td><td align="center"><b class="userinput"><tt>M-C-v</tt></b></td><td align="left"><span><b class="command">scroll-right</b></span></td><td align="center"><b class="userinput"><tt>&lt;C-prior&gt;</tt></b></td></tr><tr><td align="left"><span><b class="command">scroll-right</b></span></td><td align="center"><b class="userinput"><tt>C-x&gt;</tt></b></td><td align="left"><span><b class="command">scroll-up-mark</b></span></td><td align="center"><b class="userinput"><tt>&lt;S-next&gt;</tt></b></td><td align="left"><span><b class="command">scroll-up</b></span></td><td align="center"><b class="userinput"><tt>C-v</tt></b></td></tr><tr><td align="left"><span><b class="command">set-buffer-file-coding-system</b></span></td><td align="center"><b class="userinput"><tt>C-xRETf</tt></b></td><td align="left"><span><b class="command">set-buffer-process-coding-system</b></span></td><td align="center"><b class="userinput"><tt>C-xRETp</tt></b></td><td align="left"><span><b class="command">set-fill-column</b></span></td><td align="center"><b class="userinput"><tt>C-xf</tt></b></td></tr><tr><td align="left"><span><b class="command">set-fill-prefix</b></span></td><td align="center"><b class="userinput"><tt>C-x.</tt></b></td><td align="left"><span><b class="command">set-goal-column</b></span></td><td align="center"><b class="userinput"><tt>C-xC-n</tt></b></td><td align="left"><span><b class="command">set-input-method</b></span></td><td align="center"><b class="userinput"><tt>C-xRETC-\</tt></b></td></tr><tr><td align="left"><span><b class="command">set-keyboard-coding-system</b></span></td><td align="center"><b class="userinput"><tt>C-xRETk</tt></b></td><td align="left"><span><b class="command">set-language-environment</b></span></td><td align="center"><b class="userinput"><tt>C-xRETl</tt></b></td><td align="left"><span><b class="command">set-mark-command</b></span></td><td align="center"><b class="userinput"><tt>C-@</tt></b></td></tr><tr><td align="left"><span><b class="command">set-mark-command</b></span></td><td align="center"><b class="userinput"><tt>C-SPC</tt></b></td><td align="left"><span><b class="command">set-next-selection-coding-system</b></span></td><td align="center"><b class="userinput"><tt>C-xRETX</tt></b></td><td align="left"><span><b class="command">set-selection-coding-system</b></span></td><td align="center"><b class="userinput"><tt>C-xRETx</tt></b></td></tr><tr><td align="left"><span><b class="command">set-selective-display</b></span></td><td align="center"><b class="userinput"><tt>C-x$</tt></b></td><td align="left"><span><b class="command">set-terminal-coding-system</b></span></td><td align="center"><b class="userinput"><tt>C-xRETt</tt></b></td><td align="left"><span><b class="command">shell-command-on-region</b></span></td><td align="center"><b class="userinput"><tt>M-|</tt></b></td></tr><tr><td align="left"><span><b class="command">shell-command</b></span></td><td align="center"><b class="userinput"><tt>M-!</tt></b></td><td align="left"><span><b class="command">shrink-window-horizontally</b></span></td><td align="center"><b class="userinput"><tt>C-x{</tt></b></td><td align="left"><span><b class="command">shrink-window-if-larger-than-buffer</b></span></td><td align="center"><b class="userinput"><tt>C-x-</tt></b></td></tr><tr><td align="left"><span><b class="command">speedbar-get-focus</b></span></td><td align="center"><b class="userinput"><tt>&lt;f4&gt;</tt></b></td><td align="left"><span><b class="command">split-line</b></span></td><td align="center"><b class="userinput"><tt>M-C-o</tt></b></td><td align="left"><span><b class="command">split-window-horizontally</b></span></td><td align="center"><b class="userinput"><tt>C-x3</tt></b></td></tr><tr><td align="left"><span><b class="command">split-window-vertically</b></span></td><td align="center"><b class="userinput"><tt>C-x2</tt></b></td><td align="left"><span><b class="command">start-kbd-macro</b></span></td><td align="center"><b class="userinput"><tt>C-x(</tt></b></td><td align="left"><span><b class="command">string-rectangle</b></span></td><td align="center"><b class="userinput"><tt>C-xrt</tt></b></td></tr><tr><td align="left"><span><b class="command">switch-to-buffer-other-frame</b></span></td><td align="center"><b class="userinput"><tt>C-x5b</tt></b></td><td align="left"><span><b class="command">switch-to-buffer-other-window</b></span></td><td align="center"><b class="userinput"><tt>C-x4b</tt></b></td><td align="left"><span><b class="command">switch-to-buffer</b></span></td><td align="center"><b class="userinput"><tt>C-xb</tt></b></td></tr><tr><td align="left"><span><b class="command">tab-to-tab-stop</b></span></td><td align="center"><b class="userinput"><tt>M-i</tt></b></td><td align="left"><span><b class="command">tags-loop-continue</b></span></td><td align="center"><b class="userinput"><tt>M-,</tt></b></td><td align="left"><span><b class="command">tmm-menubar</b></span></td><td align="center"><b class="userinput"><tt>M-`</tt></b></td></tr><tr><td align="left"><span><b class="command">toggle-input-method</b></span></td><td align="center"><b class="userinput"><tt>C-\</tt></b></td><td align="left"><span><b class="command">transpose-chars</b></span></td><td align="center"><b class="userinput"><tt>C-t</tt></b></td><td align="left"><span><b class="command">transpose-lines</b></span></td><td align="center"><b class="userinput"><tt>C-xC-t</tt></b></td></tr><tr><td align="left"><span><b class="command">transpose-sexps</b></span></td><td align="center"><b class="userinput"><tt>M-C-t</tt></b></td><td align="left"><span><b class="command">transpose-words</b></span></td><td align="center"><b class="userinput"><tt>M-t</tt></b></td><td align="left"><span><b class="command">undo</b></span></td><td align="center"><b class="userinput"><tt>&lt;M-backspace&gt;</tt></b></td></tr><tr><td align="left"><span><b class="command">undo</b></span></td><td align="center"><b class="userinput"><tt>C-/</tt></b></td><td align="left"><span><b class="command">undo</b></span></td><td align="center"><b class="userinput"><tt>C-_</tt></b></td><td align="left"><span><b class="command">undo</b></span></td><td align="center"><b class="userinput"><tt>M-DEL</tt></b></td></tr><tr><td align="left"><span><b class="command">universal-argument</b></span></td><td align="center"><b class="userinput"><tt>C-u</tt></b></td><td align="left"><span><b class="command">universal-coding-system-argument</b></span></td><td align="center"><b class="userinput"><tt>C-xRETc</tt></b></td><td align="left"><span><b class="command">upcase-region</b></span></td><td align="center"><b class="userinput"><tt>C-xC-u</tt></b></td></tr><tr><td align="left"><span><b class="command">upcase-word</b></span></td><td align="center"><b class="userinput"><tt>M-u</tt></b></td><td align="left"><span><b class="command">vc-annotate</b></span></td><td align="center"><b class="userinput"><tt>C-xvg</tt></b></td><td align="left"><span><b class="command">vc-cancel-version</b></span></td><td align="center"><b class="userinput"><tt>C-xvc</tt></b></td></tr><tr><td align="left"><span><b class="command">vc-create-snapshot</b></span></td><td align="center"><b class="userinput"><tt>C-xvs</tt></b></td><td align="left"><span><b class="command">vc-diff</b></span></td><td align="center"><b class="userinput"><tt>C-xv=</tt></b></td><td align="left"><span><b class="command">vc-directory</b></span></td><td align="center"><b class="userinput"><tt>C-xvd</tt></b></td></tr><tr><td align="left"><span><b class="command">vc-insert-headers</b></span></td><td align="center"><b class="userinput"><tt>C-xvh</tt></b></td><td align="left"><span><b class="command">vc-merge</b></span></td><td align="center"><b class="userinput"><tt>C-xvm</tt></b></td><td align="left"><span><b class="command">vc-next-action</b></span></td><td align="center"><b class="userinput"><tt>C-xvv</tt></b></td></tr><tr><td align="left"><span><b class="command">vc-prefix-map</b></span></td><td align="center"><b class="userinput"><tt>C-xv</tt></b></td><td align="left"><span><b class="command">vc-print-log</b></span></td><td align="center"><b class="userinput"><tt>C-xvl</tt></b></td><td align="left"><span><b class="command">vc-register</b></span></td><td align="center"><b class="userinput"><tt>C-xvi</tt></b></td></tr><tr><td align="left"><span><b class="command">vc-retrieve-snapshot</b></span></td><td align="center"><b class="userinput"><tt>C-xvr</tt></b></td><td align="left"><span><b class="command">vc-revert-buffer</b></span></td><td align="center"><b class="userinput"><tt>C-xvu</tt></b></td><td align="left"><span><b class="command">vc-switch-backend</b></span></td><td align="center"><b class="userinput"><tt>C-xvb</tt></b></td></tr><tr><td align="left"><span><b class="command">vc-toggle-read-only</b></span></td><td align="center"><b class="userinput"><tt>C-xC-q</tt></b></td><td align="left"><span><b class="command">vc-update-change-log</b></span></td><td align="center"><b class="userinput"><tt>C-xva</tt></b></td><td align="left"><span><b class="command">vc-version-other-window</b></span></td><td align="center"><b class="userinput"><tt>C-xv~</tt></b></td></tr><tr><td align="left"><span><b class="command">view-emacs-FAQ</b></span></td><td align="center"><b class="userinput"><tt>C-hF</tt></b></td><td align="left"><span><b class="command">view-emacs-news</b></span></td><td align="center"><b class="userinput"><tt>C-hC-n</tt></b></td><td align="left"><span><b class="command">view-emacs-news</b></span></td><td align="center"><b class="userinput"><tt>C-hn</tt></b></td></tr><tr><td align="left"><span><b class="command">view-emacs-problems</b></span></td><td align="center"><b class="userinput"><tt>C-hP</tt></b></td><td align="left"><span><b class="command">view-hello-file</b></span></td><td align="center"><b class="userinput"><tt>C-hh</tt></b></td><td align="left"><span><b class="command">view-lossage</b></span></td><td align="center"><b class="userinput"><tt>C-hl</tt></b></td></tr><tr><td align="left"><span><b class="command">view-order-manuals</b></span></td><td align="center"><b class="userinput"><tt>C-hRET</tt></b></td><td align="left"><span><b class="command">what-cursor-position</b></span></td><td align="center"><b class="userinput"><tt>C-x=</tt></b></td><td align="left"><span><b class="command">where-is</b></span></td><td align="center"><b class="userinput"><tt>C-hw</tt></b></td></tr><tr><td align="left"><span><b class="command">widen</b></span></td><td align="center"><b class="userinput"><tt>C-xnw</tt></b></td><td align="left"><span><b class="command">window-configuration-to-register</b></span></td><td align="center"><b class="userinput"><tt>C-xrw</tt></b></td><td align="left"><span><b class="command">write-file</b></span></td><td align="center"><b class="userinput"><tt>C-xC-w</tt></b></td></tr><tr><td align="left"><span><b class="command">yank-pop</b></span></td><td align="center"><b class="userinput"><tt>M-y</tt></b></td><td align="left"><span><b class="command">yank-rectangle</b></span></td><td align="center"><b class="userinput"><tt>C-xry</tt></b></td><td align="left"><span><b class="command">yank</b></span></td><td align="center"><b class="userinput"><tt>&lt;S-insert&gt;</tt></b></td></tr><tr><td align="left"><span><b class="command">yank</b></span></td><td align="center"><b class="userinput"><tt>C-y</tt></b></td><td align="left"><span><b class="command">zap-to-char</b></span></td><td align="center"><b class="userinput"><tt>M-z</tt></b></td><td class="auto-generated">�</td><td class="auto-generated">�</td></tr></tbody></table></div></body></html>
+
+      
+    </div>
+    <div class="article-footer">
+      <blockquote class="mt-2x">
+  <ul class="post-copyright list-unstyled">
+    
+    <li class="post-copyright-link hidden-xs">
+      <strong>本文链接：</strong>
+      <a href="http://oi.linkfqy.top/documents/emacs-keybindings table.html" title="" target="_blank" rel="external">http://oi.linkfqy.top/documents/emacs-keybindings table.html</a>
+    </li>
+    
+    <li class="post-copyright-license">
+      <strong>版权声明： </strong> 本博客所有文章除特别声明外，均采用 <a href="http://creativecommons.org/licenses/by/4.0/deed.zh" target="_blank" rel="external">CC BY 4.0 CN协议</a> 许可协议。转载请注明出处！
+    </li>
+  </ul>
+</blockquote>
+
+
+<div class="panel panel-default panel-badger">
+  <div class="panel-body">
+    <figure class="media">
+      <div class="media-left">
+        <a href="http://linkfqy.top" target="_blank" class="img-burn thumb-sm visible-lg">
+          <img src="/images/avatar.jpg" class="img-rounded w-full" alt="">
+        </a>
+      </div>
+      <div class="media-body">
+        <h3 class="media-heading"><a href="http://linkfqy.top" target="_blank"><span class="text-dark">linkfqy</span><small class="ml-1x">A link to the past.</small></a></h3>
+        <div>蒟蒻OIer</div>
+      </div>
+    </figure>
+  </div>
+</div>
+
+
+    </div>
+  </article>
+  
+    
+  <section id="comments">
+  	
+       <div id="comment"></div>
+<script>
+    new Valine({
+    el: '#comment' ,
+    notify:false, 
+    verify:false, 
+    appId: 'rJeVBhWeHlb33cC9L26UE7y3-gzGzoHsz',
+    appKey: 'uU7rD0e4IaYyrk6vSdM6GoHX',
+    placeholder: '↑请在上面填写信息后评论↑',
+    path:window.location.pathname, 
+    avatar:'mm' 
+    });
+</script>      
+    
+  </section>
+
+
+  
+</div>
+
+  <nav class="bar bar-footer clearfix" data-stick-bottom>
+  <div class="bar-inner">
+  
+  
+  <!-- Button trigger modal -->
+  <button type="button" class="btn btn-fancy btn-donate pop-onhover bg-gradient-warning" data-toggle="modal" data-target="#donateModal"><span>赏</span></button>
+  <!-- <div class="wave-icon wave-icon-danger btn-donate" data-toggle="modal" data-target="#donateModal">
+    <div class="wave-circle"><span class="icon"><i class="icon icon-bill"></i></span></div>
+  </div> -->
+  
+  
+  <div class="bar-right">
+    
+    <div class="share-component" data-sites="weibo,qq,wechat,facebook,twitter" data-mobile-sites="weibo,qq,qzone"></div>
+    
+  </div>
+  </div>
+</nav>
+  
+<!-- Modal -->
+<div class="modal modal-center modal-small modal-xs-full fade" id="donateModal" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content donate">
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      <div class="modal-body">
+        <div class="donate-box">
+          <div class="donate-head">
+            <p>感谢您的支持，我会继续努力的!</p>
+          </div>
+          <div class="tab-content">
+            <div role="tabpanel" class="tab-pane fade active in" id="alipay">
+              <div class="donate-payimg">
+                <img src="/images/donate/alipayimg.png" alt="扫码支持" title="扫一扫" />
+              </div>
+              <p class="text-muted mv">扫码打赏，你说多少就多少</p>
+              <p class="text-grey">打开支付宝扫一扫，即可进行扫码打赏哦</p>
+            </div>
+            <div role="tabpanel" class="tab-pane fade" id="wechatpay">
+              <div class="donate-payimg">
+                <img src="/images/donate/wechatpayimg.png" alt="扫码支持" title="扫一扫" />
+              </div>
+              <p class="text-muted mv">扫码打赏，你说多少就多少</p>
+              <p class="text-grey">打开微信扫一扫，即可进行扫码打赏哦</p>
+            </div>
+          </div>
+          <div class="donate-footer">
+            <ul class="nav nav-tabs nav-justified" role="tablist">
+              <li role="presentation" class="active">
+                <a href="#alipay" id="alipay-tab" role="tab" data-toggle="tab" aria-controls="alipay" aria-expanded="true"><i class="icon icon-alipay"></i> 支付宝</a>
+              </li>
+              <li role="presentation" class="">
+                <a href="#wechatpay" role="tab" id="wechatpay-tab" data-toggle="tab" aria-controls="wechatpay" aria-expanded="false"><i class="icon icon-wepay"></i> 微信支付</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+</main>
+
+  <footer class="footer" itemscope itemtype="http://schema.org/WPFooter">
+	
+	
+    <ul class="social-links">
+    	
+        <li><a href="https://github.com/linkfqy" target="_blank" title="Github" data-toggle=tooltip data-placement=top><i class="icon icon-github"></i></a></li>
+        
+        <li><a href="https://www.zhihu.com/people/linkfqy/activities" target="_blank" title="Zhihu" data-toggle=tooltip data-placement=top><i class="icon icon-zhihu"></i></a></li>
+        
+        <li><a href="https://twitter.com/linkfqy" target="_blank" title="Twitter" data-toggle=tooltip data-placement=top><i class="icon icon-twitter"></i></a></li>
+        
+        <li><a href="https://www.pinterest.com/linkfqy/" target="_blank" title="Pinterest" data-toggle=tooltip data-placement=top><i class="icon icon-pinterest"></i></a></li>
+        
+        <li><a href="/atom.xml" target="_blank" title="Rss" data-toggle=tooltip data-placement=top><i class="icon icon-rss"></i></a></li>
+        
+    </ul>
+
+    <div class="copyright">
+    	
+        Think twice,code once.
+    </div>
+</footer>
+  <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+<script>
+window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
+</script>
+<script src="/js/plugin.min.js"></script>
+<script src="/js/application.js"></script>
+  
+    
+    
+    
+        <script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: '文章',
+            PAGES: '页面',
+            CATEGORIES: '分类',
+            TAGS: '标签',
+            UNTITLED: '(未命名)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="/js/insight.js"></script>
+    
+    
+    
+        
+
+
+
+<script defer src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<script src="//cdn1.lncld.net/static/js/2.5.0/av-min.js"></script>
+<script>
+    var APP_ID = 'rJeVBhWeHlb33cC9L26UE7y3-gzGzoHsz';
+    var APP_KEY = 'uU7rD0e4IaYyrk6vSdM6GoHX';
+    AV.init({
+        appId: APP_ID,
+        appKey: APP_KEY
+    });
+    // 显示次数
+    function showTime(Counter) {
+        var query = new AV.Query("Counter");
+        if($(".leancloud_visitors").length > 0){
+            var url = $(".leancloud_visitors").attr('id').trim();
+            // where field
+            query.equalTo("words", url);
+            // count 
+            query.count().then(function (number) {
+                // There are number instances of MyClass where words equals url.
+                $(document.getElementById(url)).text(number?  number : '--');
+            }, function (error) {
+                // error is an instance of AVError.
+            });
+        }
+    }
+   // 追加pv
+    function addCount(Counter) {
+        var url = $(".leancloud_visitors").length > 0 ? $(".leancloud_visitors").attr('id').trim() : 'oi.linkfqy.top';
+        var Counter = AV.Object.extend("Counter");
+        var query = new Counter;
+        query.save({
+            words: url
+        }).then(function (object) {
+        })
+    }
+    $(function () {
+        var Counter = AV.Object.extend("Counter");
+        addCount(Counter);
+        showTime(Counter);
+    });
+</script>
+
+    
+    
+        
+    
+    
+        <script defer type="text/javascript">
+(function(i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-117106595-1', 'auto');
+ga('send', 'pageview');
+
+</script>
+
+
+    <script defer>
+var _hmt = _hmt || [];
+(function() {
+    var hm = document.createElement("script");
+    hm.src = "//hm.baidu.com/hm.js?39d7480ca7aecd618b1d194fd01aa4e7";
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+</body>
+
+      
+                <script type="text/javascript">
+                    AV.init({
+                        appId: 'rJeVBhWeHlb33cC9L26UE7y3-gzGzoHsz',
+                        appKey: 'uU7rD0e4IaYyrk6vSdM6GoHX'
+                    });
+                    var query = new AV.Query("Counter");
+                        query.equalTo("words", "oi.linkfqy.top");
+                        query.count().then(function (number) {
+                            $(document.getElementById("lalala")).text(number?  number : '0');
+                        }, function (error) {
+                            $(document.getElementById("lalala")).text('0');
+                        });
+                </script>
+      
+
+<script type="text/javascript" src="/js/la.js"></script>
+</html>
