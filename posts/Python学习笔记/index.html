@@ -50,7 +50,7 @@
 <meta property="og:site_name" content="linkfqy">
 <meta property="og:description" content="3.25 之前对python变量传值的理解一直模模糊糊，直到今天看了这篇文章 豁然开朗，之前理解有误的原因是自动把C++的赋值与Python等同了 Python的变量，其实是C++意义上的指针 下面摘录几段： 构造函数返回指针 Python 的构造函数将构造匿名对象，且返回此对象的一个指针。 这是 Python 与指针的第一个重要联系。 用代码描述，对于Python代码： 1sa">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2021-03-26T15:55:51.226Z">
+<meta property="og:updated_time" content="2021-03-26T16:01:34.631Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Python学习笔记">
 <meta name="twitter:description" content="3.25 之前对python变量传值的理解一直模模糊糊，直到今天看了这篇文章 豁然开朗，之前理解有误的原因是自动把C++的赋值与Python等同了 Python的变量，其实是C++意义上的指针 下面摘录几段： 构造函数返回指针 Python 的构造函数将构造匿名对象，且返回此对象的一个指针。 这是 Python 与指针的第一个重要联系。 用代码描述，对于Python代码： 1sa">
@@ -340,7 +340,7 @@
         <span class="post-comment"><i class="icon icon-comment"></i> <a href="/posts/Python学习笔记/#comments" class="article-comment-link">评论</a></span>
         
 	
-		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 366(words)</span>
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 453(words)</span>
 	
 	
 
@@ -377,6 +377,12 @@
 <ol start="2" type="1">
 <li>任何涉及__setitems__的操作都将成为解指针操作。</li>
 </ol>
+<p>由于 Python 对哈希表的高度依赖，“涉及__setitems__的操作”在 Python 中实际上是一个非常广泛的行为，这主要包括：</p>
+<ul>
+<li>对数组的索引操作</li>
+<li>对哈希表的查找操作</li>
+<li>涉及__setattr__的操作（由于 Python 将 attribute 存储在哈希表中，所以__setattr__操作最终将是某种__setitems__操作）</li>
+</ul>
 
       
     </div>
