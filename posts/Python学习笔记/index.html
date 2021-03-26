@@ -42,18 +42,18 @@
   
   
   <title>Python学习笔记 | linkfqy&#39;s Blog</title>
-  <meta name="description" content="3.25 之前对python变量传值的理解一直模模糊糊，直到今天看了这篇文章">
+  <meta name="description" content="3.25 之前对python变量传值的理解一直模模糊糊，直到今天看了这篇文章 豁然开朗，之前理解有误的原因是自动把C++的赋值与Python等同了 Python的变量，其实是C++意义上的指针 下面摘录几段： 构造函数返回指针 Python 的构造函数将构造匿名对象，且返回此对象的一个指针。 这是 Python 与指针的第一个重要联系。 用代码描述，对于Python代码： 1sa">
 <meta name="keywords" content="Python">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Python学习笔记">
 <meta property="og:url" content="http://oi.linkfqy.top/posts/Python学习笔记/index.html">
 <meta property="og:site_name" content="linkfqy">
-<meta property="og:description" content="3.25 之前对python变量传值的理解一直模模糊糊，直到今天看了这篇文章">
+<meta property="og:description" content="3.25 之前对python变量传值的理解一直模模糊糊，直到今天看了这篇文章 豁然开朗，之前理解有误的原因是自动把C++的赋值与Python等同了 Python的变量，其实是C++意义上的指针 下面摘录几段： 构造函数返回指针 Python 的构造函数将构造匿名对象，且返回此对象的一个指针。 这是 Python 与指针的第一个重要联系。 用代码描述，对于Python代码： 1sa">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2021-03-25T15:38:26.771Z">
+<meta property="og:updated_time" content="2021-03-26T15:55:51.226Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Python学习笔记">
-<meta name="twitter:description" content="3.25 之前对python变量传值的理解一直模模糊糊，直到今天看了这篇文章">
+<meta name="twitter:description" content="3.25 之前对python变量传值的理解一直模模糊糊，直到今天看了这篇文章 豁然开朗，之前理解有误的原因是自动把C++的赋值与Python等同了 Python的变量，其实是C++意义上的指针 下面摘录几段： 构造函数返回指针 Python 的构造函数将构造匿名对象，且返回此对象的一个指针。 这是 Python 与指针的第一个重要联系。 用代码描述，对于Python代码： 1sa">
   <!-- Canonical links -->
   <link rel="canonical" href="http://oi.linkfqy.top/posts/Python学习笔记/index.html">
   
@@ -291,7 +291,7 @@
   <div class="slimContent">
     <nav id="toc" class="article-toc">
       <h3 class="toc-title">文章目录</h3>
-      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#section"><span class="toc-number">1.</span> <span class="toc-text">3.25</span></a></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#section"><span class="toc-number">1.</span> <span class="toc-text">3.25</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#构造函数返回指针"><span class="toc-number">1.1.</span> <span class="toc-text">构造函数返回指针</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#setitems__操作将隐式解指针"><span class="toc-number">1.2.</span> <span class="toc-text">__setitems__操作将隐式解指针</span></a></li></ol></li></ol>
     </nav>
   </div>
 </aside>
@@ -340,7 +340,7 @@
         <span class="post-comment"><i class="icon icon-comment"></i> <a href="/posts/Python学习笔记/#comments" class="article-comment-link">评论</a></span>
         
 	
-		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 29(words)</span>
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 366(words)</span>
 	
 	
 
@@ -348,8 +348,35 @@
     </div>
     <div class="article-entry markdown-body" itemprop="articleBody">
       
-        <h1 id="section">3.25</h1>
+        <h2 id="section">3.25</h2>
 <p>之前对python变量传值的理解一直模模糊糊，直到今天看了这篇<a href="https://www.cnblogs.com/pythonista/p/11178705.html" target="_blank" rel="noopener">文章</a></p>
+<p>豁然开朗，之前理解有误的原因是自动把C++的赋值与Python等同了</p>
+<p>Python的变量，其实是C++意义上的指针</p>
+<p>下面摘录几段：</p>
+<h3 id="构造函数返回指针">构造函数返回指针</h3>
+<p><strong>Python 的构造函数将构造匿名对象，且返回此对象的一个指针。</strong></p>
+<p>这是 Python 与指针的第一个重要联系。</p>
+<p>用代码描述，对于Python代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sampleNum = <span class="number">0</span></span><br></pre></td></tr></table></figure>
+<p>其不类似于 C++ 代码：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> sampleNum = <span class="number">0</span>;</span><br></pre></td></tr></table></figure>
+<p>而更类似于：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> __tmpNum = <span class="number">0</span>, *sampleNum = &amp;__tmpNum;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 或者：</span></span><br><span class="line"><span class="built_in">shared_ptr</span>&lt;<span class="keyword">int</span>&gt; sampleNum(<span class="keyword">new</span> <span class="keyword">int</span>(<span class="number">0</span>));</span><br></pre></td></tr></table></figure>
+<h3 id="setitems__操作将隐式解指针">__setitems__操作将隐式解指针</h3>
+<p>Python 与指针的另一个重要联系在于 Python 的<strong>隐式解指针行为。</strong></p>
+<p>虽然 Python 不存在显式解指针操作，但（有且仅有）__setitems__操作将进行隐式解指针，通过此方法对变量进行修改等同于通过解指针操作修改变量原值。</p>
+<p>此种性质意味着：</p>
+<ol type="1">
+<li>任何不涉及__setitems__的操作都将成为指针重绑定。</li>
+</ol>
+<p>对于Python代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">numList = [<span class="keyword">None</span>] * <span class="number">10</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Rebinding</span></span><br><span class="line">numList = [<span class="keyword">None</span>] * <span class="number">5</span></span><br></pre></td></tr></table></figure>
+<p>其相当于：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> *numList = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">10</span>];</span><br><span class="line"></span><br><span class="line"><span class="comment">// Rebinding</span></span><br><span class="line"><span class="keyword">delete</span>[] numList;</span><br><span class="line">numList = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">5</span>];</span><br><span class="line"><span class="keyword">delete</span>[] numList;</span><br></pre></td></tr></table></figure>
+<p>由此可见，对 numList 的非__setitems__操作，导致 numList 被绑定到了一个新指针上。</p>
+<ol start="2" type="1">
+<li>任何涉及__setitems__的操作都将成为解指针操作。</li>
+</ol>
 
       
     </div>
