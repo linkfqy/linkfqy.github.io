@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://oi.linkfqy.top/"/>
-  <updated>2021-05-03T09:19:47.991Z</updated>
+  <updated>2021-08-01T16:17:20.416Z</updated>
   <id>http://oi.linkfqy.top/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Python使用Matplotlib作图</title>
+    <link href="http://oi.linkfqy.top/posts/Python%E4%BD%BF%E7%94%A8Matplotlib%E4%BD%9C%E5%9B%BE/"/>
+    <id>http://oi.linkfqy.top/posts/Python使用Matplotlib作图/</id>
+    <published>2021-08-01T12:43:30.000Z</published>
+    <updated>2021-08-01T16:17:20.416Z</updated>
+    
+    <content type="html"><![CDATA[<p><code>Matplotlib.pyplot</code>将原本面向对象的作图操作封装成函数，使之更近似于MATLAB的交互式命令</p><p>只要有离散的数据，就可以做出柱状、散点、饼状、折线、3D图形等可视化图表</p><h1 id="柱状图bar">柱状图（bar）</h1><p><code>pyplot.bar()</code>只需提供两个数组作为各数据的横纵坐标，即可生成柱状图</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> matplotlib <span class="keyword">import</span> rcParams</span><br><span class="line"><span class="keyword">from</span> matplotlib.pyplot <span class="keyword">import</span> *</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line">y = np.array((<span class="number">2100</span>, <span class="number">3000</span>, <span class="number">4000</span>))</span><br><span class="line">x = np.array([<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>])</span><br><span class="line">width = <span class="number">0.2</span></span><br><span class="line">rc(<span class="string">'font'</span>, size=<span class="number">16</span>)</span><br><span class="line">bar(x, y, width)  <span class="comment"># 指定柱宽</span></span><br><span class="line">ylabel(<span class="string">"消费数据"</span>)</span><br><span class="line">xticks(x, [<span class="string">"用户A"</span>, <span class="string">"用户B"</span>, <span class="string">"用户C"</span>], rotation=<span class="number">20</span>)  <span class="comment"># 将x标签改为用户名，并旋转20度显示</span></span><br><span class="line">rcParams[<span class="string">'font.sans-serif'</span>] = [<span class="string">'SimHei'</span>]  <span class="comment"># 设置中文字体，否则会乱码</span></span><br><span class="line">savefig(<span class="string">'bar.png'</span>, dpi=<span class="number">500</span>)</span><br><span class="line">show()  <span class="comment"># 显示在屏幕</span></span><br></pre></td></tr></table></figure><p>效果图：</p><p><img src="/posts/Python使用Matplotlib作图/bar.png"></p><p>若要显示负号，需<code>rcParams['axes.unicode_minus']=False</code></p><h1 id="散点图scatter">散点图（scatter）</h1><p>与<code>bar</code>类似</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> numpy.linalg.linalg <span class="keyword">import</span> _eigvalsh_dispatcher</span><br><span class="line"><span class="keyword">from</span> pylab <span class="keyword">import</span> *  <span class="comment"># pylab=pyplot+部分numpy函数</span></span><br><span class="line">x = array(range(<span class="number">1</span>, <span class="number">8</span>))</span><br><span class="line">y = <span class="string">"27.0  26.5 26.3  26.1    25.7 25.3   24.8"</span></span><br><span class="line">y = <span class="string">","</span>.join(y.split())</span><br><span class="line">y = array(eval(y))</span><br><span class="line">scatter(x, y, marker=<span class="string">'*'</span>)  <span class="comment"># 用星形显示散点</span></span><br><span class="line">savefig(<span class="string">"scatter.png"</span>, dpi=<span class="number">500</span>)</span><br><span class="line">show()</span><br></pre></td></tr></table></figure><p><img src="/posts/Python使用Matplotlib作图/scatter.png"></p><h1 id="折线图plot">折线图（plot）</h1><p>基本用法为<code>plot(x,y,s)</code>，前两个参数为数据点的横纵坐标，s为指定线条颜色、线条样式和数据点形状的字符串</p><p>也可在同一个坐标内显示多个折线</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">from</span> matplotlib.pyplot <span class="keyword">import</span> *</span><br><span class="line">x = np.linspace(<span class="number">0</span>, <span class="number">2</span>*np.pi, <span class="number">200</span>)</span><br><span class="line">y1 = np.sin(x)</span><br><span class="line">y2 = np.cos(pow(x, <span class="number">2</span>))</span><br><span class="line">rc(<span class="string">'font'</span>, size=<span class="number">16</span>)</span><br><span class="line"><span class="comment"># rc('text', usetex=True) # 可以用LaTeX字体显示</span></span><br><span class="line">plot(x, y1, <span class="string">'r-'</span>, label=<span class="string">'$sin(x)$'</span>, linewidth=<span class="number">2</span>)  <span class="comment"># 红色实线</span></span><br><span class="line">plot(x, y2, <span class="string">'b--'</span>, label=<span class="string">'$cos(x^2)$'</span>)  <span class="comment"># 蓝色虚线</span></span><br><span class="line">xlabel(<span class="string">'$x$'</span>)</span><br><span class="line">ylabel(<span class="string">'$y$'</span>, rotation=<span class="number">0</span>)  <span class="comment"># y标签默认旋转90度</span></span><br><span class="line">rc(<span class="string">'legend'</span>, loc=<span class="string">'lower left'</span>)  <span class="comment"># 图例在左下显示</span></span><br><span class="line">legend()</span><br><span class="line">savefig(<span class="string">'plot.png'</span>, dpi=<span class="number">500</span>)</span><br><span class="line">show()</span><br></pre></td></tr></table></figure><p><img src="/posts/Python使用Matplotlib作图/plot.png"></p><h1 id="饼状图pie">饼状图（pie）</h1><p>只需一维数组</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> matplotlib <span class="keyword">import</span> rcParams</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">from</span> matplotlib.pyplot <span class="keyword">import</span> *</span><br><span class="line">a = np.array([<span class="number">124</span>, <span class="number">45</span>, <span class="number">72</span>, <span class="number">87</span>, <span class="number">11</span>])</span><br><span class="line">pie(a, labels=[<span class="string">"A产品"</span>, <span class="string">"B产品"</span>, <span class="string">"C产品"</span>, <span class="string">"D产品"</span>, <span class="string">"E产品"</span>])</span><br><span class="line">title(<span class="string">"销售额分析"</span>)</span><br><span class="line">rcParams[<span class="string">'font.sans-serif'</span>] = [<span class="string">'SimHei'</span>]</span><br><span class="line">savefig(<span class="string">"pie.png"</span>, dpi=<span class="number">500</span>)</span><br><span class="line">show()</span><br></pre></td></tr></table></figure><p><img src="/posts/Python使用Matplotlib作图/pie.png"></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;code&gt;Matplotlib.pyplot&lt;/code&gt;将原本面向对象的作图操作封装成函数，使之更近似于MATLAB的交互式命令&lt;/p&gt;
+&lt;p&gt;只要有离散的数据，就可以做出柱状、散点、饼状、折线、3D图形等可视化图表&lt;/p&gt;
+&lt;h1 id=&quot;柱状图bar&quot;&gt;柱状图（
+      
+    
+    </summary>
+    
+      <category term="学习笔记" scheme="http://oi.linkfqy.top/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+    
+      <category term="Python" scheme="http://oi.linkfqy.top/tags/Python/"/>
+    
+  </entry>
   
   <entry>
     <title>LitePal使用指南</title>
@@ -526,9 +553,9 @@
       <category term="题解" scheme="http://oi.linkfqy.top/categories/%E9%A2%98%E8%A7%A3/"/>
     
     
-      <category term="矩阵" scheme="http://oi.linkfqy.top/tags/%E7%9F%A9%E9%98%B5/"/>
-    
       <category term="BZOJ" scheme="http://oi.linkfqy.top/tags/BZOJ/"/>
+    
+      <category term="矩阵" scheme="http://oi.linkfqy.top/tags/%E7%9F%A9%E9%98%B5/"/>
     
       <category term="期望DP" scheme="http://oi.linkfqy.top/tags/%E6%9C%9F%E6%9C%9BDP/"/>
     
@@ -560,36 +587,6 @@
       <category term="并查集" scheme="http://oi.linkfqy.top/tags/%E5%B9%B6%E6%9F%A5%E9%9B%86/"/>
     
       <category term="Codeforces" scheme="http://oi.linkfqy.top/tags/Codeforces/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>【结论】BZOJ4401 块的计数</title>
-    <link href="http://oi.linkfqy.top/posts/BZOJ4401/"/>
-    <id>http://oi.linkfqy.top/posts/BZOJ4401/</id>
-    <published>2018-11-02T11:47:47.000Z</published>
-    <updated>2018-11-02T11:55:18.000Z</updated>
-    
-    <content type="html"><![CDATA[<p><a href="https://lydsy.com/JudgeOnline/problem.php?id=4401" target="_blank" rel="noopener">题面在这里</a></p><p>​</p><ul><li>只有n的因子能作为块的大小</li><li>块大小确定的情况下，至多有一种划分方法</li><li>块大小为<span class="math inline">\(d\)</span>时，存在一种划分方法当且仅当有<span class="math inline">\(\frac n d\)</span>个子树的大小被<span class="math inline">\(d\)</span>整除</li></ul><p>前两条的正确性显然</p><p>对于第三条，考虑如果有划分方法，把根所在的块去掉，剩下几个子树大小一定都被<span class="math inline">\(d\)</span>整除，以此类推</p><p>​</p><p>示例程序：</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">char</span> <span class="title">nc</span><span class="params">()</span></span>&#123;</span><br><span class="line"><span class="keyword">static</span> <span class="keyword">char</span> buf[<span class="number">100000</span>],*l=buf,*r=buf;</span><br><span class="line"><span class="keyword">return</span> l==r&amp;&amp;(r=(l=buf)+fread(buf,<span class="number">1</span>,<span class="number">100000</span>,<span class="built_in">stdin</span>),l==r)?EOF:*l++;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">int</span> <span class="title">red</span><span class="params">()</span></span>&#123;</span><br><span class="line"><span class="keyword">int</span> res=<span class="number">0</span>,f=<span class="number">1</span>;<span class="keyword">char</span> ch=nc();</span><br><span class="line"><span class="keyword">while</span> (ch&lt;<span class="string">'0'</span>||<span class="string">'9'</span>&lt;ch) &#123;<span class="keyword">if</span> (ch==<span class="string">'-'</span>) f=-f;ch=nc();&#125;</span><br><span class="line"><span class="keyword">while</span> (<span class="string">'0'</span>&lt;=ch&amp;&amp;ch&lt;=<span class="string">'9'</span>) res=res*<span class="number">10</span>+ch<span class="number">-48</span>,ch=nc();</span><br><span class="line"><span class="keyword">return</span> res*f;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxn=<span class="number">1000005</span>,maxe=<span class="number">2000005</span>;</span><br><span class="line"><span class="keyword">int</span> n,siz[maxn],s[maxn];</span><br><span class="line"><span class="keyword">int</span> tot,son[maxe],nxt[maxe],lnk[maxn];</span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">add</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">int</span> y)</span></span>&#123;</span><br><span class="line">son[++tot]=y;nxt[tot]=lnk[x];lnk[x]=tot;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">dfs</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">int</span> fa)</span></span>&#123;</span><br><span class="line">siz[x]=<span class="number">1</span>;</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> j=lnk[x];j;j=nxt[j])</span><br><span class="line"> <span class="keyword">if</span> (son[j]!=fa)&#123;</span><br><span class="line"> dfs(son[j],x); siz[x]+=siz[son[j]];</span><br><span class="line"> &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">check</span><span class="params">(<span class="keyword">int</span> x)</span></span>&#123;</span><br><span class="line"><span class="keyword">int</span> tot=<span class="number">0</span>;</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i=x;i&lt;=n;i+=x) tot+=s[i];</span><br><span class="line"><span class="keyword">return</span> tot==n/x;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">n=red();</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">1</span>,x,y;i&lt;n;i++) x=red(),y=red(),add(x,y),add(y,x);</span><br><span class="line">dfs(<span class="number">1</span>,<span class="number">1</span>);</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++) s[siz[i]]++;</span><br><span class="line"><span class="keyword">int</span> ans=<span class="number">0</span>;</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> d=<span class="number">1</span>;d*d&lt;=n;d++)</span><br><span class="line"> <span class="keyword">if</span> (n%d==<span class="number">0</span>)&#123;</span><br><span class="line"> <span class="keyword">if</span> (check(d)) ans++;</span><br><span class="line"> <span class="keyword">if</span> (d*d!=n&amp;&amp;check(n/d)) ans++;</span><br><span class="line"> &#125;</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"%d"</span>,ans);</span><br><span class="line"><span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;&lt;a href=&quot;https://lydsy.com/JudgeOnline/problem.php?id=4401&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;题面在这里&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;​&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;只有n的因子能作为块的
-      
-    
-    </summary>
-    
-      <category term="题解" scheme="http://oi.linkfqy.top/categories/%E9%A2%98%E8%A7%A3/"/>
-    
-    
-      <category term="BZOJ" scheme="http://oi.linkfqy.top/tags/BZOJ/"/>
-    
-      <category term="结论题" scheme="http://oi.linkfqy.top/tags/%E7%BB%93%E8%AE%BA%E9%A2%98/"/>
     
   </entry>
   
