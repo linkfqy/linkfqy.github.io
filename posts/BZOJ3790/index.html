@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang=zh>
-<head>
+<head><meta name="generator" content="Hexo 3.9.0">
 <!-- hexo-inject:begin --><!-- hexo-inject:end --><script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
 <link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
 <style>
@@ -19,41 +19,41 @@
 
 <!-- Valine评论 -->
 <script src="/js/av-min.js"></script>
-<script src='/js/Valine.min.js'></script>
+<script src="/js/Valine.min.js"></script>
 <!-- Leancloud统计 -->
 <!-- <script src="/js/av-min-1.2.1.js"></script> -->
 <!--  <script>AV.initialize("rJeVBhWeHlb33cC9L26UE7y3-gzGzoHsz", "uU7rD0e4IaYyrk6vSdM6GoHX");</script> -->
 
-<meta name="google-site-verification" content="IneMsg5aBY2Vw5QuPukpMzm5ATzGfO0dg40QXgKIPkk" />
+<meta name="google-site-verification" content="IneMsg5aBY2Vw5QuPukpMzm5ATzGfO0dg40QXgKIPkk">
 
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
   <meta name="renderer" content="webkit">
-  <meta http-equiv="Cache-Control" content="no-transform" />
-  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   <meta name="format-detection" content="telephone=no,email=no,adress=no">
   <!-- Color theme for statusbar -->
-  <meta name="theme-color" content="#000000" />
+  <meta name="theme-color" content="#000000">
   <!-- 强制页面在当前窗口以独立页面显示,防止别人在框架里调用页面 -->
-  <meta http-equiv="window-target" content="_top" />
+  <meta http-equiv="window-target" content="_top">
   
   
   <title>【Manacher+贪心】BZOJ3790 神奇项链 | linkfqy&#39;s Blog</title>
-  <meta name="description" content="题面在这里 ​ 可以发现题目意思就是把\(S\)用最少的回文串覆盖 那么先\(Manacher\)把所有极大回文子串找出来 就变成用一些线段覆盖\([1,n]\) 贪心即可 ​ 示例程序： 123456789101112131415161718192021222324252627282930313233343536#include&amp;lt;cstdio&amp;gt;#include&amp;lt;">
+  <meta name="description" content="题面在这里 ​     可以发现题目意思就是把$S$用最少的回文串覆盖 那么先$Manacher$把所有极大回文子串找出来 就变成用一些线段覆盖$[1,n]$ 贪心即可 ​     示例程序： 123456789101112131415161718192021222324252627282930313233343536#include&amp;lt;cstdio&amp;gt;#include&amp;lt;algori">
 <meta name="keywords" content="BZOJ,贪心,Manacher">
 <meta property="og:type" content="article">
 <meta property="og:title" content="【Manacher+贪心】BZOJ3790 神奇项链">
 <meta property="og:url" content="http://oi.linkfqy.top/posts/BZOJ3790/index.html">
 <meta property="og:site_name" content="linkfqy">
-<meta property="og:description" content="题面在这里 ​ 可以发现题目意思就是把\(S\)用最少的回文串覆盖 那么先\(Manacher\)把所有极大回文子串找出来 就变成用一些线段覆盖\([1,n]\) 贪心即可 ​ 示例程序： 123456789101112131415161718192021222324252627282930313233343536#include&amp;lt;cstdio&amp;gt;#include&amp;lt;">
+<meta property="og:description" content="题面在这里 ​     可以发现题目意思就是把$S$用最少的回文串覆盖 那么先$Manacher$把所有极大回文子串找出来 就变成用一些线段覆盖$[1,n]$ 贪心即可 ​     示例程序： 123456789101112131415161718192021222324252627282930313233343536#include&amp;lt;cstdio&amp;gt;#include&amp;lt;algori">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:updated_time" content="2018-10-05T06:07:24.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="【Manacher+贪心】BZOJ3790 神奇项链">
-<meta name="twitter:description" content="题面在这里 ​ 可以发现题目意思就是把\(S\)用最少的回文串覆盖 那么先\(Manacher\)把所有极大回文子串找出来 就变成用一些线段覆盖\([1,n]\) 贪心即可 ​ 示例程序： 123456789101112131415161718192021222324252627282930313233343536#include&amp;lt;cstdio&amp;gt;#include&amp;lt;">
+<meta name="twitter:description" content="题面在这里 ​     可以发现题目意思就是把$S$用最少的回文串覆盖 那么先$Manacher$把所有极大回文子串找出来 就变成用一些线段覆盖$[1,n]$ 贪心即可 ​     示例程序： 123456789101112131415161718192021222324252627282930313233343536#include&amp;lt;cstdio&amp;gt;#include&amp;lt;algori">
   <!-- Canonical links -->
   <link rel="canonical" href="http://oi.linkfqy.top/posts/BZOJ3790/index.html">
   
@@ -349,12 +349,12 @@
     <div class="article-entry markdown-body" itemprop="articleBody">
       
         <p><a href="https://lydsy.com/JudgeOnline/problem.php?id=3790" target="_blank" rel="noopener">题面在这里</a></p>
-<p>​</p>
-<p>可以发现题目意思就是把<span class="math inline">\(S\)</span>用最少的回文串覆盖</p>
-<p>那么先<span class="math inline">\(Manacher\)</span>把所有极大回文子串找出来</p>
-<p>就变成用一些线段覆盖<span class="math inline">\([1,n]\)</span></p>
+<p>​    </p>
+<p>可以发现题目意思就是把$S$用最少的回文串覆盖</p>
+<p>那么先$Manacher$把所有极大回文子串找出来</p>
+<p>就变成用一些线段覆盖$[1,n]$</p>
 <p>贪心即可</p>
-<p>​</p>
+<p>​    </p>
 <p>示例程序：</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> mp make_pair</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> X first</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> Y second</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxn=<span class="number">100005</span>;</span><br><span class="line"><span class="keyword">int</span> n,p[maxn];</span><br><span class="line"><span class="keyword">char</span> t[maxn],s[maxn];</span><br><span class="line">pair&lt;<span class="keyword">int</span>,<span class="keyword">int</span>&gt; a[maxn];</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">manacher</span><span class="params">(<span class="keyword">char</span> *s)</span></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> pos=<span class="number">0</span>,R=<span class="number">0</span>;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)&#123;</span><br><span class="line">		<span class="keyword">if</span> (i&lt;R) p[i]=min(p[<span class="number">2</span>*pos-i],R-i); <span class="keyword">else</span> p[i]=<span class="number">1</span>;</span><br><span class="line">		<span class="keyword">while</span> (<span class="number">1</span>&lt;=i-p[i]&amp;&amp;i+p[i]&lt;=n&amp;&amp;s[i-p[i]]==s[i+p[i]]) p[i]++;</span><br><span class="line">		<span class="keyword">if</span> (i+p[i]&gt;R) pos=i,R=i+p[i];</span><br><span class="line">		a[i]=mp(i-p[i]+<span class="number">1</span>,i+p[i]<span class="number">-1</span>);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="keyword">while</span> (~<span class="built_in">scanf</span>(<span class="string">"%s"</span>,t+<span class="number">1</span>))&#123;</span><br><span class="line">		n=<span class="number">0</span>;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">1</span>;t[i];i++) s[++n]=<span class="string">'#'</span>,s[++n]=t[i];</span><br><span class="line">		s[++n]=<span class="string">'#'</span>;</span><br><span class="line">		manacher(s);</span><br><span class="line">		sort(a+<span class="number">1</span>,a+<span class="number">1</span>+n);</span><br><span class="line">		<span class="keyword">int</span> ans=<span class="number">0</span>;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">1</span>,j=<span class="number">1</span>,MX=<span class="number">0</span>;i&lt;=n;)&#123;</span><br><span class="line">			<span class="keyword">while</span> (j&lt;=n&amp;&amp;a[j].X&lt;=i) MX=max(MX,a[j++].Y);</span><br><span class="line">			i=MX+<span class="number">1</span>;ans++;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"%d\n"</span>,ans<span class="number">-1</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
@@ -630,10 +630,26 @@ var _hmt = _hmt || [];
     var s = document.getElementsByTagName("script")[0];
     s.parentNode.insertBefore(hm, s);
 })();
-</script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</script>
 
 
 
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/MathJax.js?config=TeX-MML-AM_CHTML"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 
 </body>
 

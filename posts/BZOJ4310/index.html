@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang=zh>
-<head>
+<head><meta name="generator" content="Hexo 3.9.0">
 <!-- hexo-inject:begin --><!-- hexo-inject:end --><script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
 <link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
 <style>
@@ -19,26 +19,26 @@
 
 <!-- Valine评论 -->
 <script src="/js/av-min.js"></script>
-<script src='/js/Valine.min.js'></script>
+<script src="/js/Valine.min.js"></script>
 <!-- Leancloud统计 -->
 <!-- <script src="/js/av-min-1.2.1.js"></script> -->
 <!--  <script>AV.initialize("rJeVBhWeHlb33cC9L26UE7y3-gzGzoHsz", "uU7rD0e4IaYyrk6vSdM6GoHX");</script> -->
 
-<meta name="google-site-verification" content="IneMsg5aBY2Vw5QuPukpMzm5ATzGfO0dg40QXgKIPkk" />
+<meta name="google-site-verification" content="IneMsg5aBY2Vw5QuPukpMzm5ATzGfO0dg40QXgKIPkk">
 
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
   <meta name="renderer" content="webkit">
-  <meta http-equiv="Cache-Control" content="no-transform" />
-  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   <meta name="format-detection" content="telephone=no,email=no,adress=no">
   <!-- Color theme for statusbar -->
-  <meta name="theme-color" content="#000000" />
+  <meta name="theme-color" content="#000000">
   <!-- 强制页面在当前窗口以独立页面显示,防止别人在框架里调用页面 -->
-  <meta http-equiv="window-target" content="_top" />
+  <meta http-equiv="window-target" content="_top">
   
   
   <title>【后缀数组+二分+贪心】BZOJ4310 跳蚤 | linkfqy&#39;s Blog</title>
@@ -353,18 +353,18 @@
 <p><a href="https://www.lydsy.com/JudgeOnline/problem.php?id=4310" target="_blank" rel="noopener">题面在这里</a></p>
 <p>看到最大值最小就很明显是二分了</p>
 <p>关键在于如何获得第mid小的子串</p>
-<p>考虑第i小的后缀能够贡献多少个不同的子串，其实是<span class="math inline">\(n-sa[i]+1-height[i]\)</span></p>
+<p>考虑第i小的后缀能够贡献多少个不同的子串，其实是$n-sa[i]+1-height[i]$</p>
 <p>由于已知后缀的排序，扫一趟看第mid个贡献属于哪个后缀，就可以得到第mid小的子串了</p>
 <p>然后就是一个非常好想的贪心：从后往前，如果当前段即将比二分出的子串大，就分另一段</p>
 <p>看看段数是否不大于k就验证好了</p>
 <p>比较两个子串的大小可以用LCP实现。</p>
-<p>时间复杂度<span class="math inline">\(O(nlogn)\)</span></p>
+<p>时间复杂度$O(nlogn)$</p>
 <hr>
 <p>其实还有解法二……</p>
 <p>注意到k非常的小，可以先二分子串属于哪个后缀，然后大力二分右端点的位置</p>
-<p>往右枚举一个段的左端点，右端点为了不大于子串往左缩，到<span class="math inline">\(l\gt r\)</span>就可分一段了</p>
+<p>往右枚举一个段的左端点，右端点为了不大于子串往左缩，到$l\gt r$就可分一段了</p>
 <p>由于最多分K段，所以做的次数并不多</p>
-<p>炒鸡好写而且常数巨小！<span class="math inline">\(O(knlog^2n)\)</span>跑得飞快</p>
+<p>炒鸡好写而且常数巨小！$O(knlog^2n)$跑得飞快</p>
 <p>示例程序：</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cmath&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> cl(x,y) memset(x,y,sizeof(x))</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> ll;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxn=<span class="number">100005</span>;</span><br><span class="line"><span class="keyword">int</span> n,m,K,sa[maxn],rk[maxn],ht[maxn],ansl,ansr;</span><br><span class="line"><span class="keyword">char</span> s[maxn];</span><br><span class="line"><span class="keyword">int</span> t[maxn],buc[maxn],f[maxn][<span class="number">20</span>],w[maxn];</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">get_sa</span><span class="params">()</span></span>&#123;</span><br><span class="line">	cl(buc,<span class="number">0</span>);</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++) buc[rk[t[i]]]++;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=m;i++) buc[i]+=buc[i<span class="number">-1</span>];</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i=n;i&gt;=<span class="number">1</span>;i--) sa[buc[rk[t[i]]]--]=t[i];</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">make_sa</span><span class="params">()</span></span>&#123;</span><br><span class="line">	m=<span class="number">128</span>;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++) rk[i]=s[i],t[i]=i;</span><br><span class="line">	get_sa();</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> k=<span class="number">1</span>,p=<span class="number">0</span>;k&lt;n&amp;&amp;p&lt;n;k&lt;&lt;=<span class="number">1</span>,m=p)&#123;</span><br><span class="line">		p=<span class="number">0</span>;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i=n-k+<span class="number">1</span>;i&lt;=n;i++) t[++p]=i;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++) <span class="keyword">if</span> (sa[i]&gt;k) t[++p]=sa[i]-k;</span><br><span class="line">		get_sa(); t[sa[<span class="number">1</span>]]=p=<span class="number">1</span>;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">2</span>;i&lt;=n;i++)</span><br><span class="line">		 <span class="keyword">if</span> (rk[sa[i]]==rk[sa[i<span class="number">-1</span>]]&amp;&amp;rk[sa[i]+k]==rk[sa[i<span class="number">-1</span>]+k]) t[sa[i]]=p;<span class="keyword">else</span> t[sa[i]]=++p;</span><br><span class="line">		<span class="built_in">memcpy</span>(rk,t,<span class="keyword">sizeof</span>(rk));</span><br><span class="line">		<span class="keyword">if</span> (p==n) <span class="keyword">break</span>;</span><br><span class="line">		m=p;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">1</span>,h=<span class="number">0</span>;i&lt;=n;i++)&#123;</span><br><span class="line">		<span class="keyword">if</span> (h) h--;</span><br><span class="line">		<span class="keyword">int</span> j=sa[rk[i]<span class="number">-1</span>];</span><br><span class="line">		<span class="keyword">while</span> (s[i+h]==s[j+h]) h++;</span><br><span class="line">		ht[rk[i]]=h;</span><br><span class="line">	&#125; ht[<span class="number">1</span>]=<span class="number">0</span>;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++) f[i][<span class="number">0</span>]=ht[i];</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> j=<span class="number">1</span>;j&lt;=log2(n);j++)</span><br><span class="line">	 <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">1</span>;i+(<span class="number">1</span>&lt;&lt;j)<span class="number">-1</span>&lt;=n;i++)</span><br><span class="line">	  f[i][j]=min(f[i][j<span class="number">-1</span>],f[i+(<span class="number">1</span>&lt;&lt;j<span class="number">-1</span>)][j<span class="number">-1</span>]);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">int</span> <span class="title">LCP</span><span class="params">(<span class="keyword">int</span> l,<span class="keyword">int</span> r)</span></span>&#123;</span><br><span class="line">	<span class="keyword">if</span> (l==r) <span class="keyword">return</span> n-l+<span class="number">1</span>;</span><br><span class="line">	l=rk[l];r=rk[r]; <span class="keyword">if</span> (l&gt;r) swap(l,r); l++;</span><br><span class="line">	<span class="keyword">int</span> j=log2(r-l+<span class="number">1</span>);</span><br><span class="line">	<span class="keyword">return</span> min(f[l][j],f[r-(<span class="number">1</span>&lt;&lt;j)+<span class="number">1</span>][j]);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">bool</span> <span class="title">cmp</span><span class="params">(<span class="keyword">int</span> l,<span class="keyword">int</span> r,<span class="keyword">int</span> ll,<span class="keyword">int</span> rr)</span></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> n1=r-l+<span class="number">1</span>,n2=rr-ll+<span class="number">1</span>,k=LCP(l,ll);</span><br><span class="line">	<span class="keyword">if</span> (n1&lt;=n2&amp;&amp;k&gt;=n1) <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">	<span class="keyword">if</span> (n1&gt;n2&amp;&amp;k&gt;=n2) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">return</span> s[l+k]&lt;=s[ll+k];</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">check</span><span class="params">(ll mid)</span></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> l,r,num=<span class="number">1</span>,lst=n;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)</span><br><span class="line">	 <span class="keyword">if</span> (w[i]&lt;mid) mid-=w[i];<span class="keyword">else</span> &#123;l=sa[i];r=n-w[i]+mid;;<span class="keyword">break</span>;&#125;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i=n;i&gt;=<span class="number">1</span>;i--)&#123;</span><br><span class="line">		<span class="keyword">if</span> (s[i]&gt;s[l]) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">		<span class="keyword">if</span> (!cmp(i,lst,l,r)) lst=i,num++;</span><br><span class="line">		<span class="keyword">if</span> (num&gt;K) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	ansl=l;ansr=r;<span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%d%s"</span>,&amp;K,s+<span class="number">1</span>);n=<span class="built_in">strlen</span>(s+<span class="number">1</span>);</span><br><span class="line">	make_sa();</span><br><span class="line">	ll l=<span class="number">1</span>,r=<span class="number">0</span>;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++) w[i]=n-sa[i]+<span class="number">1</span>-ht[i],r+=w[i];</span><br><span class="line">	<span class="keyword">while</span> (l&lt;=r)&#123;</span><br><span class="line">		ll mid=l+r&gt;&gt;<span class="number">1</span>;</span><br><span class="line">		<span class="keyword">if</span> (check(mid)) r=mid<span class="number">-1</span>;<span class="keyword">else</span> l=mid+<span class="number">1</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i=ansl;i&lt;=ansr;i++) <span class="built_in">putchar</span>(s[i]);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
@@ -640,10 +640,26 @@ var _hmt = _hmt || [];
     var s = document.getElementsByTagName("script")[0];
     s.parentNode.insertBefore(hm, s);
 })();
-</script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</script>
 
 
 
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/MathJax.js?config=TeX-MML-AM_CHTML"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 
 </body>
 

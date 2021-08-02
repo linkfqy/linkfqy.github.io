@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang=zh>
-<head>
+<head><meta name="generator" content="Hexo 3.9.0">
 <!-- hexo-inject:begin --><!-- hexo-inject:end --><script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
 <link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
 <style>
@@ -19,41 +19,41 @@
 
 <!-- Valine评论 -->
 <script src="/js/av-min.js"></script>
-<script src='/js/Valine.min.js'></script>
+<script src="/js/Valine.min.js"></script>
 <!-- Leancloud统计 -->
 <!-- <script src="/js/av-min-1.2.1.js"></script> -->
 <!--  <script>AV.initialize("rJeVBhWeHlb33cC9L26UE7y3-gzGzoHsz", "uU7rD0e4IaYyrk6vSdM6GoHX");</script> -->
 
-<meta name="google-site-verification" content="IneMsg5aBY2Vw5QuPukpMzm5ATzGfO0dg40QXgKIPkk" />
+<meta name="google-site-verification" content="IneMsg5aBY2Vw5QuPukpMzm5ATzGfO0dg40QXgKIPkk">
 
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
   <meta name="renderer" content="webkit">
-  <meta http-equiv="Cache-Control" content="no-transform" />
-  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   <meta name="format-detection" content="telephone=no,email=no,adress=no">
   <!-- Color theme for statusbar -->
-  <meta name="theme-color" content="#000000" />
+  <meta name="theme-color" content="#000000">
   <!-- 强制页面在当前窗口以独立页面显示,防止别人在框架里调用页面 -->
-  <meta http-equiv="window-target" content="_top" />
+  <meta http-equiv="window-target" content="_top">
   
   
   <title>【线段树+矩阵乘法】Codeforces 719E Sasha and Array | linkfqy&#39;s Blog</title>
-  <meta name="description" content="题面在这里 ​ 因为矩乘是满足分配率和结合律的 所以直接用线段树维护矩阵即可 修改的值和懒标记都是一个矩阵 ​ 示例程序： 12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656667686970">
+  <meta name="description" content="题面在这里 ​     因为矩乘是满足分配率和结合律的 所以直接用线段树维护矩阵即可 修改的值和懒标记都是一个矩阵 ​     示例程序： 1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697">
 <meta name="keywords" content="矩阵,线段树,Codeforces">
 <meta property="og:type" content="article">
 <meta property="og:title" content="【线段树+矩阵乘法】Codeforces 719E Sasha and Array">
 <meta property="og:url" content="http://oi.linkfqy.top/posts/CF719E/index.html">
 <meta property="og:site_name" content="linkfqy">
-<meta property="og:description" content="题面在这里 ​ 因为矩乘是满足分配率和结合律的 所以直接用线段树维护矩阵即可 修改的值和懒标记都是一个矩阵 ​ 示例程序： 12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656667686970">
+<meta property="og:description" content="题面在这里 ​     因为矩乘是满足分配率和结合律的 所以直接用线段树维护矩阵即可 修改的值和懒标记都是一个矩阵 ​     示例程序： 1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:updated_time" content="2018-10-10T10:23:12.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="【线段树+矩阵乘法】Codeforces 719E Sasha and Array">
-<meta name="twitter:description" content="题面在这里 ​ 因为矩乘是满足分配率和结合律的 所以直接用线段树维护矩阵即可 修改的值和懒标记都是一个矩阵 ​ 示例程序： 12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656667686970">
+<meta name="twitter:description" content="题面在这里 ​     因为矩乘是满足分配率和结合律的 所以直接用线段树维护矩阵即可 修改的值和懒标记都是一个矩阵 ​     示例程序： 1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697">
   <!-- Canonical links -->
   <link rel="canonical" href="http://oi.linkfqy.top/posts/CF719E/index.html">
   
@@ -349,11 +349,11 @@
     <div class="article-entry markdown-body" itemprop="articleBody">
       
         <p><a href="http://codeforces.com/problemset/problem/719/E" target="_blank" rel="noopener">题面在这里</a></p>
-<p>​</p>
+<p>​    </p>
 <p>因为矩乘是满足分配率和结合律的</p>
 <p>所以直接用线段树维护矩阵即可</p>
 <p>修改的值和懒标记都是一个矩阵</p>
-<p>​</p>
+<p>​    </p>
 <p>示例程序：</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> ll;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxn=<span class="number">100005</span>,maxs=<span class="number">400005</span>,MOD=<span class="number">1e9</span>+<span class="number">7</span>;</span><br><span class="line"><span class="keyword">int</span> n,q;</span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">matrix</span>&#123;</span></span><br><span class="line">	<span class="keyword">int</span> n,m;</span><br><span class="line">	ll s[<span class="number">2</span>][<span class="number">2</span>];</span><br><span class="line">	matrix () &#123;n=m=<span class="number">0</span>;s[<span class="number">0</span>][<span class="number">0</span>]=s[<span class="number">0</span>][<span class="number">1</span>]=s[<span class="number">1</span>][<span class="number">0</span>]=s[<span class="number">1</span>][<span class="number">1</span>]=<span class="number">0</span>;&#125;</span><br><span class="line">&#125;a[maxn],t,one;</span><br><span class="line"><span class="keyword">inline</span> matrix <span class="keyword">operator</span>*(<span class="keyword">const</span> matrix&amp;a,<span class="keyword">const</span> matrix&amp;b)&#123;</span><br><span class="line">	matrix c;</span><br><span class="line">	c.n=a.n;c.m=b.m;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;c.n;i++)</span><br><span class="line">	 <span class="keyword">for</span> (<span class="keyword">int</span> j=<span class="number">0</span>;j&lt;c.m;j++)</span><br><span class="line">	  <span class="keyword">for</span> (<span class="keyword">int</span> k=<span class="number">0</span>;k&lt;a.m;k++)</span><br><span class="line">	   (c.s[i][j]+=a.s[i][k]*b.s[k][j]%MOD)%=MOD;</span><br><span class="line">	<span class="keyword">return</span> c;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">inline</span> matrix <span class="keyword">operator</span>+(<span class="keyword">const</span> matrix&amp;a,<span class="keyword">const</span> matrix&amp;b)&#123;</span><br><span class="line">	matrix c;</span><br><span class="line">	c.n=a.n;c.m=b.m;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;c.n;i++)</span><br><span class="line">	 <span class="keyword">for</span> (<span class="keyword">int</span> j=<span class="number">0</span>;j&lt;c.m;j++)</span><br><span class="line">	  c.s[i][j]=(a.s[i][j]+b.s[i][j])%MOD;</span><br><span class="line">	<span class="keyword">return</span> c;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">inline</span> <span class="keyword">bool</span> <span class="keyword">operator</span>==(<span class="keyword">const</span> matrix&amp;a,<span class="keyword">const</span> matrix&amp;b)&#123;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;<span class="number">2</span>;i++)</span><br><span class="line">	 <span class="keyword">for</span> (<span class="keyword">int</span> j=<span class="number">0</span>;j&lt;<span class="number">2</span>;j++)</span><br><span class="line">	  <span class="keyword">if</span> (a.s[i][j]!=b.s[i][j]) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">inline</span> matrix <span class="title">power</span><span class="params">(matrix a,<span class="keyword">int</span> b)</span></span>&#123;</span><br><span class="line">	matrix w=a,res=one;</span><br><span class="line">	<span class="keyword">while</span> (b)&#123;</span><br><span class="line">		<span class="keyword">if</span> (b&amp;<span class="number">1</span>) res=res*w;</span><br><span class="line">		w=w*w;</span><br><span class="line">		b&gt;&gt;=<span class="number">1</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> res;</span><br><span class="line">&#125;</span><br><span class="line">matrix m[maxs],tg[maxs];</span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> ls x&lt;&lt;1</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> rs x&lt;&lt;1|1</span></span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">pushup</span><span class="params">(<span class="keyword">int</span> x)</span> </span>&#123;m[x]=m[ls]+m[rs];&#125;</span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">addtg</span><span class="params">(<span class="keyword">int</span> x,matrix w)</span> </span>&#123;m[x]=w*m[x];tg[x]=w*tg[x];&#125;</span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">pushdown</span><span class="params">(<span class="keyword">int</span> x)</span></span>&#123;</span><br><span class="line">	<span class="keyword">if</span> (!(tg[x]==one)) addtg(ls,tg[x]),addtg(rs,tg[x]),tg[x]=one;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">build</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">int</span> l,<span class="keyword">int</span> r)</span></span>&#123;</span><br><span class="line">	tg[x]=one;</span><br><span class="line">	<span class="keyword">if</span> (l==r) &#123;m[x]=a[l];<span class="keyword">return</span>;&#125;</span><br><span class="line">	<span class="keyword">int</span> mid=l+r&gt;&gt;<span class="number">1</span>;</span><br><span class="line">	build(ls,l,mid);build(rs,mid+<span class="number">1</span>,r);</span><br><span class="line">	pushup(x);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">ist</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">int</span> l,<span class="keyword">int</span> r,<span class="keyword">int</span> ql,<span class="keyword">int</span> qr,matrix w)</span></span>&#123;</span><br><span class="line">	<span class="keyword">if</span> (ql&lt;=l&amp;&amp;r&lt;=qr) &#123;addtg(x,w);<span class="keyword">return</span>;&#125;</span><br><span class="line">	<span class="keyword">if</span> (qr&lt;l||r&lt;ql) <span class="keyword">return</span>;</span><br><span class="line">	<span class="keyword">int</span> mid=l+r&gt;&gt;<span class="number">1</span>; pushdown(x);</span><br><span class="line">	ist(ls,l,mid,ql,qr,w); ist(rs,mid+<span class="number">1</span>,r,ql,qr,w);</span><br><span class="line">	pushup(x);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function">ll <span class="title">qry</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">int</span> l,<span class="keyword">int</span> r,<span class="keyword">int</span> ql,<span class="keyword">int</span> qr)</span></span>&#123;</span><br><span class="line">	<span class="keyword">if</span> (ql&lt;=l&amp;&amp;r&lt;=qr) <span class="keyword">return</span> m[x].s[<span class="number">1</span>][<span class="number">0</span>];</span><br><span class="line">	<span class="keyword">if</span> (qr&lt;l||r&lt;ql) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">int</span> mid=l+r&gt;&gt;<span class="number">1</span>; pushdown(x);</span><br><span class="line">	<span class="keyword">return</span> (qry(ls,l,mid,ql,qr)+qry(rs,mid+<span class="number">1</span>,r,ql,qr))%MOD;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%d%d"</span>,&amp;n,&amp;q);</span><br><span class="line">	t.n=t.m=<span class="number">2</span>; t.s[<span class="number">0</span>][<span class="number">0</span>]=t.s[<span class="number">0</span>][<span class="number">1</span>]=t.s[<span class="number">1</span>][<span class="number">0</span>]=<span class="number">1</span>;</span><br><span class="line">	one.n=one.m=<span class="number">2</span>; one.s[<span class="number">0</span>][<span class="number">0</span>]=one.s[<span class="number">1</span>][<span class="number">1</span>]=<span class="number">1</span>;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)&#123;</span><br><span class="line">		<span class="keyword">int</span> x;<span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;x);</span><br><span class="line">		a[i].n=<span class="number">2</span>;a[i].m=<span class="number">1</span>;a[i].s[<span class="number">0</span>][<span class="number">0</span>]=a[i].s[<span class="number">1</span>][<span class="number">0</span>]=<span class="number">1</span>;</span><br><span class="line">		a[i]=power(t,x<span class="number">-1</span>)*a[i];</span><br><span class="line">	&#125;</span><br><span class="line">	build(<span class="number">1</span>,<span class="number">1</span>,n);</span><br><span class="line">	<span class="keyword">while</span> (q--)&#123;</span><br><span class="line">		<span class="keyword">int</span> c;<span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;c);</span><br><span class="line">		<span class="keyword">if</span> (c==<span class="number">1</span>)&#123;</span><br><span class="line">			<span class="keyword">int</span> l,r,x;<span class="built_in">scanf</span>(<span class="string">"%d%d%d"</span>,&amp;l,&amp;r,&amp;x);</span><br><span class="line">			ist(<span class="number">1</span>,<span class="number">1</span>,n,l,r,power(t,x));</span><br><span class="line">		&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">			<span class="keyword">int</span> l,r;<span class="built_in">scanf</span>(<span class="string">"%d%d"</span>,&amp;l,&amp;r);</span><br><span class="line">			<span class="built_in">printf</span>(<span class="string">"%lld\n"</span>,qry(<span class="number">1</span>,<span class="number">1</span>,n,l,r));</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
@@ -629,10 +629,26 @@ var _hmt = _hmt || [];
     var s = document.getElementsByTagName("script")[0];
     s.parentNode.insertBefore(hm, s);
 })();
-</script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</script>
 
 
 
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/MathJax.js?config=TeX-MML-AM_CHTML"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 
 </body>
 

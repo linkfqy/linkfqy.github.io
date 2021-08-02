@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang=zh>
-<head>
+<head><meta name="generator" content="Hexo 3.9.0">
 <!-- hexo-inject:begin --><!-- hexo-inject:end --><script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
 <link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
 <style>
@@ -19,41 +19,41 @@
 
 <!-- Valine评论 -->
 <script src="/js/av-min.js"></script>
-<script src='/js/Valine.min.js'></script>
+<script src="/js/Valine.min.js"></script>
 <!-- Leancloud统计 -->
 <!-- <script src="/js/av-min-1.2.1.js"></script> -->
 <!--  <script>AV.initialize("rJeVBhWeHlb33cC9L26UE7y3-gzGzoHsz", "uU7rD0e4IaYyrk6vSdM6GoHX");</script> -->
 
-<meta name="google-site-verification" content="IneMsg5aBY2Vw5QuPukpMzm5ATzGfO0dg40QXgKIPkk" />
+<meta name="google-site-verification" content="IneMsg5aBY2Vw5QuPukpMzm5ATzGfO0dg40QXgKIPkk">
 
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
   <meta name="renderer" content="webkit">
-  <meta http-equiv="Cache-Control" content="no-transform" />
-  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   <meta name="format-detection" content="telephone=no,email=no,adress=no">
   <!-- Color theme for statusbar -->
-  <meta name="theme-color" content="#000000" />
+  <meta name="theme-color" content="#000000">
   <!-- 强制页面在当前窗口以独立页面显示,防止别人在框架里调用页面 -->
-  <meta http-equiv="window-target" content="_top" />
+  <meta http-equiv="window-target" content="_top">
   
   
   <title>【贪心】Codeforces 958B2 Maximum Control (medium) | linkfqy&#39;s Blog</title>
-  <meta name="description" content="题面在这里 很容易想到\(K=2\)时就是求树的直径 其实就是两次DFS，得到的两个最远点的距离就是直径了 其实\(K\gt 2\)也差不多： 每次从未标记的点中找出深度最大的，用于放新的飞船 然后一路向上，标记路径上所有点并更新答案就好了 挺好想的一个贪心…… 示例程序： 123456789101112131415161718192021222324252627282930313">
+  <meta name="description" content="题面在这里 很容易想到$K=2$时就是求树的直径 其实就是两次DFS，得到的两个最远点的距离就是直径了 其实$K\gt 2$也差不多： 每次从未标记的点中找出深度最大的，用于放新的飞船 然后一路向上，标记路径上所有点并更新答案就好了 挺好想的一个贪心…… 示例程序： 123456789101112131415161718192021222324252627282930313233343536373">
 <meta name="keywords" content="贪心,Codeforces">
 <meta property="og:type" content="article">
 <meta property="og:title" content="【贪心】Codeforces 958B2 Maximum Control (medium)">
 <meta property="og:url" content="http://oi.linkfqy.top/posts/CF958B2/index.html">
 <meta property="og:site_name" content="linkfqy">
-<meta property="og:description" content="题面在这里 很容易想到\(K=2\)时就是求树的直径 其实就是两次DFS，得到的两个最远点的距离就是直径了 其实\(K\gt 2\)也差不多： 每次从未标记的点中找出深度最大的，用于放新的飞船 然后一路向上，标记路径上所有点并更新答案就好了 挺好想的一个贪心…… 示例程序： 123456789101112131415161718192021222324252627282930313">
+<meta property="og:description" content="题面在这里 很容易想到$K=2$时就是求树的直径 其实就是两次DFS，得到的两个最远点的距离就是直径了 其实$K\gt 2$也差不多： 每次从未标记的点中找出深度最大的，用于放新的飞船 然后一路向上，标记路径上所有点并更新答案就好了 挺好想的一个贪心…… 示例程序： 123456789101112131415161718192021222324252627282930313233343536373">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:updated_time" content="2018-05-12T15:05:50.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="【贪心】Codeforces 958B2 Maximum Control (medium)">
-<meta name="twitter:description" content="题面在这里 很容易想到\(K=2\)时就是求树的直径 其实就是两次DFS，得到的两个最远点的距离就是直径了 其实\(K\gt 2\)也差不多： 每次从未标记的点中找出深度最大的，用于放新的飞船 然后一路向上，标记路径上所有点并更新答案就好了 挺好想的一个贪心…… 示例程序： 123456789101112131415161718192021222324252627282930313">
+<meta name="twitter:description" content="题面在这里 很容易想到$K=2$时就是求树的直径 其实就是两次DFS，得到的两个最远点的距离就是直径了 其实$K\gt 2$也差不多： 每次从未标记的点中找出深度最大的，用于放新的飞船 然后一路向上，标记路径上所有点并更新答案就好了 挺好想的一个贪心…… 示例程序： 123456789101112131415161718192021222324252627282930313233343536373">
   <!-- Canonical links -->
   <link rel="canonical" href="http://oi.linkfqy.top/posts/CF958B2/index.html">
   
@@ -349,9 +349,9 @@
     <div class="article-entry markdown-body" itemprop="articleBody">
       
         <p><a href="http://codeforces.com/contest/958/problem/B2" target="_blank" rel="noopener">题面在这里</a></p>
-<p>很容易想到<span class="math inline">\(K=2\)</span>时就是求树的直径</p>
+<p>很容易想到$K=2$时就是求树的直径</p>
 <p>其实就是两次DFS，得到的两个最远点的距离就是直径了</p>
-<p>其实<span class="math inline">\(K\gt 2\)</span>也差不多：</p>
+<p>其实$K\gt 2$也差不多：</p>
 <p>每次从未标记的点中找出深度最大的，用于放新的飞船</p>
 <p>然后一路向上，标记路径上所有点并更新答案就好了</p>
 <p>挺好想的一个贪心……</p>
@@ -630,10 +630,26 @@ var _hmt = _hmt || [];
     var s = document.getElementsByTagName("script")[0];
     s.parentNode.insertBefore(hm, s);
 })();
-</script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</script>
 
 
 
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/MathJax.js?config=TeX-MML-AM_CHTML"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 
 </body>
 

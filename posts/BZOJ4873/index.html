@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang=zh>
-<head>
+<head><meta name="generator" content="Hexo 3.9.0">
 <!-- hexo-inject:begin --><!-- hexo-inject:end --><script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
 <link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
 <style>
@@ -19,41 +19,41 @@
 
 <!-- Valine评论 -->
 <script src="/js/av-min.js"></script>
-<script src='/js/Valine.min.js'></script>
+<script src="/js/Valine.min.js"></script>
 <!-- Leancloud统计 -->
 <!-- <script src="/js/av-min-1.2.1.js"></script> -->
 <!--  <script>AV.initialize("rJeVBhWeHlb33cC9L26UE7y3-gzGzoHsz", "uU7rD0e4IaYyrk6vSdM6GoHX");</script> -->
 
-<meta name="google-site-verification" content="IneMsg5aBY2Vw5QuPukpMzm5ATzGfO0dg40QXgKIPkk" />
+<meta name="google-site-verification" content="IneMsg5aBY2Vw5QuPukpMzm5ATzGfO0dg40QXgKIPkk">
 
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
   <meta name="renderer" content="webkit">
-  <meta http-equiv="Cache-Control" content="no-transform" />
-  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   <meta name="format-detection" content="telephone=no,email=no,adress=no">
   <!-- Color theme for statusbar -->
-  <meta name="theme-color" content="#000000" />
+  <meta name="theme-color" content="#000000">
   <!-- 强制页面在当前窗口以独立页面显示,防止别人在框架里调用页面 -->
-  <meta http-equiv="window-target" content="_top" />
+  <meta http-equiv="window-target" content="_top">
   
   
   <title>【最大权闭合子图】BZOJ4873 [Shoi2017]寿司餐厅 | linkfqy&#39;s Blog</title>
-  <meta name="description" content="题面在这里 ​ 因为题中各种代价都只能算入一次，很适合用最大权闭合子图的模型解决 把区间\((i,j)\)和代号\(a_i\)看作一个点，建立点权图：  对于\((i,j),i\lt j\)，点权为\(d_{i,j}\)，向\((i+1,j),(i,j-1)\)连边  取了一个区间，则其所有子区间都会有代价  对于\((i,i)\)，点权为\(d_{i,i}-a_i\)，向\(a">
-<meta name="keywords" content="网络流,BZOJ,最大权闭合子图">
+  <meta name="description" content="题面在这里 ​     因为题中各种代价都只能算入一次，很适合用最大权闭合子图的模型解决 把区间$(i,j)$和代号$a_i$看作一个点，建立点权图：  对于$(i,j),i\lt j$，点权为$d_{i,j}$，向$(i+1,j),(i,j-1)$连边 取了一个区间，则其所有子区间都会有代价   对于$(i,i)$，点权为$d_{i,i}-a_i$，向$a_i$连边 底层区间对应所取的寿司">
+<meta name="keywords" content="BZOJ,网络流,最大权闭合子图">
 <meta property="og:type" content="article">
 <meta property="og:title" content="【最大权闭合子图】BZOJ4873 [Shoi2017]寿司餐厅">
 <meta property="og:url" content="http://oi.linkfqy.top/posts/BZOJ4873/index.html">
 <meta property="og:site_name" content="linkfqy">
-<meta property="og:description" content="题面在这里 ​ 因为题中各种代价都只能算入一次，很适合用最大权闭合子图的模型解决 把区间\((i,j)\)和代号\(a_i\)看作一个点，建立点权图：  对于\((i,j),i\lt j\)，点权为\(d_{i,j}\)，向\((i+1,j),(i,j-1)\)连边  取了一个区间，则其所有子区间都会有代价  对于\((i,i)\)，点权为\(d_{i,i}-a_i\)，向\(a">
+<meta property="og:description" content="题面在这里 ​     因为题中各种代价都只能算入一次，很适合用最大权闭合子图的模型解决 把区间$(i,j)$和代号$a_i$看作一个点，建立点权图：  对于$(i,j),i\lt j$，点权为$d_{i,j}$，向$(i+1,j),(i,j-1)$连边 取了一个区间，则其所有子区间都会有代价   对于$(i,i)$，点权为$d_{i,i}-a_i$，向$a_i$连边 底层区间对应所取的寿司">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:updated_time" content="2018-09-30T13:54:44.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="【最大权闭合子图】BZOJ4873 [Shoi2017]寿司餐厅">
-<meta name="twitter:description" content="题面在这里 ​ 因为题中各种代价都只能算入一次，很适合用最大权闭合子图的模型解决 把区间\((i,j)\)和代号\(a_i\)看作一个点，建立点权图：  对于\((i,j),i\lt j\)，点权为\(d_{i,j}\)，向\((i+1,j),(i,j-1)\)连边  取了一个区间，则其所有子区间都会有代价  对于\((i,i)\)，点权为\(d_{i,i}-a_i\)，向\(a">
+<meta name="twitter:description" content="题面在这里 ​     因为题中各种代价都只能算入一次，很适合用最大权闭合子图的模型解决 把区间$(i,j)$和代号$a_i$看作一个点，建立点权图：  对于$(i,j),i\lt j$，点权为$d_{i,j}$，向$(i+1,j),(i,j-1)$连边 取了一个区间，则其所有子区间都会有代价   对于$(i,i)$，点权为$d_{i,i}-a_i$，向$a_i$连边 底层区间对应所取的寿司">
   <!-- Canonical links -->
   <link rel="canonical" href="http://oi.linkfqy.top/posts/BZOJ4873/index.html">
   
@@ -349,26 +349,26 @@
     <div class="article-entry markdown-body" itemprop="articleBody">
       
         <p><a href="https://lydsy.com/JudgeOnline/problem.php?id=4873" target="_blank" rel="noopener">题面在这里</a></p>
-<p>​</p>
+<p>​    </p>
 <p>因为题中各种代价都只能算入一次，很适合用最大权闭合子图的模型解决</p>
-<p>把区间<span class="math inline">\((i,j)\)</span>和代号<span class="math inline">\(a_i\)</span>看作一个点，建立点权图：</p>
+<p>把区间$(i,j)$和代号$a_i$看作一个点，建立点权图：</p>
 <ul>
-<li>对于<span class="math inline">\((i,j),i\lt j\)</span>，点权为<span class="math inline">\(d_{i,j}\)</span>，向<span class="math inline">\((i+1,j),(i,j-1)\)</span>连边
-<ul>
+<li>对于$(i,j),i\lt j$，点权为$d_{i,j}$，向$(i+1,j),(i,j-1)$连边<ul>
 <li>取了一个区间，则其所有子区间都会有代价</li>
-</ul></li>
-<li>对于<span class="math inline">\((i,i)\)</span>，点权为<span class="math inline">\(d_{i,i}-a_i\)</span>，向<span class="math inline">\(a_i\)</span>连边
-<ul>
+</ul>
+</li>
+<li>对于$(i,i)$，点权为$d_{i,i}-a_i$，向$a_i$连边<ul>
 <li>底层区间对应所取的寿司</li>
-</ul></li>
-<li>对于<span class="math inline">\(a_i\)</span>，点权为<span class="math inline">\(-m\cdot a_i^2\)</span>
-<ul>
+</ul>
+</li>
+<li>对于$a_i$，点权为$-m\cdot a_i^2$<ul>
 <li>还是为了满足关于代号的代价</li>
-</ul></li>
+</ul>
+</li>
 </ul>
 <p>直接套用最小割求解</p>
-<p>注意<span class="math inline">\(a_i\)</span>哪里不要搞出重边来，网络流最怕这个</p>
-<p>​</p>
+<p>注意$a_i$哪里不要搞出重边来，网络流最怕这个</p>
+<p>​    </p>
 <p>示例程序：</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> cl(x,y) memset(x,y,sizeof(x))</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxn=<span class="number">11005</span>,maxe=<span class="number">62005</span>,INF=<span class="number">0x3f3f3f3f</span>;</span><br><span class="line"><span class="keyword">int</span> n,N,S,T,m,ans,a[<span class="number">105</span>],d[<span class="number">105</span>][<span class="number">105</span>],id[<span class="number">105</span>][<span class="number">105</span>];</span><br><span class="line"><span class="keyword">int</span> son[maxe],nxt[maxe],lnk[maxn],tot=<span class="number">1</span>,flw[maxe],cap[maxe];</span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">add</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">int</span> y,<span class="keyword">int</span> f)</span></span>&#123;</span><br><span class="line">	son[++tot]=y;nxt[tot]=lnk[x];lnk[x]=tot;flw[tot]=<span class="number">0</span>;cap[tot]=f;</span><br><span class="line">	son[++tot]=x;nxt[tot]=lnk[y];lnk[y]=tot;flw[tot]=<span class="number">0</span>;cap[tot]=<span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">int</span> pos[maxn],que[maxn],D[maxn];</span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">bfs</span><span class="params">()</span></span>&#123;</span><br><span class="line">	cl(D,<span class="number">63</span>);</span><br><span class="line">	<span class="keyword">int</span> hed=<span class="number">0</span>,til=<span class="number">1</span>;</span><br><span class="line">	que[<span class="number">1</span>]=S;D[S]=<span class="number">0</span>;</span><br><span class="line">	<span class="keyword">while</span> (hed!=til)&#123;</span><br><span class="line">		<span class="keyword">int</span> x=que[++hed];</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> j=lnk[x];j;j=nxt[j])</span><br><span class="line">		 <span class="keyword">if</span> (D[son[j]]==INF&amp;&amp;flw[j]&lt;cap[j])</span><br><span class="line">		  que[++til]=son[j],D[son[j]]=D[x]+<span class="number">1</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> D[T]!=INF;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">dfs</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">int</span> flow)</span></span>&#123;</span><br><span class="line">	<span class="keyword">if</span> (x==T||flow==<span class="number">0</span>) <span class="keyword">return</span> flow;</span><br><span class="line">	<span class="keyword">int</span> res=<span class="number">0</span>,f;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> &amp;j=pos[x];j;j=nxt[j])</span><br><span class="line">	 <span class="keyword">if</span> (D[son[j]]==D[x]+<span class="number">1</span>&amp;&amp;(f=dfs(son[j],min(flow,cap[j]-flw[j])))&gt;<span class="number">0</span>)&#123;</span><br><span class="line">	 	flw[j]+=f; flw[j^<span class="number">1</span>]-=f;</span><br><span class="line">	 	res+=f; flow-=f;</span><br><span class="line">	 &#125;</span><br><span class="line">	<span class="keyword">return</span> res;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%d%d"</span>,&amp;n,&amp;m);</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++) <span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;a[i]);</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)</span><br><span class="line">	 <span class="keyword">for</span> (<span class="keyword">int</span> j=i;j&lt;=n;j++) <span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;d[i][j]);</span><br><span class="line">	S=++N;T=++N;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)</span><br><span class="line">	 <span class="keyword">for</span> (<span class="keyword">int</span> j=i;j&lt;=n;j++)&#123;</span><br><span class="line">	 	id[i][j]=++N;<span class="keyword">int</span> w=(i==j?d[i][j]-a[i]:d[i][j]);</span><br><span class="line">	 	<span class="keyword">if</span> (w&gt;<span class="number">0</span>) add(S,N,w),ans+=w;<span class="keyword">else</span> add(N,T,-w);</span><br><span class="line">	 &#125;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=<span class="number">1000</span>;i++) add(i+N,T,m*i*i);</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)</span><br><span class="line">	 <span class="keyword">for</span> (<span class="keyword">int</span> j=i;j&lt;=n;j++)</span><br><span class="line">	  <span class="keyword">if</span> (i==j) add(id[i][j],N+a[i],INF);</span><br><span class="line">	  <span class="keyword">else</span>&#123;</span><br><span class="line">	  	<span class="keyword">if</span> (i&lt;n) add(id[i][j],id[i+<span class="number">1</span>][j],INF);</span><br><span class="line">	  	<span class="keyword">if</span> (j&gt;<span class="number">1</span>) add(id[i][j],id[i][j<span class="number">-1</span>],INF);</span><br><span class="line">	  &#125;</span><br><span class="line">	<span class="keyword">while</span> (bfs())&#123;</span><br><span class="line">		<span class="built_in">memcpy</span>(pos,lnk,<span class="keyword">sizeof</span>(lnk));</span><br><span class="line">		ans-=dfs(S,INF);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"%d"</span>,ans);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
@@ -644,10 +644,26 @@ var _hmt = _hmt || [];
     var s = document.getElementsByTagName("script")[0];
     s.parentNode.insertBefore(hm, s);
 })();
-</script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</script>
 
 
 
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/MathJax.js?config=TeX-MML-AM_CHTML"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 
 </body>
 

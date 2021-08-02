@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang=zh>
-<head>
+<head><meta name="generator" content="Hexo 3.9.0">
 <!-- hexo-inject:begin --><!-- hexo-inject:end --><script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
 <link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
 <style>
@@ -19,41 +19,41 @@
 
 <!-- Valine评论 -->
 <script src="/js/av-min.js"></script>
-<script src='/js/Valine.min.js'></script>
+<script src="/js/Valine.min.js"></script>
 <!-- Leancloud统计 -->
 <!-- <script src="/js/av-min-1.2.1.js"></script> -->
 <!--  <script>AV.initialize("rJeVBhWeHlb33cC9L26UE7y3-gzGzoHsz", "uU7rD0e4IaYyrk6vSdM6GoHX");</script> -->
 
-<meta name="google-site-verification" content="IneMsg5aBY2Vw5QuPukpMzm5ATzGfO0dg40QXgKIPkk" />
+<meta name="google-site-verification" content="IneMsg5aBY2Vw5QuPukpMzm5ATzGfO0dg40QXgKIPkk">
 
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
   <meta name="renderer" content="webkit">
-  <meta http-equiv="Cache-Control" content="no-transform" />
-  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   <meta name="format-detection" content="telephone=no,email=no,adress=no">
   <!-- Color theme for statusbar -->
-  <meta name="theme-color" content="#000000" />
+  <meta name="theme-color" content="#000000">
   <!-- 强制页面在当前窗口以独立页面显示,防止别人在框架里调用页面 -->
-  <meta http-equiv="window-target" content="_top" />
+  <meta http-equiv="window-target" content="_top">
   
   
   <title>BZOJ3626 [LNOI2014]LCA | linkfqy&#39;s Blog</title>
-  <meta name="description" content="题面在这里 ​ 考虑\(deep_i\)到底表示的是什么东西 其实就是\(i\)到根路径上有几个点 即对于任意\(i\in [l,r]\)，\(i\)到根路径上每个点对答案的贡献都是1 如果对每个\(i\)到根路径上点权都加一，\(z\)的答案就是\(z\)到根路径上点权之和 这个可以用树链剖分实现 然后对所有询问离线，差分求区间和 时间复杂度\(O(nlog^2_2n)\) ​">
+  <meta name="description" content="题面在这里     ​     考虑$deep_i$到底表示的是什么东西 其实就是$i$到根路径上有几个点 即对于任意$i\in [l,r]$，$i$到根路径上每个点对答案的贡献都是1 如果对每个$i$到根路径上点权都加一，$z$的答案就是$z$到根路径上点权之和 这个可以用树链剖分实现 然后对所有询问离线，差分求区间和 时间复杂度$O(nlog^2_2n)$ ​     示例程序： 123456">
 <meta name="keywords" content="BZOJ,线段树,树链剖分">
 <meta property="og:type" content="article">
 <meta property="og:title" content="BZOJ3626 [LNOI2014]LCA">
 <meta property="og:url" content="http://oi.linkfqy.top/posts/BZOJ3626/index.html">
 <meta property="og:site_name" content="linkfqy">
-<meta property="og:description" content="题面在这里 ​ 考虑\(deep_i\)到底表示的是什么东西 其实就是\(i\)到根路径上有几个点 即对于任意\(i\in [l,r]\)，\(i\)到根路径上每个点对答案的贡献都是1 如果对每个\(i\)到根路径上点权都加一，\(z\)的答案就是\(z\)到根路径上点权之和 这个可以用树链剖分实现 然后对所有询问离线，差分求区间和 时间复杂度\(O(nlog^2_2n)\) ​">
+<meta property="og:description" content="题面在这里     ​     考虑$deep_i$到底表示的是什么东西 其实就是$i$到根路径上有几个点 即对于任意$i\in [l,r]$，$i$到根路径上每个点对答案的贡献都是1 如果对每个$i$到根路径上点权都加一，$z$的答案就是$z$到根路径上点权之和 这个可以用树链剖分实现 然后对所有询问离线，差分求区间和 时间复杂度$O(nlog^2_2n)$ ​     示例程序： 123456">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:updated_time" content="2018-07-17T11:28:42.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="BZOJ3626 [LNOI2014]LCA">
-<meta name="twitter:description" content="题面在这里 ​ 考虑\(deep_i\)到底表示的是什么东西 其实就是\(i\)到根路径上有几个点 即对于任意\(i\in [l,r]\)，\(i\)到根路径上每个点对答案的贡献都是1 如果对每个\(i\)到根路径上点权都加一，\(z\)的答案就是\(z\)到根路径上点权之和 这个可以用树链剖分实现 然后对所有询问离线，差分求区间和 时间复杂度\(O(nlog^2_2n)\) ​">
+<meta name="twitter:description" content="题面在这里     ​     考虑$deep_i$到底表示的是什么东西 其实就是$i$到根路径上有几个点 即对于任意$i\in [l,r]$，$i$到根路径上每个点对答案的贡献都是1 如果对每个$i$到根路径上点权都加一，$z$的答案就是$z$到根路径上点权之和 这个可以用树链剖分实现 然后对所有询问离线，差分求区间和 时间复杂度$O(nlog^2_2n)$ ​     示例程序： 123456">
   <!-- Canonical links -->
   <link rel="canonical" href="http://oi.linkfqy.top/posts/BZOJ3626/index.html">
   
@@ -348,16 +348,16 @@
     </div>
     <div class="article-entry markdown-body" itemprop="articleBody">
       
-        <p><a href="https://www.lydsy.com/JudgeOnline/problem.php?id=3626" target="_blank" rel="noopener">题面在这里</a></p>
-<p>​</p>
-<p>考虑<span class="math inline">\(deep_i\)</span>到底表示的是什么东西</p>
-<p>其实就是<span class="math inline">\(i\)</span>到根路径上有几个点</p>
-<p>即对于任意<span class="math inline">\(i\in [l,r]\)</span>，<span class="math inline">\(i\)</span>到根路径上每个点对答案的贡献都是1</p>
-<p>如果对每个<span class="math inline">\(i\)</span>到根路径上点权都加一，<span class="math inline">\(z\)</span>的答案就是<span class="math inline">\(z\)</span>到根路径上点权之和</p>
+        <p><a href="https://www.lydsy.com/JudgeOnline/problem.php?id=3626" target="_blank" rel="noopener">题面在这里</a>    </p>
+<p>​    </p>
+<p>考虑$deep_i$到底表示的是什么东西</p>
+<p>其实就是$i$到根路径上有几个点</p>
+<p>即对于任意$i\in [l,r]$，$i$到根路径上每个点对答案的贡献都是1</p>
+<p>如果对每个$i$到根路径上点权都加一，$z$的答案就是$z$到根路径上点权之和</p>
 <p>这个可以用树链剖分实现</p>
 <p>然后对所有询问离线，差分求区间和</p>
-<p>时间复杂度<span class="math inline">\(O(nlog^2_2n)\)</span></p>
-<p>​</p>
+<p>时间复杂度$O(nlog^2_2n)$</p>
+<p>​    </p>
 <p>示例程序：</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> nc getchar</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> pb push_back</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> mp make_pair</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">int</span> <span class="title">red</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> res=<span class="number">0</span>,f=<span class="number">1</span>;<span class="keyword">char</span> ch=nc();</span><br><span class="line">	<span class="keyword">while</span> (ch&lt;<span class="string">'0'</span>||<span class="string">'9'</span>&lt;ch) &#123;<span class="keyword">if</span> (ch==<span class="string">'-'</span>) f=-f;ch=nc();&#125;</span><br><span class="line">	<span class="keyword">while</span> (<span class="string">'0'</span>&lt;=ch&amp;&amp;ch&lt;=<span class="string">'9'</span>) res=res*<span class="number">10</span>+ch<span class="number">-48</span>,ch=nc();</span><br><span class="line">	<span class="keyword">return</span> res*f;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxn=<span class="number">50005</span>,maxe=maxn,maxs=maxn*<span class="number">4</span>,MOD=<span class="number">201314</span>;</span><br><span class="line"><span class="keyword">int</span> n,q,ans[maxn];</span><br><span class="line"><span class="keyword">int</span> tot,son[maxe],nxt[maxe],lnk[maxn];</span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">add</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">int</span> y)</span></span>&#123;</span><br><span class="line">	son[++tot]=y;nxt[tot]=lnk[x];lnk[x]=tot;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">int</span> fa[maxn],H_son[maxn],dep[maxn],siz[maxn],top[maxn],id[maxn],times;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">mkdep</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">int</span> f)</span></span>&#123;</span><br><span class="line">	dep[x]=dep[f]+<span class="number">1</span>;fa[x]=f;siz[x]=<span class="number">1</span>;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> j=lnk[x];j;j=nxt[j])&#123;</span><br><span class="line">		mkdep(son[j],x);siz[x]+=siz[son[j]];</span><br><span class="line">		<span class="keyword">if</span> (!H_son[x]||siz[H_son[x]]&lt;siz[son[j]]) H_son[x]=son[j];</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">dfs</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">int</span> lst)</span></span>&#123;</span><br><span class="line">	top[x]=lst;id[x]=++times;</span><br><span class="line">	<span class="keyword">if</span> (H_son[x]) dfs(H_son[x],lst);</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> j=lnk[x];j;j=nxt[j])</span><br><span class="line">	 <span class="keyword">if</span> (son[j]!=H_son[x]) dfs(son[j],son[j]);</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">int</span> tre[maxs],tag[maxs];</span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">pushdown</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">int</span> L,<span class="keyword">int</span> R)</span></span>&#123;</span><br><span class="line">	<span class="keyword">if</span> (tag[x]==<span class="number">0</span>||L==R) <span class="keyword">return</span>;</span><br><span class="line">	<span class="keyword">int</span> mid=L+R&gt;&gt;<span class="number">1</span>;</span><br><span class="line">	(tre[x&lt;&lt;<span class="number">1</span>]+=(mid-L+<span class="number">1</span>)*tag[x])%=MOD; (tag[x&lt;&lt;<span class="number">1</span>]+=tag[x])%=MOD;</span><br><span class="line">	(tre[x&lt;&lt;<span class="number">1</span>|<span class="number">1</span>]+=(R-mid)*tag[x])%=MOD; (tag[x&lt;&lt;<span class="number">1</span>|<span class="number">1</span>]+=tag[x])%=MOD;</span><br><span class="line">	tag[x]=<span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">insert</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">int</span> L,<span class="keyword">int</span> R,<span class="keyword">int</span> ql,<span class="keyword">int</span> qr,<span class="keyword">int</span> w)</span></span>&#123;</span><br><span class="line">	<span class="keyword">if</span> (qr&lt;L||R&lt;ql) <span class="keyword">return</span>;</span><br><span class="line">	<span class="keyword">if</span> (ql&lt;=L&amp;&amp;R&lt;=qr) &#123;(tre[x]+=(R-L+<span class="number">1</span>)*w)%=MOD;(tag[x]+=w)%=MOD;<span class="keyword">return</span>;&#125;</span><br><span class="line">	<span class="keyword">int</span> mid=L+R&gt;&gt;<span class="number">1</span>; pushdown(x,L,R);</span><br><span class="line">	insert(x&lt;&lt;<span class="number">1</span>,L,mid,ql,qr,w);insert(x&lt;&lt;<span class="number">1</span>|<span class="number">1</span>,mid+<span class="number">1</span>,R,ql,qr,w);</span><br><span class="line">	tre[x]=(tre[x&lt;&lt;<span class="number">1</span>]+tre[x&lt;&lt;<span class="number">1</span>|<span class="number">1</span>])%MOD;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">query</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">int</span> L,<span class="keyword">int</span> R,<span class="keyword">int</span> ql,<span class="keyword">int</span> qr)</span></span>&#123;</span><br><span class="line">	<span class="keyword">if</span> (qr&lt;L||R&lt;ql) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">if</span> (ql&lt;=L&amp;&amp;R&lt;=qr) <span class="keyword">return</span> tre[x];</span><br><span class="line">	<span class="keyword">int</span> mid=L+R&gt;&gt;<span class="number">1</span>; pushdown(x,L,R);</span><br><span class="line">	<span class="keyword">return</span> (query(x&lt;&lt;<span class="number">1</span>,L,mid,ql,qr)+query(x&lt;&lt;<span class="number">1</span>|<span class="number">1</span>,mid+<span class="number">1</span>,R,ql,qr))%MOD;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">ist</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">int</span> y,<span class="keyword">int</span> w)</span></span>&#123;</span><br><span class="line">	<span class="keyword">if</span> (!y) <span class="keyword">return</span>;</span><br><span class="line">	<span class="keyword">while</span> (top[x]!=top[y])&#123;</span><br><span class="line">		<span class="keyword">if</span> (dep[top[x]]&lt;dep[top[y]]) swap(x,y);</span><br><span class="line">		insert(<span class="number">1</span>,<span class="number">1</span>,n,id[top[x]],id[x],w);</span><br><span class="line">		x=fa[top[x]];</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">if</span> (id[x]&gt;id[y]) swap(x,y);</span><br><span class="line">	insert(<span class="number">1</span>,<span class="number">1</span>,n,id[x],id[y],w);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">qry</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">int</span> y)</span></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> res=<span class="number">0</span>;</span><br><span class="line">	<span class="keyword">while</span> (top[x]!=top[y])&#123;</span><br><span class="line">		<span class="keyword">if</span> (dep[top[x]]&lt;dep[top[y]]) swap(x,y);</span><br><span class="line">		(res+=query(<span class="number">1</span>,<span class="number">1</span>,n,id[top[x]],id[x]))%=MOD;</span><br><span class="line">		x=fa[top[x]];</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">if</span> (id[x]&gt;id[y]) swap(x,y);</span><br><span class="line">	<span class="keyword">return</span> (res+query(<span class="number">1</span>,<span class="number">1</span>,n,id[x],id[y]))%MOD;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">vector</span>&lt;pair&lt;<span class="keyword">int</span>,<span class="keyword">int</span>&gt; &gt; Ql[maxn],Qr[maxn];</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	n=red(),q=red();</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">2</span>,fa;i&lt;=n;i++) fa=red()+<span class="number">1</span>,add(fa,i);</span><br><span class="line">	mkdep(<span class="number">1</span>,<span class="number">1</span>);dfs(<span class="number">1</span>,<span class="number">1</span>);</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=q;i++)&#123;</span><br><span class="line">		<span class="keyword">int</span> l=red()+<span class="number">1</span>,r=red()+<span class="number">1</span>,x=red()+<span class="number">1</span>;</span><br><span class="line">		Ql[l<span class="number">-1</span>].pb(mp(i,x));</span><br><span class="line">		Qr[r].pb(mp(i,x));</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)&#123;</span><br><span class="line">		ist(<span class="number">1</span>,i,<span class="number">1</span>);</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> j=<span class="number">0</span>;j&lt;Ql[i].size();j++)</span><br><span class="line">		 (ans[Ql[i][j].first]-=qry(<span class="number">1</span>,Ql[i][j].second))%=MOD;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> j=<span class="number">0</span>;j&lt;Qr[i].size();j++)</span><br><span class="line">		 (ans[Qr[i][j].first]+=qry(<span class="number">1</span>,Qr[i][j].second))%=MOD;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=q;i++) <span class="built_in">printf</span>(<span class="string">"%d\n"</span>,(ans[i]+MOD)%MOD);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
@@ -633,10 +633,26 @@ var _hmt = _hmt || [];
     var s = document.getElementsByTagName("script")[0];
     s.parentNode.insertBefore(hm, s);
 })();
-</script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</script>
 
 
 
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/MathJax.js?config=TeX-MML-AM_CHTML"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 
 </body>
 

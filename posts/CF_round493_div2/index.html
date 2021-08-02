@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang=zh>
-<head>
+<head><meta name="generator" content="Hexo 3.9.0">
 <!-- hexo-inject:begin --><!-- hexo-inject:end --><script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
 <link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
 <style>
@@ -19,41 +19,41 @@
 
 <!-- Valine评论 -->
 <script src="/js/av-min.js"></script>
-<script src='/js/Valine.min.js'></script>
+<script src="/js/Valine.min.js"></script>
 <!-- Leancloud统计 -->
 <!-- <script src="/js/av-min-1.2.1.js"></script> -->
 <!--  <script>AV.initialize("rJeVBhWeHlb33cC9L26UE7y3-gzGzoHsz", "uU7rD0e4IaYyrk6vSdM6GoHX");</script> -->
 
-<meta name="google-site-verification" content="IneMsg5aBY2Vw5QuPukpMzm5ATzGfO0dg40QXgKIPkk" />
+<meta name="google-site-verification" content="IneMsg5aBY2Vw5QuPukpMzm5ATzGfO0dg40QXgKIPkk">
 
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
   <meta name="renderer" content="webkit">
-  <meta http-equiv="Cache-Control" content="no-transform" />
-  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   <meta name="format-detection" content="telephone=no,email=no,adress=no">
   <!-- Color theme for statusbar -->
-  <meta name="theme-color" content="#000000" />
+  <meta name="theme-color" content="#000000">
   <!-- 强制页面在当前窗口以独立页面显示,防止别人在框架里调用页面 -->
-  <meta http-equiv="window-target" content="_top" />
+  <meta http-equiv="window-target" content="_top">
   
   
   <title>Codeforces Round#493 (Div. 2) | linkfqy&#39;s Blog</title>
-  <meta name="description" content="比赛传送门 ​ A. Balloons 暴搜即可 12345678910111213141516171819202122232425262728#include&amp;lt;cstdio&amp;gt;#include&amp;lt;algorithm&amp;gt;using namespace std;const int maxn=15;int sum,n,a[maxn],ans[maxn],suc;void df">
+  <meta name="description" content="比赛传送门 ​     A. Balloons暴搜即可 12345678910111213141516171819202122232425262728#include&amp;lt;cstdio&amp;gt;#include&amp;lt;algorithm&amp;gt;using namespace std;const int maxn=15;int sum,n,a[maxn],ans[maxn],suc;void dfs">
 <meta name="keywords" content="Codeforces">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Codeforces Round#493 (Div. 2)">
 <meta property="og:url" content="http://oi.linkfqy.top/posts/CF_round493_div2/index.html">
 <meta property="og:site_name" content="linkfqy">
-<meta property="og:description" content="比赛传送门 ​ A. Balloons 暴搜即可 12345678910111213141516171819202122232425262728#include&amp;lt;cstdio&amp;gt;#include&amp;lt;algorithm&amp;gt;using namespace std;const int maxn=15;int sum,n,a[maxn],ans[maxn],suc;void df">
+<meta property="og:description" content="比赛传送门 ​     A. Balloons暴搜即可 12345678910111213141516171819202122232425262728#include&amp;lt;cstdio&amp;gt;#include&amp;lt;algorithm&amp;gt;using namespace std;const int maxn=15;int sum,n,a[maxn],ans[maxn],suc;void dfs">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:updated_time" content="2018-08-28T03:55:28.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Codeforces Round#493 (Div. 2)">
-<meta name="twitter:description" content="比赛传送门 ​ A. Balloons 暴搜即可 12345678910111213141516171819202122232425262728#include&amp;lt;cstdio&amp;gt;#include&amp;lt;algorithm&amp;gt;using namespace std;const int maxn=15;int sum,n,a[maxn],ans[maxn],suc;void df">
+<meta name="twitter:description" content="比赛传送门 ​     A. Balloons暴搜即可 12345678910111213141516171819202122232425262728#include&amp;lt;cstdio&amp;gt;#include&amp;lt;algorithm&amp;gt;using namespace std;const int maxn=15;int sum,n,a[maxn],ans[maxn],suc;void dfs">
   <!-- Canonical links -->
   <link rel="canonical" href="http://oi.linkfqy.top/posts/CF_round493_div2/index.html">
   
@@ -291,7 +291,7 @@
   <div class="slimContent">
     <nav id="toc" class="article-toc">
       <h3 class="toc-title">文章目录</h3>
-      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#a.-balloons"><span class="toc-number">1.</span> <span class="toc-text">A. Balloons</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#b.-cutting"><span class="toc-number">2.</span> <span class="toc-text">B. Cutting</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#c.-convert-to-ones"><span class="toc-number">3.</span> <span class="toc-text">C. Convert to Ones</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#d.-roman-digits"><span class="toc-number">4.</span> <span class="toc-text">D. Roman Digits</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#e.-sky-full-of-stars"><span class="toc-number">5.</span> <span class="toc-text">E. Sky Full of Stars</span></a></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#A-Balloons"><span class="toc-number">1.</span> <span class="toc-text">A. Balloons</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#B-Cutting"><span class="toc-number">2.</span> <span class="toc-text">B. Cutting</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#C-Convert-to-Ones"><span class="toc-number">3.</span> <span class="toc-text">C. Convert to Ones</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#D-Roman-Digits"><span class="toc-number">4.</span> <span class="toc-text">D. Roman Digits</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#E-Sky-Full-of-Stars"><span class="toc-number">5.</span> <span class="toc-text">E. Sky Full of Stars</span></a></li></ol>
     </nav>
   </div>
 </aside>
@@ -349,22 +349,17 @@
     <div class="article-entry markdown-body" itemprop="articleBody">
       
         <p><a href="http://codeforces.com/contest/998" target="_blank" rel="noopener">比赛传送门</a></p>
-<p>​</p>
-<h1 id="a.-balloons">A. Balloons</h1>
-<p>暴搜即可</p>
+<p>​    </p>
+<h1 id="A-Balloons"><a href="#A-Balloons" class="headerlink" title="A. Balloons"></a>A. Balloons</h1><p>暴搜即可</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxn=<span class="number">15</span>;</span><br><span class="line"><span class="keyword">int</span> sum,n,a[maxn],ans[maxn],suc;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">dfs</span><span class="params">(<span class="keyword">int</span> stp,<span class="keyword">int</span> s)</span></span>&#123;</span><br><span class="line">	<span class="keyword">if</span> (suc) <span class="keyword">return</span>;</span><br><span class="line">	<span class="keyword">if</span> (stp&gt;n)&#123;</span><br><span class="line">		<span class="keyword">if</span> (s!=<span class="number">0</span>&amp;&amp;sum-s!=<span class="number">0</span>&amp;&amp;s!=sum-s)&#123;</span><br><span class="line">			suc=<span class="number">1</span>;</span><br><span class="line">			<span class="built_in">printf</span>(<span class="string">"%d\n"</span>,ans[<span class="number">0</span>]);</span><br><span class="line">			<span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=ans[<span class="number">0</span>];i++) <span class="built_in">printf</span>(<span class="string">"%d "</span>,ans[i]);</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	dfs(stp+<span class="number">1</span>,s);</span><br><span class="line">	ans[++ans[<span class="number">0</span>]]=stp;</span><br><span class="line">	dfs(stp+<span class="number">1</span>,s+a[stp]);</span><br><span class="line">	ans[<span class="number">0</span>]--;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;n); <span class="keyword">if</span> (n==<span class="number">1</span>) <span class="keyword">return</span> <span class="built_in">puts</span>(<span class="string">"-1"</span>),<span class="number">0</span>;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++) <span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;a[i]),sum+=a[i];</span><br><span class="line">	dfs(<span class="number">1</span>,<span class="number">0</span>);</span><br><span class="line">	<span class="keyword">if</span> (!suc) <span class="built_in">puts</span>(<span class="string">"-1"</span>);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h1 id="b.-cutting">B. Cutting</h1>
-<p>记录奇数和偶数出现的次数，显然只有相等时才可以切割</p>
+<h1 id="B-Cutting"><a href="#B-Cutting" class="headerlink" title="B. Cutting"></a>B. Cutting</h1><p>记录奇数和偶数出现的次数，显然只有相等时才可以切割</p>
 <p>然后贪心取代价小的切割即可</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxn=<span class="number">105</span>,maxv=<span class="number">105</span>;</span><br><span class="line"><span class="keyword">int</span> n,N,V,a[maxn],w[maxn],f[maxn];</span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">int</span> <span class="title">Abs</span><span class="params">(<span class="keyword">int</span> x)</span> </span>&#123;<span class="keyword">return</span> x&gt;<span class="number">0</span>?x:-x;&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%d%d"</span>,&amp;n,&amp;V);</span><br><span class="line">	<span class="keyword">int</span> s=<span class="number">0</span>;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)&#123;</span><br><span class="line">		<span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;a[i]);</span><br><span class="line">		<span class="keyword">if</span> (i!=<span class="number">1</span>&amp;&amp;s==<span class="number">0</span>) w[++N]=Abs(a[i]-a[i<span class="number">-1</span>]);</span><br><span class="line">		<span class="keyword">if</span> (a[i]&amp;<span class="number">1</span>) s++;<span class="keyword">else</span> s--;</span><br><span class="line">	&#125;</span><br><span class="line">	sort(w+<span class="number">1</span>,w+<span class="number">1</span>+N);</span><br><span class="line">	<span class="keyword">int</span> ans=<span class="number">0</span>;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=N;i++)</span><br><span class="line">	 <span class="keyword">if</span> (w[i]&lt;=V) V-=w[i],ans++;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"%d"</span>,ans);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h1 id="c.-convert-to-ones">C. Convert to Ones</h1>
-<p>设连续0的段数为<span class="math inline">\(cnt\)</span>，则用<span class="math inline">\(cnt-1\)</span>次操作就可以把所有0放到一起</p>
-<p>答案为<span class="math inline">\(\max \{ cnt\cdot y,(cnt-1)x+y \}\)</span></p>
+<h1 id="C-Convert-to-Ones"><a href="#C-Convert-to-Ones" class="headerlink" title="C. Convert to Ones"></a>C. Convert to Ones</h1><p>设连续0的段数为$cnt$，则用$cnt-1$次操作就可以把所有0放到一起</p>
+<p>答案为$\max \{ cnt\cdot y,(cnt-1)x+y \}$</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> ll;</span><br><span class="line"></span><br><span class="line"><span class="keyword">char</span> s[<span class="number">300005</span>];</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> n,x,y;ll cnt=<span class="number">0</span>;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%d%d%d%s"</span>,&amp;n,&amp;x,&amp;y,s+<span class="number">1</span>);</span><br><span class="line">	s[<span class="number">0</span>]=<span class="string">'1'</span>;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++) cnt+=(s[i<span class="number">-1</span>]==<span class="string">'1'</span>&amp;&amp;s[i]==<span class="string">'0'</span>);</span><br><span class="line">	<span class="keyword">if</span> (cnt==<span class="number">0</span>) <span class="keyword">return</span> <span class="built_in">puts</span>(<span class="string">"0"</span>),<span class="number">0</span>;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"%lld"</span>,min(cnt*y,(cnt<span class="number">-1</span>)*x+y));</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h1 id="d.-roman-digits">D. Roman Digits</h1>
-<p><a href="../CF998D">看这里</a></p>
-<h1 id="e.-sky-full-of-stars">E. Sky Full of Stars</h1>
-<p><a href="../CF998E">看这里</a></p>
+<h1 id="D-Roman-Digits"><a href="#D-Roman-Digits" class="headerlink" title="D. Roman Digits"></a>D. Roman Digits</h1><p><a href="../CF998D">看这里</a></p>
+<h1 id="E-Sky-Full-of-Stars"><a href="#E-Sky-Full-of-Stars" class="headerlink" title="E. Sky Full of Stars"></a>E. Sky Full of Stars</h1><p><a href="../CF998E">看这里</a></p>
 
       
     </div>
@@ -638,10 +633,26 @@ var _hmt = _hmt || [];
     var s = document.getElementsByTagName("script")[0];
     s.parentNode.insertBefore(hm, s);
 })();
-</script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</script>
 
 
 
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/MathJax.js?config=TeX-MML-AM_CHTML"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 
 </body>
 

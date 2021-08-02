@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang=zh>
-<head>
+<head><meta name="generator" content="Hexo 3.9.0">
 <!-- hexo-inject:begin --><!-- hexo-inject:end --><script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
 <link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
 <style>
@@ -19,41 +19,41 @@
 
 <!-- Valine评论 -->
 <script src="/js/av-min.js"></script>
-<script src='/js/Valine.min.js'></script>
+<script src="/js/Valine.min.js"></script>
 <!-- Leancloud统计 -->
 <!-- <script src="/js/av-min-1.2.1.js"></script> -->
 <!--  <script>AV.initialize("rJeVBhWeHlb33cC9L26UE7y3-gzGzoHsz", "uU7rD0e4IaYyrk6vSdM6GoHX");</script> -->
 
-<meta name="google-site-verification" content="IneMsg5aBY2Vw5QuPukpMzm5ATzGfO0dg40QXgKIPkk" />
+<meta name="google-site-verification" content="IneMsg5aBY2Vw5QuPukpMzm5ATzGfO0dg40QXgKIPkk">
 
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
   <meta name="renderer" content="webkit">
-  <meta http-equiv="Cache-Control" content="no-transform" />
-  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   <meta name="format-detection" content="telephone=no,email=no,adress=no">
   <!-- Color theme for statusbar -->
-  <meta name="theme-color" content="#000000" />
+  <meta name="theme-color" content="#000000">
   <!-- 强制页面在当前窗口以独立页面显示,防止别人在框架里调用页面 -->
-  <meta http-equiv="window-target" content="_top" />
+  <meta http-equiv="window-target" content="_top">
   
   
   <title>【多校2018#2】HDU6318 Swaps and Inversions | linkfqy&#39;s Blog</title>
-  <meta name="description" content="题面在这里 ​ 考虑交换一对原本构成逆序对的数，会将代价从x变为y 而交换次数恰好等于逆序对数 所以\(x&amp;lt;y\)不做任何交换 \(x&amp;gt;y\)交换所有逆序对 ​ 又一次无耻的copy队友代码…… ​ 示例程序： 12345678910111213141516171819202122232425262728293031323334353637#include&amp;lt;c">
+  <meta name="description" content="题面在这里 ​     考虑交换一对原本构成逆序对的数，会将代价从x变为y 而交换次数恰好等于逆序对数 所以$x&amp;lt;y$不做任何交换 $x&amp;gt;y$交换所有逆序对 ​     又一次无耻的copy队友代码…… ​     示例程序： 12345678910111213141516171819202122232425262728293031323334353637#include&amp;lt;cst">
 <meta name="keywords" content="贪心,树状数组,HDU">
 <meta property="og:type" content="article">
 <meta property="og:title" content="【多校2018#2】HDU6318 Swaps and Inversions">
 <meta property="og:url" content="http://oi.linkfqy.top/posts/HDU6318/index.html">
 <meta property="og:site_name" content="linkfqy">
-<meta property="og:description" content="题面在这里 ​ 考虑交换一对原本构成逆序对的数，会将代价从x变为y 而交换次数恰好等于逆序对数 所以\(x&amp;lt;y\)不做任何交换 \(x&amp;gt;y\)交换所有逆序对 ​ 又一次无耻的copy队友代码…… ​ 示例程序： 12345678910111213141516171819202122232425262728293031323334353637#include&amp;lt;c">
+<meta property="og:description" content="题面在这里 ​     考虑交换一对原本构成逆序对的数，会将代价从x变为y 而交换次数恰好等于逆序对数 所以$x&amp;lt;y$不做任何交换 $x&amp;gt;y$交换所有逆序对 ​     又一次无耻的copy队友代码…… ​     示例程序： 12345678910111213141516171819202122232425262728293031323334353637#include&amp;lt;cst">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:updated_time" content="2018-07-25T10:41:26.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="【多校2018#2】HDU6318 Swaps and Inversions">
-<meta name="twitter:description" content="题面在这里 ​ 考虑交换一对原本构成逆序对的数，会将代价从x变为y 而交换次数恰好等于逆序对数 所以\(x&amp;lt;y\)不做任何交换 \(x&amp;gt;y\)交换所有逆序对 ​ 又一次无耻的copy队友代码…… ​ 示例程序： 12345678910111213141516171819202122232425262728293031323334353637#include&amp;lt;c">
+<meta name="twitter:description" content="题面在这里 ​     考虑交换一对原本构成逆序对的数，会将代价从x变为y 而交换次数恰好等于逆序对数 所以$x&amp;lt;y$不做任何交换 $x&amp;gt;y$交换所有逆序对 ​     又一次无耻的copy队友代码…… ​     示例程序： 12345678910111213141516171819202122232425262728293031323334353637#include&amp;lt;cst">
   <!-- Canonical links -->
   <link rel="canonical" href="http://oi.linkfqy.top/posts/HDU6318/index.html">
   
@@ -349,14 +349,14 @@
     <div class="article-entry markdown-body" itemprop="articleBody">
       
         <p><a href="http://acm.hdu.edu.cn/showproblem.php?pid=6318" target="_blank" rel="noopener">题面在这里</a></p>
-<p>​</p>
+<p>​    </p>
 <p>考虑交换一对原本构成逆序对的数，会将代价从x变为y</p>
 <p>而交换次数恰好等于逆序对数</p>
-<p>所以<span class="math inline">\(x&lt;y\)</span>不做任何交换</p>
-<p><span class="math inline">\(x&gt;y\)</span>交换所有逆序对</p>
-<p>​</p>
+<p>所以$x&lt;y$不做任何交换</p>
+<p>$x&gt;y$交换所有逆序对</p>
+<p>​    </p>
 <p>又一次无耻的copy队友代码……</p>
-<p>​</p>
+<p>​    </p>
 <p>示例程序：</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cctype&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> LL;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxn=<span class="number">100000</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> n,X,Y,a[maxn+<span class="number">5</span>],b[maxn+<span class="number">5</span>],c[maxn+<span class="number">5</span>];LL ans;</span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> Eoln(x) ((x)==10||(x)==13||(x)==EOF)</span></span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">char</span> <span class="title">readc</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">static</span> <span class="keyword">char</span> buf[<span class="number">100000</span>],*l=buf,*r=buf;</span><br><span class="line">    <span class="keyword">if</span> (l==r) r=(l=buf)+fread(buf,<span class="number">1</span>,<span class="number">100000</span>,<span class="built_in">stdin</span>);</span><br><span class="line">    <span class="keyword">if</span> (l==r) <span class="keyword">return</span> EOF;<span class="keyword">return</span> *l++;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">int</span> <span class="title">readi</span><span class="params">(<span class="keyword">int</span> &amp;x)</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> tot=<span class="number">0</span>;<span class="keyword">char</span> ch=readc(),lst=<span class="string">'+'</span>;</span><br><span class="line">    <span class="keyword">while</span> (!<span class="built_in">isdigit</span>(ch)) &#123;<span class="keyword">if</span> (ch==EOF) <span class="keyword">return</span> EOF;lst=ch;ch=readc();&#125;</span><br><span class="line">    <span class="keyword">while</span> (<span class="built_in">isdigit</span>(ch)) tot=(tot&lt;&lt;<span class="number">3</span>)+(tot&lt;&lt;<span class="number">1</span>)+(ch^<span class="number">48</span>),ch=readc();</span><br><span class="line">    <span class="keyword">return</span> (lst==<span class="string">'-'</span>?x=-tot:x=tot),Eoln(ch);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">int</span> <span class="title">Find</span><span class="params">(<span class="keyword">int</span> x)</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> L=<span class="number">1</span>,R=b[<span class="number">0</span>],mid;</span><br><span class="line">    <span class="keyword">while</span> (L&lt;=R) &#123;mid=L+(R-L&gt;&gt;<span class="number">1</span>);<span class="keyword">if</span> (b[mid]==x) <span class="keyword">return</span> mid;x&lt;b[mid]?R=mid<span class="number">-1</span>:L=mid+<span class="number">1</span>;&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">Update</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">int</span> tem)</span> </span>&#123;<span class="keyword">for</span> (<span class="keyword">int</span> i=x;i&lt;=b[<span class="number">0</span>];i+=i&amp;-i) c[i]+=tem;&#125;</span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">int</span> <span class="title">Sum</span><span class="params">(<span class="keyword">int</span> x)</span> </span>&#123;<span class="keyword">int</span> sum=<span class="number">0</span>;<span class="keyword">for</span> (<span class="keyword">int</span> i=x;i;i-=i&amp;-i) sum+=c[i];<span class="keyword">return</span> sum;&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">while</span> (~readi(n))&#123;</span><br><span class="line">        readi(X);readi(Y);<span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++) readi(a[i]),b[i]=a[i];</span><br><span class="line">        sort(b+<span class="number">1</span>,b+<span class="number">1</span>+n);b[<span class="number">0</span>]=unique(b+<span class="number">1</span>,b+<span class="number">1</span>+n)-b<span class="number">-1</span>;ans=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++) a[i]=Find(a[i]),c[i]=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i=n;i;i--) ans+=Sum(a[i]<span class="number">-1</span>),Update(a[i],<span class="number">1</span>);</span><br><span class="line">        <span class="keyword">if</span> (X&lt;Y) ans*=X; <span class="keyword">else</span> ans*=Y;<span class="built_in">printf</span>(<span class="string">"%lld\n"</span>,ans);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
@@ -632,10 +632,26 @@ var _hmt = _hmt || [];
     var s = document.getElementsByTagName("script")[0];
     s.parentNode.insertBefore(hm, s);
 })();
-</script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</script>
 
 
 
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/MathJax.js?config=TeX-MML-AM_CHTML"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 
 </body>
 

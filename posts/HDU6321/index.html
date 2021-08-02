@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang=zh>
-<head>
+<head><meta name="generator" content="Hexo 3.9.0">
 <!-- hexo-inject:begin --><!-- hexo-inject:end --><script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
 <link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
 <style>
@@ -19,41 +19,41 @@
 
 <!-- Valine评论 -->
 <script src="/js/av-min.js"></script>
-<script src='/js/Valine.min.js'></script>
+<script src="/js/Valine.min.js"></script>
 <!-- Leancloud统计 -->
 <!-- <script src="/js/av-min-1.2.1.js"></script> -->
 <!--  <script>AV.initialize("rJeVBhWeHlb33cC9L26UE7y3-gzGzoHsz", "uU7rD0e4IaYyrk6vSdM6GoHX");</script> -->
 
-<meta name="google-site-verification" content="IneMsg5aBY2Vw5QuPukpMzm5ATzGfO0dg40QXgKIPkk" />
+<meta name="google-site-verification" content="IneMsg5aBY2Vw5QuPukpMzm5ATzGfO0dg40QXgKIPkk">
 
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
   <meta name="renderer" content="webkit">
-  <meta http-equiv="Cache-Control" content="no-transform" />
-  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   <meta name="format-detection" content="telephone=no,email=no,adress=no">
   <!-- Color theme for statusbar -->
-  <meta name="theme-color" content="#000000" />
+  <meta name="theme-color" content="#000000">
   <!-- 强制页面在当前窗口以独立页面显示,防止别人在框架里调用页面 -->
-  <meta http-equiv="window-target" content="_top" />
+  <meta http-equiv="window-target" content="_top">
   
   
   <title>【多校2018#3】HDU6321 Problem C. Dynamic Graph Matching | linkfqy&#39;s Blog</title>
-  <meta name="description" content="题面在这里 ​ 一看就是状压DP了…… \(f_{i,s}\)表示前i个操作，状态为s的方案数 加边操作：\(f_{i,s}=f_{i-1,s-u-v}\)，\((u,v)\)是新加的边 然后i这一维可以省略，\(f_s+=f_{s-u-v}\) 删边操作：发现加边的顺序与答案无关，令上一次加边刚好是这次删的边 就变成了撤销上次的操作，\(f_s-=f_{s-u-v}\) 写得好是">
+  <meta name="description" content="题面在这里 ​     一看就是状压DP了…… $f_{i,s}$表示前i个操作，状态为s的方案数 加边操作：$f_{i,s}=f_{i-1,s-u-v}$，$(u,v)$是新加的边 然后i这一维可以省略，$f_s+=f_{s-u-v}$ 删边操作：发现加边的顺序与答案无关，令上一次加边刚好是这次删的边 就变成了撤销上次的操作，$f_s-=f_{s-u-v}$ 写得好是$O(Tm\cdot 2^n">
 <meta name="keywords" content="状压DP,HDU">
 <meta property="og:type" content="article">
 <meta property="og:title" content="【多校2018#3】HDU6321 Problem C. Dynamic Graph Matching">
 <meta property="og:url" content="http://oi.linkfqy.top/posts/HDU6321/index.html">
 <meta property="og:site_name" content="linkfqy">
-<meta property="og:description" content="题面在这里 ​ 一看就是状压DP了…… \(f_{i,s}\)表示前i个操作，状态为s的方案数 加边操作：\(f_{i,s}=f_{i-1,s-u-v}\)，\((u,v)\)是新加的边 然后i这一维可以省略，\(f_s+=f_{s-u-v}\) 删边操作：发现加边的顺序与答案无关，令上一次加边刚好是这次删的边 就变成了撤销上次的操作，\(f_s-=f_{s-u-v}\) 写得好是">
+<meta property="og:description" content="题面在这里 ​     一看就是状压DP了…… $f_{i,s}$表示前i个操作，状态为s的方案数 加边操作：$f_{i,s}=f_{i-1,s-u-v}$，$(u,v)$是新加的边 然后i这一维可以省略，$f_s+=f_{s-u-v}$ 删边操作：发现加边的顺序与答案无关，令上一次加边刚好是这次删的边 就变成了撤销上次的操作，$f_s-=f_{s-u-v}$ 写得好是$O(Tm\cdot 2^n">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:updated_time" content="2018-07-30T13:31:56.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="【多校2018#3】HDU6321 Problem C. Dynamic Graph Matching">
-<meta name="twitter:description" content="题面在这里 ​ 一看就是状压DP了…… \(f_{i,s}\)表示前i个操作，状态为s的方案数 加边操作：\(f_{i,s}=f_{i-1,s-u-v}\)，\((u,v)\)是新加的边 然后i这一维可以省略，\(f_s+=f_{s-u-v}\) 删边操作：发现加边的顺序与答案无关，令上一次加边刚好是这次删的边 就变成了撤销上次的操作，\(f_s-=f_{s-u-v}\) 写得好是">
+<meta name="twitter:description" content="题面在这里 ​     一看就是状压DP了…… $f_{i,s}$表示前i个操作，状态为s的方案数 加边操作：$f_{i,s}=f_{i-1,s-u-v}$，$(u,v)$是新加的边 然后i这一维可以省略，$f_s+=f_{s-u-v}$ 删边操作：发现加边的顺序与答案无关，令上一次加边刚好是这次删的边 就变成了撤销上次的操作，$f_s-=f_{s-u-v}$ 写得好是$O(Tm\cdot 2^n">
   <!-- Canonical links -->
   <link rel="canonical" href="http://oi.linkfqy.top/posts/HDU6321/index.html">
   
@@ -349,15 +349,15 @@
     <div class="article-entry markdown-body" itemprop="articleBody">
       
         <p><a href="http://acm.hdu.edu.cn/showproblem.php?pid=6321" target="_blank" rel="noopener">题面在这里</a></p>
-<p>​</p>
+<p>​    </p>
 <p>一看就是状压DP了……</p>
-<p><span class="math inline">\(f_{i,s}\)</span>表示前i个操作，状态为s的方案数</p>
-<p>加边操作：<span class="math inline">\(f_{i,s}=f_{i-1,s-u-v}\)</span>，<span class="math inline">\((u,v)\)</span>是新加的边</p>
-<p>然后i这一维可以省略，<span class="math inline">\(f_s+=f_{s-u-v}\)</span></p>
+<p>$f_{i,s}$表示前i个操作，状态为s的方案数</p>
+<p>加边操作：$f_{i,s}=f_{i-1,s-u-v}$，$(u,v)$是新加的边</p>
+<p>然后i这一维可以省略，$f_s+=f_{s-u-v}$</p>
 <p>删边操作：发现加边的顺序与答案无关，令上一次加边刚好是这次删的边</p>
-<p>就变成了撤销上次的操作，<span class="math inline">\(f_s-=f_{s-u-v}\)</span></p>
-<p>写得好是<span class="math inline">\(O(Tm\cdot 2^n)\)</span>丝毫不虚</p>
-<p>​</p>
+<p>就变成了撤销上次的操作，$f_s-=f_{s-u-v}$</p>
+<p>写得好是$O(Tm\cdot 2^n)$丝毫不虚</p>
+<p>​    </p>
 <p>示例程序：</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> cl(x,y) memset(x,y,sizeof(x))</span></span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">char</span> <span class="title">nc</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="keyword">static</span> <span class="keyword">char</span> buf[<span class="number">100000</span>],*l=buf,*r=buf;</span><br><span class="line">	<span class="keyword">return</span> l==r&amp;&amp;(r=(l=buf)+fread(buf,<span class="number">1</span>,<span class="number">100000</span>,<span class="built_in">stdin</span>),l==r)?EOF:*l++;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">int</span> <span class="title">red</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> res=<span class="number">0</span>,f=<span class="number">1</span>;<span class="keyword">char</span> ch=nc();</span><br><span class="line">	<span class="keyword">while</span> (ch&lt;<span class="string">'0'</span>||<span class="string">'9'</span>&lt;ch) &#123;<span class="keyword">if</span> (ch==<span class="string">'-'</span>) f=-f;ch=nc();&#125;</span><br><span class="line">	<span class="keyword">while</span> (<span class="string">'0'</span>&lt;=ch&amp;&amp;ch&lt;=<span class="string">'9'</span>) res=res*<span class="number">10</span>+ch<span class="number">-48</span>,ch=nc();</span><br><span class="line">	<span class="keyword">return</span> res*f;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">char</span> <span class="title">fstchar</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="keyword">char</span> ch=nc();<span class="keyword">while</span> (ch!=<span class="string">'+'</span>&amp;&amp;ch!=<span class="string">'-'</span>) ch=nc();</span><br><span class="line">	<span class="keyword">return</span> ch;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxs=<span class="number">1030</span>,MOD=<span class="number">1e9</span>+<span class="number">7</span>;</span><br><span class="line"><span class="keyword">int</span> tst,n,q,f[maxs],h[maxs],num1[maxs];</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	tst=red();</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> s=<span class="number">0</span>;s&lt;<span class="number">1024</span>;s++)&#123;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> x=s;x;x&gt;&gt;=<span class="number">1</span>) num1[s]+=x&amp;<span class="number">1</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">while</span> (tst--)&#123;</span><br><span class="line">		n=red(),q=red(); cl(f,<span class="number">0</span>);f[<span class="number">0</span>]=<span class="number">1</span>;</span><br><span class="line">		<span class="keyword">while</span> (q--)&#123;</span><br><span class="line">			<span class="keyword">if</span> (fstchar()==<span class="string">'+'</span>)&#123;</span><br><span class="line">				<span class="keyword">int</span> u=red(),v=red();</span><br><span class="line">				<span class="keyword">for</span> (<span class="keyword">int</span> s=(<span class="number">1</span>&lt;&lt;n)<span class="number">-1</span>;s&gt;=<span class="number">0</span>;s--)</span><br><span class="line">				 <span class="keyword">if</span> ((s&amp;(<span class="number">1</span>&lt;&lt;u<span class="number">-1</span>))&amp;&amp;(s&amp;(<span class="number">1</span>&lt;&lt;v<span class="number">-1</span>))) (f[s]+=f[s^(<span class="number">1</span>&lt;&lt;u<span class="number">-1</span>)^(<span class="number">1</span>&lt;&lt;v<span class="number">-1</span>)])%=MOD;</span><br><span class="line">			&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">				<span class="keyword">int</span> u=red(),v=red();</span><br><span class="line">				<span class="keyword">for</span> (<span class="keyword">int</span> s=<span class="number">0</span>;s&lt;(<span class="number">1</span>&lt;&lt;n);s++)</span><br><span class="line">				 <span class="keyword">if</span> ((s&amp;(<span class="number">1</span>&lt;&lt;u<span class="number">-1</span>))&amp;&amp;(s&amp;(<span class="number">1</span>&lt;&lt;v<span class="number">-1</span>))) (f[s]-=f[s^(<span class="number">1</span>&lt;&lt;u<span class="number">-1</span>)^(<span class="number">1</span>&lt;&lt;v<span class="number">-1</span>)])%=MOD;</span><br><span class="line">			&#125;</span><br><span class="line">			cl(h,<span class="number">0</span>);</span><br><span class="line">			<span class="keyword">for</span> (<span class="keyword">int</span> s=<span class="number">0</span>;s&lt;(<span class="number">1</span>&lt;&lt;n);s++)</span><br><span class="line">			 (h[num1[s]]+=f[s])%=MOD;</span><br><span class="line">			<span class="keyword">bool</span> fir=<span class="number">1</span>;</span><br><span class="line">			<span class="keyword">for</span> (<span class="keyword">int</span> k=<span class="number">1</span>;k&lt;=n/<span class="number">2</span>;k++)</span><br><span class="line">			 <span class="built_in">printf</span>(fir?(fir=<span class="number">0</span>,<span class="string">"%d"</span>):<span class="string">" %d"</span>,(h[k*<span class="number">2</span>]+MOD)%MOD);</span><br><span class="line">			<span class="built_in">putchar</span>(<span class="string">'\n'</span>);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
@@ -633,10 +633,26 @@ var _hmt = _hmt || [];
     var s = document.getElementsByTagName("script")[0];
     s.parentNode.insertBefore(hm, s);
 })();
-</script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</script>
 
 
 
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/MathJax.js?config=TeX-MML-AM_CHTML"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 
 </body>
 

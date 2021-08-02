@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang=zh>
-<head>
+<head><meta name="generator" content="Hexo 3.9.0">
 <!-- hexo-inject:begin --><!-- hexo-inject:end --><script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
 <link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
 <style>
@@ -19,41 +19,41 @@
 
 <!-- Valine评论 -->
 <script src="/js/av-min.js"></script>
-<script src='/js/Valine.min.js'></script>
+<script src="/js/Valine.min.js"></script>
 <!-- Leancloud统计 -->
 <!-- <script src="/js/av-min-1.2.1.js"></script> -->
 <!--  <script>AV.initialize("rJeVBhWeHlb33cC9L26UE7y3-gzGzoHsz", "uU7rD0e4IaYyrk6vSdM6GoHX");</script> -->
 
-<meta name="google-site-verification" content="IneMsg5aBY2Vw5QuPukpMzm5ATzGfO0dg40QXgKIPkk" />
+<meta name="google-site-verification" content="IneMsg5aBY2Vw5QuPukpMzm5ATzGfO0dg40QXgKIPkk">
 
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
   <meta name="renderer" content="webkit">
-  <meta http-equiv="Cache-Control" content="no-transform" />
-  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   <meta name="format-detection" content="telephone=no,email=no,adress=no">
   <!-- Color theme for statusbar -->
-  <meta name="theme-color" content="#000000" />
+  <meta name="theme-color" content="#000000">
   <!-- 强制页面在当前窗口以独立页面显示,防止别人在框架里调用页面 -->
-  <meta http-equiv="window-target" content="_top" />
+  <meta http-equiv="window-target" content="_top">
   
   
   <title>BZOJ1485 [HNOI2009]有趣的数列 | linkfqy&#39;s Blog</title>
-  <meta name="description" content="题面在这里 ​ 这题其实是一个裸的卡特兰数…… 直接消质因数搞就好了 证明如下： 根据题意，奇数位和偶数位分别递增 则任意选择n个数后，数列就被确定了（或者不合法） 考虑从1到2n依次填入数，则\(2i-1\)和\(2i\)两项一定是\(2i-1\)先填 这样就要求已填奇数位个数小于等于已填偶数位个数 就是卡特兰数的经典模型，括号匹配了 ​ 之前一直不知道卡特兰数通项公式\(">
+  <meta name="description" content="题面在这里     ​     这题其实是一个裸的卡特兰数…… 直接消质因数搞就好了 证明如下： 根据题意，奇数位和偶数位分别递增 则任意选择n个数后，数列就被确定了（或者不合法） 考虑从1到2n依次填入数，则$2i-1$和$2i$两项一定是$2i-1$先填 这样就要求已填奇数位个数小于等于已填偶数位个数 就是卡特兰数的经典模型，括号匹配了     ​     之前一直不知道卡特兰数通项公式$\f">
 <meta name="keywords" content="BZOJ,数学">
 <meta property="og:type" content="article">
 <meta property="og:title" content="BZOJ1485 [HNOI2009]有趣的数列">
 <meta property="og:url" content="http://oi.linkfqy.top/posts/BZOJ1485/index.html">
 <meta property="og:site_name" content="linkfqy">
-<meta property="og:description" content="题面在这里 ​ 这题其实是一个裸的卡特兰数…… 直接消质因数搞就好了 证明如下： 根据题意，奇数位和偶数位分别递增 则任意选择n个数后，数列就被确定了（或者不合法） 考虑从1到2n依次填入数，则\(2i-1\)和\(2i\)两项一定是\(2i-1\)先填 这样就要求已填奇数位个数小于等于已填偶数位个数 就是卡特兰数的经典模型，括号匹配了 ​ 之前一直不知道卡特兰数通项公式\(">
+<meta property="og:description" content="题面在这里     ​     这题其实是一个裸的卡特兰数…… 直接消质因数搞就好了 证明如下： 根据题意，奇数位和偶数位分别递增 则任意选择n个数后，数列就被确定了（或者不合法） 考虑从1到2n依次填入数，则$2i-1$和$2i$两项一定是$2i-1$先填 这样就要求已填奇数位个数小于等于已填偶数位个数 就是卡特兰数的经典模型，括号匹配了     ​     之前一直不知道卡特兰数通项公式$\f">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:updated_time" content="2018-07-22T10:50:56.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="BZOJ1485 [HNOI2009]有趣的数列">
-<meta name="twitter:description" content="题面在这里 ​ 这题其实是一个裸的卡特兰数…… 直接消质因数搞就好了 证明如下： 根据题意，奇数位和偶数位分别递增 则任意选择n个数后，数列就被确定了（或者不合法） 考虑从1到2n依次填入数，则\(2i-1\)和\(2i\)两项一定是\(2i-1\)先填 这样就要求已填奇数位个数小于等于已填偶数位个数 就是卡特兰数的经典模型，括号匹配了 ​ 之前一直不知道卡特兰数通项公式\(">
+<meta name="twitter:description" content="题面在这里     ​     这题其实是一个裸的卡特兰数…… 直接消质因数搞就好了 证明如下： 根据题意，奇数位和偶数位分别递增 则任意选择n个数后，数列就被确定了（或者不合法） 考虑从1到2n依次填入数，则$2i-1$和$2i$两项一定是$2i-1$先填 这样就要求已填奇数位个数小于等于已填偶数位个数 就是卡特兰数的经典模型，括号匹配了     ​     之前一直不知道卡特兰数通项公式$\f">
   <!-- Canonical links -->
   <link rel="canonical" href="http://oi.linkfqy.top/posts/BZOJ1485/index.html">
   
@@ -348,24 +348,24 @@
     </div>
     <div class="article-entry markdown-body" itemprop="articleBody">
       
-        <p><a href="https://www.lydsy.com/JudgeOnline/problem.php?id=1485" target="_blank" rel="noopener">题面在这里</a></p>
-<p>​</p>
+        <p><a href="https://www.lydsy.com/JudgeOnline/problem.php?id=1485" target="_blank" rel="noopener">题面在这里</a>    </p>
+<p>​    </p>
 <p>这题其实是一个裸的卡特兰数……</p>
 <p>直接消质因数搞就好了</p>
 <p>证明如下：</p>
 <p>根据题意，奇数位和偶数位分别递增</p>
 <p>则任意选择n个数后，数列就被确定了（或者不合法）</p>
-<p>考虑从1到2n依次填入数，则<span class="math inline">\(2i-1\)</span>和<span class="math inline">\(2i\)</span>两项一定是<span class="math inline">\(2i-1\)</span>先填</p>
+<p>考虑从1到2n依次填入数，则$2i-1$和$2i$两项一定是$2i-1$先填</p>
 <p>这样就要求已填奇数位个数小于等于已填偶数位个数</p>
-<p>就是卡特兰数的经典模型，括号匹配了</p>
-<p>​</p>
-<p>之前一直不知道卡特兰数通项公式<span class="math inline">\(\frac {C_{2n}^n}{n+1}\)</span>是怎么来的，这里再证一下</p>
-<p>考虑括号匹配问题，其实就是构造一个长为2n的01串，使得任意位置<span class="math inline">\(sum_1\le sum_0\)</span></p>
-<p>则先选n个1，方案是<span class="math inline">\(C_{2n}^n\)</span></p>
-<p>再考虑不合法的方案：必然存在i，使得<span class="math inline">\(sum1_i=sum0_i+1\)</span>且<span class="math inline">\(sum1_{i-1}=sum0_{i-1}\)</span></p>
-<p>使i+1到2n的01串取反，则整个串有<span class="math inline">\(n-1\)</span>个0，<span class="math inline">\(n+1\)</span>个1，对应方案为<span class="math inline">\(C_{2n}^{n+1}\)</span></p>
-<p>则卡特兰数<span class="math inline">\(C_{2n}^n-C_{2n}^{n+1}=\frac {C_{2n}^n}{n+1}\)</span></p>
-<p>​</p>
+<p>就是卡特兰数的经典模型，括号匹配了    </p>
+<p>​    </p>
+<p>之前一直不知道卡特兰数通项公式$\frac {C_{2n}^n}{n+1}$是怎么来的，这里再证一下</p>
+<p>考虑括号匹配问题，其实就是构造一个长为2n的01串，使得任意位置$sum_1\le sum_0$</p>
+<p>则先选n个1，方案是$C_{2n}^n$</p>
+<p>再考虑不合法的方案：必然存在i，使得$sum1_i=sum0_i+1$且$sum1_{i-1}=sum0_{i-1}$</p>
+<p>使i+1到2n的01串取反，则整个串有$n-1$个0，$n+1$个1，对应方案为$C_{2n}^{n+1}$</p>
+<p>则卡特兰数$C_{2n}^n-C_{2n}^{n+1}=\frac {C_{2n}^n}{n+1}$</p>
+<p>​    </p>
 <p>示例程序：</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxn=<span class="number">2000005</span>;</span><br><span class="line"><span class="keyword">int</span> n,MOD,p[maxn],nxt[maxn],num[maxn];</span><br><span class="line"><span class="keyword">bool</span> vis[maxn];</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">makep</span><span class="params">(<span class="keyword">int</span> n)</span></span>&#123;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">2</span>;i&lt;=n;i++)&#123;</span><br><span class="line">		<span class="keyword">if</span> (!vis[i]) p[++p[<span class="number">0</span>]]=i,nxt[i]=i;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> j=<span class="number">1</span>;j&lt;=p[<span class="number">0</span>]&amp;&amp;i*p[j]&lt;=n;j++)&#123;</span><br><span class="line">			vis[i*p[j]]=<span class="number">1</span>;nxt[i*p[j]]=p[j];</span><br><span class="line">			<span class="keyword">if</span> (i%p[j]==<span class="number">0</span>) <span class="keyword">break</span>;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">add</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">int</span> f)</span></span>&#123;</span><br><span class="line">	<span class="keyword">for</span> (;x&gt;<span class="number">1</span>;x/=nxt[x]) num[nxt[x]]+=f;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%d%d"</span>,&amp;n,&amp;MOD);</span><br><span class="line">	makep(<span class="number">2</span>*n);</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i=n+<span class="number">2</span>;i&lt;=<span class="number">2</span>*n;i++) add(i,<span class="number">1</span>);</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++) add(i,<span class="number">-1</span>);</span><br><span class="line">	<span class="keyword">long</span> <span class="keyword">long</span> ans=<span class="number">1</span>;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=p[<span class="number">0</span>];i++)</span><br><span class="line">	 <span class="keyword">for</span> (<span class="keyword">int</span> j=<span class="number">1</span>;j&lt;=num[p[i]];j++)</span><br><span class="line">	  (ans*=p[i])%=MOD;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"%lld"</span>,ans);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
@@ -641,10 +641,26 @@ var _hmt = _hmt || [];
     var s = document.getElementsByTagName("script")[0];
     s.parentNode.insertBefore(hm, s);
 })();
-</script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</script>
 
 
 
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/MathJax.js?config=TeX-MML-AM_CHTML"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 
 </body>
 

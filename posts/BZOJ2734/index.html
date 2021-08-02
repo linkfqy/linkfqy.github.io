@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang=zh>
-<head>
+<head><meta name="generator" content="Hexo 3.9.0">
 <!-- hexo-inject:begin --><!-- hexo-inject:end --><script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
 <link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
 <style>
@@ -19,41 +19,41 @@
 
 <!-- Valine评论 -->
 <script src="/js/av-min.js"></script>
-<script src='/js/Valine.min.js'></script>
+<script src="/js/Valine.min.js"></script>
 <!-- Leancloud统计 -->
 <!-- <script src="/js/av-min-1.2.1.js"></script> -->
 <!--  <script>AV.initialize("rJeVBhWeHlb33cC9L26UE7y3-gzGzoHsz", "uU7rD0e4IaYyrk6vSdM6GoHX");</script> -->
 
-<meta name="google-site-verification" content="IneMsg5aBY2Vw5QuPukpMzm5ATzGfO0dg40QXgKIPkk" />
+<meta name="google-site-verification" content="IneMsg5aBY2Vw5QuPukpMzm5ATzGfO0dg40QXgKIPkk">
 
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
   <meta name="renderer" content="webkit">
-  <meta http-equiv="Cache-Control" content="no-transform" />
-  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   <meta name="format-detection" content="telephone=no,email=no,adress=no">
   <!-- Color theme for statusbar -->
-  <meta name="theme-color" content="#000000" />
+  <meta name="theme-color" content="#000000">
   <!-- 强制页面在当前窗口以独立页面显示,防止别人在框架里调用页面 -->
-  <meta http-equiv="window-target" content="_top" />
+  <meta http-equiv="window-target" content="_top">
   
   
   <title>【状压DP】BZOJ2734 [HNOI2012]集合选数 | linkfqy&#39;s Blog</title>
-  <meta name="description" content="题面在这里 ​ 一开始看毫无头绪，可以建立这样一个矩阵： \[ x\ \ 3x\ \ 9x \dots \\ 2x\ \ 6x\ \ 18x \dots  \\ 4x\ \ 12x\ \ 36x \dots \\ \dots \] 然后就是不能取相邻格子，因为\(logn\)比较小，直接状压就好了…… ​ 复杂度有点玄学啊…… 卡了好久才过 ​ 示例程序： 1234567">
+  <meta name="description" content="题面在这里     ​     一开始看毫无头绪，可以建立这样一个矩阵：  x\ \ 3x\ \ 9x \dots \\ 2x\ \ 6x\ \ 18x \dots  \\ 4x\ \ 12x\ \ 36x \dots \\ \dots然后就是不能取相邻格子，因为$logn$比较小，直接状压就好了……     ​     复杂度有点玄学啊…… 卡了好久才过 ​     示例程序： 12345678">
 <meta name="keywords" content="BZOJ,状压DP">
 <meta property="og:type" content="article">
 <meta property="og:title" content="【状压DP】BZOJ2734 [HNOI2012]集合选数">
 <meta property="og:url" content="http://oi.linkfqy.top/posts/BZOJ2734/index.html">
 <meta property="og:site_name" content="linkfqy">
-<meta property="og:description" content="题面在这里 ​ 一开始看毫无头绪，可以建立这样一个矩阵： \[ x\ \ 3x\ \ 9x \dots \\ 2x\ \ 6x\ \ 18x \dots  \\ 4x\ \ 12x\ \ 36x \dots \\ \dots \] 然后就是不能取相邻格子，因为\(logn\)比较小，直接状压就好了…… ​ 复杂度有点玄学啊…… 卡了好久才过 ​ 示例程序： 1234567">
+<meta property="og:description" content="题面在这里     ​     一开始看毫无头绪，可以建立这样一个矩阵：  x\ \ 3x\ \ 9x \dots \\ 2x\ \ 6x\ \ 18x \dots  \\ 4x\ \ 12x\ \ 36x \dots \\ \dots然后就是不能取相邻格子，因为$logn$比较小，直接状压就好了……     ​     复杂度有点玄学啊…… 卡了好久才过 ​     示例程序： 12345678">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:updated_time" content="2018-07-17T02:31:52.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="【状压DP】BZOJ2734 [HNOI2012]集合选数">
-<meta name="twitter:description" content="题面在这里 ​ 一开始看毫无头绪，可以建立这样一个矩阵： \[ x\ \ 3x\ \ 9x \dots \\ 2x\ \ 6x\ \ 18x \dots  \\ 4x\ \ 12x\ \ 36x \dots \\ \dots \] 然后就是不能取相邻格子，因为\(logn\)比较小，直接状压就好了…… ​ 复杂度有点玄学啊…… 卡了好久才过 ​ 示例程序： 1234567">
+<meta name="twitter:description" content="题面在这里     ​     一开始看毫无头绪，可以建立这样一个矩阵：  x\ \ 3x\ \ 9x \dots \\ 2x\ \ 6x\ \ 18x \dots  \\ 4x\ \ 12x\ \ 36x \dots \\ \dots然后就是不能取相邻格子，因为$logn$比较小，直接状压就好了……     ​     复杂度有点玄学啊…… 卡了好久才过 ​     示例程序： 12345678">
   <!-- Canonical links -->
   <link rel="canonical" href="http://oi.linkfqy.top/posts/BZOJ2734/index.html">
   
@@ -340,7 +340,7 @@
         <span class="post-comment"><i class="icon icon-comment"></i> <a href="/posts/BZOJ2734/#comments" class="article-comment-link">评论</a></span>
         
 	
-		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 380(words)</span>
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 367(words)</span>
 	
 	
 
@@ -348,18 +348,18 @@
     </div>
     <div class="article-entry markdown-body" itemprop="articleBody">
       
-        <p><a href="https://linkfqy.github.io/my_bzoj/p/2734.html" target="_blank" rel="noopener">题面在这里</a></p>
-<p>​</p>
-<p>一开始看毫无头绪，可以建立这样一个矩阵： <span class="math display">\[
+        <p><a href="https://linkfqy.github.io/my_bzoj/p/2734.html" target="_blank" rel="noopener">题面在这里</a>    </p>
+<p>​    </p>
+<p>一开始看毫无头绪，可以建立这样一个矩阵：</p>
+<script type="math/tex; mode=display">
 x\ \ 3x\ \ 9x \dots \\
 2x\ \ 6x\ \ 18x \dots  \\
 4x\ \ 12x\ \ 36x \dots \\
-\dots
-\]</span> 然后就是不能取相邻格子，因为<span class="math inline">\(logn\)</span>比较小，直接状压就好了……</p>
-<p>​</p>
+\dots</script><p>然后就是不能取相邻格子，因为$logn$比较小，直接状压就好了……    </p>
+<p>​    </p>
 <p>复杂度有点玄学啊……</p>
 <p><del>卡了好久才过</del></p>
-<p>​</p>
+<p>​    </p>
 <p>示例程序：</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> cl(x,y) memset(x,y,sizeof(x))</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> ll;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> MOD=<span class="number">1e9</span>+<span class="number">1</span>,maxn=<span class="number">20</span>,maxm=<span class="number">13</span>,maxs=<span class="number">1</span>&lt;&lt;<span class="number">13</span>;</span><br><span class="line"><span class="keyword">int</span> n,e,N,M;</span><br><span class="line">ll f[maxn][maxs],pw2[maxn],pw3[maxn],ans;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">maker</span><span class="params">()</span></span>&#123;</span><br><span class="line">	N=M=<span class="number">1</span>;pw2[<span class="number">0</span>]=pw3[<span class="number">0</span>]=<span class="number">1</span>;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">1</span>;pw2[i<span class="number">-1</span>]*<span class="number">2</span>&lt;=n;i++) pw2[i]=pw2[i<span class="number">-1</span>]*<span class="number">2</span>,N++;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">1</span>;pw3[i<span class="number">-1</span>]*<span class="number">3</span>&lt;=n;i++) pw3[i]=pw3[i<span class="number">-1</span>]*<span class="number">3</span>,M++;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">highbit</span><span class="params">(<span class="keyword">int</span> j)</span> </span>&#123;<span class="keyword">for</span> (<span class="keyword">int</span> t=M;t;t--) <span class="keyword">if</span> (j&amp;(<span class="number">1</span>&lt;&lt;t<span class="number">-1</span>)) <span class="keyword">return</span> t;<span class="keyword">return</span> <span class="number">0</span>;&#125;</span><br><span class="line"><span class="function">ll <span class="title">DP</span><span class="params">(<span class="keyword">int</span> x)</span></span>&#123;</span><br><span class="line">	N=M=<span class="number">1</span>;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i=x;i*<span class="number">2</span>&lt;=n;i*=<span class="number">2</span>) N++;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i=x;i*<span class="number">3</span>&lt;=n;i*=<span class="number">3</span>) M++;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=N;i++)</span><br><span class="line">	 <span class="keyword">for</span> (<span class="keyword">int</span> j=<span class="number">0</span>;j&lt;(<span class="number">1</span>&lt;&lt;M);j++) f[i][j]=<span class="number">0</span>;</span><br><span class="line">	f[<span class="number">0</span>][<span class="number">0</span>]=<span class="number">1</span>;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=N;i++)</span><br><span class="line">	 <span class="keyword">for</span> (<span class="keyword">int</span> j=<span class="number">0</span>;j&lt;(<span class="number">1</span>&lt;&lt;M);j++)&#123;</span><br><span class="line">	 	<span class="keyword">if</span> (j&amp;(j&gt;&gt;<span class="number">1</span>)) <span class="keyword">continue</span>;ll w=pw2[i<span class="number">-1</span>]*pw3[highbit(j)<span class="number">-1</span>]*(j!=<span class="number">0</span>);</span><br><span class="line">	 	<span class="keyword">if</span> (w&gt;n||x*w&gt;n) <span class="keyword">break</span>;</span><br><span class="line">	 	<span class="keyword">for</span> (<span class="keyword">int</span> k=<span class="number">0</span>;k&lt;(<span class="number">1</span>&lt;&lt;M);k++)</span><br><span class="line">	 	 <span class="keyword">if</span> (!(k&amp;j)) (f[i][j]+=f[i<span class="number">-1</span>][k])%=MOD;</span><br><span class="line">	 &#125;</span><br><span class="line">	ll res=<span class="number">0</span>;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> j=<span class="number">0</span>;j&lt;(<span class="number">1</span>&lt;&lt;M);j++) (res+=f[N][j])%=MOD;</span><br><span class="line">	<span class="keyword">return</span> res;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;n);</span><br><span class="line">	maker(); ans=<span class="number">1</span>;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)</span><br><span class="line">	 <span class="keyword">if</span> (i%<span class="number">2</span>!=<span class="number">0</span>&amp;&amp;i%<span class="number">3</span>!=<span class="number">0</span>) (ans*=DP(i))%=MOD;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"%lld"</span>,ans);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
@@ -635,10 +635,26 @@ var _hmt = _hmt || [];
     var s = document.getElementsByTagName("script")[0];
     s.parentNode.insertBefore(hm, s);
 })();
-</script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</script>
 
 
 
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/MathJax.js?config=TeX-MML-AM_CHTML"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 
 </body>
 

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang=zh>
-<head>
+<head><meta name="generator" content="Hexo 3.9.0">
 <!-- hexo-inject:begin --><!-- hexo-inject:end --><script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
 <link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
 <style>
@@ -19,26 +19,26 @@
 
 <!-- Valine评论 -->
 <script src="/js/av-min.js"></script>
-<script src='/js/Valine.min.js'></script>
+<script src="/js/Valine.min.js"></script>
 <!-- Leancloud统计 -->
 <!-- <script src="/js/av-min-1.2.1.js"></script> -->
 <!--  <script>AV.initialize("rJeVBhWeHlb33cC9L26UE7y3-gzGzoHsz", "uU7rD0e4IaYyrk6vSdM6GoHX");</script> -->
 
-<meta name="google-site-verification" content="IneMsg5aBY2Vw5QuPukpMzm5ATzGfO0dg40QXgKIPkk" />
+<meta name="google-site-verification" content="IneMsg5aBY2Vw5QuPukpMzm5ATzGfO0dg40QXgKIPkk">
 
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
   <meta name="renderer" content="webkit">
-  <meta http-equiv="Cache-Control" content="no-transform" />
-  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   <meta name="format-detection" content="telephone=no,email=no,adress=no">
   <!-- Color theme for statusbar -->
-  <meta name="theme-color" content="#000000" />
+  <meta name="theme-color" content="#000000">
   <!-- 强制页面在当前窗口以独立页面显示,防止别人在框架里调用页面 -->
-  <meta http-equiv="window-target" content="_top" />
+  <meta http-equiv="window-target" content="_top">
   
   
   <title>【双层WQS二分】Codeforces 739E Gosha is hunting | linkfqy&#39;s Blog</title>
@@ -350,10 +350,10 @@
       
         <p>WQS二分第一题。</p>
 <a id="more"></a>
-<p>WQS二分需要满足的条件是<span class="math inline">\(g(x)\)</span>斜率单调</p>
+<p>WQS二分需要满足的条件是$g(x)$斜率单调</p>
 <p>这题其实感性理解一下就可以了：</p>
-<p>考虑限制Ultra Ball为<span class="math inline">\(x\)</span>个，为了使收益最大，显然是选择贡献前x大的来使用Ultra Ball</p>
-<p>这其实是对一个递减序列求前缀和，<span class="math inline">\(g(x)\)</span>当然是斜率单调的啦</p>
+<p>考虑限制Ultra Ball为$x$个，为了使收益最大，显然是选择贡献前x大的来使用Ultra Ball</p>
+<p>这其实是对一个递减序列求前缀和，$g(x)$当然是斜率单调的啦</p>
 <p>由于两种球都有个数限制，WQS二分里再套一个WQS二分就好了</p>
 <p>示例程序：</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> cl(x,y) memset(x,y,sizeof(x))</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> ins(x,y) (x[i]=x[i-1]+y)</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxn=<span class="number">100005</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">double</span> eps=<span class="number">1e-8</span>;</span><br><span class="line"><span class="keyword">int</span> n,A,B,num_a[maxn],num_b[maxn];</span><br><span class="line"><span class="keyword">double</span> a[maxn],b[maxn],f[maxn];</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">work</span><span class="params">(<span class="keyword">double</span> w1,<span class="keyword">double</span> w2)</span></span>&#123;</span><br><span class="line">	f[<span class="number">0</span>]=<span class="number">0</span>;num_a[<span class="number">0</span>]=num_b[<span class="number">0</span>]=<span class="number">0</span>;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)&#123;</span><br><span class="line">		ins(f,<span class="number">0</span>);ins(num_a,<span class="number">0</span>);ins(num_b,<span class="number">0</span>);</span><br><span class="line">		<span class="keyword">if</span> (f[i<span class="number">-1</span>]+a[i]-w1&gt;f[i])</span><br><span class="line">		 f[i]=f[i<span class="number">-1</span>]+a[i]-w1,ins(num_a,<span class="number">1</span>),ins(num_b,<span class="number">0</span>);</span><br><span class="line">		<span class="keyword">if</span> (f[i<span class="number">-1</span>]+b[i]-w2&gt;f[i])</span><br><span class="line">		 f[i]=f[i<span class="number">-1</span>]+b[i]-w2,ins(num_a,<span class="number">0</span>),ins(num_b,<span class="number">1</span>);</span><br><span class="line">		<span class="keyword">if</span> (f[i<span class="number">-1</span>]+<span class="number">1</span>-(<span class="number">1</span>-a[i])*(<span class="number">1</span>-b[i])-w1-w2&gt;f[i])</span><br><span class="line">		 f[i]=f[i<span class="number">-1</span>]+<span class="number">1</span>-(<span class="number">1</span>-a[i])*(<span class="number">1</span>-b[i])-w1-w2,</span><br><span class="line">		 ins(num_a,<span class="number">1</span>),ins(num_b,<span class="number">1</span>);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="keyword">while</span> (<span class="built_in">scanf</span>(<span class="string">"%d%d%d"</span>,&amp;n,&amp;A,&amp;B)==<span class="number">3</span>)&#123;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++) <span class="built_in">scanf</span>(<span class="string">"%lf"</span>,&amp;a[i]);</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++) <span class="built_in">scanf</span>(<span class="string">"%lf"</span>,&amp;b[i]);</span><br><span class="line">		<span class="keyword">double</span> l1=<span class="number">0</span>,r1=<span class="number">1</span>,l2=<span class="number">0</span>,r2=<span class="number">1</span>;</span><br><span class="line">		<span class="keyword">while</span> (r1-l1&gt;=eps)&#123;</span><br><span class="line">			<span class="keyword">double</span> mid1=(l1+r1)/<span class="number">2</span>;</span><br><span class="line">			l2=<span class="number">0</span>,r2=<span class="number">1</span>;</span><br><span class="line">			<span class="keyword">while</span> (r2-l2&gt;=eps)&#123;</span><br><span class="line">				<span class="keyword">double</span> mid2=(l2+r2)/<span class="number">2</span>;</span><br><span class="line">				<span class="keyword">if</span> ((work(mid1,mid2),num_b[n])&gt;B) l2=mid2;<span class="keyword">else</span> r2=mid2;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">if</span> (work(mid1,r2),num_a[n]&gt;A) l1=mid1;<span class="keyword">else</span> r1=mid1;</span><br><span class="line">		&#125;</span><br><span class="line">		work(r1,r2);</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"%.5lf\n"</span>,f[n]+r1*A+r2*B);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -630,10 +630,26 @@ var _hmt = _hmt || [];
     var s = document.getElementsByTagName("script")[0];
     s.parentNode.insertBefore(hm, s);
 })();
-</script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</script>
 
 
 
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/MathJax.js?config=TeX-MML-AM_CHTML"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 
 </body>
 

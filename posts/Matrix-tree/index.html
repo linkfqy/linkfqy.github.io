@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang=zh>
-<head>
+<head><meta name="generator" content="Hexo 3.9.0">
 <!-- hexo-inject:begin --><!-- hexo-inject:end --><script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
 <link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
 <style>
@@ -19,41 +19,41 @@
 
 <!-- Valine评论 -->
 <script src="/js/av-min.js"></script>
-<script src='/js/Valine.min.js'></script>
+<script src="/js/Valine.min.js"></script>
 <!-- Leancloud统计 -->
 <!-- <script src="/js/av-min-1.2.1.js"></script> -->
 <!--  <script>AV.initialize("rJeVBhWeHlb33cC9L26UE7y3-gzGzoHsz", "uU7rD0e4IaYyrk6vSdM6GoHX");</script> -->
 
-<meta name="google-site-verification" content="IneMsg5aBY2Vw5QuPukpMzm5ATzGfO0dg40QXgKIPkk" />
+<meta name="google-site-verification" content="IneMsg5aBY2Vw5QuPukpMzm5ATzGfO0dg40QXgKIPkk">
 
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
   <meta name="renderer" content="webkit">
-  <meta http-equiv="Cache-Control" content="no-transform" />
-  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   <meta name="format-detection" content="telephone=no,email=no,adress=no">
   <!-- Color theme for statusbar -->
-  <meta name="theme-color" content="#000000" />
+  <meta name="theme-color" content="#000000">
   <!-- 强制页面在当前窗口以独立页面显示,防止别人在框架里调用页面 -->
-  <meta http-equiv="window-target" content="_top" />
+  <meta http-equiv="window-target" content="_top">
   
   
   <title>矩阵树定理 | linkfqy&#39;s Blog</title>
-  <meta name="description" content="最近学习了矩阵树定理。 矩阵树定理可以求生成树个数">
+  <meta name="description" content="最近学习了矩阵树定理。   矩阵树定理可以求生成树个数">
 <meta name="keywords" content="矩阵树定理">
 <meta property="og:type" content="article">
 <meta property="og:title" content="矩阵树定理">
 <meta property="og:url" content="http://oi.linkfqy.top/posts/Matrix-tree/index.html">
 <meta property="og:site_name" content="linkfqy">
-<meta property="og:description" content="最近学习了矩阵树定理。 矩阵树定理可以求生成树个数">
+<meta property="og:description" content="最近学习了矩阵树定理。   矩阵树定理可以求生成树个数">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:updated_time" content="2018-05-27T08:40:14.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="矩阵树定理">
-<meta name="twitter:description" content="最近学习了矩阵树定理。 矩阵树定理可以求生成树个数">
+<meta name="twitter:description" content="最近学习了矩阵树定理。   矩阵树定理可以求生成树个数">
   <!-- Canonical links -->
   <link rel="canonical" href="http://oi.linkfqy.top/posts/Matrix-tree/index.html">
   
@@ -340,7 +340,7 @@
         <span class="post-comment"><i class="icon icon-comment"></i> <a href="/posts/Matrix-tree/#comments" class="article-comment-link">评论</a></span>
         
 	
-		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 1,088(words)</span>
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 1,040(words)</span>
 	
 	
 
@@ -348,61 +348,52 @@
     </div>
     <div class="article-entry markdown-body" itemprop="articleBody">
       
-        <p>最近学习了矩阵树定理。</p>
+        <p>最近学习了矩阵树定理。  </p>
 <p>矩阵树定理可以求生成树个数</p>
 <a id="more"></a>
-<h1 id="前置知识">前置知识</h1>
-<h2 id="行列式">行列式</h2>
-<h3 id="定义">定义</h3>
-<p>对于一个<span class="math inline">\(N\times N\)</span>矩阵<span class="math inline">\(A\)</span>，它的行列式<span class="math inline">\(det(A)\)</span>： <span class="math display">\[
+<h1 id="前置知识"><a href="#前置知识" class="headerlink" title="前置知识"></a>前置知识</h1><h2 id="行列式"><a href="#行列式" class="headerlink" title="行列式"></a>行列式</h2><h3 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h3><p>对于一个$N\times N$矩阵$A$，它的行列式$det(A)$：</p>
+<script type="math/tex; mode=display">
 det(A)=\sum\limits_{(i_1i_2...i_n)}(-1)^ka_{1,i_1}a_{2,i_2}...a_{n,i_n}=
 \left|\begin{array}{cccc}
-a_{1,1} &amp; a_{1,2} &amp; \dots &amp; a_{1,n} \\
-a_{2,1} &amp; \dots \\
+a_{1,1} & a_{1,2} & \dots & a_{1,n} \\
+a_{2,1} & \dots \\
 \dots \\
-a_{n,1} &amp; a_{n,2} &amp; \dots &amp; a_{n,n}
-\end{array}\right|
-\]</span></p>
-<p>其中<span class="math inline">\(i\)</span>是<span class="math inline">\(n\)</span>的一个排列，<span class="math inline">\(k\)</span>是这个排列的逆序对数</p>
+a_{n,1} & a_{n,2} & \dots & a_{n,n}
+\end{array}\right|</script><p>其中$i$是$n$的一个排列，$k$是这个排列的逆序对数</p>
 <p>这个定义可以理解为每行每列仅取一个，求所有方案的乘积和</p>
 <p>几何意义：线性变换的（体积）放大率</p>
-<h3 id="性质">性质</h3>
-<p>行列式具有以下性质：</p>
+<h3 id="性质"><a href="#性质" class="headerlink" title="性质"></a>性质</h3><p>行列式具有以下性质：</p>
 <ul>
-<li><span class="math inline">\(det(A)=det(A^T)\)</span>（行列等价）</li>
+<li>$det(A)=det(A^T)$（行列等价）</li>
 <li>交换两行，行列式变号（从奇偶排列的角度看）</li>
 <li>某一行乘K，行列式变为K倍（从几何意义理解）</li>
 <li>某一行加上另一行的K倍，行列式不变（这意味着行列式可以高斯消元）</li>
 </ul>
-<p>把<span class="math inline">\(\forall i&gt;j,a_{i,j}=0\)</span>的矩阵称为上三角矩阵，左上到右下称为主对角线</p>
+<p>把$\forall i&gt;j,a_{i,j}=0$的矩阵称为上三角矩阵，左上到右下称为主对角线</p>
 <ul>
 <li>上三角矩阵的行列式为主对角线乘积（由定义得）</li>
 </ul>
-<h3 id="求解">求解</h3>
-<p>行列式的求解可以用高斯消元<span class="math inline">\(O(n^3)\)</span>实现：</p>
+<h3 id="求解"><a href="#求解" class="headerlink" title="求解"></a>求解</h3><p>行列式的求解可以用高斯消元$O(n^3)$实现：</p>
 <p>先高斯消元把矩阵等价变形为上三角矩阵，然后求主对角线乘积就好了</p>
 <p>如果答案要膜一个质数，就用逆元</p>
 <p>如果丧心病狂不是质数，就只能辗转相除法了</p>
 <p>注意记录交换行的次数，并取负</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">ll <span class="title">det</span><span class="params">(matrix a,<span class="keyword">int</span> n)</span></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> tot=<span class="number">0</span>;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)&#123;</span><br><span class="line">		<span class="keyword">int</span> where=<span class="number">-1</span>;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> j=i;j&lt;=n;j++) <span class="keyword">if</span> (a[j][i]!=<span class="number">0</span>) &#123;where=j;<span class="keyword">break</span>;&#125;</span><br><span class="line">		<span class="keyword">if</span> (where&lt;<span class="number">0</span>) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">		<span class="keyword">if</span> (where&gt;i)&#123;</span><br><span class="line">			tot++;</span><br><span class="line">			<span class="keyword">for</span> (<span class="keyword">int</span> j=<span class="number">1</span>;j&lt;=n;j++) swap(a[i][j],a[where][j]);</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> j=i+<span class="number">1</span>;j&lt;=n;j++)&#123;</span><br><span class="line">			ll t=a[j][i]*inv(a[i][i])%MD;</span><br><span class="line">			<span class="keyword">for</span> (<span class="keyword">int</span> k=i;k&lt;=n;k++) A(a[j][k],-a[i][k]*t);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	ll res=<span class="number">1</span>;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++) (res*=a[i][i])%=MD;</span><br><span class="line">	<span class="keyword">return</span> (tot&amp;<span class="number">1</span>)?MD-res:res;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h1 id="基尔霍夫矩阵">基尔霍夫矩阵</h1>
-<p>对于一个无向图，定义邻接矩阵和度数矩阵：</p>
+<h1 id="基尔霍夫矩阵"><a href="#基尔霍夫矩阵" class="headerlink" title="基尔霍夫矩阵"></a>基尔霍夫矩阵</h1><p>对于一个无向图，定义邻接矩阵和度数矩阵：</p>
 <ul>
-<li>邻接矩阵：<span class="math inline">\(a_{u,v}=a_{v,u}=1 当且仅当存在u\leftrightarrow v\)</span></li>
-<li>度数矩阵：<span class="math inline">\(a_{v,v}\)</span>表示v的度数</li>
+<li>邻接矩阵：$a_{u,v}=a_{v,u}=1 当且仅当存在u\leftrightarrow v$</li>
+<li>度数矩阵：$a_{v,v}$表示v的度数</li>
 </ul>
 <p>类似地，有向图也有以下定义：</p>
 <ul>
-<li>邻接矩阵：<span class="math inline">\(a_{u,v}=1 当且仅当存在u\rightarrow v\)</span></li>
-<li>度数矩阵：<span class="math inline">\(a_{v,v}\)</span>表示v的入度</li>
+<li>邻接矩阵：$a_{u,v}=1 当且仅当存在u\rightarrow v$</li>
+<li>度数矩阵：$a_{v,v}$表示v的入度</li>
 </ul>
 <p>基尔霍夫矩阵就是邻接矩阵减去度数矩阵</p>
-<h1 id="矩阵树定理">矩阵树定理</h1>
-<p>Matrix-tree定理：</p>
-<p>一个图的生成树个数为 基尔霍夫矩阵的余子式<span class="math inline">\(M_{i,i}\)</span>的行列式<span class="math inline">\(det(M_{i,i})\)</span></p>
+<h1 id="矩阵树定理"><a href="#矩阵树定理" class="headerlink" title="矩阵树定理"></a>矩阵树定理</h1><p>Matrix-tree定理：</p>
+<p>一个图的生成树个数为 基尔霍夫矩阵的余子式$M_{i,i}$的行列式$det(M_{i,i})$</p>
 <p>对应有向图就是以i为根的外向树个数</p>
-<h2 id="模板">模板</h2>
-<p>bzoj4596</p>
+<h2 id="模板"><a href="#模板" class="headerlink" title="模板"></a>模板</h2><p>bzoj4596</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> cl(x,y) memset(x,y,sizeof(x))</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> ll;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxn=<span class="number">25</span>;</span><br><span class="line"><span class="keyword">typedef</span> ll matrix[maxn][maxn];</span><br><span class="line"><span class="keyword">const</span> ll MD=<span class="number">1e9</span>+<span class="number">7</span>;</span><br><span class="line"><span class="keyword">int</span> n,m[maxn];</span><br><span class="line">ll ans;</span><br><span class="line">matrix kir;</span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">data</span>&#123;</span></span><br><span class="line">	<span class="keyword">int</span> x,y;</span><br><span class="line">	<span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">read</span><span class="params">()</span> </span>&#123;<span class="built_in">scanf</span>(<span class="string">"%d%d"</span>,&amp;x,&amp;y);&#125;</span><br><span class="line">&#125;a[maxn][<span class="number">105</span>];</span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">A</span><span class="params">(ll &amp;a,ll b)</span></span>&#123; (a+=(b%MD+MD)%MD)%=MD; &#125;</span><br><span class="line"><span class="function"><span class="keyword">inline</span> ll <span class="title">inv</span><span class="params">(ll a)</span></span>&#123;</span><br><span class="line">	ll res=<span class="number">1</span>,w=a%MD,b=MD<span class="number">-2</span>;</span><br><span class="line">	<span class="keyword">while</span> (b)&#123;</span><br><span class="line">		<span class="keyword">if</span> (b&amp;<span class="number">1</span>) res=res*w%MD;</span><br><span class="line">		w=w*w%MD;</span><br><span class="line">		b&gt;&gt;=<span class="number">1</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> res;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function">ll <span class="title">det</span><span class="params">(matrix a,<span class="keyword">int</span> n)</span></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> tot=<span class="number">0</span>;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)&#123;</span><br><span class="line">		<span class="keyword">int</span> where=<span class="number">-1</span>;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> j=i;j&lt;=n;j++) <span class="keyword">if</span> (a[j][i]!=<span class="number">0</span>) &#123;where=j;<span class="keyword">break</span>;&#125;</span><br><span class="line">		<span class="keyword">if</span> (where&lt;<span class="number">0</span>) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">		<span class="keyword">if</span> (where&gt;i)&#123;</span><br><span class="line">			tot++;</span><br><span class="line">			<span class="keyword">for</span> (<span class="keyword">int</span> j=<span class="number">1</span>;j&lt;=n;j++) swap(a[i][j],a[where][j]);</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> j=i+<span class="number">1</span>;j&lt;=n;j++)&#123;</span><br><span class="line">			ll t=a[j][i]*inv(a[i][i])%MD;</span><br><span class="line">			<span class="keyword">for</span> (<span class="keyword">int</span> k=i;k&lt;=n;k++) A(a[j][k],-a[i][k]*t);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	ll res=<span class="number">1</span>;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++) (res*=a[i][i])%=MD;</span><br><span class="line">	<span class="keyword">return</span> (tot&amp;<span class="number">1</span>)?MD-res:res;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;n);</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;n;i++)&#123;</span><br><span class="line">		<span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;m[i]);</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> j=<span class="number">1</span>;j&lt;=m[i];j++) a[i][j].read();</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> s=<span class="number">0</span>;s&lt;(<span class="number">1</span>&lt;&lt;n<span class="number">-1</span>);s++)&#123;</span><br><span class="line">		cl(kir,<span class="number">0</span>);<span class="keyword">int</span> tot=<span class="number">0</span>;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)</span><br><span class="line">		 <span class="keyword">if</span> (s&amp;(<span class="number">1</span>&lt;&lt;i<span class="number">-1</span>))&#123;tot++;</span><br><span class="line">		  <span class="keyword">for</span> (<span class="keyword">int</span> j=<span class="number">1</span>;j&lt;=m[i];j++)&#123;</span><br><span class="line">		  	<span class="keyword">int</span> x=a[i][j].x,y=a[i][j].y;</span><br><span class="line">		  	A(kir[x][y],<span class="number">-1</span>);A(kir[y][x],<span class="number">-1</span>);A(kir[x][x],<span class="number">1</span>);A(kir[y][y],<span class="number">1</span>);</span><br><span class="line">		  &#125;&#125;</span><br><span class="line">		A(ans,((n<span class="number">-1</span>-tot&amp;<span class="number">1</span>)?<span class="number">-1</span>:<span class="number">1</span>)*det(kir,n<span class="number">-1</span>));</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"%lld"</span>,ans);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
       
@@ -677,10 +668,26 @@ var _hmt = _hmt || [];
     var s = document.getElementsByTagName("script")[0];
     s.parentNode.insertBefore(hm, s);
 })();
-</script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</script>
 
 
 
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/MathJax.js?config=TeX-MML-AM_CHTML"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 
 </body>
 

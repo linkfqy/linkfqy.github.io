@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang=zh>
-<head>
+<head><meta name="generator" content="Hexo 3.9.0">
 <!-- hexo-inject:begin --><!-- hexo-inject:end --><script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
 <link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
 <style>
@@ -19,41 +19,41 @@
 
 <!-- Valine评论 -->
 <script src="/js/av-min.js"></script>
-<script src='/js/Valine.min.js'></script>
+<script src="/js/Valine.min.js"></script>
 <!-- Leancloud统计 -->
 <!-- <script src="/js/av-min-1.2.1.js"></script> -->
 <!--  <script>AV.initialize("rJeVBhWeHlb33cC9L26UE7y3-gzGzoHsz", "uU7rD0e4IaYyrk6vSdM6GoHX");</script> -->
 
-<meta name="google-site-verification" content="IneMsg5aBY2Vw5QuPukpMzm5ATzGfO0dg40QXgKIPkk" />
+<meta name="google-site-verification" content="IneMsg5aBY2Vw5QuPukpMzm5ATzGfO0dg40QXgKIPkk">
 
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
   <meta name="renderer" content="webkit">
-  <meta http-equiv="Cache-Control" content="no-transform" />
-  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   <meta name="format-detection" content="telephone=no,email=no,adress=no">
   <!-- Color theme for statusbar -->
-  <meta name="theme-color" content="#000000" />
+  <meta name="theme-color" content="#000000">
   <!-- 强制页面在当前窗口以独立页面显示,防止别人在框架里调用页面 -->
-  <meta http-equiv="window-target" content="_top" />
+  <meta http-equiv="window-target" content="_top">
   
   
   <title>BZOJ4144 [AMPPZ2014]Petrol | linkfqy&#39;s Blog</title>
-  <meta name="description" content="题面在这里 ​ 如果知道所有加油站之间的距离，最小生成树路径上的最大边就是决定了是否能走到 令\(from_i\)为离i最近的加油站，\(dist_i\)为到最近的加油站的距离 考虑从加油站\(x\)走到\(y\)，路径上的\(from\)一定是这样的： x,x,x...x,x,y,y...y,y,y（反证得） 所以对于给定的边\((x,y,w)\)，建边\((from_x,from_">
+  <meta name="description" content="题面在这里 ​     如果知道所有加油站之间的距离，最小生成树路径上的最大边就是决定了是否能走到 令$from_i$为离i最近的加油站，$dist_i$为到最近的加油站的距离 考虑从加油站$x$走到$y$，路径上的$from$一定是这样的： x,x,x...x,x,y,y...y,y,y（反证得） 所以对于给定的边$(x,y,w)$，建边$(from_x,from_y,dist_x+dist_y">
 <meta name="keywords" content="BZOJ,最小生成树,最短路">
 <meta property="og:type" content="article">
 <meta property="og:title" content="BZOJ4144 [AMPPZ2014]Petrol">
 <meta property="og:url" content="http://oi.linkfqy.top/posts/BZOJ4144/index.html">
 <meta property="og:site_name" content="linkfqy">
-<meta property="og:description" content="题面在这里 ​ 如果知道所有加油站之间的距离，最小生成树路径上的最大边就是决定了是否能走到 令\(from_i\)为离i最近的加油站，\(dist_i\)为到最近的加油站的距离 考虑从加油站\(x\)走到\(y\)，路径上的\(from\)一定是这样的： x,x,x...x,x,y,y...y,y,y（反证得） 所以对于给定的边\((x,y,w)\)，建边\((from_x,from_">
+<meta property="og:description" content="题面在这里 ​     如果知道所有加油站之间的距离，最小生成树路径上的最大边就是决定了是否能走到 令$from_i$为离i最近的加油站，$dist_i$为到最近的加油站的距离 考虑从加油站$x$走到$y$，路径上的$from$一定是这样的： x,x,x...x,x,y,y...y,y,y（反证得） 所以对于给定的边$(x,y,w)$，建边$(from_x,from_y,dist_x+dist_y">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:updated_time" content="2018-10-05T12:28:38.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="BZOJ4144 [AMPPZ2014]Petrol">
-<meta name="twitter:description" content="题面在这里 ​ 如果知道所有加油站之间的距离，最小生成树路径上的最大边就是决定了是否能走到 令\(from_i\)为离i最近的加油站，\(dist_i\)为到最近的加油站的距离 考虑从加油站\(x\)走到\(y\)，路径上的\(from\)一定是这样的： x,x,x...x,x,y,y...y,y,y（反证得） 所以对于给定的边\((x,y,w)\)，建边\((from_x,from_">
+<meta name="twitter:description" content="题面在这里 ​     如果知道所有加油站之间的距离，最小生成树路径上的最大边就是决定了是否能走到 令$from_i$为离i最近的加油站，$dist_i$为到最近的加油站的距离 考虑从加油站$x$走到$y$，路径上的$from$一定是这样的： x,x,x...x,x,y,y...y,y,y（反证得） 所以对于给定的边$(x,y,w)$，建边$(from_x,from_y,dist_x+dist_y">
   <!-- Canonical links -->
   <link rel="canonical" href="http://oi.linkfqy.top/posts/BZOJ4144/index.html">
   
@@ -349,14 +349,14 @@
     <div class="article-entry markdown-body" itemprop="articleBody">
       
         <p><a href="https://lydsy.com/JudgeOnline/problem.php?id=4144" target="_blank" rel="noopener">题面在这里</a></p>
-<p>​</p>
+<p>​    </p>
 <p>如果知道所有加油站之间的距离，最小生成树路径上的最大边就是决定了是否能走到</p>
-<p>令<span class="math inline">\(from_i\)</span>为离i最近的加油站，<span class="math inline">\(dist_i\)</span>为到最近的加油站的距离</p>
-<p>考虑从加油站<span class="math inline">\(x\)</span>走到<span class="math inline">\(y\)</span>，路径上的<span class="math inline">\(from\)</span>一定是这样的：</p>
+<p>令$from_i$为离i最近的加油站，$dist_i$为到最近的加油站的距离</p>
+<p>考虑从加油站$x$走到$y$，路径上的$from$一定是这样的：</p>
 <p><code>x,x,x...x,x,y,y...y,y,y</code>（反证得）</p>
-<p>所以对于给定的边<span class="math inline">\((x,y,w)\)</span>，建边<span class="math inline">\((from_x,from_y,dist_x+dist_y+w)\)</span></p>
+<p>所以对于给定的边$(x,y,w)$，建边$(from_x,from_y,dist_x+dist_y+w)$</p>
 <p>然后就好了</p>
-<p>​</p>
+<p>​    </p>
 <p>示例程序：</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> cl(x,y) memset(x,y,sizeof(x))</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">char</span> <span class="title">nc</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="keyword">static</span> <span class="keyword">char</span> buf[<span class="number">100000</span>],*l=buf,*r=buf;</span><br><span class="line">	<span class="keyword">return</span> l==r&amp;&amp;(r=(l=buf)+fread(buf,<span class="number">1</span>,<span class="number">100000</span>,<span class="built_in">stdin</span>),l==r)?EOF:*l++;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">int</span> <span class="title">red</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> res=<span class="number">0</span>,f=<span class="number">1</span>;<span class="keyword">char</span> ch=nc();</span><br><span class="line">	<span class="keyword">while</span> (ch&lt;<span class="string">'0'</span>||<span class="string">'9'</span>&lt;ch) &#123;<span class="keyword">if</span> (ch==<span class="string">'-'</span>) f=-f;ch=nc();&#125;</span><br><span class="line">	<span class="keyword">while</span> (<span class="string">'0'</span>&lt;=ch&amp;&amp;ch&lt;=<span class="string">'9'</span>) res=res*<span class="number">10</span>+ch<span class="number">-48</span>,ch=nc();</span><br><span class="line">	<span class="keyword">return</span> res*f;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxn=<span class="number">200005</span>,maxe=<span class="number">800005</span>;</span><br><span class="line"><span class="keyword">int</span> n,s,e,q,c[maxn];</span><br><span class="line"><span class="keyword">int</span> son[maxe],nxt[maxe],lnk1[maxn],lnk2[maxn],w[maxe],tot;</span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">add</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">int</span> y,<span class="keyword">int</span> z,<span class="keyword">int</span> *lnk)</span></span>&#123;</span><br><span class="line">	son[++tot]=y;nxt[tot]=lnk[x];lnk[x]=tot;w[tot]=z;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">int</span> que[maxn],dst[maxn],frm[maxn];</span><br><span class="line"><span class="keyword">bool</span> vis[maxn];</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">spfa</span><span class="params">()</span></span>&#123;</span><br><span class="line">	cl(dst,<span class="number">63</span>);</span><br><span class="line">	<span class="keyword">int</span> hed=<span class="number">0</span>,til=<span class="number">0</span>;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=s;i++) que[++til]=c[i],dst[c[i]]=<span class="number">0</span>,vis[c[i]]=<span class="number">1</span>,frm[c[i]]=c[i];</span><br><span class="line">	<span class="keyword">while</span> (hed!=til)&#123;</span><br><span class="line">		<span class="keyword">int</span> x=que[hed=(hed+<span class="number">1</span>)%maxn];</span><br><span class="line">		vis[x]=<span class="number">0</span>;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> j=lnk1[x];j;j=nxt[j])</span><br><span class="line">		 <span class="keyword">if</span> (dst[son[j]]&gt;dst[x]+w[j])&#123;</span><br><span class="line">		 	dst[son[j]]=dst[x]+w[j];</span><br><span class="line">		 	frm[son[j]]=frm[x];</span><br><span class="line">		 	<span class="keyword">if</span> (!vis[son[j]])</span><br><span class="line">		 	 vis[que[til=(til+<span class="number">1</span>)%maxn]=son[j]]=<span class="number">1</span>;</span><br><span class="line">		 &#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">edge</span>&#123;</span></span><br><span class="line">	<span class="keyword">int</span> x,y,w;</span><br><span class="line">	<span class="keyword">bool</span> <span class="keyword">operator</span>&lt;(<span class="keyword">const</span> edge&amp;b)<span class="keyword">const</span> &#123;<span class="keyword">return</span> w&lt;b.w;&#125;</span><br><span class="line">&#125;a[maxn],b[maxn];</span><br><span class="line"><span class="keyword">int</span> fa[maxn];</span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">int</span> <span class="title">getfa</span><span class="params">(<span class="keyword">int</span> x)</span> </span>&#123;<span class="keyword">return</span> fa[x]==x?x:fa[x]=getfa(fa[x]);&#125;</span><br><span class="line"><span class="keyword">int</span> f[maxn][<span class="number">18</span>],g[maxn][<span class="number">18</span>],dep[maxn];</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">dfs</span><span class="params">(<span class="keyword">int</span> x)</span></span>&#123;</span><br><span class="line">	vis[x]=<span class="number">1</span>;dep[x]=dep[f[x][<span class="number">0</span>]]+<span class="number">1</span>;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> j=lnk2[x];j;j=nxt[j])</span><br><span class="line">	 <span class="keyword">if</span> (!vis[son[j]]) f[son[j]][<span class="number">0</span>]=x,g[son[j]][<span class="number">0</span>]=w[j],dfs(son[j]);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">DP</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> j=<span class="number">1</span>;j&lt;=<span class="number">17</span>;j++)</span><br><span class="line">	 <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)</span><br><span class="line">	  f[i][j]=f[f[i][j<span class="number">-1</span>]][j<span class="number">-1</span>],</span><br><span class="line">	  g[i][j]=max(g[i][j<span class="number">-1</span>],g[f[i][j<span class="number">-1</span>]][j<span class="number">-1</span>]);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">LCA</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">int</span> y)</span></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> res=<span class="number">0</span>;</span><br><span class="line">	<span class="keyword">if</span> (dep[x]&lt;dep[y]) swap(x,y);</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> j=<span class="number">17</span>;~j;j--)</span><br><span class="line">	 <span class="keyword">if</span> (dep[f[x][j]]&gt;=dep[y]) res=max(res,g[x][j]),x=f[x][j];</span><br><span class="line">	<span class="keyword">if</span> (x==y) <span class="keyword">return</span> res;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> j=<span class="number">17</span>;~j;j--)</span><br><span class="line">	 <span class="keyword">if</span> (f[x][j]!=f[y][j]) res=max(res,max(g[x][j],g[y][j])),x=f[x][j],y=f[y][j];</span><br><span class="line">	<span class="keyword">return</span> max(res,max(g[x][<span class="number">0</span>],g[y][<span class="number">0</span>]));</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	n=red(),s=red(),e=red();</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=s;i++) c[i]=red();</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">1</span>,x,y,z;i&lt;=e;i++) a[i].x=x=red(),a[i].y=y=red(),a[i].w=z=red(),add(x,y,z,lnk1),add(y,x,z,lnk1);</span><br><span class="line">	spfa();</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=e;i++) b[i].x=frm[a[i].x],b[i].y=frm[a[i].y],b[i].w=dst[a[i].x]+dst[a[i].y]+a[i].w;</span><br><span class="line">	sort(b+<span class="number">1</span>,b+<span class="number">1</span>+e);</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++) fa[i]=i;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=e;i++)</span><br><span class="line">	 <span class="keyword">if</span> (getfa(b[i].x)!=getfa(b[i].y))&#123;</span><br><span class="line">	 	fa[getfa(b[i].x)]=getfa(b[i].y);</span><br><span class="line">	 	add(b[i].x,b[i].y,b[i].w,lnk2); add(b[i].y,b[i].x,b[i].w,lnk2);</span><br><span class="line">	 &#125;</span><br><span class="line">	cl(vis,<span class="number">0</span>);</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=s;i++)</span><br><span class="line">	 <span class="keyword">if</span> (!vis[c[i]]) f[c[i]][<span class="number">0</span>]=<span class="number">0</span>,g[c[i]][<span class="number">0</span>]=<span class="number">0</span>,dfs(c[i]);</span><br><span class="line">	DP();</span><br><span class="line">	q=red();</span><br><span class="line">	<span class="keyword">while</span> (q--)&#123;</span><br><span class="line">		<span class="keyword">int</span> x=red(),y=red(),d=red();</span><br><span class="line">		<span class="keyword">if</span> (getfa(x)!=getfa(y)) <span class="built_in">puts</span>(<span class="string">"NIE"</span>);<span class="keyword">else</span></span><br><span class="line">		<span class="built_in">puts</span>(LCA(x,y)&lt;=d?<span class="string">"TAK"</span>:<span class="string">"NIE"</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
@@ -632,10 +632,26 @@ var _hmt = _hmt || [];
     var s = document.getElementsByTagName("script")[0];
     s.parentNode.insertBefore(hm, s);
 })();
-</script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</script>
 
 
 
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/MathJax.js?config=TeX-MML-AM_CHTML"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 
 </body>
 

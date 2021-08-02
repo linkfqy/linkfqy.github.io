@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang=zh>
-<head>
+<head><meta name="generator" content="Hexo 3.9.0">
 <!-- hexo-inject:begin --><!-- hexo-inject:end --><script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
 <link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
 <style>
@@ -19,26 +19,26 @@
 
 <!-- Valine评论 -->
 <script src="/js/av-min.js"></script>
-<script src='/js/Valine.min.js'></script>
+<script src="/js/Valine.min.js"></script>
 <!-- Leancloud统计 -->
 <!-- <script src="/js/av-min-1.2.1.js"></script> -->
 <!--  <script>AV.initialize("rJeVBhWeHlb33cC9L26UE7y3-gzGzoHsz", "uU7rD0e4IaYyrk6vSdM6GoHX");</script> -->
 
-<meta name="google-site-verification" content="IneMsg5aBY2Vw5QuPukpMzm5ATzGfO0dg40QXgKIPkk" />
+<meta name="google-site-verification" content="IneMsg5aBY2Vw5QuPukpMzm5ATzGfO0dg40QXgKIPkk">
 
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
   <meta name="renderer" content="webkit">
-  <meta http-equiv="Cache-Control" content="no-transform" />
-  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   <meta name="format-detection" content="telephone=no,email=no,adress=no">
   <!-- Color theme for statusbar -->
-  <meta name="theme-color" content="#000000" />
+  <meta name="theme-color" content="#000000">
   <!-- 强制页面在当前窗口以独立页面显示,防止别人在框架里调用页面 -->
-  <meta http-equiv="window-target" content="_top" />
+  <meta http-equiv="window-target" content="_top">
   
   
   <title>关于WQS二分的一点理解 | linkfqy&#39;s Blog</title>
@@ -350,17 +350,17 @@
       
         <p>最近才学习了WQS二分，发现这是一个很有用的东西。</p>
 <a id="more"></a>
-<p>大概是这样一类问题：决策<span class="math inline">\(i\)</span>对答案有<span class="math inline">\(w_i\)</span>贡献，求恰好做<span class="math inline">\(k\)</span>次该类决策的最大答案</p>
-<p>考虑不限制决策的次数，但每个决策除贡献外，都减去一个代价<span class="math inline">\(cost\)</span></p>
-<p>这样通过调整<span class="math inline">\(cost\)</span>的值，就能够控制决策的次数</p>
-<p>WQS二分其实就是二分这个<span class="math inline">\(cost\)</span>，使得最优解做不大于<span class="math inline">\(k\)</span>次该类决策，且<span class="math inline">\(cost\)</span>尽量大</p>
-<p>设最优解做了<span class="math inline">\(x\)</span>次该决策，定义<span class="math inline">\(g(x)\)</span>为最优解（不减<span class="math inline">\(cost\)</span>），<span class="math inline">\(f(x)\)</span>为最优解</p>
-<p>则有：<span class="math inline">\(g(x)=kx+f(x)\)</span></p>
-<p><span class="math inline">\(k\)</span>其实就是<span class="math inline">\(cost\)</span></p>
-<p>你会发现这其实就是在二分<span class="math inline">\(g(x)\)</span>的斜率，使该斜率对应的<span class="math inline">\(x\)</span>满足题意</p>
-<p>这样我们就得到了WQS二分的条件：原贡献关于决策次数的函数<span class="math inline">\(g(x)\)</span>斜率单调（<span class="math inline">\(g&#39;(x)\)</span>单调）</p>
-<p>值得注意的是，最后得到的<span class="math inline">\(cost\)</span>，对应决策次数不一定是<span class="math inline">\(k\)</span>（<span class="math inline">\(g‘(x)\)</span>某段水平）</p>
-<p>但这并不影响答案，因为<span class="math inline">\(g&#39;(x)=g&#39;(k)\)</span>意味着<span class="math inline">\(f(x)=f(k)\)</span>，我们要的就是<span class="math inline">\(f(k)\)</span></p>
+<p>大概是这样一类问题：决策$i$对答案有$w_i$贡献，求恰好做$k$次该类决策的最大答案</p>
+<p>考虑不限制决策的次数，但每个决策除贡献外，都减去一个代价$cost$</p>
+<p>这样通过调整$cost$的值，就能够控制决策的次数</p>
+<p>WQS二分其实就是二分这个$cost$，使得最优解做不大于$k$次该类决策，且$cost$尽量大</p>
+<p>设最优解做了$x$次该决策，定义$g(x)$为最优解（不减$cost$），$f(x)$为最优解</p>
+<p>则有：$g(x)=kx+f(x)$</p>
+<p>$k$其实就是$cost$</p>
+<p>你会发现这其实就是在二分$g(x)$的斜率，使该斜率对应的$x$满足题意</p>
+<p>这样我们就得到了WQS二分的条件：原贡献关于决策次数的函数$g(x)$斜率单调（$g’(x)$单调）</p>
+<p>值得注意的是，最后得到的$cost$，对应决策次数不一定是$k$（$g‘(x)$某段水平）</p>
+<p>但这并不影响答案，因为$g’(x)=g’(k)$意味着$f(x)=f(k)$，我们要的就是$f(k)$</p>
 <p>推荐题目：BZOJ2654 tree、Codeforces 739E Gosha is hunting</p>
 
       
@@ -635,10 +635,26 @@ var _hmt = _hmt || [];
     var s = document.getElementsByTagName("script")[0];
     s.parentNode.insertBefore(hm, s);
 })();
-</script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</script>
 
 
 
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/MathJax.js?config=TeX-MML-AM_CHTML"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 
 </body>
 

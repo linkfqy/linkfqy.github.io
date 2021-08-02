@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang=zh>
-<head>
+<head><meta name="generator" content="Hexo 3.9.0">
 <!-- hexo-inject:begin --><!-- hexo-inject:end --><script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
 <link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
 <style>
@@ -19,41 +19,41 @@
 
 <!-- Valine评论 -->
 <script src="/js/av-min.js"></script>
-<script src='/js/Valine.min.js'></script>
+<script src="/js/Valine.min.js"></script>
 <!-- Leancloud统计 -->
 <!-- <script src="/js/av-min-1.2.1.js"></script> -->
 <!--  <script>AV.initialize("rJeVBhWeHlb33cC9L26UE7y3-gzGzoHsz", "uU7rD0e4IaYyrk6vSdM6GoHX");</script> -->
 
-<meta name="google-site-verification" content="IneMsg5aBY2Vw5QuPukpMzm5ATzGfO0dg40QXgKIPkk" />
+<meta name="google-site-verification" content="IneMsg5aBY2Vw5QuPukpMzm5ATzGfO0dg40QXgKIPkk">
 
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
   <meta name="renderer" content="webkit">
-  <meta http-equiv="Cache-Control" content="no-transform" />
-  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   <meta name="format-detection" content="telephone=no,email=no,adress=no">
   <!-- Color theme for statusbar -->
-  <meta name="theme-color" content="#000000" />
+  <meta name="theme-color" content="#000000">
   <!-- 强制页面在当前窗口以独立页面显示,防止别人在框架里调用页面 -->
-  <meta http-equiv="window-target" content="_top" />
+  <meta http-equiv="window-target" content="_top">
   
   
   <title>【启发式分裂】BZOJ5200 [NWERC2017]Factor-Free Tree | linkfqy&#39;s Blog</title>
-  <meta name="description" content="题面在这里 ​ 考虑一个子树（序列），\(i\)能作为根当且仅当区间内所有数与\(a_i\)互质 可以预处理出左边第一个与\(a_i\)不互质的位置\(L_i\)和右边第一个与\(a_i\)不互质的位置\(R_i\) 具体方法：枚举每个数的质因子，取所有质因子出现位置最大的 还有一个结论：对于任意区间，更靠两端的点满足与整个区间互质却不能作为根，则里面的点一定也不能 然后就可以启发式分">
+  <meta name="description" content="题面在这里 ​     考虑一个子树（序列），$i$能作为根当且仅当区间内所有数与$a_i$互质 可以预处理出左边第一个与$a_i$不互质的位置$L_i$和右边第一个与$a_i$不互质的位置$R_i$ 具体方法：枚举每个数的质因子，取所有质因子出现位置最大的 还有一个结论：对于任意区间，更靠两端的点满足与整个区间互质却不能作为根，则里面的点一定也不能 然后就可以启发式分裂找每个子树的根啦 启发式分">
 <meta name="keywords" content="BZOJ,启发式分裂">
 <meta property="og:type" content="article">
 <meta property="og:title" content="【启发式分裂】BZOJ5200 [NWERC2017]Factor-Free Tree">
 <meta property="og:url" content="http://oi.linkfqy.top/posts/BZOJ5200/index.html">
 <meta property="og:site_name" content="linkfqy">
-<meta property="og:description" content="题面在这里 ​ 考虑一个子树（序列），\(i\)能作为根当且仅当区间内所有数与\(a_i\)互质 可以预处理出左边第一个与\(a_i\)不互质的位置\(L_i\)和右边第一个与\(a_i\)不互质的位置\(R_i\) 具体方法：枚举每个数的质因子，取所有质因子出现位置最大的 还有一个结论：对于任意区间，更靠两端的点满足与整个区间互质却不能作为根，则里面的点一定也不能 然后就可以启发式分">
+<meta property="og:description" content="题面在这里 ​     考虑一个子树（序列），$i$能作为根当且仅当区间内所有数与$a_i$互质 可以预处理出左边第一个与$a_i$不互质的位置$L_i$和右边第一个与$a_i$不互质的位置$R_i$ 具体方法：枚举每个数的质因子，取所有质因子出现位置最大的 还有一个结论：对于任意区间，更靠两端的点满足与整个区间互质却不能作为根，则里面的点一定也不能 然后就可以启发式分裂找每个子树的根啦 启发式分">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:updated_time" content="2018-11-07T07:19:08.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="【启发式分裂】BZOJ5200 [NWERC2017]Factor-Free Tree">
-<meta name="twitter:description" content="题面在这里 ​ 考虑一个子树（序列），\(i\)能作为根当且仅当区间内所有数与\(a_i\)互质 可以预处理出左边第一个与\(a_i\)不互质的位置\(L_i\)和右边第一个与\(a_i\)不互质的位置\(R_i\) 具体方法：枚举每个数的质因子，取所有质因子出现位置最大的 还有一个结论：对于任意区间，更靠两端的点满足与整个区间互质却不能作为根，则里面的点一定也不能 然后就可以启发式分">
+<meta name="twitter:description" content="题面在这里 ​     考虑一个子树（序列），$i$能作为根当且仅当区间内所有数与$a_i$互质 可以预处理出左边第一个与$a_i$不互质的位置$L_i$和右边第一个与$a_i$不互质的位置$R_i$ 具体方法：枚举每个数的质因子，取所有质因子出现位置最大的 还有一个结论：对于任意区间，更靠两端的点满足与整个区间互质却不能作为根，则里面的点一定也不能 然后就可以启发式分裂找每个子树的根啦 启发式分">
   <!-- Canonical links -->
   <link rel="canonical" href="http://oi.linkfqy.top/posts/BZOJ5200/index.html">
   
@@ -349,14 +349,14 @@
     <div class="article-entry markdown-body" itemprop="articleBody">
       
         <p><a href="https://lydsy.com/JudgeOnline/problem.php?id=5200" target="_blank" rel="noopener">题面在这里</a></p>
-<p>​</p>
-<p>考虑一个子树（序列），<span class="math inline">\(i\)</span>能作为根当且仅当区间内所有数与<span class="math inline">\(a_i\)</span>互质</p>
-<p>可以预处理出左边第一个与<span class="math inline">\(a_i\)</span>不互质的位置<span class="math inline">\(L_i\)</span>和右边第一个与<span class="math inline">\(a_i\)</span>不互质的位置<span class="math inline">\(R_i\)</span></p>
+<p>​    </p>
+<p>考虑一个子树（序列），$i$能作为根当且仅当区间内所有数与$a_i$互质</p>
+<p>可以预处理出左边第一个与$a_i$不互质的位置$L_i$和右边第一个与$a_i$不互质的位置$R_i$</p>
 <p>具体方法：枚举每个数的质因子，取所有质因子出现位置最大的</p>
 <p>还有一个结论：对于任意区间，更靠两端的点满足与整个区间互质却不能作为根，则里面的点一定也不能</p>
 <p>然后就可以启发式分裂找每个子树的根啦</p>
 <p>启发式分裂：由于指针移动次数为分裂出较小的那个区间长度，可以看作时启发式合并的逆过程</p>
-<p>​</p>
+<p>​    </p>
 <p>示例程序：</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">char</span> <span class="title">nc</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="keyword">static</span> <span class="keyword">char</span> buf[<span class="number">100000</span>],*l=buf,*r=buf;</span><br><span class="line">	<span class="keyword">return</span> l==r&amp;&amp;(r=(l=buf)+fread(buf,<span class="number">1</span>,<span class="number">100000</span>,<span class="built_in">stdin</span>),l==r)?EOF:*l++;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">int</span> <span class="title">red</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> res=<span class="number">0</span>,f=<span class="number">1</span>;<span class="keyword">char</span> ch=nc();</span><br><span class="line">	<span class="keyword">while</span> (ch&lt;<span class="string">'0'</span>||<span class="string">'9'</span>&lt;ch) &#123;<span class="keyword">if</span> (ch==<span class="string">'-'</span>) f=-f;ch=nc();&#125;</span><br><span class="line">	<span class="keyword">while</span> (<span class="string">'0'</span>&lt;=ch&amp;&amp;ch&lt;=<span class="string">'9'</span>) res=res*<span class="number">10</span>+ch<span class="number">-48</span>,ch=nc();</span><br><span class="line">	<span class="keyword">return</span> res*f;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">put</span><span class="params">(<span class="keyword">int</span> x)</span></span>&#123;</span><br><span class="line">	<span class="keyword">static</span> <span class="keyword">int</span> stk[<span class="number">11</span>];stk[<span class="number">0</span>]=<span class="number">0</span>;</span><br><span class="line">	<span class="keyword">do</span> stk[++stk[<span class="number">0</span>]]=x%<span class="number">10</span>,x/=<span class="number">10</span>; <span class="keyword">while</span> (x);</span><br><span class="line">	<span class="keyword">while</span> (stk[<span class="number">0</span>]) <span class="built_in">putchar</span>(stk[stk[<span class="number">0</span>]--]+<span class="number">48</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxn=<span class="number">1000005</span>,maxa=<span class="number">10000005</span>;</span><br><span class="line"><span class="keyword">int</span> n,a[maxn],L[maxn],R[maxn];</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">gcd</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">int</span> y)</span> </span>&#123;<span class="keyword">return</span> y==<span class="number">0</span>?x:gcd(y,x%y);&#125;</span><br><span class="line"><span class="keyword">int</span> p[maxa],pre[maxa],lst[maxa];</span><br><span class="line"><span class="keyword">bool</span> vis[maxa];</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">makep</span><span class="params">(<span class="keyword">int</span> n)</span></span>&#123;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">2</span>;i&lt;=n;i++)&#123;</span><br><span class="line">		<span class="keyword">if</span> (!vis[i]) p[++p[<span class="number">0</span>]]=i,pre[i]=i;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> j=<span class="number">1</span>;j&lt;=p[<span class="number">0</span>]&amp;&amp;i*p[j]&lt;=n;j++)&#123;</span><br><span class="line">			vis[i*p[j]]=<span class="number">1</span>; pre[i*p[j]]=p[j];</span><br><span class="line">			<span class="keyword">if</span> (i%p[j]==<span class="number">0</span>) <span class="keyword">break</span>;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">int</span> fa[maxn];</span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">solve</span><span class="params">(<span class="keyword">int</span> l,<span class="keyword">int</span> r,<span class="keyword">int</span> f)</span></span>&#123;</span><br><span class="line">	<span class="keyword">if</span> (l&gt;r) <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i=l,j=r;i&lt;=j;i++,j--)&#123;</span><br><span class="line">		<span class="keyword">if</span> (L[i]&lt;l&amp;&amp;r&lt;R[i])&#123;</span><br><span class="line">			fa[i]=f;<span class="keyword">return</span> solve(l,i<span class="number">-1</span>,i)&amp;&amp;solve(i+<span class="number">1</span>,r,i);</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">if</span> (L[j]&lt;l&amp;&amp;r&lt;R[j])&#123;</span><br><span class="line">			fa[j]=f;<span class="keyword">return</span> solve(l,j<span class="number">-1</span>,j)&amp;&amp;solve(j+<span class="number">1</span>,r,j);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	n=red();</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++) a[i]=red();</span><br><span class="line">	makep(<span class="number">10000000</span>);</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)&#123;</span><br><span class="line">		<span class="keyword">int</span> x=a[i];</span><br><span class="line">		<span class="keyword">while</span> (x!=<span class="number">1</span>)&#123;</span><br><span class="line">			<span class="keyword">int</span> p=pre[x];</span><br><span class="line">			L[i]=max(L[i],lst[p]);</span><br><span class="line">			lst[p]=i;</span><br><span class="line">			<span class="keyword">while</span> (x%p==<span class="number">0</span>) x/=p;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=p[<span class="number">0</span>];i++) lst[p[i]]=n+<span class="number">1</span>;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i=n;i;i--)&#123;</span><br><span class="line">		<span class="keyword">int</span> x=a[i];R[i]=n+<span class="number">1</span>;</span><br><span class="line">		<span class="keyword">while</span> (x!=<span class="number">1</span>)&#123;</span><br><span class="line">			<span class="keyword">int</span> p=pre[x];</span><br><span class="line">			R[i]=min(R[i],lst[p]);</span><br><span class="line">			lst[p]=i;</span><br><span class="line">			<span class="keyword">while</span> (x%p==<span class="number">0</span>) x/=p;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">if</span> (solve(<span class="number">1</span>,n,<span class="number">0</span>))</span><br><span class="line">	 <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++) put(fa[i]),<span class="built_in">putchar</span>(<span class="string">' '</span>);</span><br><span class="line">	<span class="keyword">else</span> <span class="built_in">puts</span>(<span class="string">"impossible"</span>);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
@@ -632,10 +632,26 @@ var _hmt = _hmt || [];
     var s = document.getElementsByTagName("script")[0];
     s.parentNode.insertBefore(hm, s);
 })();
-</script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</script>
 
 
 
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/MathJax.js?config=TeX-MML-AM_CHTML"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 
 </body>
 

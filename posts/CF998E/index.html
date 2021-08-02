@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang=zh>
-<head>
+<head><meta name="generator" content="Hexo 3.9.0">
 <!-- hexo-inject:begin --><!-- hexo-inject:end --><script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
 <link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
 <style>
@@ -19,41 +19,41 @@
 
 <!-- Valine评论 -->
 <script src="/js/av-min.js"></script>
-<script src='/js/Valine.min.js'></script>
+<script src="/js/Valine.min.js"></script>
 <!-- Leancloud统计 -->
 <!-- <script src="/js/av-min-1.2.1.js"></script> -->
 <!--  <script>AV.initialize("rJeVBhWeHlb33cC9L26UE7y3-gzGzoHsz", "uU7rD0e4IaYyrk6vSdM6GoHX");</script> -->
 
-<meta name="google-site-verification" content="IneMsg5aBY2Vw5QuPukpMzm5ATzGfO0dg40QXgKIPkk" />
+<meta name="google-site-verification" content="IneMsg5aBY2Vw5QuPukpMzm5ATzGfO0dg40QXgKIPkk">
 
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
   <meta name="renderer" content="webkit">
-  <meta http-equiv="Cache-Control" content="no-transform" />
-  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   <meta name="format-detection" content="telephone=no,email=no,adress=no">
   <!-- Color theme for statusbar -->
-  <meta name="theme-color" content="#000000" />
+  <meta name="theme-color" content="#000000">
   <!-- 强制页面在当前窗口以独立页面显示,防止别人在框架里调用页面 -->
-  <meta http-equiv="window-target" content="_top" />
+  <meta http-equiv="window-target" content="_top">
   
   
   <title>【容斥计数】Codeforces 998E Sky Full of Stars | linkfqy&#39;s Blog</title>
-  <meta name="description" content="题面在这里 题意：用3种颜色涂满\(n\times n\)的矩阵，求至少一行或一列颜色相同的方案数 ​ 先考虑至少一列同色，方案为\(3^{n^2}-(3^n-3)^n\) 再加上至少一行同色，这里有些方案是重复的，这些方案只可能是所有同色行的颜色相同（如果不同就不会有同色列了） 用容斥处理，枚举有\(i\)个同色行，则：  所有同色行颜色相同：那么每一列都不能是这种颜色的同色列，\">
+  <meta name="description" content="题面在这里 题意：用3种颜色涂满$n\times n$的矩阵，求至少一行或一列颜色相同的方案数 ​     先考虑至少一列同色，方案为$3^{n^2}-(3^n-3)^n$ 再加上至少一行同色，这里有些方案是重复的，这些方案只可能是所有同色行的颜色相同（如果不同就不会有同色列了） 用容斥处理，枚举有$i$个同色行，则：  所有同色行颜色相同：那么每一列都不能是这种颜色的同色列，$3 {n\choo">
 <meta name="keywords" content="Codeforces,容斥,计数题">
 <meta property="og:type" content="article">
 <meta property="og:title" content="【容斥计数】Codeforces 998E Sky Full of Stars">
 <meta property="og:url" content="http://oi.linkfqy.top/posts/CF998E/index.html">
 <meta property="og:site_name" content="linkfqy">
-<meta property="og:description" content="题面在这里 题意：用3种颜色涂满\(n\times n\)的矩阵，求至少一行或一列颜色相同的方案数 ​ 先考虑至少一列同色，方案为\(3^{n^2}-(3^n-3)^n\) 再加上至少一行同色，这里有些方案是重复的，这些方案只可能是所有同色行的颜色相同（如果不同就不会有同色列了） 用容斥处理，枚举有\(i\)个同色行，则：  所有同色行颜色相同：那么每一列都不能是这种颜色的同色列，\">
+<meta property="og:description" content="题面在这里 题意：用3种颜色涂满$n\times n$的矩阵，求至少一行或一列颜色相同的方案数 ​     先考虑至少一列同色，方案为$3^{n^2}-(3^n-3)^n$ 再加上至少一行同色，这里有些方案是重复的，这些方案只可能是所有同色行的颜色相同（如果不同就不会有同色列了） 用容斥处理，枚举有$i$个同色行，则：  所有同色行颜色相同：那么每一列都不能是这种颜色的同色列，$3 {n\choo">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:updated_time" content="2018-08-28T03:18:52.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="【容斥计数】Codeforces 998E Sky Full of Stars">
-<meta name="twitter:description" content="题面在这里 题意：用3种颜色涂满\(n\times n\)的矩阵，求至少一行或一列颜色相同的方案数 ​ 先考虑至少一列同色，方案为\(3^{n^2}-(3^n-3)^n\) 再加上至少一行同色，这里有些方案是重复的，这些方案只可能是所有同色行的颜色相同（如果不同就不会有同色列了） 用容斥处理，枚举有\(i\)个同色行，则：  所有同色行颜色相同：那么每一列都不能是这种颜色的同色列，\">
+<meta name="twitter:description" content="题面在这里 题意：用3种颜色涂满$n\times n$的矩阵，求至少一行或一列颜色相同的方案数 ​     先考虑至少一列同色，方案为$3^{n^2}-(3^n-3)^n$ 再加上至少一行同色，这里有些方案是重复的，这些方案只可能是所有同色行的颜色相同（如果不同就不会有同色列了） 用容斥处理，枚举有$i$个同色行，则：  所有同色行颜色相同：那么每一列都不能是这种颜色的同色列，$3 {n\choo">
   <!-- Canonical links -->
   <link rel="canonical" href="http://oi.linkfqy.top/posts/CF998E/index.html">
   
@@ -349,16 +349,16 @@
     <div class="article-entry markdown-body" itemprop="articleBody">
       
         <p><a href="http://codeforces.com/problemset/problem/998/E" target="_blank" rel="noopener">题面在这里</a></p>
-<p>题意：用3种颜色涂满<span class="math inline">\(n\times n\)</span>的矩阵，求至少一行或一列颜色相同的方案数</p>
-<p>​</p>
-<p>先考虑至少一列同色，方案为<span class="math inline">\(3^{n^2}-(3^n-3)^n\)</span></p>
+<p>题意：用3种颜色涂满$n\times n$的矩阵，求至少一行或一列颜色相同的方案数</p>
+<p>​    </p>
+<p>先考虑至少一列同色，方案为$3^{n^2}-(3^n-3)^n$</p>
 <p>再加上至少一行同色，这里有些方案是重复的，这些方案只可能是所有同色行的颜色相同（如果不同就不会有同色列了）</p>
-<p>用容斥处理，枚举有<span class="math inline">\(i\)</span>个同色行，则：</p>
+<p>用容斥处理，枚举有$i$个同色行，则：</p>
 <ul>
-<li>所有同色行颜色相同：那么每一列都不能是这种颜色的同色列，<span class="math inline">\(3 {n\choose i}(3^{n-i}-1)^n\)</span></li>
-<li>其他：不会有同色列产生，答案是<span class="math inline">\({n \choose i}(3^i-3)3^{n(n-i)}\)</span></li>
+<li>所有同色行颜色相同：那么每一列都不能是这种颜色的同色列，$3 {n\choose i}(3^{n-i}-1)^n$</li>
+<li>其他：不会有同色列产生，答案是${n \choose i}(3^i-3)3^{n(n-i)}$</li>
 </ul>
-<p>​</p>
+<p>​    </p>
 <p>示例程序：</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> ll;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxn=<span class="number">1000005</span>,MOD=<span class="number">998244353</span>;</span><br><span class="line"><span class="keyword">int</span> n; ll fac[maxn],inv[maxn];</span><br><span class="line"><span class="function"><span class="keyword">inline</span> ll <span class="title">ksm</span><span class="params">(ll a,ll b)</span></span>&#123;</span><br><span class="line">	ll res=<span class="number">1</span>,w=a;</span><br><span class="line">	<span class="keyword">while</span> (b)&#123;</span><br><span class="line">		<span class="keyword">if</span> (b&amp;<span class="number">1</span>) (res*=w)%=MOD;</span><br><span class="line">		(w*=w)%=MOD;</span><br><span class="line">		b&gt;&gt;=<span class="number">1</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> res;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">inline</span> ll <span class="title">C</span><span class="params">(ll x,ll y)</span></span>&#123;</span><br><span class="line">	<span class="keyword">return</span> fac[x]*inv[y]%MOD*inv[x-y]%MOD;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;n);</span><br><span class="line">	fac[<span class="number">0</span>]=<span class="number">1</span>;<span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++) fac[i]=(fac[i<span class="number">-1</span>]*i)%MOD;</span><br><span class="line">	inv[n]=ksm(fac[n],MOD<span class="number">-2</span>);<span class="keyword">for</span> (<span class="keyword">int</span> i=n;i;i--) inv[i<span class="number">-1</span>]=(inv[i]*i)%MOD;</span><br><span class="line">	ll ans=(ksm(<span class="number">3</span>,(ll)n*n)-ksm(ksm(<span class="number">3</span>,n)<span class="number">-3</span>,n))%MOD;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)&#123;</span><br><span class="line">		ll del=<span class="number">3</span>*C(n,i)%MOD*ksm(ksm(<span class="number">3</span>,n-i)<span class="number">-1</span>,n)%MOD+C(n,i)*(ksm(<span class="number">3</span>,i)<span class="number">-3</span>)%MOD*ksm(<span class="number">3</span>,(ll)n*(n-i))%MOD;del%=MOD;</span><br><span class="line">		<span class="keyword">if</span> (i&amp;<span class="number">1</span>) (ans+=del)%=MOD;<span class="keyword">else</span> (ans-=del)%=MOD;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"%lld"</span>,(ans+MOD)%MOD);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
@@ -634,10 +634,26 @@ var _hmt = _hmt || [];
     var s = document.getElementsByTagName("script")[0];
     s.parentNode.insertBefore(hm, s);
 })();
-</script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</script>
 
 
 
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/MathJax.js?config=TeX-MML-AM_CHTML"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 
 </body>
 

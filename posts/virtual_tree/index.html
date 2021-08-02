@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang=zh>
-<head>
+<head><meta name="generator" content="Hexo 3.9.0">
 <!-- hexo-inject:begin --><!-- hexo-inject:end --><script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
 <link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
 <style>
@@ -19,26 +19,26 @@
 
 <!-- Valine评论 -->
 <script src="/js/av-min.js"></script>
-<script src='/js/Valine.min.js'></script>
+<script src="/js/Valine.min.js"></script>
 <!-- Leancloud统计 -->
 <!-- <script src="/js/av-min-1.2.1.js"></script> -->
 <!--  <script>AV.initialize("rJeVBhWeHlb33cC9L26UE7y3-gzGzoHsz", "uU7rD0e4IaYyrk6vSdM6GoHX");</script> -->
 
-<meta name="google-site-verification" content="IneMsg5aBY2Vw5QuPukpMzm5ATzGfO0dg40QXgKIPkk" />
+<meta name="google-site-verification" content="IneMsg5aBY2Vw5QuPukpMzm5ATzGfO0dg40QXgKIPkk">
 
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
   <meta name="renderer" content="webkit">
-  <meta http-equiv="Cache-Control" content="no-transform" />
-  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   <meta name="format-detection" content="telephone=no,email=no,adress=no">
   <!-- Color theme for statusbar -->
-  <meta name="theme-color" content="#000000" />
+  <meta name="theme-color" content="#000000">
   <!-- 强制页面在当前窗口以独立页面显示,防止别人在框架里调用页面 -->
-  <meta http-equiv="window-target" content="_top" />
+  <meta http-equiv="window-target" content="_top">
   
   
   <title>虚树-学习笔记 | linkfqy&#39;s Blog</title>
@@ -350,34 +350,30 @@
       
         <p><del>为什么我现在才会</del></p>
 <a id="more"></a>
-<p>​</p>
-<h1 id="引入">引入</h1>
-<p>先放一道题：</p>
+<p>​    </p>
+<h1 id="引入"><a href="#引入" class="headerlink" title="引入"></a>引入</h1><p>先放一道题：</p>
 <p><a href="https://www.lydsy.com/JudgeOnline/problem.php?id=2286" target="_blank" rel="noopener">BZOJ2286</a>：</p>
 <p>给一棵带边权有根树，可以花费边权的代价断一些边</p>
-<p>每次询问<span class="math inline">\(k_i\)</span>个点，问使这些点都不与根联通的最小代价</p>
-<p><span class="math inline">\(n,q\le 10^5，\sum k_i \le 10^5\)</span></p>
-<p>​</p>
+<p>每次询问$k_i$个点，问使这些点都不与根联通的最小代价</p>
+<p>$n,q\le 10^5，\sum k_i \le 10^5$</p>
+<p>​    </p>
 <p>如果只有一个询问是个SB题……直接树形DP就好了</p>
 <p>但是考虑到询问的总点数很有限，还是可做的</p>
-<h1 id="什么是虚树">什么是虚树</h1>
-<p>像上面的例题，我们只把与询问有关的点拿出来建一棵树，就可以解决问题</p>
+<h1 id="什么是虚树"><a href="#什么是虚树" class="headerlink" title="什么是虚树"></a>什么是虚树</h1><p>像上面的例题，我们只把与询问有关的点拿出来建一棵树，就可以解决问题</p>
 <p>那么这棵树包含所有询问点以及它们的LCA，这棵树就是虚树</p>
-<p>​</p>
-<p>考虑每次往虚树里加入一个询问点，最多增加一个LCA，所以虚树的点数是<span class="math inline">\(O(k)\)</span>的</p>
+<p>​    </p>
+<p>考虑每次往虚树里加入一个询问点，最多增加一个LCA，所以虚树的点数是$O(k)$的</p>
 <p>每次询问直接在虚树里做DP就可以了</p>
 <p>这保证了复杂度</p>
-<h1 id="虚树的构造">虚树的构造</h1>
-<p>按DFS序遍历每个询问点</p>
-<p>我们用一个栈<span class="math inline">\(stack\)</span>维护从根到当前点路径上的所有虚树点</p>
-<p>当新加入点<span class="math inline">\(x\)</span>是栈顶<span class="math inline">\(stack[top]\)</span>的后代时，直接入栈</p>
-<p>否则<span class="math inline">\(x\)</span>与栈顶<span class="math inline">\(stack[top]\)</span>的LCA一定要入栈（可能已经入了），同时应该把LCA的<span class="math inline">\(x\)</span>所在子树构造好虚树</p>
+<h1 id="虚树的构造"><a href="#虚树的构造" class="headerlink" title="虚树的构造"></a>虚树的构造</h1><p>按DFS序遍历每个询问点</p>
+<p>我们用一个栈$stack$维护从根到当前点路径上的所有虚树点</p>
+<p>当新加入点$x$是栈顶$stack[top]$的后代时，直接入栈</p>
+<p>否则$x$与栈顶$stack[top]$的LCA一定要入栈（可能已经入了），同时应该把LCA的$x$所在子树构造好虚树</p>
 <p>最后别忘了清栈</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">insert</span><span class="params">(<span class="keyword">int</span> x)</span></span>&#123;</span><br><span class="line">	<span class="keyword">if</span> (!top) &#123;stk[++top]=x;<span class="keyword">return</span>;&#125;</span><br><span class="line">	<span class="keyword">int</span> lca=LCA(x,stk[top]);</span><br><span class="line">	<span class="keyword">while</span> (top&gt;<span class="number">1</span>&amp;&amp;dfn[stk[top<span class="number">-1</span>]]&gt;dfn[lca])</span><br><span class="line">		add(stk[top<span class="number">-1</span>],stk[top],dst(stk[top<span class="number">-1</span>],stk[top])),top--;</span><br><span class="line">	<span class="keyword">if</span> (dfn[stk[top]]&gt;dfn[lca]) add(lca,stk[top],dst(lca,stk[top])),top--;</span><br><span class="line">	<span class="keyword">if</span> (!top||dfn[stk[top]]&lt;dfn[lca]) stk[++top]=lca;</span><br><span class="line">	stk[++top]=x;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//......</span></span><br><span class="line">sort(h+<span class="number">1</span>,h+<span class="number">1</span>+K,cmp); tot=top=<span class="number">0</span>;</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=K;i++) insert(h[i]);</span><br><span class="line"><span class="keyword">while</span> (top&gt;<span class="number">1</span>) add(stk[top<span class="number">-1</span>],stk[top],dst(stk[top<span class="number">-1</span>],stk[top])),top--;</span><br></pre></td></tr></table></figure>
-<h1 id="tips">tips</h1>
-<ul>
+<h1 id="tips"><a href="#tips" class="headerlink" title="tips"></a>tips</h1><ul>
 <li>最后剩下的栈顶就是虚树根啦</li>
-<li>每次建图清<span class="math inline">\(lnk\)</span>很烦，可以一边DP一边清</li>
+<li>每次建图清$lnk$很烦，可以一边DP一边清</li>
 </ul>
 
       
@@ -652,10 +648,26 @@ var _hmt = _hmt || [];
     var s = document.getElementsByTagName("script")[0];
     s.parentNode.insertBefore(hm, s);
 })();
-</script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</script>
 
 
 
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/MathJax.js?config=TeX-MML-AM_CHTML"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 
 </body>
 

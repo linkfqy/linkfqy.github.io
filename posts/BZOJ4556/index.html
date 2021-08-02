@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang=zh>
-<head>
+<head><meta name="generator" content="Hexo 3.9.0">
 <!-- hexo-inject:begin --><!-- hexo-inject:end --><script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
 <link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
 <style>
@@ -19,41 +19,41 @@
 
 <!-- Valine评论 -->
 <script src="/js/av-min.js"></script>
-<script src='/js/Valine.min.js'></script>
+<script src="/js/Valine.min.js"></script>
 <!-- Leancloud统计 -->
 <!-- <script src="/js/av-min-1.2.1.js"></script> -->
 <!--  <script>AV.initialize("rJeVBhWeHlb33cC9L26UE7y3-gzGzoHsz", "uU7rD0e4IaYyrk6vSdM6GoHX");</script> -->
 
-<meta name="google-site-verification" content="IneMsg5aBY2Vw5QuPukpMzm5ATzGfO0dg40QXgKIPkk" />
+<meta name="google-site-verification" content="IneMsg5aBY2Vw5QuPukpMzm5ATzGfO0dg40QXgKIPkk">
 
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
   <meta name="renderer" content="webkit">
-  <meta http-equiv="Cache-Control" content="no-transform" />
-  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   <meta name="format-detection" content="telephone=no,email=no,adress=no">
   <!-- Color theme for statusbar -->
-  <meta name="theme-color" content="#000000" />
+  <meta name="theme-color" content="#000000">
   <!-- 强制页面在当前窗口以独立页面显示,防止别人在框架里调用页面 -->
-  <meta http-equiv="window-target" content="_top" />
+  <meta http-equiv="window-target" content="_top">
   
   
   <title>【后缀数组+主席树】BZOJ4556 [Tjoi2016&amp;Heoi2016]字符串 | linkfqy&#39;s Blog</title>
-  <meta name="description" content="题面在这里 ​ 首先考虑二分答案 那么就是要判断\(S_{c,c+mid-1}\)是否在\(S_{a,b}\)中出现过 考虑所有以\(S_{c,c+mid-1}\)为前缀的后缀，rank一定是连续的 可以倍增找出这个区间 那么就是要看这个区间内是否存在开头属于\([a,b-mid+1]\)的后缀 主席树区间求和就好了 ​ 示例程序： 1234567891011121314151">
+  <meta name="description" content="题面在这里 ​     首先考虑二分答案 那么就是要判断$S_{c,c+mid-1}$是否在$S_{a,b}$中出现过 考虑所有以$S_{c,c+mid-1}$为前缀的后缀，rank一定是连续的 可以倍增找出这个区间 那么就是要看这个区间内是否存在开头属于$[a,b-mid+1]$的后缀 主席树区间求和就好了 ​     示例程序： 12345678910111213141516171819202">
 <meta name="keywords" content="BZOJ,后缀数组,主席树">
 <meta property="og:type" content="article">
 <meta property="og:title" content="【后缀数组+主席树】BZOJ4556 [Tjoi2016&amp;Heoi2016]字符串">
 <meta property="og:url" content="http://oi.linkfqy.top/posts/BZOJ4556/index.html">
 <meta property="og:site_name" content="linkfqy">
-<meta property="og:description" content="题面在这里 ​ 首先考虑二分答案 那么就是要判断\(S_{c,c+mid-1}\)是否在\(S_{a,b}\)中出现过 考虑所有以\(S_{c,c+mid-1}\)为前缀的后缀，rank一定是连续的 可以倍增找出这个区间 那么就是要看这个区间内是否存在开头属于\([a,b-mid+1]\)的后缀 主席树区间求和就好了 ​ 示例程序： 1234567891011121314151">
+<meta property="og:description" content="题面在这里 ​     首先考虑二分答案 那么就是要判断$S_{c,c+mid-1}$是否在$S_{a,b}$中出现过 考虑所有以$S_{c,c+mid-1}$为前缀的后缀，rank一定是连续的 可以倍增找出这个区间 那么就是要看这个区间内是否存在开头属于$[a,b-mid+1]$的后缀 主席树区间求和就好了 ​     示例程序： 12345678910111213141516171819202">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:updated_time" content="2018-08-11T07:22:22.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="【后缀数组+主席树】BZOJ4556 [Tjoi2016&amp;Heoi2016]字符串">
-<meta name="twitter:description" content="题面在这里 ​ 首先考虑二分答案 那么就是要判断\(S_{c,c+mid-1}\)是否在\(S_{a,b}\)中出现过 考虑所有以\(S_{c,c+mid-1}\)为前缀的后缀，rank一定是连续的 可以倍增找出这个区间 那么就是要看这个区间内是否存在开头属于\([a,b-mid+1]\)的后缀 主席树区间求和就好了 ​ 示例程序： 1234567891011121314151">
+<meta name="twitter:description" content="题面在这里 ​     首先考虑二分答案 那么就是要判断$S_{c,c+mid-1}$是否在$S_{a,b}$中出现过 考虑所有以$S_{c,c+mid-1}$为前缀的后缀，rank一定是连续的 可以倍增找出这个区间 那么就是要看这个区间内是否存在开头属于$[a,b-mid+1]$的后缀 主席树区间求和就好了 ​     示例程序： 12345678910111213141516171819202">
   <!-- Canonical links -->
   <link rel="canonical" href="http://oi.linkfqy.top/posts/BZOJ4556/index.html">
   
@@ -349,14 +349,14 @@
     <div class="article-entry markdown-body" itemprop="articleBody">
       
         <p><a href="https://www.lydsy.com/JudgeOnline/problem.php?id=4556" target="_blank" rel="noopener">题面在这里</a></p>
-<p>​</p>
+<p>​    </p>
 <p>首先考虑二分答案</p>
-<p>那么就是要判断<span class="math inline">\(S_{c,c+mid-1}\)</span>是否在<span class="math inline">\(S_{a,b}\)</span>中出现过</p>
-<p>考虑所有以<span class="math inline">\(S_{c,c+mid-1}\)</span>为前缀的后缀，rank一定是连续的</p>
+<p>那么就是要判断$S_{c,c+mid-1}$是否在$S_{a,b}$中出现过</p>
+<p>考虑所有以$S_{c,c+mid-1}$为前缀的后缀，rank一定是连续的</p>
 <p>可以倍增找出这个区间</p>
-<p>那么就是要看这个区间内是否存在开头属于<span class="math inline">\([a,b-mid+1]\)</span>的后缀</p>
+<p>那么就是要看这个区间内是否存在开头属于$[a,b-mid+1]$的后缀</p>
 <p>主席树区间求和就好了</p>
-<p>​</p>
+<p>​    </p>
 <p>示例程序：</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> cl(x,y) memset(x,y,sizeof(x))</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxn=<span class="number">100005</span>,maxs=<span class="number">2000005</span>;</span><br><span class="line"><span class="keyword">int</span> n,m,q;</span><br><span class="line"><span class="keyword">char</span> s[maxn];</span><br><span class="line"><span class="keyword">int</span> sa[maxn],rk[maxn*<span class="number">2</span>],t[maxn],buc[maxn],ht[maxn],f[maxn][<span class="number">17</span>];</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">get_sa</span><span class="params">()</span></span>&#123;</span><br><span class="line">	cl(buc,<span class="number">0</span>);</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++) buc[rk[t[i]]]++;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=m;i++) buc[i]+=buc[i<span class="number">-1</span>];</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i=n;i;i--) sa[buc[rk[t[i]]]--]=t[i];</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">make_sa</span><span class="params">()</span></span>&#123;</span><br><span class="line">	m=<span class="number">128</span>;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++) rk[i]=s[i],t[i]=i;</span><br><span class="line">	get_sa();</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> k=<span class="number">1</span>,p=<span class="number">0</span>;k&lt;n&amp;&amp;p&lt;n;k&lt;&lt;=<span class="number">1</span>,m=p)&#123;</span><br><span class="line">		p=<span class="number">0</span>;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i=n-k+<span class="number">1</span>;i&lt;=n;i++) t[++p]=i;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++) <span class="keyword">if</span> (sa[i]&gt;k) t[++p]=sa[i]-k;</span><br><span class="line">		get_sa(); t[sa[<span class="number">1</span>]]=p=<span class="number">1</span>;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">2</span>;i&lt;=n;i++)</span><br><span class="line">		 <span class="keyword">if</span> (rk[sa[i]]==rk[sa[i<span class="number">-1</span>]]&amp;&amp;rk[sa[i]+k]==rk[sa[i<span class="number">-1</span>]+k]) t[sa[i]]=p;<span class="keyword">else</span> t[sa[i]]=++p;</span><br><span class="line">		<span class="built_in">memcpy</span>(rk,t,<span class="keyword">sizeof</span>(t));</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">1</span>,h=<span class="number">0</span>;i&lt;=n;i++)&#123;</span><br><span class="line">		<span class="keyword">if</span> (h) h--;</span><br><span class="line">		<span class="keyword">int</span> j=sa[rk[i]<span class="number">-1</span>];</span><br><span class="line">		<span class="keyword">while</span> (s[i+h]==s[j+h]) h++;</span><br><span class="line">		ht[rk[i]]=h;</span><br><span class="line">	&#125; ht[<span class="number">1</span>]=<span class="number">0</span>;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++) f[i][<span class="number">0</span>]=ht[i];</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> j=<span class="number">1</span>;j&lt;=<span class="number">16</span>;j++)</span><br><span class="line">	 <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)</span><br><span class="line">	  f[i][j]=min(f[i][j<span class="number">-1</span>],f[i+(<span class="number">1</span>&lt;&lt;j<span class="number">-1</span>)][j<span class="number">-1</span>]);</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">int</span> tre[maxs],ls[maxs],rs[maxs],len,Rot[maxn];</span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">pushup</span><span class="params">(<span class="keyword">int</span> x)</span> </span>&#123;tre[x]=tre[ls[x]]+tre[rs[x]];&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">build</span><span class="params">(<span class="keyword">int</span> l,<span class="keyword">int</span> r)</span></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> x=++len;tre[x]=<span class="number">0</span>;</span><br><span class="line">	<span class="keyword">if</span> (l==r) <span class="keyword">return</span> ls[x]=rs[x]=<span class="number">0</span>,x;</span><br><span class="line">	<span class="keyword">int</span> mid=l+r&gt;&gt;<span class="number">1</span>;</span><br><span class="line">	ls[x]=build(l,mid); rs[x]=build(mid+<span class="number">1</span>,r);</span><br><span class="line">	<span class="keyword">return</span> x;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">ist</span><span class="params">(<span class="keyword">int</span> fa,<span class="keyword">int</span> l,<span class="keyword">int</span> r,<span class="keyword">int</span> k)</span></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> x=++len; tre[x]=tre[fa]; ls[x]=ls[fa]; rs[x]=rs[fa];</span><br><span class="line">	<span class="keyword">if</span> (l==r) <span class="keyword">return</span> tre[x]++,x;</span><br><span class="line">	<span class="keyword">int</span> mid=l+r&gt;&gt;<span class="number">1</span>;</span><br><span class="line">	<span class="keyword">if</span> (k&lt;=mid) ls[x]=ist(ls[fa],l,mid,k);</span><br><span class="line">	 <span class="keyword">else</span> rs[x]=ist(rs[fa],mid+<span class="number">1</span>,r,k);</span><br><span class="line">	pushup(x); <span class="keyword">return</span> x;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">qry</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">int</span> y,<span class="keyword">int</span> l,<span class="keyword">int</span> r,<span class="keyword">int</span> ql,<span class="keyword">int</span> qr)</span></span>&#123;</span><br><span class="line">	<span class="keyword">if</span> (ql&lt;=l&amp;&amp;r&lt;=qr) <span class="keyword">return</span> tre[y]-tre[x];</span><br><span class="line">	<span class="keyword">if</span> (qr&lt;l||r&lt;ql) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">int</span> mid=l+r&gt;&gt;<span class="number">1</span>;</span><br><span class="line">	<span class="keyword">return</span> qry(ls[x],ls[y],l,mid,ql,qr)+qry(rs[x],rs[y],mid+<span class="number">1</span>,r,ql,qr);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%d%d%s"</span>,&amp;n,&amp;q,s+<span class="number">1</span>);</span><br><span class="line">	make_sa();</span><br><span class="line">	Rot[<span class="number">0</span>]=build(<span class="number">1</span>,n);</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++) Rot[i]=ist(Rot[i<span class="number">-1</span>],<span class="number">1</span>,n,sa[i]);</span><br><span class="line">	<span class="keyword">while</span> (q--)&#123;</span><br><span class="line">		<span class="keyword">int</span> a,b,c,d;<span class="built_in">scanf</span>(<span class="string">"%d%d%d%d"</span>,&amp;a,&amp;b,&amp;c,&amp;d);</span><br><span class="line">		<span class="keyword">int</span> l=<span class="number">1</span>,r=d-c+<span class="number">1</span>,res=<span class="number">0</span>;</span><br><span class="line">		<span class="keyword">while</span> (l&lt;=r)&#123;</span><br><span class="line">			<span class="keyword">int</span> mid=l+r&gt;&gt;<span class="number">1</span>,L=rk[c],R=rk[c];</span><br><span class="line">			<span class="keyword">for</span> (<span class="keyword">int</span> j=<span class="number">16</span>;j&gt;=<span class="number">0</span>;j--)&#123;</span><br><span class="line">				<span class="keyword">if</span> (L&gt;(<span class="number">1</span>&lt;&lt;j)&amp;&amp;f[L-(<span class="number">1</span>&lt;&lt;j)+<span class="number">1</span>][j]&gt;=mid) L-=(<span class="number">1</span>&lt;&lt;j);</span><br><span class="line">				<span class="keyword">if</span> (R+(<span class="number">1</span>&lt;&lt;j)&lt;=n&amp;&amp;f[R+<span class="number">1</span>][j]&gt;=mid) R+=(<span class="number">1</span>&lt;&lt;j);</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">if</span> (qry(Rot[L<span class="number">-1</span>],Rot[R],<span class="number">1</span>,n,a,b-mid+<span class="number">1</span>)&gt;<span class="number">0</span>) res=mid,l=mid+<span class="number">1</span>;<span class="keyword">else</span> r=mid<span class="number">-1</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"%d\n"</span>,res);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
@@ -632,10 +632,26 @@ var _hmt = _hmt || [];
     var s = document.getElementsByTagName("script")[0];
     s.parentNode.insertBefore(hm, s);
 })();
-</script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</script>
 
 
 
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/MathJax.js?config=TeX-MML-AM_CHTML"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 
 </body>
 

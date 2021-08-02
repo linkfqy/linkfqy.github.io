@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang=zh>
-<head>
+<head><meta name="generator" content="Hexo 3.9.0">
 <!-- hexo-inject:begin --><!-- hexo-inject:end --><script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
 <link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
 <style>
@@ -19,41 +19,41 @@
 
 <!-- Valine评论 -->
 <script src="/js/av-min.js"></script>
-<script src='/js/Valine.min.js'></script>
+<script src="/js/Valine.min.js"></script>
 <!-- Leancloud统计 -->
 <!-- <script src="/js/av-min-1.2.1.js"></script> -->
 <!--  <script>AV.initialize("rJeVBhWeHlb33cC9L26UE7y3-gzGzoHsz", "uU7rD0e4IaYyrk6vSdM6GoHX");</script> -->
 
-<meta name="google-site-verification" content="IneMsg5aBY2Vw5QuPukpMzm5ATzGfO0dg40QXgKIPkk" />
+<meta name="google-site-verification" content="IneMsg5aBY2Vw5QuPukpMzm5ATzGfO0dg40QXgKIPkk">
 
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
   <meta name="renderer" content="webkit">
-  <meta http-equiv="Cache-Control" content="no-transform" />
-  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   <meta name="format-detection" content="telephone=no,email=no,adress=no">
   <!-- Color theme for statusbar -->
-  <meta name="theme-color" content="#000000" />
+  <meta name="theme-color" content="#000000">
   <!-- 强制页面在当前窗口以独立页面显示,防止别人在框架里调用页面 -->
-  <meta http-equiv="window-target" content="_top" />
+  <meta http-equiv="window-target" content="_top">
   
   
   <title>【线段树+并查集】Codeforces 811E Vladik and Entertaining Flags | linkfqy&#39;s Blog</title>
-  <meta name="description" content="题面在这里 ​ 一看n这么小，每次只询问区间，就可以用线段树搞 线段树每个节点维护区间左右两端属于哪个联通块，合并用并查集维护 ​ 示例程序： 12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656">
+  <meta name="description" content="题面在这里 ​     一看n这么小，每次只询问区间，就可以用线段树搞 线段树每个节点维护区间左右两端属于哪个联通块，合并用并查集维护 ​     示例程序： 123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646">
 <meta name="keywords" content="并查集,线段树,Codeforces">
 <meta property="og:type" content="article">
 <meta property="og:title" content="【线段树+并查集】Codeforces 811E Vladik and Entertaining Flags">
 <meta property="og:url" content="http://oi.linkfqy.top/posts/CF811E/index.html">
 <meta property="og:site_name" content="linkfqy">
-<meta property="og:description" content="题面在这里 ​ 一看n这么小，每次只询问区间，就可以用线段树搞 线段树每个节点维护区间左右两端属于哪个联通块，合并用并查集维护 ​ 示例程序： 12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656">
+<meta property="og:description" content="题面在这里 ​     一看n这么小，每次只询问区间，就可以用线段树搞 线段树每个节点维护区间左右两端属于哪个联通块，合并用并查集维护 ​     示例程序： 123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:updated_time" content="2018-09-23T09:30:48.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="【线段树+并查集】Codeforces 811E Vladik and Entertaining Flags">
-<meta name="twitter:description" content="题面在这里 ​ 一看n这么小，每次只询问区间，就可以用线段树搞 线段树每个节点维护区间左右两端属于哪个联通块，合并用并查集维护 ​ 示例程序： 12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656">
+<meta name="twitter:description" content="题面在这里 ​     一看n这么小，每次只询问区间，就可以用线段树搞 线段树每个节点维护区间左右两端属于哪个联通块，合并用并查集维护 ​     示例程序： 123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646">
   <!-- Canonical links -->
   <link rel="canonical" href="http://oi.linkfqy.top/posts/CF811E/index.html">
   
@@ -349,10 +349,10 @@
     <div class="article-entry markdown-body" itemprop="articleBody">
       
         <p><a href="http://codeforces.com/problemset/problem/811/E" target="_blank" rel="noopener">题面在这里</a></p>
-<p>​</p>
+<p>​    </p>
 <p>一看n这么小，每次只询问区间，就可以用线段树搞</p>
 <p>线段树每个节点维护区间左右两端属于哪个联通块，合并用并查集维护</p>
-<p>​</p>
+<p>​    </p>
 <p>示例程序：</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> cl(x,y) memset(x,y,sizeof(x))</span></span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">char</span> <span class="title">nc</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="keyword">static</span> <span class="keyword">char</span> buf[<span class="number">100000</span>],*l=buf,*r=buf;</span><br><span class="line">	<span class="keyword">return</span> l==r&amp;&amp;(r=(l=buf)+fread(buf,<span class="number">1</span>,<span class="number">100000</span>,<span class="built_in">stdin</span>),l==r)?EOF:*l++;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">int</span> <span class="title">red</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> res=<span class="number">0</span>,f=<span class="number">1</span>;<span class="keyword">char</span> ch=nc();</span><br><span class="line">	<span class="keyword">while</span> (ch&lt;<span class="string">'0'</span>||<span class="string">'9'</span>&lt;ch) &#123;<span class="keyword">if</span> (ch==<span class="string">'-'</span>) f=-f;ch=nc();&#125;</span><br><span class="line">	<span class="keyword">while</span> (<span class="string">'0'</span>&lt;=ch&amp;&amp;ch&lt;=<span class="string">'9'</span>) res=res*<span class="number">10</span>+ch<span class="number">-48</span>,ch=nc();</span><br><span class="line">	<span class="keyword">return</span> res*f; </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxn=<span class="number">100005</span>,maxs=<span class="number">400005</span>;</span><br><span class="line"><span class="keyword">int</span> n,m,q,A[<span class="number">11</span>][maxn];</span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">node</span>&#123;</span></span><br><span class="line">	<span class="keyword">int</span> s,l[<span class="number">11</span>],r[<span class="number">11</span>];</span><br><span class="line">&#125;T[maxs];</span><br><span class="line"><span class="keyword">int</span> fa[<span class="number">45</span>],id[<span class="number">45</span>];</span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">int</span> <span class="title">getfa</span><span class="params">(<span class="keyword">int</span> x)</span> </span>&#123;<span class="keyword">return</span> fa[x]==x?x:fa[x]=getfa(fa[x]);&#125;</span><br><span class="line"><span class="function"><span class="keyword">inline</span> node <span class="title">merge</span><span class="params">(<span class="keyword">const</span> node&amp;a,<span class="keyword">const</span> node&amp;b,<span class="keyword">int</span> m)</span></span>&#123;</span><br><span class="line">	node c; c.s=a.s+b.s;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)&#123;</span><br><span class="line">		fa[i]=a.l[i];</span><br><span class="line">		fa[i+n]=a.r[i];</span><br><span class="line">		fa[i+n*<span class="number">2</span>]=b.l[i]+<span class="number">2</span>*n;</span><br><span class="line">		fa[i+n*<span class="number">3</span>]=b.r[i]+<span class="number">2</span>*n;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)</span><br><span class="line">	 <span class="keyword">if</span> (A[i][m]==A[i][m+<span class="number">1</span>]&amp;&amp;getfa(i+n)!=getfa(i+<span class="number">2</span>*n)) fa[getfa(i+n)]=getfa(i+<span class="number">2</span>*n),c.s--;</span><br><span class="line">	cl(id,<span class="number">0</span>);</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)&#123;</span><br><span class="line">		<span class="keyword">if</span> (!id[getfa(i)]) id[getfa(i)]=i;</span><br><span class="line">		<span class="keyword">if</span> (!id[getfa(i+<span class="number">3</span>*n)]) id[getfa(i+<span class="number">3</span>*n)]=i+n;</span><br><span class="line">		c.l[i]=id[getfa(i)]; c.r[i]=id[getfa(i+<span class="number">3</span>*n)];</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> c;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">build</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">int</span> l,<span class="keyword">int</span> r)</span></span>&#123;</span><br><span class="line">	<span class="keyword">if</span> (l==r)&#123;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)</span><br><span class="line">		 T[x].l[i]=T[x].r[i]=(A[i][l]!=A[i<span class="number">-1</span>][l])?T[x].s++,i:T[x].l[i<span class="number">-1</span>];</span><br><span class="line">		<span class="keyword">return</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">int</span> mid=l+r&gt;&gt;<span class="number">1</span>;</span><br><span class="line">	build(x&lt;&lt;<span class="number">1</span>,l,mid); build(x&lt;&lt;<span class="number">1</span>|<span class="number">1</span>,mid+<span class="number">1</span>,r);</span><br><span class="line">	T[x]=merge(T[x&lt;&lt;<span class="number">1</span>],T[x&lt;&lt;<span class="number">1</span>|<span class="number">1</span>],mid);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function">node <span class="title">qry</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">int</span> l,<span class="keyword">int</span> r,<span class="keyword">int</span> ql,<span class="keyword">int</span> qr)</span></span>&#123;</span><br><span class="line">	<span class="keyword">if</span> (ql==l&amp;&amp;r==qr) <span class="keyword">return</span> T[x];</span><br><span class="line">	<span class="keyword">int</span> mid=l+r&gt;&gt;<span class="number">1</span>;</span><br><span class="line">	<span class="keyword">if</span> (qr&lt;=mid) <span class="keyword">return</span> qry(x&lt;&lt;<span class="number">1</span>,l,mid,ql,qr);<span class="keyword">else</span></span><br><span class="line">	<span class="keyword">if</span> (ql&gt; mid) <span class="keyword">return</span> qry(x&lt;&lt;<span class="number">1</span>|<span class="number">1</span>,mid+<span class="number">1</span>,r,ql,qr);<span class="keyword">else</span></span><br><span class="line">	<span class="keyword">return</span> merge(qry(x&lt;&lt;<span class="number">1</span>,l,mid,ql,mid),qry(x&lt;&lt;<span class="number">1</span>|<span class="number">1</span>,mid+<span class="number">1</span>,r,mid+<span class="number">1</span>,qr),mid);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	n=red(),m=red(),q=red();</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)</span><br><span class="line">	 <span class="keyword">for</span> (<span class="keyword">int</span> j=<span class="number">1</span>;j&lt;=m;j++) A[i][j]=red();</span><br><span class="line">	build(<span class="number">1</span>,<span class="number">1</span>,m);</span><br><span class="line">	<span class="keyword">while</span> (q--)&#123;</span><br><span class="line">		<span class="keyword">int</span> l=red(),r=red();</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"%d\n"</span>,qry(<span class="number">1</span>,<span class="number">1</span>,m,l,r).s);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
@@ -628,10 +628,26 @@ var _hmt = _hmt || [];
     var s = document.getElementsByTagName("script")[0];
     s.parentNode.insertBefore(hm, s);
 })();
-</script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</script>
 
 
 
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/MathJax.js?config=TeX-MML-AM_CHTML"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 
 </body>
 

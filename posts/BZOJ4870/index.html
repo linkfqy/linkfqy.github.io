@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang=zh>
-<head>
+<head><meta name="generator" content="Hexo 3.9.0">
 <!-- hexo-inject:begin --><!-- hexo-inject:end --><script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
 <link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
 <style>
@@ -19,41 +19,41 @@
 
 <!-- Valine评论 -->
 <script src="/js/av-min.js"></script>
-<script src='/js/Valine.min.js'></script>
+<script src="/js/Valine.min.js"></script>
 <!-- Leancloud统计 -->
 <!-- <script src="/js/av-min-1.2.1.js"></script> -->
 <!--  <script>AV.initialize("rJeVBhWeHlb33cC9L26UE7y3-gzGzoHsz", "uU7rD0e4IaYyrk6vSdM6GoHX");</script> -->
 
-<meta name="google-site-verification" content="IneMsg5aBY2Vw5QuPukpMzm5ATzGfO0dg40QXgKIPkk" />
+<meta name="google-site-verification" content="IneMsg5aBY2Vw5QuPukpMzm5ATzGfO0dg40QXgKIPkk">
 
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
   <meta name="renderer" content="webkit">
-  <meta http-equiv="Cache-Control" content="no-transform" />
-  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   <meta name="format-detection" content="telephone=no,email=no,adress=no">
   <!-- Color theme for statusbar -->
-  <meta name="theme-color" content="#000000" />
+  <meta name="theme-color" content="#000000">
   <!-- 强制页面在当前窗口以独立页面显示,防止别人在框架里调用页面 -->
-  <meta http-equiv="window-target" content="_top" />
+  <meta http-equiv="window-target" content="_top">
   
   
   <title>BZOJ4870 [Shoi2017]组合数问题 | linkfqy&#39;s Blog</title>
-  <meta name="description" content="题面在这里 ​ 考虑实际意义，就是从\(nk\)个中选\(r\)个，选的个数是在模k意义下的 仍旧满足\(f_{i,j}=f_{i-1,j}+f_{i-1,j-1}\) 矩乘即可 ​ WA了2发的经历告诉我构造转移矩阵一定不能赋值！！！！ ​ 示例程序： 123456789101112131415161718192021222324252627282930313233343536">
+  <meta name="description" content="题面在这里 ​     考虑实际意义，就是从$nk$个中选$r$个，选的个数是在模k意义下的 仍旧满足$f_{i,j}=f_{i-1,j}+f_{i-1,j-1}$ 矩乘即可 ​     WA了2发的经历告诉我构造转移矩阵一定不能赋值！！！！ ​     示例程序： 123456789101112131415161718192021222324252627282930313233343536373">
 <meta name="keywords" content="BZOJ,矩阵">
 <meta property="og:type" content="article">
 <meta property="og:title" content="BZOJ4870 [Shoi2017]组合数问题">
 <meta property="og:url" content="http://oi.linkfqy.top/posts/BZOJ4870/index.html">
 <meta property="og:site_name" content="linkfqy">
-<meta property="og:description" content="题面在这里 ​ 考虑实际意义，就是从\(nk\)个中选\(r\)个，选的个数是在模k意义下的 仍旧满足\(f_{i,j}=f_{i-1,j}+f_{i-1,j-1}\) 矩乘即可 ​ WA了2发的经历告诉我构造转移矩阵一定不能赋值！！！！ ​ 示例程序： 123456789101112131415161718192021222324252627282930313233343536">
+<meta property="og:description" content="题面在这里 ​     考虑实际意义，就是从$nk$个中选$r$个，选的个数是在模k意义下的 仍旧满足$f_{i,j}=f_{i-1,j}+f_{i-1,j-1}$ 矩乘即可 ​     WA了2发的经历告诉我构造转移矩阵一定不能赋值！！！！ ​     示例程序： 123456789101112131415161718192021222324252627282930313233343536373">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:updated_time" content="2018-10-17T11:37:34.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="BZOJ4870 [Shoi2017]组合数问题">
-<meta name="twitter:description" content="题面在这里 ​ 考虑实际意义，就是从\(nk\)个中选\(r\)个，选的个数是在模k意义下的 仍旧满足\(f_{i,j}=f_{i-1,j}+f_{i-1,j-1}\) 矩乘即可 ​ WA了2发的经历告诉我构造转移矩阵一定不能赋值！！！！ ​ 示例程序： 123456789101112131415161718192021222324252627282930313233343536">
+<meta name="twitter:description" content="题面在这里 ​     考虑实际意义，就是从$nk$个中选$r$个，选的个数是在模k意义下的 仍旧满足$f_{i,j}=f_{i-1,j}+f_{i-1,j-1}$ 矩乘即可 ​     WA了2发的经历告诉我构造转移矩阵一定不能赋值！！！！ ​     示例程序： 123456789101112131415161718192021222324252627282930313233343536373">
   <!-- Canonical links -->
   <link rel="canonical" href="http://oi.linkfqy.top/posts/BZOJ4870/index.html">
   
@@ -349,13 +349,13 @@
     <div class="article-entry markdown-body" itemprop="articleBody">
       
         <p><a href="https://lydsy.com/JudgeOnline/problem.php?id=4870" target="_blank" rel="noopener">题面在这里</a></p>
-<p>​</p>
-<p>考虑实际意义，就是从<span class="math inline">\(nk\)</span>个中选<span class="math inline">\(r\)</span>个，选的个数是在模k意义下的</p>
-<p>仍旧满足<span class="math inline">\(f_{i,j}=f_{i-1,j}+f_{i-1,j-1}\)</span></p>
+<p>​    </p>
+<p>考虑实际意义，就是从$nk$个中选$r$个，选的个数是在模k意义下的</p>
+<p>仍旧满足$f_{i,j}=f_{i-1,j}+f_{i-1,j-1}$</p>
 <p>矩乘即可</p>
-<p>​</p>
+<p>​    </p>
 <p><del>WA了2发的经历告诉我构造转移矩阵一定不能赋值！！！！</del></p>
-<p>​</p>
+<p>​    </p>
 <p>示例程序：</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> cl(x,y) memset(x,y,sizeof(x))</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> ll;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> n,p,k,r;</span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">matrix</span>&#123;</span></span><br><span class="line">	<span class="keyword">int</span> n,m; ll s[<span class="number">50</span>][<span class="number">50</span>];</span><br><span class="line">	matrix () &#123;cl(s,<span class="number">0</span>);n=m=<span class="number">0</span>;&#125;</span><br><span class="line">&#125;t,ans;</span><br><span class="line"><span class="keyword">inline</span> matrix <span class="keyword">operator</span>*(<span class="keyword">const</span> matrix&amp;a,<span class="keyword">const</span> matrix&amp;b)&#123;</span><br><span class="line">	matrix c;</span><br><span class="line">	c.n=a.n;c.m=b.m;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;c.n;i++)</span><br><span class="line">	 <span class="keyword">for</span> (<span class="keyword">int</span> j=<span class="number">0</span>;j&lt;c.m;j++)</span><br><span class="line">	  <span class="keyword">for</span> (<span class="keyword">int</span> k=<span class="number">0</span>;k&lt;a.m;k++)</span><br><span class="line">	   (c.s[i][j]+=a.s[i][k]*b.s[k][j])%=p;</span><br><span class="line">	<span class="keyword">return</span> c;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function">matrix <span class="title">power</span><span class="params">(matrix a,ll b)</span></span>&#123;</span><br><span class="line">	matrix w=a,res;</span><br><span class="line">	res.n=res.m=k; <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;k;i++) res.s[i][i]=<span class="number">1</span>;</span><br><span class="line">	<span class="keyword">while</span> (b)&#123;</span><br><span class="line">		<span class="keyword">if</span> (b&amp;<span class="number">1</span>) res=res*w;</span><br><span class="line">		w=w*w;</span><br><span class="line">		b&gt;&gt;=<span class="number">1</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> res;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%d%d%d%d"</span>,&amp;n,&amp;p,&amp;k,&amp;r);</span><br><span class="line">	ans.n=k;ans.m=<span class="number">1</span>; ans.s[<span class="number">0</span>][<span class="number">0</span>]=<span class="number">1</span>;</span><br><span class="line">	t.n=t.m=k;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;k;i++) t.s[i][i]++,t.s[i][(i<span class="number">-1</span>+k)%k]++;</span><br><span class="line">	ans=power(t,(ll)n*k)*ans;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"%lld"</span>,ans.s[r][<span class="number">0</span>]);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
@@ -631,10 +631,26 @@ var _hmt = _hmt || [];
     var s = document.getElementsByTagName("script")[0];
     s.parentNode.insertBefore(hm, s);
 })();
-</script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</script>
 
 
 
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/MathJax.js?config=TeX-MML-AM_CHTML"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 
 </body>
 

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang=zh>
-<head>
+<head><meta name="generator" content="Hexo 3.9.0">
 <!-- hexo-inject:begin --><!-- hexo-inject:end --><script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
 <link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
 <style>
@@ -19,41 +19,41 @@
 
 <!-- Valine评论 -->
 <script src="/js/av-min.js"></script>
-<script src='/js/Valine.min.js'></script>
+<script src="/js/Valine.min.js"></script>
 <!-- Leancloud统计 -->
 <!-- <script src="/js/av-min-1.2.1.js"></script> -->
 <!--  <script>AV.initialize("rJeVBhWeHlb33cC9L26UE7y3-gzGzoHsz", "uU7rD0e4IaYyrk6vSdM6GoHX");</script> -->
 
-<meta name="google-site-verification" content="IneMsg5aBY2Vw5QuPukpMzm5ATzGfO0dg40QXgKIPkk" />
+<meta name="google-site-verification" content="IneMsg5aBY2Vw5QuPukpMzm5ATzGfO0dg40QXgKIPkk">
 
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
   <meta name="renderer" content="webkit">
-  <meta http-equiv="Cache-Control" content="no-transform" />
-  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   <meta name="format-detection" content="telephone=no,email=no,adress=no">
   <!-- Color theme for statusbar -->
-  <meta name="theme-color" content="#000000" />
+  <meta name="theme-color" content="#000000">
   <!-- 强制页面在当前窗口以独立页面显示,防止别人在框架里调用页面 -->
-  <meta http-equiv="window-target" content="_top" />
+  <meta http-equiv="window-target" content="_top">
   
   
   <title>【状压+期望DP，定积分】BZOJ3925 [Zjoi2015]地震后的幻想乡 | linkfqy&#39;s Blog</title>
-  <meta name="description" content="以下是ChesterKing神仙的题解： ​ ​ 题目传送门 这题是真的神仙题……整整花了我两个礼拜来理解这题 首先这题据我了解有三种做法：纯OI做法、积分+数学推导、直接积分 请做好一定的心理准备，接下来的东西可能有点难理解（好像不是一点点的难吧……）  1.纯OI做法 首先我们根据期望的线性性，可以得到\(ans=\sum_{x=0}^mw(x)\times p(x)\)，其">
+  <meta name="description" content="以下是ChesterKing神仙的题解： ​     ​     题目传送门 这题是真的神仙题……整整花了我两个礼拜来理解这题 首先这题据我了解有三种做法：纯OI做法、积分+数学推导、直接积分 请做好一定的心理准备，接下来的东西可能有点难理解（好像不是一点点的难吧……）  1.纯OI做法 首先我们根据期望的线性性，可以得到$ans=\sum_{x=0}^mw(x)\times p(x)$，其中$w">
 <meta name="keywords" content="BZOJ,期望DP,状压DP">
 <meta property="og:type" content="article">
 <meta property="og:title" content="【状压+期望DP，定积分】BZOJ3925 [Zjoi2015]地震后的幻想乡">
 <meta property="og:url" content="http://oi.linkfqy.top/posts/BZOJ3925/index.html">
 <meta property="og:site_name" content="linkfqy">
-<meta property="og:description" content="以下是ChesterKing神仙的题解： ​ ​ 题目传送门 这题是真的神仙题……整整花了我两个礼拜来理解这题 首先这题据我了解有三种做法：纯OI做法、积分+数学推导、直接积分 请做好一定的心理准备，接下来的东西可能有点难理解（好像不是一点点的难吧……）  1.纯OI做法 首先我们根据期望的线性性，可以得到\(ans=\sum_{x=0}^mw(x)\times p(x)\)，其">
+<meta property="og:description" content="以下是ChesterKing神仙的题解： ​     ​     题目传送门 这题是真的神仙题……整整花了我两个礼拜来理解这题 首先这题据我了解有三种做法：纯OI做法、积分+数学推导、直接积分 请做好一定的心理准备，接下来的东西可能有点难理解（好像不是一点点的难吧……）  1.纯OI做法 首先我们根据期望的线性性，可以得到$ans=\sum_{x=0}^mw(x)\times p(x)$，其中$w">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:updated_time" content="2018-10-09T11:30:52.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="【状压+期望DP，定积分】BZOJ3925 [Zjoi2015]地震后的幻想乡">
-<meta name="twitter:description" content="以下是ChesterKing神仙的题解： ​ ​ 题目传送门 这题是真的神仙题……整整花了我两个礼拜来理解这题 首先这题据我了解有三种做法：纯OI做法、积分+数学推导、直接积分 请做好一定的心理准备，接下来的东西可能有点难理解（好像不是一点点的难吧……）  1.纯OI做法 首先我们根据期望的线性性，可以得到\(ans=\sum_{x=0}^mw(x)\times p(x)\)，其">
+<meta name="twitter:description" content="以下是ChesterKing神仙的题解： ​     ​     题目传送门 这题是真的神仙题……整整花了我两个礼拜来理解这题 首先这题据我了解有三种做法：纯OI做法、积分+数学推导、直接积分 请做好一定的心理准备，接下来的东西可能有点难理解（好像不是一点点的难吧……）  1.纯OI做法 首先我们根据期望的线性性，可以得到$ans=\sum_{x=0}^mw(x)\times p(x)$，其中$w">
   <!-- Canonical links -->
   <link rel="canonical" href="http://oi.linkfqy.top/posts/BZOJ3925/index.html">
   
@@ -340,7 +340,7 @@
         <span class="post-comment"><i class="icon icon-comment"></i> <a href="/posts/BZOJ3925/#comments" class="article-comment-link">评论</a></span>
         
 	
-		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 2,217(words)</span>
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 1,957(words)</span>
 	
 	
 
@@ -349,86 +349,82 @@
     <div class="article-entry markdown-body" itemprop="articleBody">
       
         <p>以下是ChesterKing神仙的题解：</p>
-<p>​</p>
-<p>​</p>
+<p>​    </p>
+<p>​    </p>
 <p><a href="https://www.lydsy.com/JudgeOnline/problem.php?id=3925" target="_blank" rel="noopener">题目传送门</a></p>
 <p>这题是真的神仙题……整整花了我两个礼拜来理解这题</p>
 <p>首先这题据我了解有三种做法：纯OI做法、积分+数学推导、直接积分</p>
 <p>请做好一定的心理准备，接下来的东西可能有点难理解<del>（好像不是一点点的难吧……）</del></p>
 <hr>
 <p>1.纯OI做法</p>
-<p>首先我们根据期望的线性性，可以得到<span class="math inline">\(ans=\sum_{x=0}^mw(x)\times p(x)\)</span>，其中<span class="math inline">\(w(x)\)</span>为最大边为<span class="math inline">\(x\)</span>时的对答案的贡献，<span class="math inline">\(p(x)\)</span>为最大边为<span class="math inline">\(x\)</span>时的概率。</p>
-<p>由题目所给信息“对于<span class="math inline">\(n\)</span>个之<span class="math inline">\([0,1]\)</span>间的随机变量<span class="math inline">\(x1,x2,...,xn\)</span>，第<span class="math inline">\(k\)</span>小的那个的期望值是<span class="math inline">\(\frac{k}{n+1}\)</span>”可知：<span class="math inline">\(w(x)=\frac{x}{m+1}\)</span>。</p>
-<p><span class="math inline">\(\therefore ans=\sum_{x=0}^m\frac{x}{m+1}\times p(x)\)</span></p>
-<p>设<span class="math inline">\(f(x)\)</span>为最大边权的排名<span class="math inline">\(\ge x\)</span>的概率，则<span class="math inline">\(p(x)=f(x-1)-f(x)\)</span>。</p>
-<p><span class="math display">\[
-\therefore ans=\frac{1}{m+1}\times[f(0)-f(1)]+\frac{2}{m+1}\times[f(1)-f(2)]+...+\frac{m}{m+1}\times[f(m-1)-f(m)]+\frac{m+1}{m+1}\times[f(m)-f(m+1)]
-\]</span></p>
-<p><span class="math inline">\(\because f(0)=1,f(m+1)=0\)</span> <span class="math display">\[
-\therefore ans=\frac{1}{m+1}\sum_{x=0}^mf(x)
-\]</span> 定义<span class="math inline">\(f[S][i]\)</span>为点集为<span class="math inline">\(S\)</span>，选取了<span class="math inline">\(i\)</span>条边使得点集不连通的方案数；同理，定义<span class="math inline">\(g[S][i]\)</span>为点集为<span class="math inline">\(S\)</span>，选取了<span class="math inline">\(i\)</span>条边使得点集连通的方案数。</p>
-<p>易得<span class="math inline">\(f[S][i]+g[S][i]={i\choose cnt[s]}\)</span>，其中<span class="math inline">\(cnt[S]\)</span>为点集<span class="math inline">\(S\)</span>内的边数。</p>
-<p>可以通过固定某定点<span class="math inline">\(P\)</span>来进行转移，以达到不重复、不遗漏的计数。 <span class="math display">\[
-f[S][i+j]=\sum_{P \in S,T \subset S}g[T][i]\times{j \choose cnt[S-T]}
-\]</span> 那么最终答案即为<span class="math inline">\(ans=\frac{1}{m+1}\sum_{x=0}^m\frac{f[all][x]}{x \choose cnt[all]}\)</span>。</p>
+<p>首先我们根据期望的线性性，可以得到$ans=\sum_{x=0}^mw(x)\times p(x)$，其中$w(x)$为最大边为$x$时的对答案的贡献，$p(x)$为最大边为$x$时的概率。</p>
+<p>由题目所给信息“对于$n$个之$[0,1]$间的随机变量$x1,x2,…,xn$，第$k$小的那个的期望值是$\frac{k}{n+1}$”可知：$w(x)=\frac{x}{m+1}$。</p>
+<p>$\therefore ans=\sum_{x=0}^m\frac{x}{m+1}\times p(x)$</p>
+<p>设$f(x)$为最大边权的排名$\ge x$的概率，则$p(x)=f(x-1)-f(x)$。</p>
+<script type="math/tex; mode=display">
+\therefore ans=\frac{1}{m+1}\times[f(0)-f(1)]+\frac{2}{m+1}\times[f(1)-f(2)]+...+\frac{m}{m+1}\times[f(m-1)-f(m)]+\frac{m+1}{m+1}\times[f(m)-f(m+1)]</script><p>$\because f(0)=1,f(m+1)=0$</p>
+<script type="math/tex; mode=display">
+\therefore ans=\frac{1}{m+1}\sum_{x=0}^mf(x)</script><p>定义$f[S][i]$为点集为$S$，选取了$i$条边使得点集不连通的方案数；同理，定义$g[S][i]$为点集为$S$，选取了$i$条边使得点集连通的方案数。</p>
+<p>易得$f[S][i]+g[S][i]={i\choose cnt[s]}$，其中$cnt[S]$为点集$S$内的边数。</p>
+<p>可以通过固定某定点$P$来进行转移，以达到不重复、不遗漏的计数。</p>
+<script type="math/tex; mode=display">
+f[S][i+j]=\sum_{P \in S,T \subset S}g[T][i]\times{j \choose cnt[S-T]}</script><p>那么最终答案即为$ans=\frac{1}{m+1}\sum_{x=0}^m\frac{f[all][x]}{x \choose cnt[all]}$。</p>
 <p>附上AC代码：</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> ll;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> N=<span class="number">11</span>,M=<span class="number">46</span>;</span><br><span class="line"><span class="keyword">int</span> n,m,e[N],sz[<span class="number">1</span>&lt;&lt;N],cnt[<span class="number">1</span>&lt;&lt;N],wz;</span><br><span class="line">ll c[M][M],f[<span class="number">1</span>&lt;&lt;N][M],g[<span class="number">1</span>&lt;&lt;N][M];</span><br><span class="line"><span class="keyword">double</span> ans;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span>&#123;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%d%d"</span>,&amp;n,&amp;m);</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">1</span>,x,y; i&lt;=m; ++i) <span class="built_in">scanf</span>(<span class="string">"%d%d"</span>,&amp;x,&amp;y),--x,--y,e[x]|=<span class="number">1</span>&lt;&lt;y,e[y]|=<span class="number">1</span>&lt;&lt;x;</span><br><span class="line">	c[<span class="number">0</span>][<span class="number">0</span>]=<span class="number">1</span>;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">1</span>; i&lt;=m; ++i)&#123;</span><br><span class="line">		c[i][<span class="number">0</span>]=<span class="number">1</span>;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> j=<span class="number">1</span>; j&lt;=i; ++j) c[i][j]=c[i<span class="number">-1</span>][j<span class="number">-1</span>]+c[i<span class="number">-1</span>][j];</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> sub=<span class="number">1</span>; sub&lt;(<span class="number">1</span>&lt;&lt;n); ++sub)&#123;</span><br><span class="line">		<span class="keyword">if</span> ((sz[sub]=sz[sub&gt;&gt;<span class="number">1</span>]+(sub&amp;<span class="number">1</span>))==<span class="number">1</span>)&#123;g[sub][<span class="number">0</span>]=<span class="number">1</span>; <span class="keyword">continue</span>;&#125;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;n; ++i) <span class="keyword">if</span> ((sub&gt;&gt;i)&amp;<span class="number">1</span>) cnt[sub]+=sz[e[i]&amp;sub];</span><br><span class="line">		cnt[sub]&gt;&gt;=<span class="number">1</span>,wz=sub&amp;-sub;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> opt=(sub<span class="number">-1</span>)&amp;sub; opt; opt=(opt<span class="number">-1</span>)&amp;sub)</span><br><span class="line">			<span class="keyword">if</span> (opt&amp;wz)</span><br><span class="line">				<span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;=cnt[opt]; ++i)</span><br><span class="line">					<span class="keyword">for</span> (<span class="keyword">int</span> j=<span class="number">0</span>; j&lt;=cnt[opt^sub]; ++j)</span><br><span class="line">						f[sub][i+j]+=g[opt][i]*c[cnt[opt^sub]][j];</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;=cnt[sub]; ++i) g[sub][i]=c[cnt[sub]][i]-f[sub][i];</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;=m; ++i) ans+=(<span class="keyword">double</span>)f[(<span class="number">1</span>&lt;&lt;n)<span class="number">-1</span>][i]/c[cnt[(<span class="number">1</span>&lt;&lt;n)<span class="number">-1</span>]][i];</span><br><span class="line">	<span class="keyword">return</span> <span class="built_in">printf</span>(<span class="string">"%.6lf\n"</span>,ans/=m+<span class="number">1</span>),<span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <hr>
 <p>接下来的两种做法可能需要一定的高等数学知识，至于定积分、求导之类的运算法则，出门左拐度娘处。</p>
 <p>讲接下来的两种做法之前，我们先来证明一个对于我个人很难理解的东西，因为接下来的做法都要用到。</p>
-<p>求证：<span class="math inline">\(ans=\int_0^1f(x){\rm d}x\)</span>，其中<span class="math inline">\(f(x)\)</span>为答案<span class="math inline">\(&gt;x\)</span>的概率。</p>
-<p>证明：设<span class="math inline">\(p(x)\)</span>为答案<span class="math inline">\(=x\)</span>的概率</p>
-<p>易得：<span class="math inline">\(p(x)=\lim_{\Delta x \rightarrow 0}\frac{f(x)-f(x+\Delta x)}{\Delta x}=-f&#39;(x)\)</span></p>
-<p>根据期望的定义，得：<span class="math inline">\(ans=\int_0^1x\times p(x){\rm d}x\)</span></p>
-<p><span class="math display">\[
+<p>求证：$ans=\int_0^1f(x){\rm d}x$，其中$f(x)$为答案$&gt;x$的概率。</p>
+<p>证明：设$p(x)$为答案$=x$的概率</p>
+<p>易得：$p(x)=\lim_{\Delta x \rightarrow 0}\frac{f(x)-f(x+\Delta x)}{\Delta x}=-f’(x)$</p>
+<p>根据期望的定义，得：$ans=\int_0^1x\times p(x){\rm d}x$</p>
+<script type="math/tex; mode=display">
 \begin{align}
-\therefore ans&amp;=\int_0^1x\times (-f&#39;(x)){\rm d}x\\
-            &amp;=\int_0^1x{\rm d}(-f(x))\\
-            &amp;=[x\times (-f(x))]_0^1+\int_0^1f(x){\rm d}x
-\end{align}
-\]</span> <span class="math inline">\(\because f(x)\)</span>为答案<span class="math inline">\(&gt;x\)</span>的概率<span class="math inline">\(\qquad\therefore f(0)=1,f(1)=0\qquad\therefore ans=\int_0^1f(x){\rm d}x\)</span></p>
+\therefore ans&=\int_0^1x\times (-f'(x)){\rm d}x\\
+            &=\int_0^1x{\rm d}(-f(x))\\
+            &=[x\times (-f(x))]_0^1+\int_0^1f(x){\rm d}x
+\end{align}</script><p>$\because f(x)$为答案$&gt;x$的概率$\qquad\therefore f(0)=1,f(1)=0\qquad\therefore ans=\int_0^1f(x){\rm d}x$</p>
 <p>证毕。</p>
 <p>2.积分+数学推导</p>
-<p>我们设一个函数<span class="math inline">\(P_S(t)\)</span>表示当<span class="math inline">\(S\)</span>[<span class="math inline">\(S\)</span>为一个点集在原图中的导出子图]中的最大边为<span class="math inline">\(t\)</span>时，<span class="math inline">\(S\)</span>不连通的概率为<span class="math inline">\(P_S(t)\)</span>。</p>
-<p>那么有<span class="math inline">\(E(X)=\int_0^1P_{SIE}(t){\rm d}t\qquad\)</span>[<span class="math inline">\(SIE\)</span>为全集]<span class="math inline">\(\qquad\)</span>(根据上面的证明可得)</p>
-<p>我们可以方便地写出<span class="math inline">\(P(t)\)</span>的递归式。</p>
-<p>我们考虑一张图<span class="math inline">\(S\)</span>，我们把其分成两部分(<span class="math inline">\(S_0\)</span>与<span class="math inline">\(S-S_0\)</span>)，那么<span class="math inline">\(S_0\)</span>连通而<span class="math inline">\(S\)</span>不连通的概率为： <span class="math display">\[
-[1-P_{S_0}(t)]\times(1-t)^{E(S_0,S)}
-\]</span> 其中<span class="math inline">\(E(S_0,S)\)</span>为<span class="math inline">\(S_0\)</span>到<span class="math inline">\(S- S0\)</span>的边数。 <span class="math display">\[
+<p>我们设一个函数$P_S(t)$表示当$S$[$S$为一个点集在原图中的导出子图]中的最大边为$t$时，$S$不连通的概率为$P_S(t)$。</p>
+<p>那么有$E(X)=\int_0^1P_{SIE}(t){\rm d}t\qquad$[$SIE$为全集]$\qquad$(根据上面的证明可得)</p>
+<p>我们可以方便地写出$P(t)$的递归式。</p>
+<p>我们考虑一张图$S$，我们把其分成两部分($S_0$与$S-S_0$)，那么$S_0$连通而$S$不连通的概率为：</p>
+<script type="math/tex; mode=display">
+[1-P_{S_0}(t)]\times(1-t)^{E(S_0,S)}</script><p>其中$E(S_0,S)$为$S_0$到$S- S0$的边数。</p>
+<script type="math/tex; mode=display">
 \begin{align}
-\therefore P_S(t)&amp;=\sum_{S_0\not\subseteq S}(1-t)^{E(S_0,S)}\times [1-P_{S_0}(t)]\qquad[1\in S_0]\\
-\therefore E(X)&amp;=\int_0^1P_{SIE}(t){\rm d}t\\
-            &amp;=\int_0^1\sum(1-t)^{E(S_0,S)}\times[1-P_{S_0}(t)]]{\rm d}t\qquad[1\in S_0)]\\
-            &amp;=\sum\int_0^1(1-t)^{E(S_0,S)}{\rm d}t-\int_0^1(1-t)^{E(S_0,S)}\times P_{S_0}(t){\rm d}t\\
-            &amp;=\sum\frac{1}{E(S_0,S)+1}-\int_0^1(1-t)^{E(S_0,S)}\times P_{S_0}(t){\rm d}t
-\end{align}
-\]</span></p>
-<p>我们递归定义<span class="math inline">\(f[S_0][E(S_0,S)]=\int_0^1(1-t)^{E(S_0,S)}\times P_{S_0}(t){\rm d}t​\)</span></p>
-<p><span class="math inline">\(\therefore f[1][k]=0,k\in[0,m]\qquad f[S][k]=\sum\frac{1}{k+E(S_0,S)+1}-f[S_0][k+E(S_0,S)]\)</span></p>
+\therefore P_S(t)&=\sum_{S_0\not\subseteq S}(1-t)^{E(S_0,S)}\times [1-P_{S_0}(t)]\qquad[1\in S_0]\\
+\therefore E(X)&=\int_0^1P_{SIE}(t){\rm d}t\\
+            &=\int_0^1\sum(1-t)^{E(S_0,S)}\times[1-P_{S_0}(t)]]{\rm d}t\qquad[1\in S_0)]\\
+            &=\sum\int_0^1(1-t)^{E(S_0,S)}{\rm d}t-\int_0^1(1-t)^{E(S_0,S)}\times P_{S_0}(t){\rm d}t\\
+            &=\sum\frac{1}{E(S_0,S)+1}-\int_0^1(1-t)^{E(S_0,S)}\times P_{S_0}(t){\rm d}t
+\end{align}</script><p>我们递归定义$f[S_0][E(S_0,S)]=\int_0^1(1-t)^{E(S_0,S)}\times P_{S_0}(t){\rm d}t​$</p>
+<p>$\therefore f[1][k]=0,k\in[0,m]\qquad f[S][k]=\sum\frac{1}{k+E(S_0,S)+1}-f[S_0][k+E(S_0,S)]$</p>
 <p>然后直接暴力即可。</p>
 <p>附上AC代码：</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> N=<span class="number">11</span>,M=<span class="number">56</span>;</span><br><span class="line"><span class="keyword">int</span> n,m,x,y,t[<span class="number">1</span>&lt;&lt;N][<span class="number">1</span>&lt;&lt;N],all,b[<span class="number">1</span>&lt;&lt;N][M];</span><br><span class="line"><span class="keyword">double</span> f[<span class="number">1</span>&lt;&lt;N][M];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">double</span> <span class="title">calc</span><span class="params">(<span class="keyword">int</span> sub,<span class="keyword">int</span> k)</span></span>&#123;</span><br><span class="line">	<span class="keyword">if</span> (sub==<span class="number">1</span>) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">if</span> (b[sub][k]) <span class="keyword">return</span> f[sub][k];</span><br><span class="line">	b[sub][k]=<span class="number">1</span>;</span><br><span class="line">	<span class="keyword">double</span> &amp;ans=(f[sub][k]=<span class="number">.0</span>);</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> opt=(sub<span class="number">-1</span>)&amp;sub; opt^sub; opt=(opt<span class="number">-1</span>)&amp;sub)</span><br><span class="line">		<span class="keyword">if</span> (opt&amp;<span class="number">1</span>) ans+=<span class="number">1.0</span>/(k+t[opt][sub&amp;~opt]+<span class="number">1</span>),ans-=calc(opt,k+t[opt][sub&amp;~opt]);</span><br><span class="line">	<span class="keyword">return</span> ans;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span>&#123;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%d%d"</span>,&amp;n,&amp;m),all=(<span class="number">1</span>&lt;&lt;n)<span class="number">-1</span>;</span><br><span class="line">	<span class="keyword">while</span> (m--)&#123;</span><br><span class="line">		<span class="built_in">scanf</span>(<span class="string">"%d%d"</span>,&amp;x,&amp;y),--x,--y;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> s1=<span class="number">0</span>; s1&lt;=all; ++s1)</span><br><span class="line">			<span class="keyword">if</span> ((s1&gt;&gt;x)&amp;<span class="number">1</span>)</span><br><span class="line">				<span class="keyword">for</span> (<span class="keyword">int</span> s2=<span class="number">0</span>; s2&lt;=all; ++s2)</span><br><span class="line">					<span class="keyword">if</span> ((s2&gt;&gt;y)&amp;<span class="number">1</span>)</span><br><span class="line">						++t[s1][s2],++t[s2][s1];</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="built_in">printf</span>(<span class="string">"%.6lf\n"</span>,calc(all,<span class="number">0</span>)),<span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <hr>
 <p>3.直接积分</p>
-<p>首先记<span class="math inline">\(F(x)\)</span>为答案<span class="math inline">\(&gt;x\)</span>的概率，可知<span class="math inline">\(ans=\int_0^1F(x){\rm d}x\)</span></p>
-<p><span class="math inline">\(F(x)\)</span>等价于边权<span class="math inline">\(&lt;x\)</span>时不能使图连通的概率。有点难求，正难则反，考虑使图连通的概率。</p>
-<p>记<span class="math inline">\(f(S)\)</span>为集合<span class="math inline">\(S\)</span>连通的概率，<span class="math inline">\(f(S)=1-\sum_{S&#39;\subset S}f(S&#39;)\times(1-x)^{cnt}\)</span>，其中<span class="math inline">\(cnt\)</span>为<span class="math inline">\(S&#39;\)</span>和<span class="math inline">\(S-S&#39;\)</span>的边数。</p>
-<p>可以发现，<span class="math inline">\(f(S)\)</span>为关于<span class="math inline">\(x\)</span>的多项式，可以做定积分。</p>
+<p>首先记$F(x)$为答案$&gt;x$的概率，可知$ans=\int_0^1F(x){\rm d}x$</p>
+<p>$F(x)$等价于边权$&lt;x$时不能使图连通的概率。有点难求，正难则反，考虑使图连通的概率。</p>
+<p>记$f(S)$为集合$S$连通的概率，$f(S)=1-\sum_{S’\subset S}f(S’)\times(1-x)^{cnt}$，其中$cnt$为$S’$和$S-S’$的边数。</p>
+<p>可以发现，$f(S)$为关于$x$的多项式，可以做定积分。</p>
 <p>也可以换一种理解的方式。</p>
-<p>设<span class="math inline">\(f(x)\)</span>为<span class="math inline">\(x==ans\)</span>的概率密度函数，令<span class="math inline">\(F(x)=\int f(x){\rm d}x\)</span> <span class="math display">\[
+<p>设$f(x)$为$x==ans$的概率密度函数，令$F(x)=\int f(x){\rm d}x$</p>
+<script type="math/tex; mode=display">
 \begin{align}
-ans&amp;=\int_0^1xf(x){\rm d}x\\
-    &amp;=\int_0^1x{\rm d}(F(x))\\
-    &amp;=[x\times F(x)]_0^1-\int_0^1F(x){\rm d}x\\
-    &amp;=1-\int_0^1F(x){\rm d}x\\
-    &amp;=\int_0^1(1-F(x)){\rm d}x
-\end{align}
-\]</span> <span class="math inline">\(F(x)\)</span>的意义为取值<span class="math inline">\(\le x\)</span>的概率，等价于每条边有<span class="math inline">\(x\)</span>的概率出现，问图的连通概率。</p>
+ans&=\int_0^1xf(x){\rm d}x\\
+    &=\int_0^1x{\rm d}(F(x))\\
+    &=[x\times F(x)]_0^1-\int_0^1F(x){\rm d}x\\
+    &=1-\int_0^1F(x){\rm d}x\\
+    &=\int_0^1(1-F(x)){\rm d}x
+\end{align}</script><p> $F(x)$的意义为取值$\le x$的概率，等价于每条边有$x$的概率出现，问图的连通概率。</p>
 <p>注意：这种做法不知为何有点卡精度，需要开__float128。</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> N=<span class="number">10</span>,M=<span class="number">57</span>;</span><br><span class="line"><span class="keyword">typedef</span> __float128 ld;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> ll;</span><br><span class="line"><span class="keyword">typedef</span> <span class="built_in">vector</span> &lt;ll&gt; poly;</span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">note</span>&#123;</span></span><br><span class="line">	<span class="keyword">int</span> x,y;</span><br><span class="line">&#125;a[M];</span><br><span class="line"><span class="keyword">int</span> n,m;</span><br><span class="line">poly o,tmp,f[<span class="number">1</span>&lt;&lt;N],ans;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">bool</span> <span class="title">in</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">int</span> sub)</span></span>&#123;<span class="keyword">return</span> (sub&gt;&gt;x<span class="number">-1</span>)&amp;<span class="number">1</span>;&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">inline</span> poly <span class="keyword">operator</span> * (<span class="keyword">const</span> poly x,<span class="keyword">const</span> poly y)&#123;</span><br><span class="line">	poly ret(x.size()+y.size()-1,0);</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;x.size(); ++i)</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> j=<span class="number">0</span>; j&lt;y.size(); ++j)</span><br><span class="line">			ret[i+j]+=x[i]*y[j];</span><br><span class="line">	<span class="keyword">return</span> ret;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">inline</span> poly <span class="keyword">operator</span> - (<span class="keyword">const</span> poly x,<span class="keyword">const</span> poly y)&#123;</span><br><span class="line">	poly ret(max(x.size(),y.size()),0);</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;x.size(); ++i) ret[i]+=x[i];</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;y.size(); ++i) ret[i]-=y[i];</span><br><span class="line">	<span class="keyword">return</span> ret;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">inline</span> ld <span class="title">integrate</span><span class="params">(poly ans)</span></span>&#123;</span><br><span class="line">	ld ret=<span class="number">0</span>;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;ans.size(); ++i) ret+=ld(<span class="number">1.0</span>)*ans[i]/(i+<span class="number">1</span>);</span><br><span class="line">	<span class="keyword">return</span> ret;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span>&#123;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%d%d"</span>,&amp;n,&amp;m);</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">1</span>; i&lt;=m; ++i) <span class="built_in">scanf</span>(<span class="string">"%d%d"</span>,&amp;a[i].x,&amp;a[i].y);</span><br><span class="line">	o.push_back(<span class="number">1</span>),o.push_back(<span class="number">-1</span>),f[<span class="number">1</span>].push_back(<span class="number">1</span>);</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> sub=<span class="number">3</span>; sub&lt;(<span class="number">1</span>&lt;&lt;n); sub+=<span class="number">2</span>)&#123;</span><br><span class="line">		f[sub].clear(),f[sub].push_back(<span class="number">1</span>);</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> opt=(sub<span class="number">-1</span>)&amp;sub; opt; opt=(opt<span class="number">-1</span>)&amp;sub)</span><br><span class="line">			<span class="keyword">if</span> (opt&amp;<span class="number">1</span>)&#123;</span><br><span class="line">				<span class="keyword">int</span> cnt=<span class="number">0</span>;</span><br><span class="line">				<span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">1</span>; i&lt;=m; ++i)</span><br><span class="line">					<span class="keyword">if</span> (in(a[i].x,sub)&amp;&amp;in(a[i].y,sub)&amp;&amp;(in(a[i].x,opt)^in(a[i].y,opt))) ++cnt;</span><br><span class="line">				<span class="keyword">for</span> (tmp=f[opt]; cnt; --cnt) tmp=tmp*o;</span><br><span class="line">				f[sub]=f[sub]-tmp;</span><br><span class="line">			&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	ans.push_back(<span class="number">1</span>),ans=ans-f[(<span class="number">1</span>&lt;&lt;n)<span class="number">-1</span>];</span><br><span class="line">	<span class="keyword">return</span> <span class="built_in">printf</span>(<span class="string">"%.6f\n"</span>,(<span class="keyword">double</span>)integrate(ans)),<span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <hr>
 <p>后记：讲真，这的确是一道神题，很有思考的价值。</p>
-<p>还有一小部分没有弄懂，就是“对于<span class="math inline">\(n\)</span>个之<span class="math inline">\([0,1]\)</span>间的随机变量<span class="math inline">\(x1,x2,...,xn\)</span>，第<span class="math inline">\(k\)</span>小的那个的期望值是<span class="math inline">\(\frac{k}{n+1}\)</span>”的证明，最近还在思考，挖坑待填。</p>
+<p>还有一小部分没有弄懂，就是“对于$n$个之$[0,1]$间的随机变量$x1,x2,…,xn$，第$k$小的那个的期望值是$\frac{k}{n+1}$”的证明，最近还在思考，挖坑待填。</p>
 <p>连续性变量的期望用微积分的方法来做会简便很多。</p>
 <p>希望我写的博客能够帮助各位巨佬解这道题，另外我不觉得信息学和微积分有何冲突，只要是能做题的方法都是好方法，并没有哪种方法好一些，不应该有偏见，能掌握做题的方法肯定是越多越好。</p>
 <p>就这样吧。</p>
@@ -705,10 +701,26 @@ var _hmt = _hmt || [];
     var s = document.getElementsByTagName("script")[0];
     s.parentNode.insertBefore(hm, s);
 })();
-</script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</script>
 
 
 
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/MathJax.js?config=TeX-MML-AM_CHTML"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 
 </body>
 

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang=zh>
-<head>
+<head><meta name="generator" content="Hexo 3.9.0">
 <!-- hexo-inject:begin --><!-- hexo-inject:end --><script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
 <link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
 <style>
@@ -19,41 +19,41 @@
 
 <!-- Valine评论 -->
 <script src="/js/av-min.js"></script>
-<script src='/js/Valine.min.js'></script>
+<script src="/js/Valine.min.js"></script>
 <!-- Leancloud统计 -->
 <!-- <script src="/js/av-min-1.2.1.js"></script> -->
 <!--  <script>AV.initialize("rJeVBhWeHlb33cC9L26UE7y3-gzGzoHsz", "uU7rD0e4IaYyrk6vSdM6GoHX");</script> -->
 
-<meta name="google-site-verification" content="IneMsg5aBY2Vw5QuPukpMzm5ATzGfO0dg40QXgKIPkk" />
+<meta name="google-site-verification" content="IneMsg5aBY2Vw5QuPukpMzm5ATzGfO0dg40QXgKIPkk">
 
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
   <meta name="renderer" content="webkit">
-  <meta http-equiv="Cache-Control" content="no-transform" />
-  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   <meta name="format-detection" content="telephone=no,email=no,adress=no">
   <!-- Color theme for statusbar -->
-  <meta name="theme-color" content="#000000" />
+  <meta name="theme-color" content="#000000">
   <!-- 强制页面在当前窗口以独立页面显示,防止别人在框架里调用页面 -->
-  <meta http-equiv="window-target" content="_top" />
+  <meta http-equiv="window-target" content="_top">
   
   
   <title>【kruskal重构树+dfs序上主席树】BZOJ3551 [ONTAK2010]Peaks加强版 | linkfqy&#39;s Blog</title>
-  <meta name="description" content="题面在这里 ​ BZOJ3545强制在线版。 考虑\(\text{kruskal}\)重构树，答案就是子树内第k大 直接在dfs序上跑主席树就好了 ​ 示例程序： 123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960">
+  <meta name="description" content="题面在这里 ​     BZOJ3545强制在线版。 考虑$\text{kruskal}$重构树，答案就是子树内第k大 直接在dfs序上跑主席树就好了 ​     示例程序： 1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606">
 <meta name="keywords" content="BZOJ,主席树,kruskal重构树">
 <meta property="og:type" content="article">
 <meta property="og:title" content="【kruskal重构树+dfs序上主席树】BZOJ3551 [ONTAK2010]Peaks加强版">
 <meta property="og:url" content="http://oi.linkfqy.top/posts/BZOJ3551/index.html">
 <meta property="og:site_name" content="linkfqy">
-<meta property="og:description" content="题面在这里 ​ BZOJ3545强制在线版。 考虑\(\text{kruskal}\)重构树，答案就是子树内第k大 直接在dfs序上跑主席树就好了 ​ 示例程序： 123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960">
+<meta property="og:description" content="题面在这里 ​     BZOJ3545强制在线版。 考虑$\text{kruskal}$重构树，答案就是子树内第k大 直接在dfs序上跑主席树就好了 ​     示例程序： 1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:updated_time" content="2018-08-04T13:07:40.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="【kruskal重构树+dfs序上主席树】BZOJ3551 [ONTAK2010]Peaks加强版">
-<meta name="twitter:description" content="题面在这里 ​ BZOJ3545强制在线版。 考虑\(\text{kruskal}\)重构树，答案就是子树内第k大 直接在dfs序上跑主席树就好了 ​ 示例程序： 123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960">
+<meta name="twitter:description" content="题面在这里 ​     BZOJ3545强制在线版。 考虑$\text{kruskal}$重构树，答案就是子树内第k大 直接在dfs序上跑主席树就好了 ​     示例程序： 1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606">
   <!-- Canonical links -->
   <link rel="canonical" href="http://oi.linkfqy.top/posts/BZOJ3551/index.html">
   
@@ -349,11 +349,11 @@
     <div class="article-entry markdown-body" itemprop="articleBody">
       
         <p><a href="https://www.lydsy.com/JudgeOnline/problem.php?id=3551" target="_blank" rel="noopener">题面在这里</a></p>
-<p>​</p>
+<p>​    </p>
 <p>BZOJ3545强制在线版。</p>
-<p>考虑<span class="math inline">\(\text{kruskal}\)</span>重构树，答案就是子树内第k大</p>
+<p>考虑$\text{kruskal}$重构树，答案就是子树内第k大</p>
 <p>直接在dfs序上跑主席树就好了</p>
-<p>​</p>
+<p>​    </p>
 <p>示例程序：</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">char</span> <span class="title">nc</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="keyword">static</span> <span class="keyword">char</span> buf[<span class="number">100000</span>],*l=buf,*r=buf;</span><br><span class="line">	<span class="keyword">return</span> l==r&amp;&amp;(r=(l=buf)+fread(buf,<span class="number">1</span>,<span class="number">100000</span>,<span class="built_in">stdin</span>),l==r)?EOF:*l++;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">int</span> <span class="title">red</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> res=<span class="number">0</span>,f=<span class="number">1</span>;<span class="keyword">char</span> ch=nc();</span><br><span class="line">	<span class="keyword">while</span> (ch&lt;<span class="string">'0'</span>||<span class="string">'9'</span>&lt;ch) &#123;<span class="keyword">if</span> (ch==<span class="string">'-'</span>) f=-f;ch=nc();&#125;</span><br><span class="line">	<span class="keyword">while</span> (<span class="string">'0'</span>&lt;=ch&amp;&amp;ch&lt;=<span class="string">'9'</span>) res=res*<span class="number">10</span>+ch<span class="number">-48</span>,ch=nc();</span><br><span class="line">	<span class="keyword">return</span> res*f;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxn=<span class="number">200005</span>,maxe=<span class="number">500005</span>,maxs=<span class="number">7000005</span>;</span><br><span class="line"><span class="keyword">int</span> n,N,m,e,q,h[maxn],b[maxn],val[maxn],fa[maxn];</span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">edge</span>&#123;</span></span><br><span class="line">	<span class="keyword">int</span> x,y,w;</span><br><span class="line">	<span class="keyword">bool</span> <span class="keyword">operator</span>&lt;(<span class="keyword">const</span> edge&amp;b)<span class="keyword">const</span> &#123;<span class="keyword">return</span> w&lt;b.w;&#125;</span><br><span class="line">&#125;a[maxe];</span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">int</span> <span class="title">getfa</span><span class="params">(<span class="keyword">int</span> x)</span> </span>&#123;<span class="keyword">return</span> fa[x]==x?x:fa[x]=getfa(fa[x]);&#125;</span><br><span class="line"><span class="keyword">int</span> tot,son[maxe],nxt[maxn],lnk[maxn];</span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">add</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">int</span> y)</span></span>&#123;</span><br><span class="line">	son[++tot]=y;nxt[tot]=lnk[x];lnk[x]=tot;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">int</span> times,in[maxn],out[maxn],id[maxn],f[maxn][<span class="number">20</span>];</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">dfs</span><span class="params">(<span class="keyword">int</span> x)</span></span>&#123;</span><br><span class="line">	in[x]=++times;id[times]=x;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> j=lnk[x];j;j=nxt[j]) f[son[j]][<span class="number">0</span>]=x,dfs(son[j]);</span><br><span class="line">	out[x]=times;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">int</span> Rot[maxn],tre[maxs],s[maxs][<span class="number">2</span>],len;</span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">pushup</span><span class="params">(<span class="keyword">int</span> x)</span> </span>&#123;tre[x]=tre[s[x][<span class="number">0</span>]]+tre[s[x][<span class="number">1</span>]];&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">build</span><span class="params">(<span class="keyword">int</span> l,<span class="keyword">int</span> r)</span></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> x=++len; tre[x]=<span class="number">0</span>;</span><br><span class="line">	<span class="keyword">if</span> (l==r) &#123;s[x][<span class="number">0</span>]=s[x][<span class="number">1</span>]=<span class="number">0</span>;<span class="keyword">return</span> x;&#125;</span><br><span class="line">	<span class="keyword">int</span> mid=l+r&gt;&gt;<span class="number">1</span>;</span><br><span class="line">	s[x][<span class="number">0</span>]=build(l,mid); s[x][<span class="number">1</span>]=build(mid+<span class="number">1</span>,r);</span><br><span class="line">	<span class="keyword">return</span> x;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">ist</span><span class="params">(<span class="keyword">int</span> fa,<span class="keyword">int</span> l,<span class="keyword">int</span> r,<span class="keyword">int</span> k)</span></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> x=++len; tre[x]=tre[fa];s[x][<span class="number">0</span>]=s[fa][<span class="number">0</span>];s[x][<span class="number">1</span>]=s[fa][<span class="number">1</span>];</span><br><span class="line">	<span class="keyword">if</span> (l==r) <span class="keyword">return</span> tre[x]++,x;</span><br><span class="line">	<span class="keyword">int</span> mid=l+r&gt;&gt;<span class="number">1</span>;</span><br><span class="line">	<span class="keyword">if</span> (k&lt;=mid) s[x][<span class="number">0</span>]=ist(s[fa][<span class="number">0</span>],l,mid,k);</span><br><span class="line">	 <span class="keyword">else</span> s[x][<span class="number">1</span>]=ist(s[fa][<span class="number">1</span>],mid+<span class="number">1</span>,r,k);</span><br><span class="line">	<span class="keyword">return</span> pushup(x),x;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">qry</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">int</span> y,<span class="keyword">int</span> l,<span class="keyword">int</span> r,<span class="keyword">int</span> k)</span></span>&#123;</span><br><span class="line">	<span class="keyword">if</span> (tre[y]-tre[x]&lt;k) <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">	<span class="keyword">if</span> (l==r) <span class="keyword">return</span> -b[l];</span><br><span class="line">	<span class="keyword">int</span> mid=l+r&gt;&gt;<span class="number">1</span>,tem;</span><br><span class="line">	<span class="keyword">if</span> ((tem=tre[s[y][<span class="number">0</span>]]-tre[s[x][<span class="number">0</span>]])&gt;=k) <span class="keyword">return</span> qry(s[x][<span class="number">0</span>],s[y][<span class="number">0</span>],l,mid,k);</span><br><span class="line">	 <span class="keyword">else</span> <span class="keyword">return</span> qry(s[x][<span class="number">1</span>],s[y][<span class="number">1</span>],mid+<span class="number">1</span>,r,k-tem);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	N=n=red(),e=red(),q=red();</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++) b[i]=h[i]=-red();</span><br><span class="line">	sort(b+<span class="number">1</span>,b+<span class="number">1</span>+n); m=unique(b+<span class="number">1</span>,b+<span class="number">1</span>+n)-b<span class="number">-1</span>;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">1</span>,x,y,z;i&lt;=e;i++) a[i].x=red(),a[i].y=red(),a[i].w=red();</span><br><span class="line">	sort(a+<span class="number">1</span>,a+<span class="number">1</span>+e);</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=(n&lt;&lt;<span class="number">1</span>);i++) fa[i]=i;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=e;i++)</span><br><span class="line">	 <span class="keyword">if</span> (getfa(a[i].x)!=getfa(a[i].y))&#123;</span><br><span class="line">	 	val[++N]=a[i].w;</span><br><span class="line">	 	add(N,getfa(a[i].x)); add(N,getfa(a[i].y));</span><br><span class="line">	 	fa[getfa(a[i].x)]=N; fa[getfa(a[i].y)]=N;</span><br><span class="line">	 &#125;</span><br><span class="line">	f[N][<span class="number">0</span>]=N;dfs(N);</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> j=<span class="number">1</span>;j&lt;<span class="number">20</span>;j++)</span><br><span class="line">	 <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=N;i++)</span><br><span class="line">	  f[i][j]=f[f[i][j<span class="number">-1</span>]][j<span class="number">-1</span>];</span><br><span class="line">	Rot[<span class="number">0</span>]=build(<span class="number">1</span>,m);</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=N;i++)</span><br><span class="line">	 <span class="keyword">if</span> (id[i]&lt;=n) Rot[i]=ist(Rot[i<span class="number">-1</span>],<span class="number">1</span>,m,lower_bound(b+<span class="number">1</span>,b+<span class="number">1</span>+m,h[id[i]])-b);</span><br><span class="line">	 <span class="keyword">else</span> Rot[i]=Rot[i<span class="number">-1</span>];</span><br><span class="line">	<span class="keyword">int</span> lastans=<span class="number">-1</span>;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=q;i++)&#123;</span><br><span class="line">		<span class="keyword">int</span> v=red(),x=red(),k=red();</span><br><span class="line">		<span class="keyword">if</span> (lastans!=<span class="number">-1</span>) v^=lastans,x^=lastans,k^=lastans;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> j=<span class="number">19</span>;j&gt;=<span class="number">0</span>;j--)</span><br><span class="line">		 <span class="keyword">if</span> (val[f[v][j]]&lt;=x) v=f[v][j];</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"%d\n"</span>,lastans=qry(Rot[in[v]<span class="number">-1</span>],Rot[out[v]],<span class="number">1</span>,m,k));</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
@@ -629,10 +629,26 @@ var _hmt = _hmt || [];
     var s = document.getElementsByTagName("script")[0];
     s.parentNode.insertBefore(hm, s);
 })();
-</script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</script>
 
 
 
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/MathJax.js?config=TeX-MML-AM_CHTML"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 
 </body>
 

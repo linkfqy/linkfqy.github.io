@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang=zh>
-<head>
+<head><meta name="generator" content="Hexo 3.9.0">
 <!-- hexo-inject:begin --><!-- hexo-inject:end --><script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
 <link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
 <style>
@@ -19,41 +19,41 @@
 
 <!-- Valine评论 -->
 <script src="/js/av-min.js"></script>
-<script src='/js/Valine.min.js'></script>
+<script src="/js/Valine.min.js"></script>
 <!-- Leancloud统计 -->
 <!-- <script src="/js/av-min-1.2.1.js"></script> -->
 <!--  <script>AV.initialize("rJeVBhWeHlb33cC9L26UE7y3-gzGzoHsz", "uU7rD0e4IaYyrk6vSdM6GoHX");</script> -->
 
-<meta name="google-site-verification" content="IneMsg5aBY2Vw5QuPukpMzm5ATzGfO0dg40QXgKIPkk" />
+<meta name="google-site-verification" content="IneMsg5aBY2Vw5QuPukpMzm5ATzGfO0dg40QXgKIPkk">
 
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
   <meta name="renderer" content="webkit">
-  <meta http-equiv="Cache-Control" content="no-transform" />
-  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   <meta name="format-detection" content="telephone=no,email=no,adress=no">
   <!-- Color theme for statusbar -->
-  <meta name="theme-color" content="#000000" />
+  <meta name="theme-color" content="#000000">
   <!-- 强制页面在当前窗口以独立页面显示,防止别人在框架里调用页面 -->
-  <meta http-equiv="window-target" content="_top" />
+  <meta http-equiv="window-target" content="_top">
   
   
   <title>双联通分量小结+Tarjan模板整理 | linkfqy&#39;s Blog</title>
-  <meta name="description" content="之前有学过双联通分量相关知识…… 直到前几天学长讲课才发现自己可能学了假的Tarjan 这里做一个remake">
+  <meta name="description" content="之前有学过双联通分量相关知识…… 直到前几天学长讲课才发现自己可能学了假的Tarjan 这里做一个remake">
 <meta name="keywords" content="双联通分量">
 <meta property="og:type" content="article">
 <meta property="og:title" content="双联通分量小结+Tarjan模板整理">
 <meta property="og:url" content="http://oi.linkfqy.top/posts/BCC_and_Tarjan/index.html">
 <meta property="og:site_name" content="linkfqy">
-<meta property="og:description" content="之前有学过双联通分量相关知识…… 直到前几天学长讲课才发现自己可能学了假的Tarjan 这里做一个remake">
+<meta property="og:description" content="之前有学过双联通分量相关知识…… 直到前几天学长讲课才发现自己可能学了假的Tarjan 这里做一个remake">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:updated_time" content="2018-07-28T13:37:44.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="双联通分量小结+Tarjan模板整理">
-<meta name="twitter:description" content="之前有学过双联通分量相关知识…… 直到前几天学长讲课才发现自己可能学了假的Tarjan 这里做一个remake">
+<meta name="twitter:description" content="之前有学过双联通分量相关知识…… 直到前几天学长讲课才发现自己可能学了假的Tarjan 这里做一个remake">
   <!-- Canonical links -->
   <link rel="canonical" href="http://oi.linkfqy.top/posts/BCC_and_Tarjan/index.html">
   
@@ -291,7 +291,7 @@
   <div class="slimContent">
     <nav id="toc" class="article-toc">
       <h3 class="toc-title">文章目录</h3>
-      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#预备知识"><span class="toc-number">1.</span> <span class="toc-text">预备知识</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#边双联通分量"><span class="toc-number">2.</span> <span class="toc-text">边双联通分量</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#边双联通分量的tarjan算法"><span class="toc-number">2.1.</span> <span class="toc-text">边双联通分量的Tarjan算法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#找桥"><span class="toc-number">2.1.1.</span> <span class="toc-text">找桥</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#找边双联通分量"><span class="toc-number">2.1.2.</span> <span class="toc-text">找边双联通分量</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#点双联通分量的tarjan算法"><span class="toc-number">2.2.</span> <span class="toc-text">点双联通分量的Tarjan算法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#找割点"><span class="toc-number">2.2.1.</span> <span class="toc-text">找割点</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#找点双联通分量"><span class="toc-number">2.2.2.</span> <span class="toc-text">找点双联通分量</span></a></li></ol></li></ol></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#预备知识"><span class="toc-number">1.</span> <span class="toc-text">预备知识</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#边双联通分量"><span class="toc-number">2.</span> <span class="toc-text">边双联通分量</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#边双联通分量的Tarjan算法"><span class="toc-number">2.1.</span> <span class="toc-text">边双联通分量的Tarjan算法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#找桥"><span class="toc-number">2.1.1.</span> <span class="toc-text">找桥</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#找边双联通分量"><span class="toc-number">2.1.2.</span> <span class="toc-text">找边双联通分量</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#点双联通分量的Tarjan算法"><span class="toc-number">2.2.</span> <span class="toc-text">点双联通分量的Tarjan算法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#找割点"><span class="toc-number">2.2.1.</span> <span class="toc-text">找割点</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#找点双联通分量"><span class="toc-number">2.2.2.</span> <span class="toc-text">找点双联通分量</span></a></li></ol></li></ol></li></ol>
     </nav>
   </div>
 </aside>
@@ -352,51 +352,43 @@
 <p>直到前几天学长讲课才发现自己可能学了假的Tarjan</p>
 <p>这里做一个remake</p>
 <a id="more"></a>
-<p>​</p>
-<h1 id="预备知识">预备知识</h1>
-<p>桥（割边）：如果去掉，图的联通块个数会增加的边</p>
+<p>​    </p>
+<h1 id="预备知识"><a href="#预备知识" class="headerlink" title="预备知识"></a>预备知识</h1><p>桥（割边）：如果去掉，图的联通块个数会增加的边</p>
 <p>割点（割顶）：如果去掉，图的联通块个数会增加的点</p>
 <p>DFS树：将一个图DFS遍历所得到的树</p>
 <p>非树边：不在DFS树上的边</p>
 <p>边双联通分量：任意两点可以通过两条不同路径（边不重复）互达的子图</p>
 <p>点双联通分量：任意两点可以通过两条不同路径（点不重复）互达的子图</p>
-<p>​</p>
+<p>​    </p>
 <p>于是有这样的性质：</p>
 <ul>
 <li>非树边只会存在于DFS树的点与祖先之间</li>
 <li>一个点（割点）可能属于多个点双联通分量</li>
 <li>一条边只属于确定的一个边双联通分量</li>
 </ul>
-<h1 id="边双联通分量">边双联通分量</h1>
-<p>考虑非树边对DFS树的影响，有以下结论：</p>
+<h1 id="边双联通分量"><a href="#边双联通分量" class="headerlink" title="边双联通分量"></a>边双联通分量</h1><p>考虑非树边对DFS树的影响，有以下结论：</p>
 <ul>
 <li>非树边及其在DFS树上覆盖的路径属于同一边双联通分量</li>
 <li>边双联通分量缩点后整个图必然是森林</li>
 </ul>
-<h2 id="边双联通分量的tarjan算法">边双联通分量的Tarjan算法</h2>
-<h3 id="找桥">找桥</h3>
-<p>记录<span class="math inline">\(dfn[x]\)</span>表示x入栈的时间戳，<span class="math inline">\(low[x]\)</span>为x可达的所有点中最小的dfn</p>
-<p>那么，DFS树边<span class="math inline">\(u\rightarrow v\)</span>是桥当且仅当<span class="math inline">\(low[v]&gt;dfn[u]\)</span></p>
+<h2 id="边双联通分量的Tarjan算法"><a href="#边双联通分量的Tarjan算法" class="headerlink" title="边双联通分量的Tarjan算法"></a>边双联通分量的Tarjan算法</h2><h3 id="找桥"><a href="#找桥" class="headerlink" title="找桥"></a>找桥</h3><p>记录$dfn[x]$表示x入栈的时间戳，$low[x]$为x可达的所有点中最小的dfn</p>
+<p>那么，DFS树边$u\rightarrow v$是桥当且仅当$low[v]&gt;dfn[u]$</p>
 <p>这样我们就得到了找桥的Tarjan算法</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">tarjan</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">int</span> fa)</span></span>&#123;</span><br><span class="line">	low[x]=dfn[x]=++times;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> j=lnk[x];j;j=nxt[j])</span><br><span class="line">	 <span class="keyword">if</span> (!dfn[son[j]])&#123;</span><br><span class="line">	 	tarjan(son[j],x); low[x]=min(low[x],low[son[j]]);</span><br><span class="line">	 	<span class="keyword">if</span> (low[son[j]]&gt;dfn[x]) isb[j]=isb[j^<span class="number">1</span>]=<span class="number">1</span>;</span><br><span class="line">	 &#125;<span class="keyword">else</span> <span class="keyword">if</span> (son[j]!=fa) low[x]=min(low[x],dfn[son[j]]);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="找边双联通分量">找边双联通分量</h3>
-<p>我原来的做法是：不经过桥，把整个图再遍历一次，每个联通块是边双</p>
+<h3 id="找边双联通分量"><a href="#找边双联通分量" class="headerlink" title="找边双联通分量"></a>找边双联通分量</h3><p>我原来的做法是：不经过桥，把整个图再遍历一次，每个联通块是边双</p>
 <p>后来发现这简直蠢爆了</p>
 <p>其实可以直接用强连通分量那套栈处理的方法</p>
 <p>但是要注意：由于找到桥才判定边双，<strong>一定不要忘了根节点，可以结束后把栈清空！！</strong></p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Tarjan</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">int</span> fa)</span></span>&#123;</span><br><span class="line">	dfn[x]=low[x]=++times;stk[++stk[<span class="number">0</span>]]=x;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> j=lnk[x];j;j=nxt[j])</span><br><span class="line">	 <span class="keyword">if</span> (!dfn[son[j]])&#123;</span><br><span class="line">	 	Tarjan(son[j],x); low[x]=min(low[x],low[son[j]]);</span><br><span class="line">	 	<span class="keyword">if</span> (low[son[j]]&gt;dfn[x])&#123;</span><br><span class="line">	 		BCC++;</span><br><span class="line">	 		<span class="keyword">while</span> (stk[stk[<span class="number">0</span>]]!=son[j]) id[stk[stk[<span class="number">0</span>]--]]=BCC;</span><br><span class="line">	 		id[stk[stk[<span class="number">0</span>]--]]=BCC;</span><br><span class="line">		&#125;</span><br><span class="line">	 &#125;<span class="keyword">else</span> <span class="keyword">if</span> (son[j]!=fa) low[x]=min(low[x],dfn[son[j]]);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//......</span></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)</span><br><span class="line">    <span class="keyword">if</span> (!dfn[i]) &#123;Tarjan(i,<span class="number">0</span>); BCC++;<span class="keyword">while</span> (stk[<span class="number">0</span>]) id[stk[stk[<span class="number">0</span>]--]]=BCC;&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="点双联通分量的tarjan算法">点双联通分量的Tarjan算法</h2>
-<h3 id="找割点">找割点</h3>
-<p>同样记录<span class="math inline">\(dfn\)</span>和<span class="math inline">\(low\)</span></p>
-<p>u是割点条件是存在<span class="math inline">\(u\rightarrow v\)</span>，使得<span class="math inline">\(low[v]\ge dfn[u]\)</span></p>
+<h2 id="点双联通分量的Tarjan算法"><a href="#点双联通分量的Tarjan算法" class="headerlink" title="点双联通分量的Tarjan算法"></a>点双联通分量的Tarjan算法</h2><h3 id="找割点"><a href="#找割点" class="headerlink" title="找割点"></a>找割点</h3><p>同样记录$dfn$和$low$</p>
+<p>u是割点条件是存在$u\rightarrow v$，使得$low[v]\ge dfn[u]$</p>
 <p>但是根节点需要特判——仅当根有多个儿子时，根才是割点</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Tarjan</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">int</span> fa)</span></span>&#123;</span><br><span class="line">	dfn[x]=low[x]=++times;<span class="keyword">int</span> sum=<span class="number">0</span>;<span class="keyword">bool</span> suc=<span class="number">0</span>;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> j=lnk[x];j;j=nxt[j])</span><br><span class="line">	 <span class="keyword">if</span> (!dfn[son[j]])&#123;</span><br><span class="line">	 	Tarjan(son[j],x);low[x]=min(low[x],low[son[j]]);</span><br><span class="line">	 	<span class="keyword">if</span> (low[son[j]]&gt;=dfn[x]) suc=<span class="number">1</span>;sum++;</span><br><span class="line">	 &#125;<span class="keyword">else</span> <span class="keyword">if</span> (son[j]!=fa) low[x]=min(low[x],dfn[son[j]]);</span><br><span class="line">	g[x]=(fa&amp;&amp;suc||!fa&amp;&amp;sum&gt;<span class="number">1</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="找点双联通分量">找点双联通分量</h3>
-<p>和边双类似，用栈记录</p>
+<h3 id="找点双联通分量"><a href="#找点双联通分量" class="headerlink" title="找点双联通分量"></a>找点双联通分量</h3><p>和边双类似，用栈记录</p>
 <p>点双联通分量缩点一般使用圆方树，所以Tarjan时直接建边</p>
 <p><strong>同样存在根节点的问题</strong></p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">Tarjan</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">int</span> fa)</span></span>&#123;</span><br><span class="line">	dfn[x]=low[x]=++times;stk[++stk[<span class="number">0</span>]]=x;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> j=lnk[x];j;j=nxt[j])</span><br><span class="line">	 <span class="keyword">if</span> (!dfn[son[j]])&#123;</span><br><span class="line">	 	Tarjan(son[j],x); low[x]=min(low[x],low[son[j]]);</span><br><span class="line">	 	<span class="keyword">if</span> (low[son[j]]&gt;=dfn[x])&#123;</span><br><span class="line">	 		BCC++; add(x);</span><br><span class="line">	 		<span class="keyword">while</span> (stk[stk[<span class="number">0</span>]]!=son[j]) add(stk[stk[<span class="number">0</span>]--]);</span><br><span class="line">		&#125;</span><br><span class="line">	 &#125;<span class="keyword">else</span> <span class="keyword">if</span> (son[j]!=fa) low[x]=min(low[x],dfn[son[j]]);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//......</span></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)</span><br><span class="line">    <span class="keyword">if</span> (!dfn[i]) &#123;Tarjan(i,<span class="number">0</span>); BCC++;<span class="keyword">while</span> (stk[<span class="number">0</span>]) add(stk[stk[<span class="number">0</span>]--]);&#125;</span><br></pre></td></tr></table></figure>
-<p>​</p>
+<p>​    </p>
 <p>大概就好了吧……</p>
 
       
@@ -671,10 +663,26 @@ var _hmt = _hmt || [];
     var s = document.getElementsByTagName("script")[0];
     s.parentNode.insertBefore(hm, s);
 })();
-</script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</script>
 
 
 
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/MathJax.js?config=TeX-MML-AM_CHTML"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 
 </body>
 

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang=zh>
-<head>
+<head><meta name="generator" content="Hexo 3.9.0">
 <!-- hexo-inject:begin --><!-- hexo-inject:end --><script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
 <link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
 <style>
@@ -19,41 +19,41 @@
 
 <!-- Valine评论 -->
 <script src="/js/av-min.js"></script>
-<script src='/js/Valine.min.js'></script>
+<script src="/js/Valine.min.js"></script>
 <!-- Leancloud统计 -->
 <!-- <script src="/js/av-min-1.2.1.js"></script> -->
 <!--  <script>AV.initialize("rJeVBhWeHlb33cC9L26UE7y3-gzGzoHsz", "uU7rD0e4IaYyrk6vSdM6GoHX");</script> -->
 
-<meta name="google-site-verification" content="IneMsg5aBY2Vw5QuPukpMzm5ATzGfO0dg40QXgKIPkk" />
+<meta name="google-site-verification" content="IneMsg5aBY2Vw5QuPukpMzm5ATzGfO0dg40QXgKIPkk">
 
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
   <meta name="renderer" content="webkit">
-  <meta http-equiv="Cache-Control" content="no-transform" />
-  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   <meta name="format-detection" content="telephone=no,email=no,adress=no">
   <!-- Color theme for statusbar -->
-  <meta name="theme-color" content="#000000" />
+  <meta name="theme-color" content="#000000">
   <!-- 强制页面在当前窗口以独立页面显示,防止别人在框架里调用页面 -->
-  <meta http-equiv="window-target" content="_top" />
+  <meta http-equiv="window-target" content="_top">
   
   
   <title>BZOJ1124 [POI2008]枪战Maf | linkfqy&#39;s Blog</title>
-  <meta name="description" content="题面在这里 ​ 考虑最大值，对于每个联通块：  单点：死1人 环：死\(size-1\)人 基环内向树：死\(size-leaf\)人  ​ 考虑最小值，首先叶子结点不会死 那么叶子结点瞄准的目标一定会死，先打死再说 这时如果导致有新的叶子产生，就又加入队列 最后剩下的每个环，死亡人数为\(\lceil \frac{size}2 \rceil\) ​ 示例程序： 12">
+  <meta name="description" content="题面在这里 ​     考虑最大值，对于每个联通块：  单点：死1人 环：死$size-1$人 基环内向树：死$size-leaf$人  ​     考虑最小值，首先叶子结点不会死 那么叶子结点瞄准的目标一定会死，先打死再说 这时如果导致有新的叶子产生，就又加入队列 最后剩下的每个环，死亡人数为$\lceil \frac{size}2 \rceil$ ​     示例程序： 12345678910">
 <meta name="keywords" content="BZOJ,贪心,并查集">
 <meta property="og:type" content="article">
 <meta property="og:title" content="BZOJ1124 [POI2008]枪战Maf">
 <meta property="og:url" content="http://oi.linkfqy.top/posts/BZOJ1124/index.html">
 <meta property="og:site_name" content="linkfqy">
-<meta property="og:description" content="题面在这里 ​ 考虑最大值，对于每个联通块：  单点：死1人 环：死\(size-1\)人 基环内向树：死\(size-leaf\)人  ​ 考虑最小值，首先叶子结点不会死 那么叶子结点瞄准的目标一定会死，先打死再说 这时如果导致有新的叶子产生，就又加入队列 最后剩下的每个环，死亡人数为\(\lceil \frac{size}2 \rceil\) ​ 示例程序： 12">
+<meta property="og:description" content="题面在这里 ​     考虑最大值，对于每个联通块：  单点：死1人 环：死$size-1$人 基环内向树：死$size-leaf$人  ​     考虑最小值，首先叶子结点不会死 那么叶子结点瞄准的目标一定会死，先打死再说 这时如果导致有新的叶子产生，就又加入队列 最后剩下的每个环，死亡人数为$\lceil \frac{size}2 \rceil$ ​     示例程序： 12345678910">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:updated_time" content="2018-09-06T12:40:56.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="BZOJ1124 [POI2008]枪战Maf">
-<meta name="twitter:description" content="题面在这里 ​ 考虑最大值，对于每个联通块：  单点：死1人 环：死\(size-1\)人 基环内向树：死\(size-leaf\)人  ​ 考虑最小值，首先叶子结点不会死 那么叶子结点瞄准的目标一定会死，先打死再说 这时如果导致有新的叶子产生，就又加入队列 最后剩下的每个环，死亡人数为\(\lceil \frac{size}2 \rceil\) ​ 示例程序： 12">
+<meta name="twitter:description" content="题面在这里 ​     考虑最大值，对于每个联通块：  单点：死1人 环：死$size-1$人 基环内向树：死$size-leaf$人  ​     考虑最小值，首先叶子结点不会死 那么叶子结点瞄准的目标一定会死，先打死再说 这时如果导致有新的叶子产生，就又加入队列 最后剩下的每个环，死亡人数为$\lceil \frac{size}2 \rceil$ ​     示例程序： 12345678910">
   <!-- Canonical links -->
   <link rel="canonical" href="http://oi.linkfqy.top/posts/BZOJ1124/index.html">
   
@@ -349,19 +349,19 @@
     <div class="article-entry markdown-body" itemprop="articleBody">
       
         <p><a href="https://www.lydsy.com/JudgeOnline/problem.php?id=1124" target="_blank" rel="noopener">题面在这里</a></p>
-<p>​</p>
+<p>​    </p>
 <p>考虑最大值，对于每个联通块：</p>
 <ul>
 <li>单点：死1人</li>
-<li>环：死<span class="math inline">\(size-1\)</span>人</li>
-<li>基环内向树：死<span class="math inline">\(size-leaf\)</span>人</li>
+<li>环：死$size-1$人</li>
+<li>基环内向树：死$size-leaf$人</li>
 </ul>
-<p>​</p>
+<p>​    </p>
 <p>考虑最小值，首先叶子结点不会死</p>
 <p>那么叶子结点瞄准的目标一定会死，先打死再说</p>
 <p>这时如果导致有新的叶子产生，就又加入队列</p>
-<p>最后剩下的每个环，死亡人数为<span class="math inline">\(\lceil \frac{size}2 \rceil\)</span></p>
-<p>​</p>
+<p>最后剩下的每个环，死亡人数为$\lceil \frac{size}2 \rceil$</p>
+<p>​    </p>
 <p>示例程序：</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxn=<span class="number">1000005</span>;</span><br><span class="line"><span class="keyword">int</span> n,to[maxn],f[maxn],fa[maxn],s[maxn],sum[maxn],MAX,MIN,que[maxn];</span><br><span class="line"><span class="keyword">bool</span> vis[maxn];</span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">int</span> <span class="title">getfa</span><span class="params">(<span class="keyword">int</span> x)</span> </span>&#123;<span class="keyword">return</span> fa[x]==x?x:fa[x]=getfa(fa[x]);&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;n);</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++) <span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;to[i]),fa[i]=i,f[to[i]]++;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++) fa[getfa(to[i])]=getfa(i);</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++) s[getfa(i)]+=(f[i]==<span class="number">0</span>),sum[getfa(i)]++;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)</span><br><span class="line">	 <span class="keyword">if</span> (getfa(i)==i)&#123;</span><br><span class="line">	 	<span class="keyword">if</span> (sum[i]==<span class="number">1</span>) MAX++;<span class="keyword">else</span></span><br><span class="line">	 	<span class="keyword">if</span> (s[i]==<span class="number">0</span>) MAX+=sum[i]<span class="number">-1</span>;<span class="keyword">else</span> MAX+=sum[i]-s[i];</span><br><span class="line">	 &#125;</span><br><span class="line">	<span class="keyword">int</span> hed=<span class="number">0</span>,til=<span class="number">0</span>;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)</span><br><span class="line">	 <span class="keyword">if</span> (!f[i]) que[++til]=i,vis[i]=<span class="number">1</span>;</span><br><span class="line">	<span class="keyword">while</span> (hed!=til)&#123;</span><br><span class="line">		<span class="keyword">int</span> x=que[++hed];</span><br><span class="line">		<span class="keyword">if</span> (!vis[to[x]]) vis[to[x]]=<span class="number">1</span>,MIN++,f[to[to[x]]]--;</span><br><span class="line">		<span class="keyword">if</span> (!vis[to[to[x]]]&amp;&amp;!f[to[to[x]]]) que[++til]=to[to[x]],vis[to[to[x]]]=<span class="number">1</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++) fa[i]=i,s[i]=<span class="number">0</span>;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)</span><br><span class="line">	 <span class="keyword">if</span> (!vis[i]&amp;&amp;!vis[to[i]]) fa[getfa(to[i])]=getfa(i);</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++) <span class="keyword">if</span> (!vis[i]) s[getfa(i)]++;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)</span><br><span class="line">	 <span class="keyword">if</span> (getfa(i)==i) MIN+=s[i]+<span class="number">1</span>&gt;&gt;<span class="number">1</span>;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"%d %d"</span>,MIN,MAX);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
@@ -637,10 +637,26 @@ var _hmt = _hmt || [];
     var s = document.getElementsByTagName("script")[0];
     s.parentNode.insertBefore(hm, s);
 })();
-</script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</script>
 
 
 
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/MathJax.js?config=TeX-MML-AM_CHTML"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 
 </body>
 

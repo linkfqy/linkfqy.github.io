@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang=zh>
-<head>
+<head><meta name="generator" content="Hexo 3.9.0">
 <!-- hexo-inject:begin --><!-- hexo-inject:end --><script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
 <link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
 <style>
@@ -19,41 +19,41 @@
 
 <!-- Valine评论 -->
 <script src="/js/av-min.js"></script>
-<script src='/js/Valine.min.js'></script>
+<script src="/js/Valine.min.js"></script>
 <!-- Leancloud统计 -->
 <!-- <script src="/js/av-min-1.2.1.js"></script> -->
 <!--  <script>AV.initialize("rJeVBhWeHlb33cC9L26UE7y3-gzGzoHsz", "uU7rD0e4IaYyrk6vSdM6GoHX");</script> -->
 
-<meta name="google-site-verification" content="IneMsg5aBY2Vw5QuPukpMzm5ATzGfO0dg40QXgKIPkk" />
+<meta name="google-site-verification" content="IneMsg5aBY2Vw5QuPukpMzm5ATzGfO0dg40QXgKIPkk">
 
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
   <meta name="renderer" content="webkit">
-  <meta http-equiv="Cache-Control" content="no-transform" />
-  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   <meta name="format-detection" content="telephone=no,email=no,adress=no">
   <!-- Color theme for statusbar -->
-  <meta name="theme-color" content="#000000" />
+  <meta name="theme-color" content="#000000">
   <!-- 强制页面在当前窗口以独立页面显示,防止别人在框架里调用页面 -->
-  <meta http-equiv="window-target" content="_top" />
+  <meta http-equiv="window-target" content="_top">
   
   
   <title>BZOJ1443 [JSOI2009]游戏Game | linkfqy&#39;s Blog</title>
-  <meta name="description" content="题面在这里 ​ 很巧妙的一道题，利用了二分图的性质 考虑走一条长度为奇数的路径，先手是赢的 那么出发点就要满足出去的所有路径长度都为奇数 把每个点拆成两个点：先手走的点，后手走的点，然后相邻点连边 就得到了一个二分图 如果有完美匹配，先手是必败的 否则没匹配的那些点都可以作为起点（反证得） 事实上，所有可能没匹配的点都可以作为起点 那么刷完二分图匹配后对没匹配的点沿着增广路遍历">
+  <meta name="description" content="题面在这里 ​     很巧妙的一道题，利用了二分图的性质 考虑走一条长度为奇数的路径，先手是赢的 那么出发点就要满足出去的所有路径长度都为奇数 把每个点拆成两个点：先手走的点，后手走的点，然后相邻点连边 就得到了一个二分图 如果有完美匹配，先手是必败的 否则没匹配的那些点都可以作为起点（反证得） 事实上，所有可能没匹配的点都可以作为起点 那么刷完二分图匹配后对没匹配的点沿着增广路遍历到所有先手点">
 <meta name="keywords" content="BZOJ,二分图,妙题">
 <meta property="og:type" content="article">
 <meta property="og:title" content="BZOJ1443 [JSOI2009]游戏Game">
 <meta property="og:url" content="http://oi.linkfqy.top/posts/BZOJ1443/index.html">
 <meta property="og:site_name" content="linkfqy">
-<meta property="og:description" content="题面在这里 ​ 很巧妙的一道题，利用了二分图的性质 考虑走一条长度为奇数的路径，先手是赢的 那么出发点就要满足出去的所有路径长度都为奇数 把每个点拆成两个点：先手走的点，后手走的点，然后相邻点连边 就得到了一个二分图 如果有完美匹配，先手是必败的 否则没匹配的那些点都可以作为起点（反证得） 事实上，所有可能没匹配的点都可以作为起点 那么刷完二分图匹配后对没匹配的点沿着增广路遍历">
+<meta property="og:description" content="题面在这里 ​     很巧妙的一道题，利用了二分图的性质 考虑走一条长度为奇数的路径，先手是赢的 那么出发点就要满足出去的所有路径长度都为奇数 把每个点拆成两个点：先手走的点，后手走的点，然后相邻点连边 就得到了一个二分图 如果有完美匹配，先手是必败的 否则没匹配的那些点都可以作为起点（反证得） 事实上，所有可能没匹配的点都可以作为起点 那么刷完二分图匹配后对没匹配的点沿着增广路遍历到所有先手点">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:updated_time" content="2018-09-24T09:31:16.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="BZOJ1443 [JSOI2009]游戏Game">
-<meta name="twitter:description" content="题面在这里 ​ 很巧妙的一道题，利用了二分图的性质 考虑走一条长度为奇数的路径，先手是赢的 那么出发点就要满足出去的所有路径长度都为奇数 把每个点拆成两个点：先手走的点，后手走的点，然后相邻点连边 就得到了一个二分图 如果有完美匹配，先手是必败的 否则没匹配的那些点都可以作为起点（反证得） 事实上，所有可能没匹配的点都可以作为起点 那么刷完二分图匹配后对没匹配的点沿着增广路遍历">
+<meta name="twitter:description" content="题面在这里 ​     很巧妙的一道题，利用了二分图的性质 考虑走一条长度为奇数的路径，先手是赢的 那么出发点就要满足出去的所有路径长度都为奇数 把每个点拆成两个点：先手走的点，后手走的点，然后相邻点连边 就得到了一个二分图 如果有完美匹配，先手是必败的 否则没匹配的那些点都可以作为起点（反证得） 事实上，所有可能没匹配的点都可以作为起点 那么刷完二分图匹配后对没匹配的点沿着增广路遍历到所有先手点">
   <!-- Canonical links -->
   <link rel="canonical" href="http://oi.linkfqy.top/posts/BZOJ1443/index.html">
   
@@ -349,7 +349,7 @@
     <div class="article-entry markdown-body" itemprop="articleBody">
       
         <p><a href="https://lydsy.com/JudgeOnline/problem.php?id=1443" target="_blank" rel="noopener">题面在这里</a></p>
-<p>​</p>
+<p>​    </p>
 <p>很巧妙的一道题，利用了二分图的性质</p>
 <p>考虑走一条长度为奇数的路径，先手是赢的</p>
 <p>那么出发点就要满足出去的所有路径长度都为奇数</p>
@@ -359,7 +359,7 @@
 <p>否则没匹配的那些点都可以作为起点（反证得）</p>
 <p>事实上，所有可能没匹配的点都可以作为起点</p>
 <p>那么刷完二分图匹配后对没匹配的点沿着增广路遍历到所有先手点都是答案</p>
-<p>​</p>
+<p>​    </p>
 <p>示例程序：</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> cl(x,y) memset(x,y,sizeof(x))</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxn=<span class="number">20005</span>,maxe=<span class="number">80005</span>,p[<span class="number">4</span>][<span class="number">2</span>]=&#123;&#123;<span class="number">0</span>,<span class="number">1</span>&#125;,&#123;<span class="number">1</span>,<span class="number">0</span>&#125;,&#123;<span class="number">0</span>,<span class="number">-1</span>&#125;,&#123;<span class="number">-1</span>,<span class="number">0</span>&#125;&#125;;</span><br><span class="line"><span class="keyword">int</span> n,m,N,id[<span class="number">105</span>][<span class="number">105</span>];</span><br><span class="line"><span class="keyword">int</span> tot,son[maxe],nxt[maxe],lnk[maxn];</span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">add</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">int</span> y)</span></span>&#123;</span><br><span class="line">	son[++tot]=y;nxt[tot]=lnk[x];lnk[x]=tot;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">char</span> a[<span class="number">105</span>][<span class="number">105</span>]; <span class="keyword">bool</span> ed[maxn],pi[maxn];</span><br><span class="line"><span class="keyword">int</span> times,vis[maxn],con[maxn];</span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">find</span><span class="params">(<span class="keyword">int</span> x)</span></span>&#123;</span><br><span class="line">	<span class="keyword">if</span> (vis[x]==times) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">	vis[x]=times;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> j=lnk[x];j;j=nxt[j])&#123;</span><br><span class="line">		<span class="keyword">int</span> k=con[son[j]];con[son[j]]=x;</span><br><span class="line">		<span class="keyword">if</span> (!k||find(k)) <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">		con[son[j]]=k;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">dfs</span><span class="params">(<span class="keyword">int</span> x)</span></span>&#123;</span><br><span class="line">	vis[x]=times;</span><br><span class="line">	<span class="keyword">if</span> (x&lt;=N)&#123;</span><br><span class="line">		ed[x]=<span class="number">1</span>;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> j=lnk[x];j;j=nxt[j])</span><br><span class="line">		 <span class="keyword">if</span> (vis[son[j]]!=times) dfs(son[j]);</span><br><span class="line">	&#125;<span class="keyword">else</span> <span class="keyword">if</span> (con[x]&amp;&amp;vis[con[x]]!=times) dfs(con[x]);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%d%d"</span>,&amp;n,&amp;m); N=<span class="number">0</span>;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)&#123;</span><br><span class="line">		<span class="built_in">scanf</span>(<span class="string">"%s"</span>,a[i]+<span class="number">1</span>);</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> j=<span class="number">1</span>;j&lt;=m;j++)</span><br><span class="line">		 <span class="keyword">if</span> (a[i][j]==<span class="string">'.'</span>) id[i][j]=++N;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)</span><br><span class="line">	 <span class="keyword">for</span> (<span class="keyword">int</span> j=<span class="number">1</span>;j&lt;=m;j++) <span class="keyword">if</span> (a[i][j]==<span class="string">'.'</span>)</span><br><span class="line">	  <span class="keyword">for</span> (<span class="keyword">int</span> t=<span class="number">0</span>;t&lt;<span class="number">4</span>;t++)&#123;</span><br><span class="line">	  	<span class="keyword">int</span> x=i+p[t][<span class="number">0</span>],y=j+p[t][<span class="number">1</span>];</span><br><span class="line">	  	<span class="keyword">if</span> (x&lt;<span class="number">1</span>||x&gt;n||y&lt;<span class="number">1</span>||y&gt;m) <span class="keyword">continue</span>;</span><br><span class="line">	  	<span class="keyword">if</span> (a[x][y]==<span class="string">'#'</span>) <span class="keyword">continue</span>;</span><br><span class="line">	  	add(id[i][j],id[x][y]+N);add(id[x][y]+N,id[i][j]);</span><br><span class="line">	  &#125;</span><br><span class="line">	<span class="keyword">int</span> ans=<span class="number">0</span>;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=N;i++)</span><br><span class="line">	 times++,ans+=find(i);</span><br><span class="line">	<span class="keyword">if</span> (ans==N) <span class="built_in">puts</span>(<span class="string">"LOSE"</span>);<span class="keyword">else</span>&#123;</span><br><span class="line">		<span class="built_in">puts</span>(<span class="string">"WIN"</span>); times++;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=N;i++)</span><br><span class="line">		 pi[con[i+N]]=<span class="number">1</span>;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=N;i++)</span><br><span class="line">		 <span class="keyword">if</span> (!pi[i]&amp;&amp;vis[i]!=times) dfs(i);</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=N;i++) <span class="keyword">if</span> (ed[i])&#123;</span><br><span class="line">			<span class="keyword">for</span> (<span class="keyword">int</span> x=<span class="number">1</span>;x&lt;=n;x++)</span><br><span class="line">			 <span class="keyword">for</span> (<span class="keyword">int</span> y=<span class="number">1</span>;y&lt;=m;y++)</span><br><span class="line">			  <span class="keyword">if</span> (id[x][y]==i) <span class="built_in">printf</span>(<span class="string">"%d %d\n"</span>,x,y);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
@@ -635,10 +635,26 @@ var _hmt = _hmt || [];
     var s = document.getElementsByTagName("script")[0];
     s.parentNode.insertBefore(hm, s);
 })();
-</script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</script>
 
 
 
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/MathJax.js?config=TeX-MML-AM_CHTML"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 
 </body>
 

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang=zh>
-<head>
+<head><meta name="generator" content="Hexo 3.9.0">
 <!-- hexo-inject:begin --><!-- hexo-inject:end --><script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
 <link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
 <style>
@@ -19,41 +19,41 @@
 
 <!-- Valine评论 -->
 <script src="/js/av-min.js"></script>
-<script src='/js/Valine.min.js'></script>
+<script src="/js/Valine.min.js"></script>
 <!-- Leancloud统计 -->
 <!-- <script src="/js/av-min-1.2.1.js"></script> -->
 <!--  <script>AV.initialize("rJeVBhWeHlb33cC9L26UE7y3-gzGzoHsz", "uU7rD0e4IaYyrk6vSdM6GoHX");</script> -->
 
-<meta name="google-site-verification" content="IneMsg5aBY2Vw5QuPukpMzm5ATzGfO0dg40QXgKIPkk" />
+<meta name="google-site-verification" content="IneMsg5aBY2Vw5QuPukpMzm5ATzGfO0dg40QXgKIPkk">
 
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
   <meta name="renderer" content="webkit">
-  <meta http-equiv="Cache-Control" content="no-transform" />
-  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   <meta name="format-detection" content="telephone=no,email=no,adress=no">
   <!-- Color theme for statusbar -->
-  <meta name="theme-color" content="#000000" />
+  <meta name="theme-color" content="#000000">
   <!-- 强制页面在当前窗口以独立页面显示,防止别人在框架里调用页面 -->
-  <meta http-equiv="window-target" content="_top" />
+  <meta http-equiv="window-target" content="_top">
   
   
   <title>BZOJ3527 [Zjoi2014]力 | linkfqy&#39;s Blog</title>
-  <meta name="description" content="题面在这里 ​ 令\(g_i=\frac 1 {i^2},g_0=0\)直接推柿子： \[ E_i=\sum_{j=0}^i q_jg_{i-j}-\sum_{j=i}^n q_jg_{i-j} \] 发现前面是标准的卷积\(C_i\)，后面再处理一下： \[ \sum_{j=i}^n q_jg_{i-j} \\ =\sum_{j=0}^{n-i} q_{n-j}g_{i-n+j} \">
+  <meta name="description" content="题面在这里 ​     令$g_i=\frac 1 {i^2},g_0=0$直接推柿子：  E_i=\sum_{j=0}^i q_jg_{i-j}-\sum_{j=i}^n q_jg_{i-j}发现前面是标准的卷积$C_i$，后面再处理一下：  \sum_{j=i}^n q_jg_{i-j} \\ =\sum_{j=0}^{n-i} q_{n-j}g_{i-n+j} \\ D_i=\sum_{j=">
 <meta name="keywords" content="BZOJ,FFT">
 <meta property="og:type" content="article">
 <meta property="og:title" content="BZOJ3527 [Zjoi2014]力">
 <meta property="og:url" content="http://oi.linkfqy.top/posts/BZOJ3527/index.html">
 <meta property="og:site_name" content="linkfqy">
-<meta property="og:description" content="题面在这里 ​ 令\(g_i=\frac 1 {i^2},g_0=0\)直接推柿子： \[ E_i=\sum_{j=0}^i q_jg_{i-j}-\sum_{j=i}^n q_jg_{i-j} \] 发现前面是标准的卷积\(C_i\)，后面再处理一下： \[ \sum_{j=i}^n q_jg_{i-j} \\ =\sum_{j=0}^{n-i} q_{n-j}g_{i-n+j} \">
+<meta property="og:description" content="题面在这里 ​     令$g_i=\frac 1 {i^2},g_0=0$直接推柿子：  E_i=\sum_{j=0}^i q_jg_{i-j}-\sum_{j=i}^n q_jg_{i-j}发现前面是标准的卷积$C_i$，后面再处理一下：  \sum_{j=i}^n q_jg_{i-j} \\ =\sum_{j=0}^{n-i} q_{n-j}g_{i-n+j} \\ D_i=\sum_{j=">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:updated_time" content="2018-08-06T12:53:00.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="BZOJ3527 [Zjoi2014]力">
-<meta name="twitter:description" content="题面在这里 ​ 令\(g_i=\frac 1 {i^2},g_0=0\)直接推柿子： \[ E_i=\sum_{j=0}^i q_jg_{i-j}-\sum_{j=i}^n q_jg_{i-j} \] 发现前面是标准的卷积\(C_i\)，后面再处理一下： \[ \sum_{j=i}^n q_jg_{i-j} \\ =\sum_{j=0}^{n-i} q_{n-j}g_{i-n+j} \">
+<meta name="twitter:description" content="题面在这里 ​     令$g_i=\frac 1 {i^2},g_0=0$直接推柿子：  E_i=\sum_{j=0}^i q_jg_{i-j}-\sum_{j=i}^n q_jg_{i-j}发现前面是标准的卷积$C_i$，后面再处理一下：  \sum_{j=i}^n q_jg_{i-j} \\ =\sum_{j=0}^{n-i} q_{n-j}g_{i-n+j} \\ D_i=\sum_{j=">
   <!-- Canonical links -->
   <link rel="canonical" href="http://oi.linkfqy.top/posts/BZOJ3527/index.html">
   
@@ -340,7 +340,7 @@
         <span class="post-comment"><i class="icon icon-comment"></i> <a href="/posts/BZOJ3527/#comments" class="article-comment-link">评论</a></span>
         
 	
-		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 528(words)</span>
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 485(words)</span>
 	
 	
 
@@ -349,18 +349,18 @@
     <div class="article-entry markdown-body" itemprop="articleBody">
       
         <p><a href="https://www.lydsy.com/JudgeOnline/problem.php?id=3527" target="_blank" rel="noopener">题面在这里</a></p>
-<p>​</p>
-<p>令<span class="math inline">\(g_i=\frac 1 {i^2},g_0=0\)</span>直接推柿子： <span class="math display">\[
-E_i=\sum_{j=0}^i q_jg_{i-j}-\sum_{j=i}^n q_jg_{i-j}
-\]</span> 发现前面是标准的卷积<span class="math inline">\(C_i\)</span>，后面再处理一下： <span class="math display">\[
+<p>​    </p>
+<p>令$g_i=\frac 1 {i^2},g_0=0$直接推柿子：</p>
+<script type="math/tex; mode=display">
+E_i=\sum_{j=0}^i q_jg_{i-j}-\sum_{j=i}^n q_jg_{i-j}</script><p>发现前面是标准的卷积$C_i$，后面再处理一下：</p>
+<script type="math/tex; mode=display">
 \sum_{j=i}^n q_jg_{i-j} \\
 =\sum_{j=0}^{n-i} q_{n-j}g_{i-n+j} \\
-D_i=\sum_{j=0}^t q&#39;_jg_{t-j}
-\]</span> 其中<span class="math inline">\(q&#39;_i=q_{n-i},t=n-i\)</span></p>
-<p>那么答案就是<span class="math inline">\(C_i-D{n-i}\)</span></p>
-<p>​</p>
-<p>注意卷积的长度是<span class="math inline">\(2n+1\)</span>而不是<span class="math inline">\(n\)</span>，调了好久……</p>
-<p>​</p>
+D_i=\sum_{j=0}^t q'_jg_{t-j}</script><p>其中$q’_i=q_{n-i},t=n-i$</p>
+<p>那么答案就是$C_i-D{n-i}$</p>
+<p>​    </p>
+<p>注意卷积的长度是$2n+1$而不是$n$，调了好久……</p>
+<p>​    </p>
 <p>示例程序：</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cmath&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> cl(x,y) memset(x,y,sizeof(x))</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> ll;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxn=<span class="number">400005</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">double</span> PI=<span class="number">3.1415926535897932384626433832795</span>;</span><br><span class="line"><span class="keyword">int</span> n,N; <span class="keyword">double</span> q[maxn];</span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">comp</span>&#123;</span></span><br><span class="line">	<span class="keyword">double</span> r,i;</span><br><span class="line">	comp(<span class="keyword">double</span> _r=<span class="number">0</span>,<span class="keyword">double</span> _i=<span class="number">0</span>):r(_r),i(_i) &#123;&#125;</span><br><span class="line">	comp <span class="keyword">operator</span>+(<span class="keyword">const</span> comp&amp;b) &#123;<span class="keyword">return</span> comp(r+b.r,i+b.i);&#125;</span><br><span class="line">	comp <span class="keyword">operator</span>-(<span class="keyword">const</span> comp&amp;b) &#123;<span class="keyword">return</span> comp(r-b.r,i-b.i);&#125;</span><br><span class="line">	comp <span class="keyword">operator</span>*(<span class="keyword">const</span> comp&amp;b) &#123;<span class="keyword">return</span> comp(r*b.r-i*b.i,r*b.i+i*b.r);&#125;</span><br><span class="line">&#125;Q[maxn],G[maxn],C[maxn],D[maxn];</span><br><span class="line"><span class="keyword">int</span> rev[maxn];</span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">get_rev</span><span class="params">(<span class="keyword">int</span> n)</span> </span>&#123;<span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">1</span>,l=log2(n);i&lt;n;i++) rev[i]=(rev[i&gt;&gt;<span class="number">1</span>]&gt;&gt;<span class="number">1</span>)|((i&amp;<span class="number">1</span>)&lt;&lt;l<span class="number">-1</span>);&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">FFT</span><span class="params">(comp *a,<span class="keyword">int</span> n,<span class="keyword">int</span> d)</span></span>&#123;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;n;i++) <span class="keyword">if</span> (rev[i]&lt;i) swap(a[i],a[rev[i]]);</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> l=<span class="number">2</span>;l&lt;=n;l&lt;&lt;=<span class="number">1</span>)&#123;</span><br><span class="line">		comp wl(cos(2*PI/l),d*sin(2*PI/l));</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> k=<span class="number">0</span>;k&lt;n;k+=l)&#123;</span><br><span class="line">			comp w(1,0),_t,_T;</span><br><span class="line">			<span class="keyword">for</span> (<span class="keyword">int</span> j=<span class="number">0</span>,tj=l&gt;&gt;<span class="number">1</span>;j&lt;tj;j++,w=w*wl)</span><br><span class="line">			 <span class="keyword">_t</span>=a[k+j],_T=w*a[k+j+tj],a[k+j]=<span class="keyword">_t</span>+_T,a[k+j+tj]=<span class="keyword">_t</span>-_T;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">if</span> (d&lt;<span class="number">0</span>) <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;n;i++) a[i].r/=n;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;n); N=<span class="number">1</span>;<span class="keyword">while</span> (N&lt;=n) N&lt;&lt;=<span class="number">1</span>;N&lt;&lt;=<span class="number">1</span>;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++) <span class="built_in">scanf</span>(<span class="string">"%lf"</span>,&amp;q[i]),Q[i].r=q[i],G[i].r=<span class="number">1.0</span>/i/i;</span><br><span class="line">	get_rev(N);</span><br><span class="line">	FFT(Q,N,<span class="number">1</span>);FFT(G,N,<span class="number">1</span>); <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;N;i++) C[i]=Q[i]*G[i];</span><br><span class="line">	cl(Q,<span class="number">0</span>);</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;=n;i++) Q[i]=comp(q[n-i],<span class="number">0</span>);</span><br><span class="line">	FFT(Q,N,<span class="number">1</span>); <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;N;i++) D[i]=Q[i]*G[i];</span><br><span class="line">	FFT(C,N,<span class="number">-1</span>); FFT(D,N,<span class="number">-1</span>);</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++) <span class="built_in">printf</span>(<span class="string">"%.3lf\n"</span>,C[i].r-D[n-i].r);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
@@ -636,10 +636,26 @@ var _hmt = _hmt || [];
     var s = document.getElementsByTagName("script")[0];
     s.parentNode.insertBefore(hm, s);
 })();
-</script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</script>
 
 
 
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/MathJax.js?config=TeX-MML-AM_CHTML"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 
 </body>
 

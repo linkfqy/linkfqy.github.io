@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang=zh>
-<head>
+<head><meta name="generator" content="Hexo 3.9.0">
 <!-- hexo-inject:begin --><!-- hexo-inject:end --><script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
 <link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
 <style>
@@ -19,41 +19,41 @@
 
 <!-- Valine评论 -->
 <script src="/js/av-min.js"></script>
-<script src='/js/Valine.min.js'></script>
+<script src="/js/Valine.min.js"></script>
 <!-- Leancloud统计 -->
 <!-- <script src="/js/av-min-1.2.1.js"></script> -->
 <!--  <script>AV.initialize("rJeVBhWeHlb33cC9L26UE7y3-gzGzoHsz", "uU7rD0e4IaYyrk6vSdM6GoHX");</script> -->
 
-<meta name="google-site-verification" content="IneMsg5aBY2Vw5QuPukpMzm5ATzGfO0dg40QXgKIPkk" />
+<meta name="google-site-verification" content="IneMsg5aBY2Vw5QuPukpMzm5ATzGfO0dg40QXgKIPkk">
 
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
   <meta name="renderer" content="webkit">
-  <meta http-equiv="Cache-Control" content="no-transform" />
-  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   <meta name="format-detection" content="telephone=no,email=no,adress=no">
   <!-- Color theme for statusbar -->
-  <meta name="theme-color" content="#000000" />
+  <meta name="theme-color" content="#000000">
   <!-- 强制页面在当前窗口以独立页面显示,防止别人在框架里调用页面 -->
-  <meta http-equiv="window-target" content="_top" />
+  <meta http-equiv="window-target" content="_top">
   
   
   <title>【多校2018#2】HDU6315 Naive Operations | linkfqy&#39;s Blog</title>
-  <meta name="description" content="题面在这里 ​ 首先注意到\(b_i\)只是n的排列 可以猜一下\(\lfloor a_i/b_i \rfloor\)变化的次数很少 其实就是\(\sum_{i=1}^n n/i\)总共\(O(n\cdot ln(n))\)次 然后就是大力数据结构…… 把操作看成\(b_i\)不断减，减成\(0\)对答案的贡献就+1 线段树每次区间减后不断询问最小值，最小值为0就把对应位置对答案的贡">
+  <meta name="description" content="题面在这里 ​     首先注意到$b_i$只是n的排列 可以猜一下$\lfloor a_i/b_i \rfloor$变化的次数很少 其实就是$\sum_{i=1}^n n/i$总共$O(n\cdot ln(n))$次 然后就是大力数据结构…… 把操作看成$b_i$不断减，减成$0$对答案的贡献就+1 线段树每次区间减后不断询问最小值，最小值为0就把对应位置对答案的贡献+1 总复杂度$O(n\cd">
 <meta name="keywords" content="线段树,树状数组,HDU">
 <meta property="og:type" content="article">
 <meta property="og:title" content="【多校2018#2】HDU6315 Naive Operations">
 <meta property="og:url" content="http://oi.linkfqy.top/posts/HDU6315/index.html">
 <meta property="og:site_name" content="linkfqy">
-<meta property="og:description" content="题面在这里 ​ 首先注意到\(b_i\)只是n的排列 可以猜一下\(\lfloor a_i/b_i \rfloor\)变化的次数很少 其实就是\(\sum_{i=1}^n n/i\)总共\(O(n\cdot ln(n))\)次 然后就是大力数据结构…… 把操作看成\(b_i\)不断减，减成\(0\)对答案的贡献就+1 线段树每次区间减后不断询问最小值，最小值为0就把对应位置对答案的贡">
+<meta property="og:description" content="题面在这里 ​     首先注意到$b_i$只是n的排列 可以猜一下$\lfloor a_i/b_i \rfloor$变化的次数很少 其实就是$\sum_{i=1}^n n/i$总共$O(n\cdot ln(n))$次 然后就是大力数据结构…… 把操作看成$b_i$不断减，减成$0$对答案的贡献就+1 线段树每次区间减后不断询问最小值，最小值为0就把对应位置对答案的贡献+1 总复杂度$O(n\cd">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:updated_time" content="2018-07-25T10:54:52.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="【多校2018#2】HDU6315 Naive Operations">
-<meta name="twitter:description" content="题面在这里 ​ 首先注意到\(b_i\)只是n的排列 可以猜一下\(\lfloor a_i/b_i \rfloor\)变化的次数很少 其实就是\(\sum_{i=1}^n n/i\)总共\(O(n\cdot ln(n))\)次 然后就是大力数据结构…… 把操作看成\(b_i\)不断减，减成\(0\)对答案的贡献就+1 线段树每次区间减后不断询问最小值，最小值为0就把对应位置对答案的贡">
+<meta name="twitter:description" content="题面在这里 ​     首先注意到$b_i$只是n的排列 可以猜一下$\lfloor a_i/b_i \rfloor$变化的次数很少 其实就是$\sum_{i=1}^n n/i$总共$O(n\cdot ln(n))$次 然后就是大力数据结构…… 把操作看成$b_i$不断减，减成$0$对答案的贡献就+1 线段树每次区间减后不断询问最小值，最小值为0就把对应位置对答案的贡献+1 总复杂度$O(n\cd">
   <!-- Canonical links -->
   <link rel="canonical" href="http://oi.linkfqy.top/posts/HDU6315/index.html">
   
@@ -349,15 +349,15 @@
     <div class="article-entry markdown-body" itemprop="articleBody">
       
         <p><a href="http://acm.hdu.edu.cn/showproblem.php?pid=6315" target="_blank" rel="noopener">题面在这里</a></p>
-<p>​</p>
-<p>首先注意到<span class="math inline">\(b_i\)</span>只是n的排列</p>
-<p>可以猜一下<span class="math inline">\(\lfloor a_i/b_i \rfloor\)</span>变化的次数很少</p>
-<p>其实就是<span class="math inline">\(\sum_{i=1}^n n/i\)</span>总共<span class="math inline">\(O(n\cdot ln(n))\)</span>次</p>
+<p>​    </p>
+<p>首先注意到$b_i$只是n的排列</p>
+<p>可以猜一下$\lfloor a_i/b_i \rfloor$变化的次数很少</p>
+<p>其实就是$\sum_{i=1}^n n/i$总共$O(n\cdot ln(n))$次</p>
 <p>然后就是大力数据结构……</p>
-<p>把操作看成<span class="math inline">\(b_i\)</span>不断减，减成<span class="math inline">\(0\)</span>对答案的贡献就+1</p>
+<p>把操作看成$b_i$不断减，减成$0$对答案的贡献就+1</p>
 <p>线段树每次区间减后不断询问最小值，最小值为0就把对应位置对答案的贡献+1</p>
-<p>总复杂度<span class="math inline">\(O(n\cdot ln(n)logn)\)</span></p>
-<p>​</p>
+<p>总复杂度$O(n\cdot ln(n)logn)$</p>
+<p>​    </p>
 <p>示例程序：</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cctype&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> fr first</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> sc second</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> mp make_pair</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">typedef</span> pair&lt;<span class="keyword">int</span>,<span class="keyword">int</span>&gt; data;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxn=<span class="number">100000</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> n,te,b[maxn+<span class="number">5</span>],c[maxn+<span class="number">5</span>];</span><br><span class="line"><span class="keyword">int</span> ID[(maxn&lt;&lt;<span class="number">2</span>)+<span class="number">5</span>],MIN[(maxn&lt;&lt;<span class="number">2</span>)+<span class="number">5</span>],tag[(maxn&lt;&lt;<span class="number">2</span>)+<span class="number">5</span>];</span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> Eoln(x) ((x)==10||(x)==13||(x)==EOF)</span></span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">char</span> <span class="title">readc</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">static</span> <span class="keyword">char</span> buf[<span class="number">100000</span>],*l=buf,*r=buf;</span><br><span class="line">    <span class="keyword">if</span> (l==r) r=(l=buf)+fread(buf,<span class="number">1</span>,<span class="number">100000</span>,<span class="built_in">stdin</span>);</span><br><span class="line">    <span class="keyword">if</span> (l==r) <span class="keyword">return</span> EOF;<span class="keyword">return</span> *l++;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">int</span> <span class="title">readi</span><span class="params">(<span class="keyword">int</span> &amp;x)</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> tot=<span class="number">0</span>;<span class="keyword">char</span> ch=readc(),lst=<span class="string">'+'</span>;</span><br><span class="line">    <span class="keyword">while</span> (!<span class="built_in">isdigit</span>(ch)) &#123;<span class="keyword">if</span> (ch==EOF) <span class="keyword">return</span> EOF;lst=ch;ch=readc();&#125;</span><br><span class="line">    <span class="keyword">while</span> (<span class="built_in">isdigit</span>(ch)) tot=(tot&lt;&lt;<span class="number">3</span>)+(tot&lt;&lt;<span class="number">1</span>)+(ch^<span class="number">48</span>),ch=readc();</span><br><span class="line">    <span class="keyword">return</span> (lst==<span class="string">'-'</span>?x=-tot:x=tot),Eoln(ch);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">Update</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">int</span> tem)</span> </span>&#123;<span class="keyword">for</span> (<span class="keyword">int</span> i=x;i&lt;=n;i+=i&amp;-i) c[i]+=tem;&#125;</span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">int</span> <span class="title">Sum</span><span class="params">(<span class="keyword">int</span> x)</span> </span>&#123;<span class="keyword">int</span> sum=<span class="number">0</span>;<span class="keyword">for</span> (<span class="keyword">int</span> i=x;i;i-=i&amp;-i) sum+=c[i];<span class="keyword">return</span> sum;&#125;</span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">Pushup</span><span class="params">(<span class="keyword">int</span> p)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (MIN[p&lt;&lt;<span class="number">1</span>]&lt;MIN[p&lt;&lt;<span class="number">1</span>|<span class="number">1</span>]) MIN[p]=MIN[p&lt;&lt;<span class="number">1</span>],ID[p]=ID[p&lt;&lt;<span class="number">1</span>];</span><br><span class="line">    <span class="keyword">else</span> MIN[p]=MIN[p&lt;&lt;<span class="number">1</span>|<span class="number">1</span>],ID[p]=ID[p&lt;&lt;<span class="number">1</span>|<span class="number">1</span>];</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Build</span><span class="params">(<span class="keyword">int</span> L,<span class="keyword">int</span> R,<span class="keyword">int</span> p=<span class="number">1</span>)</span></span>&#123;</span><br><span class="line">    tag[p]=<span class="number">0</span>;<span class="keyword">if</span> (L==R) &#123;ID[p]=L;MIN[p]=b[L];<span class="keyword">return</span>;&#125;<span class="keyword">int</span> mid=L+(R-L&gt;&gt;<span class="number">1</span>);</span><br><span class="line">    Build(L,mid,p&lt;&lt;<span class="number">1</span>);Build(mid+<span class="number">1</span>,R,p&lt;&lt;<span class="number">1</span>|<span class="number">1</span>);Pushup(p);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">Pushdown</span><span class="params">(<span class="keyword">int</span> p)</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> now=tag[p];tag[p]=<span class="number">0</span>;<span class="keyword">if</span> (!now) <span class="keyword">return</span>;</span><br><span class="line">    MIN[p&lt;&lt;<span class="number">1</span>]+=now;tag[p&lt;&lt;<span class="number">1</span>]+=now;MIN[p&lt;&lt;<span class="number">1</span>|<span class="number">1</span>]+=now;tag[p&lt;&lt;<span class="number">1</span>|<span class="number">1</span>]+=now;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Insert</span><span class="params">(<span class="keyword">int</span> L,<span class="keyword">int</span> R,<span class="keyword">int</span> k,<span class="keyword">int</span> l=<span class="number">1</span>,<span class="keyword">int</span> r=n,<span class="keyword">int</span> p=<span class="number">1</span>)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (R&lt;l||r&lt;L) <span class="keyword">return</span>;<span class="keyword">if</span> (L&lt;=l&amp;&amp;r&lt;=R) &#123;MIN[p]+=k;tag[p]+=k;<span class="keyword">return</span>;&#125;<span class="keyword">int</span> mid=l+(r-l&gt;&gt;<span class="number">1</span>);</span><br><span class="line">    Pushdown(p);Insert(L,R,k,l,mid,p&lt;&lt;<span class="number">1</span>);Insert(L,R,k,mid+<span class="number">1</span>,r,p&lt;&lt;<span class="number">1</span>|<span class="number">1</span>);Pushup(p);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function">data <span class="title">Min</span><span class="params">(<span class="keyword">int</span> L,<span class="keyword">int</span> R,<span class="keyword">int</span> l=<span class="number">1</span>,<span class="keyword">int</span> r=n,<span class="keyword">int</span> p=<span class="number">1</span>)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (R&lt;l||r&lt;L) <span class="keyword">return</span> mp(<span class="number">2e9</span>,<span class="number">0</span>);<span class="keyword">if</span> (L&lt;=l&amp;&amp;r&lt;=R) <span class="keyword">return</span> mp(MIN[p],ID[p]);<span class="keyword">int</span> mid=l+(r-l&gt;&gt;<span class="number">1</span>);</span><br><span class="line">    Pushdown(p);<span class="keyword">return</span> min(Min(L,R,l,mid,p&lt;&lt;<span class="number">1</span>),Min(L,R,mid+<span class="number">1</span>,r,p&lt;&lt;<span class="number">1</span>|<span class="number">1</span>));</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">Add</span><span class="params">(<span class="keyword">int</span> L,<span class="keyword">int</span> R)</span></span>&#123;</span><br><span class="line">    Insert(L,R,<span class="number">-1</span>);data now=Min(L,R);</span><br><span class="line">    <span class="keyword">while</span> (!now.fr)&#123;</span><br><span class="line">        Insert(now.sc,now.sc,b[now.sc]);</span><br><span class="line">        Update(now.sc,<span class="number">1</span>);now=Min(L,R);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">int</span> <span class="title">Ask</span><span class="params">(<span class="keyword">int</span> L,<span class="keyword">int</span> R)</span> </span>&#123;<span class="keyword">return</span> Sum(R)-Sum(L<span class="number">-1</span>);&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">while</span> (~readi(n))&#123;</span><br><span class="line">        readi(te);<span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++) readi(b[i]),c[i]=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (Build(<span class="number">1</span>,n);te;te--)&#123;</span><br><span class="line">            <span class="keyword">char</span> ch=readc();<span class="keyword">while</span> (!<span class="built_in">islower</span>(ch)) ch=readc();</span><br><span class="line">            <span class="keyword">int</span> L,R;readi(L);readi(R);</span><br><span class="line">            <span class="keyword">if</span> (ch==<span class="string">'a'</span>) Add(L,R); <span class="keyword">else</span> <span class="built_in">printf</span>(<span class="string">"%d\n"</span>,Ask(L,R));</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
@@ -633,10 +633,26 @@ var _hmt = _hmt || [];
     var s = document.getElementsByTagName("script")[0];
     s.parentNode.insertBefore(hm, s);
 })();
-</script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</script>
 
 
 
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/MathJax.js?config=TeX-MML-AM_CHTML"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 
 </body>
 

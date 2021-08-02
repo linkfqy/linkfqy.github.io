@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang=zh>
-<head>
+<head><meta name="generator" content="Hexo 3.9.0">
 <!-- hexo-inject:begin --><!-- hexo-inject:end --><script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
 <link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
 <style>
@@ -19,43 +19,43 @@
 
 <!-- Valine评论 -->
 <script src="/js/av-min.js"></script>
-<script src='/js/Valine.min.js'></script>
+<script src="/js/Valine.min.js"></script>
 <!-- Leancloud统计 -->
 <!-- <script src="/js/av-min-1.2.1.js"></script> -->
 <!--  <script>AV.initialize("rJeVBhWeHlb33cC9L26UE7y3-gzGzoHsz", "uU7rD0e4IaYyrk6vSdM6GoHX");</script> -->
 
-<meta name="google-site-verification" content="IneMsg5aBY2Vw5QuPukpMzm5ATzGfO0dg40QXgKIPkk" />
+<meta name="google-site-verification" content="IneMsg5aBY2Vw5QuPukpMzm5ATzGfO0dg40QXgKIPkk">
 
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
   <meta name="renderer" content="webkit">
-  <meta http-equiv="Cache-Control" content="no-transform" />
-  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   <meta name="format-detection" content="telephone=no,email=no,adress=no">
   <!-- Color theme for statusbar -->
-  <meta name="theme-color" content="#000000" />
+  <meta name="theme-color" content="#000000">
   <!-- 强制页面在当前窗口以独立页面显示,防止别人在框架里调用页面 -->
-  <meta http-equiv="window-target" content="_top" />
+  <meta http-equiv="window-target" content="_top">
   
   
   <title>最大权闭合子图 学习笔记 | linkfqy&#39;s Blog</title>
-  <meta name="description" content="定义 一个有向图中，每个点有点权\(w_i\)（可负） 现在需要找到一个子图，满足：  对于所有边\((u,v)\)，点\(u\)在子图中则\(v\)必在子图中 子图的点权和最大  这个子图就是最大权闭合子图 解法 我们先给出最大权闭合子图的解法，之后给出证明 最大权闭合子图可以用最小割解决：   对于\(w_i\gt 0\)的点\(i\)，连边\((S,i,w_i)\)">
+  <meta name="description" content="定义一个有向图中，每个点有点权$w_i$（可负） 现在需要找到一个子图，满足：  对于所有边$(u,v)$，点$u$在子图中则$v$必在子图中 子图的点权和最大  这个子图就是最大权闭合子图 解法我们先给出最大权闭合子图的解法，之后给出证明 最大权闭合子图可以用最小割解决：   对于$w_i\gt 0$的点$i$，连边$(S,i,w_i)$ 对于$w_i\lt 0$的点$i$，连边$(i,T,-w">
 <meta name="keywords" content="网络流,最大权闭合子图">
 <meta property="og:type" content="article">
 <meta property="og:title" content="最大权闭合子图 学习笔记">
 <meta property="og:url" content="http://oi.linkfqy.top/posts/Maximum_Weight_Closure_of_a_Graph/index.html">
 <meta property="og:site_name" content="linkfqy">
-<meta property="og:description" content="定义 一个有向图中，每个点有点权\(w_i\)（可负） 现在需要找到一个子图，满足：  对于所有边\((u,v)\)，点\(u\)在子图中则\(v\)必在子图中 子图的点权和最大  这个子图就是最大权闭合子图 解法 我们先给出最大权闭合子图的解法，之后给出证明 最大权闭合子图可以用最小割解决：   对于\(w_i\gt 0\)的点\(i\)，连边\((S,i,w_i)\)">
+<meta property="og:description" content="定义一个有向图中，每个点有点权$w_i$（可负） 现在需要找到一个子图，满足：  对于所有边$(u,v)$，点$u$在子图中则$v$必在子图中 子图的点权和最大  这个子图就是最大权闭合子图 解法我们先给出最大权闭合子图的解法，之后给出证明 最大权闭合子图可以用最小割解决：   对于$w_i\gt 0$的点$i$，连边$(S,i,w_i)$ 对于$w_i\lt 0$的点$i$，连边$(i,T,-w">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://oi.linkfqy.top/posts/Maximum_Weight_Closure_of_a_Graph/1.jpg">
 <meta property="og:image" content="http://oi.linkfqy.top/posts/Maximum_Weight_Closure_of_a_Graph/2.jpg">
 <meta property="og:updated_time" content="2018-09-29T13:47:48.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="最大权闭合子图 学习笔记">
-<meta name="twitter:description" content="定义 一个有向图中，每个点有点权\(w_i\)（可负） 现在需要找到一个子图，满足：  对于所有边\((u,v)\)，点\(u\)在子图中则\(v\)必在子图中 子图的点权和最大  这个子图就是最大权闭合子图 解法 我们先给出最大权闭合子图的解法，之后给出证明 最大权闭合子图可以用最小割解决：   对于\(w_i\gt 0\)的点\(i\)，连边\((S,i,w_i)\)">
+<meta name="twitter:description" content="定义一个有向图中，每个点有点权$w_i$（可负） 现在需要找到一个子图，满足：  对于所有边$(u,v)$，点$u$在子图中则$v$必在子图中 子图的点权和最大  这个子图就是最大权闭合子图 解法我们先给出最大权闭合子图的解法，之后给出证明 最大权闭合子图可以用最小割解决：   对于$w_i\gt 0$的点$i$，连边$(S,i,w_i)$ 对于$w_i\lt 0$的点$i$，连边$(i,T,-w">
 <meta name="twitter:image" content="http://oi.linkfqy.top/posts/Maximum_Weight_Closure_of_a_Graph/1.jpg">
   <!-- Canonical links -->
   <link rel="canonical" href="http://oi.linkfqy.top/posts/Maximum_Weight_Closure_of_a_Graph/index.html">
@@ -351,46 +351,42 @@
     </div>
     <div class="article-entry markdown-body" itemprop="articleBody">
       
-        <h1 id="定义">定义</h1>
-<p>一个有向图中，每个点有点权<span class="math inline">\(w_i\)</span>（可负）</p>
+        <h1 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h1><p>一个有向图中，每个点有点权$w_i$（可负）</p>
 <p>现在需要找到一个子图，满足：</p>
 <ul>
-<li>对于所有边<span class="math inline">\((u,v)\)</span>，点<span class="math inline">\(u\)</span>在子图中则<span class="math inline">\(v\)</span>必在子图中</li>
+<li>对于所有边$(u,v)$，点$u$在子图中则$v$必在子图中</li>
 <li>子图的点权和最大</li>
 </ul>
 <p>这个子图就是最大权闭合子图</p>
-<h1 id="解法">解法</h1>
-<p>我们先给出最大权闭合子图的解法，之后给出证明</p>
+<h1 id="解法"><a href="#解法" class="headerlink" title="解法"></a>解法</h1><p>我们先给出最大权闭合子图的解法，之后给出证明</p>
 <p>最大权闭合子图可以用最小割解决：</p>
-<p><img src="/posts/Maximum_Weight_Closure_of_a_Graph/1.jpg"></p>
+<p><img src="/posts/Maximum_Weight_Closure_of_a_Graph/1.jpg" alt=""></p>
 <ul>
-<li>对于<span class="math inline">\(w_i\gt 0\)</span>的点<span class="math inline">\(i\)</span>，连边<span class="math inline">\((S,i,w_i)\)</span></li>
-<li>对于<span class="math inline">\(w_i\lt 0\)</span>的点<span class="math inline">\(i\)</span>，连边<span class="math inline">\((i,T,-w_i)\)</span></li>
-<li>对于原图边<span class="math inline">\((u,v)\)</span>，连边<span class="math inline">\((u,v,\infty)\)</span></li>
+<li>对于$w_i\gt 0$的点$i$，连边$(S,i,w_i)$</li>
+<li>对于$w_i\lt 0$的点$i$，连边$(i,T,-w_i)$</li>
+<li>对于原图边$(u,v)$，连边$(u,v,\infty)$</li>
 </ul>
 <p>答案就是<strong>所有正点权之和-最小割</strong></p>
-<h1 id="证明">证明</h1>
-<p>考虑以下两个命题：</p>
+<h1 id="证明"><a href="#证明" class="headerlink" title="证明"></a>证明</h1><p>考虑以下两个命题：</p>
 <ul>
-<li>最小割一定是简单割
-<ul>
-<li>简单割就是只割与<span class="math inline">\(S\)</span>或<span class="math inline">\(T\)</span>相连的边</li>
+<li>最小割一定是简单割<ul>
+<li>简单割就是只割与$S$或$T$相连的边</li>
 <li>显然成立，因为原图边都是无穷大</li>
-</ul></li>
-<li>简单割与闭合子图一一对应
-<ul>
-<li>闭合子图和<span class="math inline">\(S\)</span>构成集合<span class="math inline">\(V_S\)</span>，其余点和<span class="math inline">\(T\)</span>构成集合<span class="math inline">\(V_T\)</span></li>
-<li>下面是一个示例，<span class="math inline">\(V_S=\{S,2,4,5\}\)</span>：</li>
-<li><img src="/posts/Maximum_Weight_Closure_of_a_Graph/2.jpg"></li>
-<li>证明略</li>
-</ul></li>
 </ul>
-<p>那么<strong>最大权闭合子图的权<span class="math inline">\(W\)</span>=<span class="math inline">\(V_S\)</span>中正点权和-<span class="math inline">\(V_S\)</span>中负点权的绝对值和</strong></p>
-<p>最小割<span class="math inline">\(c(S,T)=\)</span><strong><span class="math inline">\(V_T\)</span>中正点权和+<span class="math inline">\(V_S\)</span>中负点权的绝对值和</strong></p>
-<p>则有<span class="math inline">\(W+c(S,T)=\)</span><strong>所有正点权之和</strong></p>
-<p>就是前面说的<span class="math inline">\(W=\)</span><strong>所有正点权之和</strong><span class="math inline">\(-c(S,T)\)</span></p>
-<h1 id="例题">例题</h1>
-<ul>
+</li>
+<li>简单割与闭合子图一一对应<ul>
+<li>闭合子图和$S$构成集合$V_S$，其余点和$T$构成集合$V_T$</li>
+<li>下面是一个示例，$V_S=\{S,2,4,5\}$：</li>
+<li><img src="/posts/Maximum_Weight_Closure_of_a_Graph/2.jpg" alt=""></li>
+<li>证明略</li>
+</ul>
+</li>
+</ul>
+<p>那么<strong>最大权闭合子图的权$W$=$V_S$中正点权和-$V_S$中负点权的绝对值和</strong></p>
+<p>最小割$c(S,T)=$<strong>$V_T$中正点权和+$V_S$中负点权的绝对值和</strong></p>
+<p>则有$W+c(S,T)=$<strong>所有正点权之和</strong></p>
+<p>就是前面说的$W=$<strong>所有正点权之和</strong>$-c(S,T)$</p>
+<h1 id="例题"><a href="#例题" class="headerlink" title="例题"></a>例题</h1><ul>
 <li>BZOJ1497 最大获利</li>
 <li>BZOJ1565 植物大战僵尸</li>
 <li>BZOJ4873 寿司餐厅</li>
@@ -668,10 +664,26 @@ var _hmt = _hmt || [];
     var s = document.getElementsByTagName("script")[0];
     s.parentNode.insertBefore(hm, s);
 })();
-</script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</script>
 
 
 
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/MathJax.js?config=TeX-MML-AM_CHTML"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 
 </body>
 

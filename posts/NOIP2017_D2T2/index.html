@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang=zh>
-<head>
+<head><meta name="generator" content="Hexo 3.9.0">
 <!-- hexo-inject:begin --><!-- hexo-inject:end --><script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
 <link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
 <style>
@@ -19,41 +19,41 @@
 
 <!-- Valine评论 -->
 <script src="/js/av-min.js"></script>
-<script src='/js/Valine.min.js'></script>
+<script src="/js/Valine.min.js"></script>
 <!-- Leancloud统计 -->
 <!-- <script src="/js/av-min-1.2.1.js"></script> -->
 <!--  <script>AV.initialize("rJeVBhWeHlb33cC9L26UE7y3-gzGzoHsz", "uU7rD0e4IaYyrk6vSdM6GoHX");</script> -->
 
-<meta name="google-site-verification" content="IneMsg5aBY2Vw5QuPukpMzm5ATzGfO0dg40QXgKIPkk" />
+<meta name="google-site-verification" content="IneMsg5aBY2Vw5QuPukpMzm5ATzGfO0dg40QXgKIPkk">
 
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
   <meta name="renderer" content="webkit">
-  <meta http-equiv="Cache-Control" content="no-transform" />
-  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   <meta name="format-detection" content="telephone=no,email=no,adress=no">
   <!-- Color theme for statusbar -->
-  <meta name="theme-color" content="#000000" />
+  <meta name="theme-color" content="#000000">
   <!-- 强制页面在当前窗口以独立页面显示,防止别人在框架里调用页面 -->
-  <meta http-equiv="window-target" content="_top" />
+  <meta http-equiv="window-target" content="_top">
   
   
   <title>NOIP2017 宝藏 | linkfqy&#39;s Blog</title>
-  <meta name="description" content="题面自取 ​ 一看就是状压DP，但是如何保存深度信息？每个点存深度显然不现实 考虑一个点的深度信息只在加新点时有用，所以强行定义当前所有点的深度即可 \(f_{i,s}\)表示当前所有点深度为\(i\)，连通块集合为\(s\) 显然枚举\(s\)补集的子集\(ss\)，则有 \[ f_{i+1,s+ss}\leftarrow f_{i,s}+g_{ss} \] 其中\(g_{ss}\">
+  <meta name="description" content="题面自取 ​     一看就是状压DP，但是如何保存深度信息？每个点存深度显然不现实 考虑一个点的深度信息只在加新点时有用，所以强行定义当前所有点的深度即可 $f_{i,s}$表示当前所有点深度为$i$，连通块集合为$s$ 显然枚举$s$补集的子集$ss$，则有  f_{i+1,s+ss}\leftarrow f_{i,s}+g_{ss}其中$g_{ss}$表示$ss$集合中所有点到$s$代价之和">
 <meta name="keywords" content="状压DP">
 <meta property="og:type" content="article">
 <meta property="og:title" content="NOIP2017 宝藏">
 <meta property="og:url" content="http://oi.linkfqy.top/posts/NOIP2017_D2T2/index.html">
 <meta property="og:site_name" content="linkfqy">
-<meta property="og:description" content="题面自取 ​ 一看就是状压DP，但是如何保存深度信息？每个点存深度显然不现实 考虑一个点的深度信息只在加新点时有用，所以强行定义当前所有点的深度即可 \(f_{i,s}\)表示当前所有点深度为\(i\)，连通块集合为\(s\) 显然枚举\(s\)补集的子集\(ss\)，则有 \[ f_{i+1,s+ss}\leftarrow f_{i,s}+g_{ss} \] 其中\(g_{ss}\">
+<meta property="og:description" content="题面自取 ​     一看就是状压DP，但是如何保存深度信息？每个点存深度显然不现实 考虑一个点的深度信息只在加新点时有用，所以强行定义当前所有点的深度即可 $f_{i,s}$表示当前所有点深度为$i$，连通块集合为$s$ 显然枚举$s$补集的子集$ss$，则有  f_{i+1,s+ss}\leftarrow f_{i,s}+g_{ss}其中$g_{ss}$表示$ss$集合中所有点到$s$代价之和">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:updated_time" content="2018-11-07T00:14:04.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="NOIP2017 宝藏">
-<meta name="twitter:description" content="题面自取 ​ 一看就是状压DP，但是如何保存深度信息？每个点存深度显然不现实 考虑一个点的深度信息只在加新点时有用，所以强行定义当前所有点的深度即可 \(f_{i,s}\)表示当前所有点深度为\(i\)，连通块集合为\(s\) 显然枚举\(s\)补集的子集\(ss\)，则有 \[ f_{i+1,s+ss}\leftarrow f_{i,s}+g_{ss} \] 其中\(g_{ss}\">
+<meta name="twitter:description" content="题面自取 ​     一看就是状压DP，但是如何保存深度信息？每个点存深度显然不现实 考虑一个点的深度信息只在加新点时有用，所以强行定义当前所有点的深度即可 $f_{i,s}$表示当前所有点深度为$i$，连通块集合为$s$ 显然枚举$s$补集的子集$ss$，则有  f_{i+1,s+ss}\leftarrow f_{i,s}+g_{ss}其中$g_{ss}$表示$ss$集合中所有点到$s$代价之和">
   <!-- Canonical links -->
   <link rel="canonical" href="http://oi.linkfqy.top/posts/NOIP2017_D2T2/index.html">
   
@@ -340,7 +340,7 @@
         <span class="post-comment"><i class="icon icon-comment"></i> <a href="/posts/NOIP2017_D2T2/#comments" class="article-comment-link">评论</a></span>
         
 	
-		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 439(words)</span>
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 428(words)</span>
 	
 	
 
@@ -349,14 +349,14 @@
     <div class="article-entry markdown-body" itemprop="articleBody">
       
         <p><a href="../../documents/NOIP2017_day2.pdf">题面自取</a></p>
-<p>​</p>
+<p>​    </p>
 <p>一看就是状压DP，但是如何保存深度信息？每个点存深度显然不现实</p>
 <p>考虑一个点的深度信息只在加新点时有用，所以强行定义当前所有点的深度即可</p>
-<p><span class="math inline">\(f_{i,s}\)</span>表示当前所有点深度为<span class="math inline">\(i\)</span>，连通块集合为<span class="math inline">\(s\)</span></p>
-<p>显然枚举<span class="math inline">\(s\)</span>补集的子集<span class="math inline">\(ss\)</span>，则有 <span class="math display">\[
-f_{i+1,s+ss}\leftarrow f_{i,s}+g_{ss}
-\]</span> 其中<span class="math inline">\(g_{ss}\)</span>表示<span class="math inline">\(ss\)</span>集合中所有点到<span class="math inline">\(s\)</span>代价之和，可以预处理出来</p>
-<p>​</p>
+<p>$f_{i,s}$表示当前所有点深度为$i$，连通块集合为$s$</p>
+<p>显然枚举$s$补集的子集$ss$，则有</p>
+<script type="math/tex; mode=display">
+f_{i+1,s+ss}\leftarrow f_{i,s}+g_{ss}</script><p>其中$g_{ss}$表示$ss$集合中所有点到$s$代价之和，可以预处理出来</p>
+<p>​    </p>
 <p>示例程序：</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> cl(x,y) memset(x,y,sizeof(x))</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxn=<span class="number">15</span>,maxe=<span class="number">2005</span>,INF=<span class="number">0x3f3f3f3f</span>;</span><br><span class="line"><span class="keyword">int</span> n,e,f[maxn][<span class="number">4100</span>],d[maxn][maxn],g[<span class="number">4100</span>],w[maxn],lg[<span class="number">4100</span>],stk[<span class="number">4100</span>];</span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> up(x,y) (x=min(x,y))</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> lowbit(x) ((x)&amp;-(x))</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%d%d"</span>,&amp;n,&amp;e);</span><br><span class="line">	cl(d,<span class="number">63</span>);</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">1</span>,x,y,z;i&lt;=e;i++) <span class="built_in">scanf</span>(<span class="string">"%d%d%d"</span>,&amp;x,&amp;y,&amp;z),x--,y--,up(d[x][y],z),up(d[y][x],z);</span><br><span class="line">	cl(f,<span class="number">63</span>);</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;n;i++) f[<span class="number">1</span>][<span class="number">1</span>&lt;&lt;i]=<span class="number">0</span>,lg[<span class="number">1</span>&lt;&lt;i]=i;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;n;i++)</span><br><span class="line">	 <span class="keyword">for</span> (<span class="keyword">int</span> s=<span class="number">0</span>;s&lt;(<span class="number">1</span>&lt;&lt;n);s++)&#123;</span><br><span class="line">	 	cl(w,<span class="number">63</span>);</span><br><span class="line">	 	<span class="keyword">for</span> (<span class="keyword">int</span> j=<span class="number">0</span>;j&lt;n;j++)</span><br><span class="line">	 	 <span class="keyword">for</span> (<span class="keyword">int</span> k=s;k;k-=k&amp;-k)</span><br><span class="line">	 	  <span class="keyword">if</span> (d[j][lg[k&amp;-k]]!=INF) up(w[j],d[j][lg[k&amp;-k]]*i);</span><br><span class="line">	 	<span class="keyword">int</span> t=s^((<span class="number">1</span>&lt;&lt;n)<span class="number">-1</span>);</span><br><span class="line">	 	cl(g,<span class="number">0</span>); stk[<span class="number">0</span>]=<span class="number">0</span>;</span><br><span class="line">	 	<span class="keyword">for</span> (<span class="keyword">int</span> ss=t;ss;ss=(ss<span class="number">-1</span>)&amp;t) stk[++stk[<span class="number">0</span>]]=ss;</span><br><span class="line">	 	<span class="keyword">for</span> (<span class="keyword">int</span> j=stk[<span class="number">0</span>];j;j--)&#123;</span><br><span class="line">			g[stk[j]]=g[stk[j]^lowbit(stk[j])]+w[lg[lowbit(stk[j])]];</span><br><span class="line">			<span class="keyword">if</span> (g[stk[j]]&gt;INF) g[stk[j]]=INF;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> ss=t;ss;ss=(ss<span class="number">-1</span>)&amp;t)&#123;</span><br><span class="line">			up(f[i+<span class="number">1</span>][s|ss],f[i][s]+g[ss]);</span><br><span class="line">		&#125;</span><br><span class="line">	 &#125;</span><br><span class="line">	<span class="keyword">int</span> ans=INF;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;=n;i++) up(ans,f[i][(<span class="number">1</span>&lt;&lt;n)<span class="number">-1</span>]);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"%d"</span>,ans);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
@@ -632,10 +632,26 @@ var _hmt = _hmt || [];
     var s = document.getElementsByTagName("script")[0];
     s.parentNode.insertBefore(hm, s);
 })();
-</script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</script>
 
 
 
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/MathJax.js?config=TeX-MML-AM_CHTML"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 
 </body>
 
