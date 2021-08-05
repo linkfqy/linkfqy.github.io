@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://oi.linkfqy.top/"/>
-  <updated>2021-08-04T15:55:17.828Z</updated>
+  <updated>2021-08-05T16:51:59.725Z</updated>
   <id>http://oi.linkfqy.top/</id>
   
   <author>
@@ -15,6 +15,36 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>SciPy解非线性规划</title>
+    <link href="http://oi.linkfqy.top/posts/SciPy%E8%A7%A3%E9%9D%9E%E7%BA%BF%E6%80%A7%E8%A7%84%E5%88%92/"/>
+    <id>http://oi.linkfqy.top/posts/SciPy解非线性规划/</id>
+    <published>2021-08-05T15:59:25.000Z</published>
+    <updated>2021-08-05T16:51:59.725Z</updated>
+    
+    <content type="html"><![CDATA[<p>与线性规划不同，非线性规划的目标函数和约束都不一定是线性的</p><p>因此最优解也不一定在可行域边界上，一般而言用迭代算法得到的也只是局部最优解</p><p>标准模型如下： <span class="math display">\[\min f(\vec x)  \\\text{s.t.}\begin{cases}    g_i(\vec x) \geq 0,\ \ \ i=1,2,...,m,  \\    h_i(\vec x) = 0,\ \ \ i=1,2,...,l,\end{cases}\]</span> <code>scipy.optimize.minimize</code>可以解决非线性规划问题</p><p>用法：</p><p><code>minimize(fun,x0,bounds=None,constraints=None)</code></p><p>其中<code>fun</code>为目标函数，输入一个向量<span class="math inline">\(\vec x\)</span>返回对应值</p><p><code>x0</code>为迭代初值，决定是否能取到全局最优解</p><p><code>bounds</code>与线性规划的<code>linprog</code>一样</p><p><code>constraints</code>为约束条件，具体实现为单个dict或dict的序列，每个dict应有两个键值：</p><ul><li><p><code>type</code>：字符串<code>'eq'</code>和<code>'ineq'</code>之一，表示该约束为等号约束或不等号约束</p></li><li><p><code>fun</code>：函数，传入向量<span class="math inline">\(\vec x\)</span>，返回约束式的左值，在可行解中该值大于等于0（不等号约束）/等于0（等号约束）</p><p>特别地，若有一系列约束为线性约束，则可将一系列右值视为一个向量，利用<code>numpy.array</code>重载的比较符号，</p><p>将这些约束缩为一个，即<code>lambda x:b-A@x</code></p></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;与线性规划不同，非线性规划的目标函数和约束都不一定是线性的&lt;/p&gt;
+&lt;p&gt;因此最优解也不一定在可行域边界上，一般而言用迭代算法得到的也只是局部最优解&lt;/p&gt;
+&lt;p&gt;标准模型如下： &lt;span class=&quot;math display&quot;&gt;\[
+\min f(\vec x)
+      
+    
+    </summary>
+    
+      <category term="学习笔记" scheme="http://oi.linkfqy.top/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+    
+      <category term="Python" scheme="http://oi.linkfqy.top/tags/Python/"/>
+    
+      <category term="SciPy" scheme="http://oi.linkfqy.top/tags/SciPy/"/>
+    
+  </entry>
   
   <entry>
     <title>SciPy解决线性规划问题</title>
@@ -562,34 +592,6 @@
       <category term="DP" scheme="http://oi.linkfqy.top/tags/DP/"/>
     
       <category term="Codeforces" scheme="http://oi.linkfqy.top/tags/Codeforces/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>51Nod 1250 排列与交换</title>
-    <link href="http://oi.linkfqy.top/posts/BZOJ1250/"/>
-    <id>http://oi.linkfqy.top/posts/BZOJ1250/</id>
-    <published>2018-11-05T10:29:30.000Z</published>
-    <updated>2018-11-05T10:56:52.000Z</updated>
-    
-    <content type="html"><![CDATA[<p><a href="http://www.51nod.com/Challenge/Problem.html#!#problemId=1250&amp;judgeId=0" target="_blank" rel="noopener">题面在这里</a></p><p>​</p><p>考虑把1到n的数一个一个加入，这样状态比较好设计</p><p>对于第一问：</p><p><span class="math inline">\(f_{i,j}\)</span>表示长度为<span class="math inline">\(i\)</span>的排列，恰好做了<span class="math inline">\(j\)</span>次交换</p><p><span class="math display">\[f_{i,j}=\sum_{k=max(0,j-i+1)}^j f_{i-1,k}\]</span></p><p>因为可以两个数不断交换，答案是<span class="math inline">\(\sum_{j\text{ mod }2=m\text{ mod }2} f_{n,j}\)</span></p><p>对于第二问：</p><p><span class="math inline">\(g_{i,j}\)</span>表示长度为<span class="math inline">\(i\)</span>的排列，恰好做了<span class="math inline">\(j\)</span>次交换 <span class="math display">\[g_{i,j}=g_{i-1,j}+(i-1)\cdot g_{i-1,j-1}\]</span> 答案是<span class="math inline">\(\sum_j g_{n,j}\)</span></p><p>​</p><p>示例程序：</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> ll;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxn=<span class="number">3005</span>,MOD=<span class="number">1e9</span>+<span class="number">7</span>;</span><br><span class="line"><span class="keyword">int</span> n,K,f[maxn][maxn],g[maxn][maxn],s[maxn][maxn],ans;</span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> up(x,y) ((x+=y)%=MOD)</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line"><span class="built_in">scanf</span>(<span class="string">"%d%d"</span>,&amp;n,&amp;K);</span><br><span class="line">f[<span class="number">0</span>][<span class="number">0</span>]=<span class="number">1</span>;</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> j=<span class="number">0</span>;j&lt;=K;j++) s[<span class="number">0</span>][j]=<span class="number">1</span>;</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)&#123;</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> j=<span class="number">0</span>;j&lt;=K;j++)</span><br><span class="line"> up(f[i][j],s[i<span class="number">-1</span>][j]-(j&gt;=i?s[i<span class="number">-1</span>][j-i]:<span class="number">0</span>)),</span><br><span class="line"> s[i][j]=((j==<span class="number">0</span>?<span class="number">0</span>:s[i][j<span class="number">-1</span>])+f[i][j])%MOD;</span><br><span class="line">&#125;</span><br><span class="line">ans=<span class="number">0</span>;</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> j=<span class="number">0</span>;j&lt;=K;j++) <span class="keyword">if</span> (j%<span class="number">2</span>==K%<span class="number">2</span>) up(ans,f[n][j]);</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"%d "</span>,ans);</span><br><span class="line">g[<span class="number">0</span>][<span class="number">0</span>]=<span class="number">1</span>;</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)</span><br><span class="line"> <span class="keyword">for</span> (<span class="keyword">int</span> j=<span class="number">0</span>;j&lt;=K;j++)</span><br><span class="line">  up(g[i][j],(g[i<span class="number">-1</span>][j]+(ll)(j==<span class="number">0</span>?<span class="number">0</span>:g[i<span class="number">-1</span>][j<span class="number">-1</span>])*(i<span class="number">-1</span>))%MOD);</span><br><span class="line">ans=<span class="number">0</span>;</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> j=<span class="number">0</span>;j&lt;=K;j++) up(ans,g[n][j]);</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"%d"</span>,ans);</span><br><span class="line"><span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;&lt;a href=&quot;http://www.51nod.com/Challenge/Problem.html#!#problemId=1250&amp;amp;judgeId=0&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;题面在这里&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;​&lt;/
-      
-    
-    </summary>
-    
-      <category term="题解" scheme="http://oi.linkfqy.top/categories/%E9%A2%98%E8%A7%A3/"/>
-    
-    
-      <category term="51Nod" scheme="http://oi.linkfqy.top/tags/51Nod/"/>
-    
-      <category term="DP" scheme="http://oi.linkfqy.top/tags/DP/"/>
     
   </entry>
   
