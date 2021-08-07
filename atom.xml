@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://oi.linkfqy.top/"/>
-  <updated>2021-08-07T07:12:05.611Z</updated>
+  <updated>2021-08-07T15:22:15.173Z</updated>
   <id>http://oi.linkfqy.top/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Python实现拟合</title>
+    <link href="http://oi.linkfqy.top/posts/Python%E5%AE%9E%E7%8E%B0%E6%8B%9F%E5%90%88/"/>
+    <id>http://oi.linkfqy.top/posts/Python实现拟合/</id>
+    <published>2021-08-07T13:30:55.000Z</published>
+    <updated>2021-08-07T15:22:15.173Z</updated>
+    
+    <content type="html"><![CDATA[<p>拟合：给定<span class="math inline">\(n\)</span>个数据点，求一<span class="math inline">\(f(x)\)</span>使其与数据点最“接近”，即： <span class="math display">\[J=\sum_{i=1}^n(fx_i-y_i)^2\]</span> 最小，称为最小二乘拟合。</p><p>往往需要提前指定<span class="math inline">\(f(x)\)</span>的类型，常用的有某次多项式、双曲函数、指数函数等</p><p><code>scipy.optimize.curve_fit</code>可以实现任意类型函数的拟合</p><p>用法：</p><p><code>curve_fit(f, xdata, ydata, p0=None)</code></p><ul><li><code>f</code>为一函数：<code>f(x,...)</code>，<code>x</code>为自变量，后面的参数全为拟合函数的待定参数</li><li><code>xdata</code>和<code>ydata</code>是数据点的坐标向量</li><li><code>p0</code>为待定参数的初值向量</li><li>D维情形，x是D维向量，<code>xdata</code>是D维向量构成的序列，p0同</li></ul><p>返回二元组<code>(popt,pcov)</code>：</p><ul><li><code>popt</code>：一维数组，表示拟合函数的参数</li><li><code>pcov</code>：二维阵列，<code>popt</code>的估计协方差。对角线提供参数估计的方差。</li></ul><p>示例：</p><p>用二次多项式拟合一元函数</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">from</span> scipy.optimize <span class="keyword">import</span> curve_fit</span><br><span class="line"><span class="keyword">import</span> pylab <span class="keyword">as</span> plt</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">f</span><span class="params">(x, a, b, c)</span>:</span> <span class="keyword">return</span> a*x**<span class="number">2</span>+b*x+c</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">x = np.arange(<span class="number">0</span>, <span class="number">1.1</span>, <span class="number">0.1</span>)</span><br><span class="line">y = np.array([<span class="number">-0.447</span>, <span class="number">1.978</span>, <span class="number">3.28</span>, <span class="number">6.16</span>, <span class="number">7.08</span>,</span><br><span class="line">              <span class="number">7.34</span>, <span class="number">7.66</span>, <span class="number">9.56</span>, <span class="number">9.48</span>, <span class="number">9.30</span>, <span class="number">11.2</span>])</span><br><span class="line">popt, pcov = curve_fit(f, x, y)</span><br><span class="line">print(<span class="string">"a=&#123;&#125;,    b=&#123;&#125;,   c=&#123;&#125;"</span>.format(*popt))  <span class="comment"># 打印参数</span></span><br><span class="line">print(<span class="string">"f(0.25)=&#123;&#125;,f(0.35)=&#123;&#125;"</span>.format(</span><br><span class="line">    *f(np.array([<span class="number">0.25</span>, <span class="number">0.35</span>]), *popt)))  <span class="comment"># 打印预测值</span></span><br><span class="line">plt.scatter(x, y)</span><br><span class="line">xn = np.linspace(<span class="number">0</span>, <span class="number">1</span>, <span class="number">100</span>)</span><br><span class="line">yn = f(xn, *popt)</span><br><span class="line">plt.plot(xn, yn)</span><br><span class="line">plt.savefig(<span class="string">'1.png'</span>, dpi=<span class="number">500</span>), plt.show()</span><br></pre></td></tr></table></figure><p>输出：</p><figure class="highlight lsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">a=<span class="number">-9.810839009366013</span>,    b=<span class="number">20.129292913034863</span>,   c=<span class="number">-0.03167107877459929</span></span><br><span class="line">f(<span class="number">0.25</span>)=<span class="number">4.387474711398741</span>,f(<span class="number">0.35</span>)=<span class="number">5.811753662140266</span></span><br></pre></td></tr></table></figure><p><img src="/posts/Python实现拟合/1.png"></p><p>对曲面<span class="math inline">\(z=e^{-\frac{(x-\mu_1)^2+(y-\mu_2)^2}{2\sigma^2}}\)</span>添加噪声，再进行拟合，其中<span class="math inline">\(\mu_1=1,\mu_2=2,\sigma=3\)</span></p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">from</span> scipy.optimize <span class="keyword">import</span> curve_fit</span><br><span class="line"><span class="keyword">import</span> pylab <span class="keyword">as</span> plt</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">f</span><span class="params">(x, u1, u2, sgm)</span>:</span></span><br><span class="line">    <span class="keyword">return</span> np.exp(-((x[<span class="number">0</span>]-u1)**<span class="number">2</span>+(x[<span class="number">1</span>]-u2)**<span class="number">2</span>)/(<span class="number">2</span>*sgm**<span class="number">2</span>))</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">x = np.linspace(<span class="number">-6</span>, <span class="number">6</span>, <span class="number">200</span>)</span><br><span class="line">y = np.linspace(<span class="number">-8</span>, <span class="number">8</span>, <span class="number">300</span>)</span><br><span class="line">X, Y = np.meshgrid(x, y)  <span class="comment"># 获得网格坐标矩阵</span></span><br><span class="line">X = np.reshape(X, (<span class="number">1</span>, <span class="number">-1</span>))</span><br><span class="line">Y = np.reshape(Y, (<span class="number">1</span>, <span class="number">-1</span>))  <span class="comment"># 降维</span></span><br><span class="line">xy = np.vstack((X, Y))  <span class="comment"># 转换成坐标点序列的形式</span></span><br><span class="line">z = f(xy, <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>)  <span class="comment"># 求原始函数的各点值</span></span><br><span class="line">zr = z+<span class="number">0.2</span>*np.random.normal(size=z.shape)  <span class="comment"># 生成噪声数据</span></span><br><span class="line">popt, pcov = curve_fit(f, xy, zr)</span><br><span class="line">print(<span class="string">"u1=&#123;&#125;,    u2=&#123;&#125;,   sgm=&#123;&#125;"</span>.format(*popt))  <span class="comment"># 打印参数</span></span><br><span class="line">zn = f(xy, *popt)  <span class="comment"># 求拟合函数的各点值</span></span><br><span class="line">X = np.reshape(X, (<span class="number">200</span>, <span class="number">300</span>))</span><br><span class="line">Y = np.reshape(Y, (<span class="number">200</span>, <span class="number">300</span>))</span><br><span class="line">zn = np.reshape(zn, (<span class="number">200</span>, <span class="number">300</span>))</span><br><span class="line">ax = plt.axes(projection=<span class="string">'3d'</span>)</span><br><span class="line">ax.plot_surface(X, Y, zn, cmap=<span class="string">'gist_rainbow'</span>)</span><br><span class="line">plt.savefig(<span class="string">'2.png'</span>, dpi=<span class="number">500</span>), plt.show()</span><br></pre></td></tr></table></figure><p>输出：</p><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">u1</span>=1.0055785483402968,    <span class="attribute">u2</span>=2.002582704331591,   <span class="attribute">sgm</span>=3.0134682873777496</span><br></pre></td></tr></table></figure><p><img src="/posts/Python实现拟合/2.png"></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;拟合：给定&lt;span class=&quot;math inline&quot;&gt;\(n\)&lt;/span&gt;个数据点，求一&lt;span class=&quot;math inline&quot;&gt;\(f(x)\)&lt;/span&gt;使其与数据点最“接近”，即： &lt;span class=&quot;math display&quot;&gt;\[
+
+      
+    
+    </summary>
+    
+      <category term="学习笔记" scheme="http://oi.linkfqy.top/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+    
+      <category term="Python" scheme="http://oi.linkfqy.top/tags/Python/"/>
+    
+      <category term="SciPy" scheme="http://oi.linkfqy.top/tags/SciPy/"/>
+    
+  </entry>
   
   <entry>
     <title>Python实现插值</title>
@@ -565,33 +593,6 @@
     
     
       <category term="状压DP" scheme="http://oi.linkfqy.top/tags/%E7%8A%B6%E5%8E%8BDP/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Codeforces 700B Connecting Universities</title>
-    <link href="http://oi.linkfqy.top/posts/CF700B/"/>
-    <id>http://oi.linkfqy.top/posts/CF700B/</id>
-    <published>2018-11-06T09:01:23.000Z</published>
-    <updated>2018-11-06T09:02:56.000Z</updated>
-    
-    <content type="html"><![CDATA[<p><a href="http://codeforces.com/problemset/problem/700/B" target="_blank" rel="noopener">题面在这里</a></p><p>​</p><p>对于每条边<span class="math inline">\((u,v)\)</span>，对答案的贡献是两边特殊点少的那个</p><p>​</p><p>示例程序：</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> ll;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxn=<span class="number">200005</span>,maxe=<span class="number">400005</span>;</span><br><span class="line"><span class="keyword">int</span> n,K,s[maxn]; ll ans;</span><br><span class="line"><span class="keyword">int</span> son[maxe],nxt[maxe],lnk[maxn],tot;</span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">add</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">int</span> y)</span></span>&#123;</span><br><span class="line">son[++tot]=y;nxt[tot]=lnk[x];lnk[x]=tot;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">dfs</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">int</span> fa)</span></span>&#123;</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> j=lnk[x];j;j=nxt[j])</span><br><span class="line"> <span class="keyword">if</span> (son[j]!=fa) dfs(son[j],x),s[x]+=s[son[j]],ans+=min(s[son[j]],<span class="number">2</span>*K-s[son[j]]);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line"><span class="built_in">scanf</span>(<span class="string">"%d%d"</span>,&amp;n,&amp;K);</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">1</span>,x;i&lt;=<span class="number">2</span>*K;i++) <span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;x),s[x]++;</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">1</span>,x,y;i&lt;n;i++) <span class="built_in">scanf</span>(<span class="string">"%d%d"</span>,&amp;x,&amp;y),add(x,y),add(y,x);</span><br><span class="line">dfs(<span class="number">1</span>,<span class="number">1</span>);</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"%lld"</span>,ans);</span><br><span class="line"><span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;&lt;a href=&quot;http://codeforces.com/problemset/problem/700/B&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;题面在这里&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;​&lt;/p&gt;
-&lt;p&gt;对于每条边&lt;span class=&quot;mat
-      
-    
-    </summary>
-    
-      <category term="题解" scheme="http://oi.linkfqy.top/categories/%E9%A2%98%E8%A7%A3/"/>
-    
-    
-      <category term="Codeforces" scheme="http://oi.linkfqy.top/tags/Codeforces/"/>
     
   </entry>
   
