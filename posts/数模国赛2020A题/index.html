@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang=zh>
+<head><meta name="generator" content="Hexo 3.9.0">
+<!-- hexo-inject:begin --><!-- hexo-inject:end --><script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+<link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
+<style>
+    .pace .pace-progress {
+        background: #1E92FB; /*进度条颜色*/
+        height: 3px;
+    }
+    .pace .pace-progress-inner {
+         box-shadow: 0 0 10px #1E92FB, 0 0 5px     #1E92FB; /*阴影颜色*/
+    }
+    .pace .pace-activity {
+        border-top-color: #1E92FB;    /*上边框颜色*/
+        border-left-color: #1E92FB;    /*左边框颜色*/
+    }
+</style>
+
+<!-- Valine评论 -->
+<script src="/js/av-min.js"></script>
+<script src="/js/Valine.min.js"></script>
+<!-- Leancloud统计 -->
+<!-- <script src="/js/av-min-1.2.1.js"></script> -->
+<!--  <script>AV.initialize("rJeVBhWeHlb33cC9L26UE7y3-gzGzoHsz", "uU7rD0e4IaYyrk6vSdM6GoHX");</script> -->
+
+<meta name="google-site-verification" content="IneMsg5aBY2Vw5QuPukpMzm5ATzGfO0dg40QXgKIPkk">
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="format-detection" content="telephone=no,email=no,adress=no">
+  <!-- Color theme for statusbar -->
+  <meta name="theme-color" content="#000000">
+  <!-- 强制页面在当前窗口以独立页面显示,防止别人在框架里调用页面 -->
+  <meta http-equiv="window-target" content="_top">
+  
+  
+  <title>数模国赛2020A题 | linkfqy&#39;s Blog</title>
+  <meta name="description" content="第一问 忽略电路板厚度，假定温区内部恒温 通过热传导方程得到不同温区之间的空隙中，温度在空间上线性分布 通过牛顿冷却定律和比热容公式解微分方程可知，物体在恒温环境下温度随时间的函数 然后由附件数据分段拟合参数 下面是拟合的代码 12345678910111213141516171819202122232425262728293031323334353637383940414243444">
+<meta name="keywords" content="Python,数模">
+<meta property="og:type" content="article">
+<meta property="og:title" content="数模国赛2020A题">
+<meta property="og:url" content="http://oi.linkfqy.top/posts/数模国赛2020A题/index.html">
+<meta property="og:site_name" content="linkfqy">
+<meta property="og:description" content="第一问 忽略电路板厚度，假定温区内部恒温 通过热传导方程得到不同温区之间的空隙中，温度在空间上线性分布 通过牛顿冷却定律和比热容公式解微分方程可知，物体在恒温环境下温度随时间的函数 然后由附件数据分段拟合参数 下面是拟合的代码 12345678910111213141516171819202122232425262728293031323334353637383940414243444">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http://oi.linkfqy.top/posts/数模国赛2020A题/sub1.png">
+<meta property="og:image" content="http://oi.linkfqy.top/posts/数模国赛2020A题/sub2.png">
+<meta property="og:image" content="http://oi.linkfqy.top/posts/数模国赛2020A题/sub3_2.png">
+<meta property="og:image" content="http://oi.linkfqy.top/posts/数模国赛2020A题/sub4.png">
+<meta property="og:image" content="http://oi.linkfqy.top/posts/数模国赛2020A题/sub4_2.png">
+<meta property="og:updated_time" content="2021-08-24T13:10:08.396Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="数模国赛2020A题">
+<meta name="twitter:description" content="第一问 忽略电路板厚度，假定温区内部恒温 通过热传导方程得到不同温区之间的空隙中，温度在空间上线性分布 通过牛顿冷却定律和比热容公式解微分方程可知，物体在恒温环境下温度随时间的函数 然后由附件数据分段拟合参数 下面是拟合的代码 12345678910111213141516171819202122232425262728293031323334353637383940414243444">
+<meta name="twitter:image" content="http://oi.linkfqy.top/posts/数模国赛2020A题/sub1.png">
+  <!-- Canonical links -->
+  <link rel="canonical" href="http://oi.linkfqy.top/posts/数模国赛2020A题/index.html">
+  
+  
+    <link rel="icon" href="/favicon.png" type="image/x-icon">
+  
+  <!-- font-awesome CSS -->
+  <!-- <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"> -->
+  <link rel="stylesheet" href="/css/style.css">
+  
+    
+        <link href="https://cdn.bootcss.com/KaTeX/0.7.1/katex.min.css" rel="stylesheet"><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+    
+    
+
+</head>
+
+
+<body class="main-center theme-black" itemscope itemtype="http://schema.org/WebPage">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><header class="header" itemscope itemtype="http://schema.org/WPHeader">
+  <div class="slimContent">
+    <div class="navbar-header">
+      
+      
+      <div class="profile-block text-center">
+        <a id="avatar" href="http://linkfqy.github.io" target="_blank">
+          <img class="img-circle img-rotate" src="/images/avatar.jpg" width="200" height="200">
+        </a>
+        <h2 id="name" class="hidden-xs hidden-sm">linkfqy</h2>
+        <h3 id="title" class="hidden-xs hidden-sm hidden-md">A link to the past.</h3>
+        <small id="location" class="text-muted hidden-xs hidden-sm"><i class="icon icon-map-marker"></i> Shenzhen, China</small>
+      </div>
+      
+      <div class="search" id="search-form-wrap">
+
+    <form class="search-form sidebar-form">
+        <div class="input-group">
+            <input type="text" class="search-form-input form-control" placeholder="搜索" />
+            <span class="input-group-btn">
+                <button type="submit" class="search-form-submit btn btn-flat" onclick="return false;"><i class="icon icon-search"></i></button>
+            </span>
+        </div>
+    </form>
+    <div class="ins-search">
+  <div class="ins-search-mask"></div>
+  <div class="ins-search-container">
+    <div class="ins-input-wrapper">
+      <input type="text" class="ins-search-input" placeholder="想要查找什么..." x-webkit-speech />
+      <button type="button" class="close ins-close ins-selectable" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+    </div>
+    <div class="ins-section-wrapper">
+      <div class="ins-section-container"></div>
+    </div>
+  </div>
+</div>
+
+
+</div>
+      <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+    <nav id="main-navbar" class="collapse navbar-collapse" itemscope itemtype="http://schema.org/SiteNavigationElement" role="navigation">
+      <ul class="nav navbar-nav main-nav">
+        
+        
+        
+        <li class="menu-item menu-item-home">
+          <a href="/.">
+            
+            <i class="icon icon-home-fill"></i>
+            
+            <span class="menu-title">首页</span>
+          </a>
+        </li>
+        
+        
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives">
+            
+            <i class="icon icon-archives-fill"></i>
+            
+            <span class="menu-title">归档</span>
+          </a>
+        </li>
+        
+        
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories">
+            
+            <i class="icon icon-folder"></i>
+            
+            <span class="menu-title">分类</span>
+          </a>
+        </li>
+        
+        
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags">
+            
+            <i class="icon icon-tags"></i>
+            
+            <span class="menu-title">标签</span>
+          </a>
+        </li>
+        
+        
+        
+        <li class="menu-item menu-item-links">
+          <a href="/links">
+            
+            <i class="icon icon-friendship"></i>
+            
+            <span class="menu-title">友链</span>
+          </a>
+        </li>
+        
+        
+        
+        <li class="menu-item menu-item-repository">
+          <a href="http://blog.csdn.net/linkfqy">
+            
+            <i class="icon icon-project"></i>
+            
+            <span class="menu-title">旧博客</span>
+          </a>
+        </li>
+        
+        
+        
+        <li class="menu-item menu-item-books">
+          <a href="https://linkfqy.github.io/my_bzoj/">
+            
+            <i class="icon icon-book-fill"></i>
+            
+            <span class="menu-title">BZOJ镜像</span>
+          </a>
+        </li>
+        
+        
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about">
+            
+            <i class="icon icon-cup-fill"></i>
+            
+            <span class="menu-title">关于</span>
+          </a>
+        </li>
+        
+      </ul>
+      
+	
+    <ul class="social-links">
+    	
+        <li><a href="https://github.com/linkfqy" target="_blank" title="Github" data-toggle=tooltip data-placement=top><i class="icon icon-github"></i></a></li>
+        
+        <li><a href="https://www.zhihu.com/people/linkfqy/activities" target="_blank" title="Zhihu" data-toggle=tooltip data-placement=top><i class="icon icon-zhihu"></i></a></li>
+        
+        <li><a href="https://twitter.com/linkfqy" target="_blank" title="Twitter" data-toggle=tooltip data-placement=top><i class="icon icon-twitter"></i></a></li>
+        
+        <li><a href="https://www.pinterest.com/linkfqy/" target="_blank" title="Pinterest" data-toggle=tooltip data-placement=top><i class="icon icon-pinterest"></i></a></li>
+        
+        <li><a href="/atom.xml" target="_blank" title="Rss" data-toggle=tooltip data-placement=top><i class="icon icon-rss"></i></a></li>
+        
+    </ul>
+
+    </nav>
+  </div>
+</header>
+
+  
+    <aside class="sidebar" itemscope itemtype="http://schema.org/WPSideBar">
+  <div class="slimContent">
+    
+      <div class="widget">
+    <h3 class="widget-title">公告</h3>
+    <div class="widget-body">
+        <div id="board">
+            
+			
+				<p>您好，您是第<span id="lalala">...</span>位访客</p>
+			
+
+            <div class="content">
+                <p>欢迎交流与分享经验!</p>
+            </div>
+            本博客的镜像： <br>
+            <a href="http://oi.linkfqy.top">oi.linkfqy.top</a> <br>
+            <a href="https://linkfqy.github.io">github</a>
+        </div>
+    </div>
+</div>
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget-body">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Android/">Android</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/学习笔记/">学习笔记</a><span class="category-list-count">23</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/实用/">实用</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/杂/">杂</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/题解/">题解</a><span class="category-list-count">256</span></li></ul>
+    </div>
+  </div>
+
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget-body tagcloud">
+      <a href="/tags/51Nod/" style="font-size: 14.17px; color: #6b6b6b">51Nod</a> <a href="/tags/A/" style="font-size: 11px; color: #808080">A*</a> <a href="/tags/AC自动机/" style="font-size: 11px; color: #808080">AC自动机</a> <a href="/tags/BFS/" style="font-size: 11px; color: #808080">BFS</a> <a href="/tags/BZOJ/" style="font-size: 30px; color: #000">BZOJ</a> <a href="/tags/Codeforces/" style="font-size: 28.94px; color: #070707">Codeforces</a> <a href="/tags/DP/" style="font-size: 26.83px; color: #151515">DP</a> <a href="/tags/FFT/" style="font-size: 13.11px; color: #727272">FFT</a> <a href="/tags/HDU/" style="font-size: 26.83px; color: #151515">HDU</a> <a href="/tags/KMP/" style="font-size: 11px; color: #808080">KMP</a> <a href="/tags/LCA/" style="font-size: 12.06px; color: #797979">LCA</a> <a href="/tags/LCT/" style="font-size: 16.28px; color: #5c5c5c">LCT</a> <a href="/tags/LIS/" style="font-size: 12.06px; color: #797979">LIS</a> <a href="/tags/LOJ/" style="font-size: 14.17px; color: #6b6b6b">LOJ</a> <a href="/tags/Manacher/" style="font-size: 11px; color: #808080">Manacher</a> <a href="/tags/Matplotlib/" style="font-size: 11px; color: #808080">Matplotlib</a> <a href="/tags/NumPy/" style="font-size: 11px; color: #808080">NumPy</a> <a href="/tags/POJ/" style="font-size: 13.11px; color: #727272">POJ</a> <a href="/tags/Python/" style="font-size: 22.61px; color: #323232">Python</a> <a href="/tags/SciPy/" style="font-size: 16.28px; color: #5c5c5c">SciPy</a> <a href="/tags/SymPy/" style="font-size: 11px; color: #808080">SymPy</a> <a href="/tags/Sympy/" style="font-size: 11px; color: #808080">Sympy</a> <a href="/tags/Trie/" style="font-size: 11px; color: #808080">Trie</a> <a href="/tags/UOJ/" style="font-size: 11px; color: #808080">UOJ</a> <a href="/tags/WQS二分/" style="font-size: 13.11px; color: #727272">WQS二分</a> <a href="/tags/dsu-on-tree/" style="font-size: 14.17px; color: #6b6b6b">dsu on tree</a> <a href="/tags/git/" style="font-size: 11px; color: #808080">git</a> <a href="/tags/hash/" style="font-size: 19.44px; color: #474747">hash</a> <a href="/tags/hihoCoder/" style="font-size: 11px; color: #808080">hihoCoder</a> <a href="/tags/kruskal重构树/" style="font-size: 12.06px; color: #797979">kruskal重构树</a> <a href="/tags/two-pointers/" style="font-size: 11px; color: #808080">two-pointers</a> <a href="/tags/三分/" style="font-size: 11px; color: #808080">三分</a> <a href="/tags/主席树/" style="font-size: 13.11px; color: #727272">主席树</a> <a href="/tags/乱搞/" style="font-size: 11px; color: #808080">乱搞</a> <a href="/tags/二分图/" style="font-size: 20.5px; color: #404040">二分图</a> <a href="/tags/交互题/" style="font-size: 12.06px; color: #797979">交互题</a> <a href="/tags/决策单调性/" style="font-size: 12.06px; color: #797979">决策单调性</a> <a href="/tags/凸包/" style="font-size: 11px; color: #808080">凸包</a> <a href="/tags/分块/" style="font-size: 11px; color: #808080">分块</a> <a href="/tags/分数规划/" style="font-size: 11px; color: #808080">分数规划</a> <a href="/tags/分治/" style="font-size: 12.06px; color: #797979">分治</a> <a href="/tags/单调栈/" style="font-size: 14.17px; color: #6b6b6b">单调栈</a> <a href="/tags/单调队列/" style="font-size: 14.17px; color: #6b6b6b">单调队列</a> <a href="/tags/博弈论/" style="font-size: 14.17px; color: #6b6b6b">博弈论</a> <a href="/tags/压位/" style="font-size: 11px; color: #808080">压位</a> <a href="/tags/双联通分量/" style="font-size: 15.22px; color: #646464">双联通分量</a> <a href="/tags/可并堆/" style="font-size: 13.11px; color: #727272">可并堆</a> <a href="/tags/后缀数组/" style="font-size: 15.22px; color: #646464">后缀数组</a> <a href="/tags/启发式分裂/" style="font-size: 12.06px; color: #797979">启发式分裂</a> <a href="/tags/启发式合并/" style="font-size: 11px; color: #808080">启发式合并</a> <a href="/tags/堆/" style="font-size: 12.06px; color: #797979">堆</a> <a href="/tags/复杂度分析/" style="font-size: 17.33px; color: #555">复杂度分析</a> <a href="/tags/妙题/" style="font-size: 19.44px; color: #474747">妙题</a> <a href="/tags/容斥/" style="font-size: 11px; color: #808080">容斥</a> <a href="/tags/对偶图/" style="font-size: 11px; color: #808080">对偶图</a> <a href="/tags/差分/" style="font-size: 14.17px; color: #6b6b6b">差分</a> <a href="/tags/差分约束系统/" style="font-size: 13.11px; color: #727272">差分约束系统</a> <a href="/tags/并查集/" style="font-size: 25.78px; color: #1c1c1c">并查集</a> <a href="/tags/强连通分量/" style="font-size: 12.06px; color: #797979">强连通分量</a> <a href="/tags/扫描线/" style="font-size: 12.06px; color: #797979">扫描线</a> <a href="/tags/拓扑排序/" style="font-size: 11px; color: #808080">拓扑排序</a> <a href="/tags/数位DP/" style="font-size: 11px; color: #808080">数位DP</a> <a href="/tags/数学/" style="font-size: 15.22px; color: #646464">数学</a> <a href="/tags/数据库/" style="font-size: 11px; color: #808080">数据库</a> <a href="/tags/数模/" style="font-size: 11px; color: #808080">数模</a> <a href="/tags/整体二分/" style="font-size: 12.06px; color: #797979">整体二分</a> <a href="/tags/最大权闭合子图/" style="font-size: 14.17px; color: #6b6b6b">最大权闭合子图</a> <a href="/tags/最小生成树/" style="font-size: 18.39px; color: #4e4e4e">最小生成树</a> <a href="/tags/最短路/" style="font-size: 21.56px; color: #393939">最短路</a> <a href="/tags/期望DP/" style="font-size: 14.17px; color: #6b6b6b">期望DP</a> <a href="/tags/构造/" style="font-size: 12.06px; color: #797979">构造</a> <a href="/tags/树形DP/" style="font-size: 15.22px; color: #646464">树形DP</a> <a href="/tags/树状数组/" style="font-size: 22.61px; color: #323232">树状数组</a> <a href="/tags/树链剖分/" style="font-size: 18.39px; color: #4e4e4e">树链剖分</a> <a href="/tags/概率DP/" style="font-size: 11px; color: #808080">概率DP</a> <a href="/tags/模拟/" style="font-size: 11px; color: #808080">模拟</a> <a href="/tags/水题/" style="font-size: 15.22px; color: #646464">水题</a> <a href="/tags/洛谷/" style="font-size: 11px; color: #808080">洛谷</a> <a href="/tags/点分治/" style="font-size: 11px; color: #808080">点分治</a> <a href="/tags/状压DP/" style="font-size: 16.28px; color: #5c5c5c">状压DP</a> <a href="/tags/矩阵/" style="font-size: 15.22px; color: #646464">矩阵</a> <a href="/tags/矩阵树定理/" style="font-size: 14.17px; color: #6b6b6b">矩阵树定理</a> <a href="/tags/离线/" style="font-size: 13.11px; color: #727272">离线</a> <a href="/tags/线性筛/" style="font-size: 11px; color: #808080">线性筛</a> <a href="/tags/线段树/" style="font-size: 27.89px; color: #0e0e0e">线段树</a> <a href="/tags/线段树分治/" style="font-size: 11px; color: #808080">线段树分治</a> <a href="/tags/结论题/" style="font-size: 11px; color: #808080">结论题</a> <a href="/tags/网络流/" style="font-size: 23.67px; color: #2b2b2b">网络流</a> <a href="/tags/莫队/" style="font-size: 15.22px; color: #646464">莫队</a> <a href="/tags/虚树/" style="font-size: 13.11px; color: #727272">虚树</a> <a href="/tags/计数题/" style="font-size: 11px; color: #808080">计数题</a> <a href="/tags/计蒜客/" style="font-size: 11px; color: #808080">计蒜客</a> <a href="/tags/贪心/" style="font-size: 24.72px; color: #242424">贪心</a> <a href="/tags/递推/" style="font-size: 11px; color: #808080">递推</a> <a href="/tags/链表/" style="font-size: 11px; color: #808080">链表</a> <a href="/tags/随机/" style="font-size: 14.17px; color: #6b6b6b">随机</a>
+    </div>
+  </div>
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget-body">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/08/">八月 2021</a><span class="archive-list-count">11</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/05/">五月 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/03/">三月 2021</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">十一月 2018</a><span class="archive-list-count">20</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">十月 2018</a><span class="archive-list-count">56</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/09/">九月 2018</a><span class="archive-list-count">50</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/">八月 2018</a><span class="archive-list-count">68</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/07/">七月 2018</a><span class="archive-list-count">45</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">五月 2018</a><span class="archive-list-count">15</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">四月 2018</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">三月 2018</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">二月 2018</a><span class="archive-list-count">4</span></li></ul>
+    </div>
+  </div>
+
+
+    
+  </div>
+</aside>
+  
+  
+<aside class="sidebar sidebar-toc collapse" id="collapseToc" itemscope itemtype="http://schema.org/WPSideBar">
+  <div class="slimContent">
+    <nav id="toc" class="article-toc">
+      <h3 class="toc-title">文章目录</h3>
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#第一问"><span class="toc-number">1.</span> <span class="toc-text">第一问</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#第二问"><span class="toc-number">2.</span> <span class="toc-text">第二问</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#第三问"><span class="toc-number">3.</span> <span class="toc-text">第三问</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#第四问"><span class="toc-number">4.</span> <span class="toc-text">第四问</span></a></li></ol>
+    </nav>
+  </div>
+</aside>
+
+<main class="main" role="main">
+  <div class="content">
+  <article id="post-数模国赛2020A题" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
+    
+    <div class="article-header">
+      
+        
+  
+    <h1 class="article-title" itemprop="name">
+      数模国赛2020A题
+    </h1>
+  
+
+      
+      <div class="article-meta">
+        <span class="article-date">
+    <i class="icon icon-calendar-check"></i>
+	<a href="/posts/数模国赛2020A题/" class="article-date">
+	  <time datetime="2021-08-24T12:32:58.000Z" itemprop="datePublished">2021-08-24</time>
+	</a>
+</span>
+        
+  <span class="article-category">
+    <i class="icon icon-folder"></i>
+    <a class="article-category-link" href="/categories/题解/">题解</a>
+  </span>
+
+        
+  <span class="article-tag">
+    <i class="icon icon-tags"></i>
+	<a class="article-tag-link" href="/tags/Python/">Python</a>, <a class="article-tag-link" href="/tags/数模/">数模</a>
+  </span>
+
+
+        
+
+	<span class="article-read hidden-xs">
+    	<i class="icon icon-eye-fill" aria-hidden="true"></i>
+    	<span id="/posts/数模国赛2020A题/" class="leancloud_visitors" data-flag-title="数模国赛2020A题"></span>
+    </span>
+
+        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/posts/数模国赛2020A题/#comments" class="article-comment-link">评论</a></span>
+        
+	
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 2,600(words)</span>
+	
+	
+
+      </div>
+    </div>
+    <div class="article-entry markdown-body" itemprop="articleBody">
+      
+        <h1 id="第一问">第一问</h1>
+<p>忽略电路板厚度，假定温区内部恒温</p>
+<p>通过热传导方程得到不同温区之间的空隙中，温度在空间上线性分布</p>
+<p>通过牛顿冷却定律和比热容公式解微分方程可知，物体在恒温环境下温度随时间的函数</p>
+<p>然后由附件数据分段拟合参数</p>
+<p>下面是拟合的代码</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> pylab <span class="keyword">as</span> plt</span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="keyword">from</span> scipy.optimize <span class="keyword">import</span> curve_fit</span><br><span class="line">exc = pd.read_excel(<span class="string">"input.xlsx"</span>, usecols=range(<span class="number">0</span>, <span class="number">2</span>))</span><br><span class="line">data = exc.values</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">pos = np.array([[<span class="number">0</span>, <span class="number">0</span>], [<span class="number">25</span>, <span class="number">55.5</span>], [<span class="number">60.5</span>, <span class="number">91</span>], [<span class="number">96</span>, <span class="number">126.5</span>], [<span class="number">131.5</span>, <span class="number">162</span>], [<span class="number">167</span>, <span class="number">197.5</span>], [<span class="number">202.5</span>, <span class="number">233</span>], [<span class="number">238</span>, <span class="number">268.5</span>], [<span class="number">273.5</span>, <span class="number">304</span>], [<span class="number">309</span>, <span class="number">339.5</span>], [<span class="number">344.5</span>, <span class="number">375</span>], [<span class="number">380</span>, <span class="number">410.5</span>], [<span class="number">435.5</span>, <span class="number">460.5</span>]]</span><br><span class="line">               )</span><br><span class="line"></span><br><span class="line">ranx = np.array([[<span class="number">0</span>, pos[<span class="number">2</span>][<span class="number">0</span>]], [pos[<span class="number">2</span>][<span class="number">0</span>], pos[<span class="number">5</span>][<span class="number">1</span>]], [pos[<span class="number">5</span>][<span class="number">1</span>], pos[<span class="number">6</span>][<span class="number">0</span>]],</span><br><span class="line">                 [pos[<span class="number">6</span>][<span class="number">0</span>], pos[<span class="number">6</span>][<span class="number">1</span>]], [pos[<span class="number">6</span>][<span class="number">1</span>], pos[<span class="number">7</span>][<span class="number">0</span>]], [</span><br><span class="line">                     pos[<span class="number">7</span>][<span class="number">0</span>], pos[<span class="number">7</span>][<span class="number">1</span>]],</span><br><span class="line">                 [pos[<span class="number">7</span>][<span class="number">1</span>], pos[<span class="number">8</span>][<span class="number">0</span>]], [pos[<span class="number">8</span>][<span class="number">0</span>], pos[<span class="number">9</span>][<span class="number">1</span>]], [</span><br><span class="line">                     pos[<span class="number">9</span>][<span class="number">1</span>], pos[<span class="number">10</span>][<span class="number">1</span>]],</span><br><span class="line">                 [pos[<span class="number">10</span>][<span class="number">1</span>], pos[<span class="number">12</span>][<span class="number">0</span>]]])</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">getab</span><span class="params">(i, tem)</span>:</span>  <span class="comment"># 计算第i个小温区后的温度曲线T=ax+b</span></span><br><span class="line">    x1 = pos[i][<span class="number">1</span>]</span><br><span class="line">    x2 = pos[i+<span class="number">1</span>][<span class="number">0</span>]</span><br><span class="line">    t1 = tem[i]</span><br><span class="line">    t2 = tem[i+<span class="number">1</span>]</span><br><span class="line">    a = (t2-t1)/(x2-x1)</span><br><span class="line">    b = t1-a*x1</span><br><span class="line">    <span class="keyword">return</span> (a, b)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">getfx</span><span class="params">(x, tem)</span>:</span>  <span class="comment"># 获取x位置的环境温度曲线f(x)=ax+b</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">0</span>, <span class="number">12</span>):</span><br><span class="line">        <span class="keyword">if</span> (pos[i][<span class="number">0</span>] &lt;= x <span class="keyword">and</span> x &lt;= pos[i][<span class="number">1</span>]):</span><br><span class="line">            <span class="keyword">return</span> (<span class="number">0</span>, tem[i])</span><br><span class="line">        <span class="keyword">elif</span> (pos[i][<span class="number">1</span>] &lt;= x <span class="keyword">and</span> x &lt;= pos[i+<span class="number">1</span>][<span class="number">0</span>]):</span><br><span class="line">            <span class="keyword">return</span> getab(i, tem=tem)</span><br><span class="line">    <span class="keyword">return</span> (<span class="number">-1</span>, <span class="number">-1</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">f</span><span class="params">(tt, lmd)</span>:</span>  <span class="comment"># 用于拟合的函数</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">gettem</span><span class="params">(t)</span>:</span>  <span class="comment"># 获取x时刻的零件温度，已知初值T(t0)=T0</span></span><br><span class="line">        <span class="comment"># a, b = (0, 175)</span></span><br><span class="line">        a, b = getfx(t[<span class="number">0</span>]*v, tem=tem)</span><br><span class="line">        c = (T0-a*v*t0+a*v/lmd-b)*np.exp(lmd*t0)</span><br><span class="line">        <span class="keyword">return</span> a*v*t-a*v/lmd+b+c*np.exp(-lmd*t)</span><br><span class="line">    <span class="keyword">return</span> gettem(tt)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">    tem = np.array([<span class="number">25</span>, <span class="number">173</span>, <span class="number">173</span>, <span class="number">173</span>, <span class="number">173</span>, <span class="number">173</span>,</span><br><span class="line">                    <span class="number">198</span>, <span class="number">230</span>, <span class="number">257</span>, <span class="number">257</span>, <span class="number">25</span>, <span class="number">25</span>, <span class="number">25</span>])</span><br><span class="line">    v = <span class="number">70</span>/<span class="number">60</span>  <span class="comment"># 传送带速度，单位cm/s</span></span><br><span class="line"></span><br><span class="line">    tT = data</span><br><span class="line">    t = tT.T[<span class="number">0</span>]</span><br><span class="line">    T = tT.T[<span class="number">1</span>]</span><br><span class="line">    lmds = []</span><br><span class="line">    TT = []</span><br><span class="line">    x = t*v</span><br><span class="line">    lj, j = <span class="number">0</span>, <span class="number">0</span></span><br><span class="line">    <span class="keyword">for</span> ranxi <span class="keyword">in</span> ranx:</span><br><span class="line">        <span class="keyword">while</span> (j &lt; len(x) <span class="keyword">and</span> x[j] &lt;= ranxi[<span class="number">1</span>]):</span><br><span class="line">            j += <span class="number">1</span></span><br><span class="line">        t0 = t[lj]</span><br><span class="line">        T0 = T[lj]</span><br><span class="line">        popt, pcov = curve_fit(f, t[lj:j], T[lj:j])</span><br><span class="line">        lmds.extend(popt)</span><br><span class="line">        TT.extend(f(t[lj:j], lmd=popt))</span><br><span class="line">        lj = j</span><br><span class="line">        <span class="keyword">if</span> (j &gt;= len(x)):</span><br><span class="line">            <span class="keyword">break</span></span><br><span class="line"></span><br><span class="line">    plt.scatter(t, T, s=<span class="number">1</span>)</span><br><span class="line">    plt.plot(t, TT, color=<span class="string">'r'</span>)</span><br><span class="line">    plt.savefig(<span class="string">'getlmd.png'</span>, dpi=<span class="number">500</span>)</span><br><span class="line">    plt.show()</span><br><span class="line">    print(lmds)</span><br></pre></td></tr></table></figure>
+<p>第一问代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> pylab <span class="keyword">as</span> plt</span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="keyword">from</span> getlmd <span class="keyword">import</span> ranx, pos, getfx</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># lmd = 0.01442337549312217</span></span><br><span class="line">lmds = [<span class="number">0.008643609716781697</span>, <span class="number">0.02103327687676206</span>, <span class="number">0.010922351732360641</span>, <span class="number">0.014168584576603811</span>, <span class="number">0.01604373036324419</span>,</span><br><span class="line">        <span class="number">0.0269012209873633</span>, <span class="number">0.023523032208845447</span>, <span class="number">0.0190525180588788</span>, <span class="number">0.00079443137454158</span>, <span class="number">0.009429030064290005</span>]</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">gettem</span><span class="params">(t, t0, T0, lmd, v, tem)</span>:</span>  <span class="comment"># 获取t时段的零件温度，已知初值T(t0)=T0</span></span><br><span class="line">    a, b = getfx(t[<span class="number">0</span>]*v, tem=tem)</span><br><span class="line">    c = (T0-a*v*t0+a*v/lmd-b)*np.exp(lmd*t0)</span><br><span class="line">    <span class="keyword">return</span> a*v*t-a*v/lmd+b+c*np.exp(-lmd*t)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">gettT</span><span class="params">(v, tem, dt=<span class="number">0.5</span>, fil=lambda x: x[<span class="number">1</span>] &gt;= <span class="number">30</span>)</span>:</span>  <span class="comment"># 计算温度曲线</span></span><br><span class="line">    t = np.arange(dt, pos[<span class="number">-1</span>][<span class="number">0</span>]/v, dt)</span><br><span class="line">    T = []</span><br><span class="line">    x = t*v</span><br><span class="line">    lj, j = <span class="number">0</span>, <span class="number">0</span></span><br><span class="line">    t0, T0 = <span class="number">0</span>, <span class="number">25</span></span><br><span class="line">    <span class="keyword">for</span> (i, ranxi) <span class="keyword">in</span> enumerate(ranx):</span><br><span class="line">        <span class="keyword">while</span> (j &lt; len(x) <span class="keyword">and</span> x[j] &lt;= ranxi[<span class="number">1</span>]):</span><br><span class="line">            j += <span class="number">1</span></span><br><span class="line">        Ti = gettem(t[lj:j], t0, T0, lmds[i], v=v, tem=tem)</span><br><span class="line">        T.extend(Ti)</span><br><span class="line">        lj = j</span><br><span class="line">        t0, T0 = t[j<span class="number">-1</span>], T[j<span class="number">-1</span>]</span><br><span class="line">        <span class="keyword">if</span> (j &gt;= len(x)):</span><br><span class="line">            <span class="keyword">break</span></span><br><span class="line"></span><br><span class="line">    tT = np.array([t, T]).T</span><br><span class="line">    <span class="keyword">if</span> (fil != <span class="keyword">None</span>):</span><br><span class="line">        tT_f = filter(fil, tT)</span><br><span class="line">        tT = np.array(list(tT_f))</span><br><span class="line">        t, T = tT.T</span><br><span class="line">    <span class="keyword">return</span> (t, T, tT)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">    tem = np.array([<span class="number">25</span>, <span class="number">173</span>, <span class="number">173</span>, <span class="number">173</span>, <span class="number">173</span>, <span class="number">173</span>,</span><br><span class="line">                    <span class="number">198</span>, <span class="number">230</span>, <span class="number">257</span>, <span class="number">257</span>, <span class="number">25</span>, <span class="number">25</span>, <span class="number">25</span>])</span><br><span class="line">    v = <span class="number">78</span>/<span class="number">60</span>  <span class="comment"># 传送带速度，单位cm/s</span></span><br><span class="line"></span><br><span class="line">    t, T, tT = gettT(v=v, tem=tem)</span><br><span class="line">    plt.plot(t, T)</span><br><span class="line">    plt.savefig(<span class="string">'sub1.png'</span>, dpi=<span class="number">500</span>)</span><br><span class="line">    plt.show()</span><br><span class="line">    res = pd.DataFrame(tT, columns=[<span class="string">"时间"</span>, <span class="string">"温度"</span>])</span><br><span class="line">    res.to_csv(<span class="string">'result.csv'</span>, index=<span class="keyword">False</span>, header=<span class="keyword">False</span>)</span><br><span class="line">    printtim = [(pos[<span class="number">3</span>][<span class="number">0</span>]+pos[<span class="number">3</span>][<span class="number">1</span>])/<span class="number">2</span>/v, (pos[<span class="number">6</span>][<span class="number">0</span>]+pos[<span class="number">6</span>][<span class="number">1</span>]) /</span><br><span class="line">                <span class="number">2</span>/v, (pos[<span class="number">7</span>][<span class="number">0</span>]+pos[<span class="number">7</span>][<span class="number">1</span>])/<span class="number">2</span>/v, pos[<span class="number">8</span>][<span class="number">1</span>]/v]</span><br><span class="line">    lmdid = [<span class="number">1</span>, <span class="number">3</span>, <span class="number">5</span>, <span class="number">7</span>]</span><br><span class="line">    j = <span class="number">1</span></span><br><span class="line">    <span class="keyword">for</span> (i, timei) <span class="keyword">in</span> enumerate(printtim):</span><br><span class="line">        <span class="keyword">while</span> (j &lt; len(t) <span class="keyword">and</span> t[j] &lt; timei):</span><br><span class="line">            j += <span class="number">1</span></span><br><span class="line">        <span class="keyword">if</span> j &gt;= len(t):</span><br><span class="line">            <span class="keyword">break</span></span><br><span class="line">        print(gettem(np.array([timei]), t[j<span class="number">-1</span>], T[j<span class="number">-1</span>],</span><br><span class="line">                     lmd=lmds[lmdid[i]], v=v, tem=tem))</span><br></pre></td></tr></table></figure>
+<p>得到的各点温度：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[135.71310782]</span><br><span class="line">[169.75603785]</span><br><span class="line">[191.00134962]</span><br><span class="line">[223.82106867]</span><br></pre></td></tr></table></figure>
+<p>炉温曲线：</p>
+<p><img src="/posts/数模国赛2020A题/sub1.png"></p>
+<h1 id="第二问">第二问</h1>
+<p>大力枚举速度v，先大范围粗糙枚举，再小范围精确枚举</p>
+<p>需要复用许多第一问的代码，所以函数化编程很重要，同时也要封装好来</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> pylab <span class="keyword">as</span> plt</span><br><span class="line"><span class="keyword">from</span> sub1 <span class="keyword">import</span> gettT</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">checkv</span><span class="params">(t, T, tT, dt=<span class="number">0.5</span>)</span>:</span></span><br><span class="line">    maxT = np.max(T)</span><br><span class="line">    <span class="keyword">if</span> <span class="keyword">not</span>(<span class="number">240</span> &lt;= maxT <span class="keyword">and</span> maxT &lt;= <span class="number">250</span>):</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">False</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">1</span>, len(T)):</span><br><span class="line">        <span class="keyword">if</span> np.abs((T[i]-T[i<span class="number">-1</span>])/dt) &gt; <span class="number">3</span>:</span><br><span class="line">            print((i, T[i], T[i<span class="number">-1</span>], t[i], t[i<span class="number">-1</span>]))</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">False</span></span><br><span class="line">        <span class="keyword">if</span> (T[i<span class="number">-1</span>] &lt; <span class="number">150</span> <span class="keyword">and</span> T[i] &gt;= <span class="number">150</span>):</span><br><span class="line">            t1 = t[i]</span><br><span class="line">        <span class="keyword">if</span> (T[i<span class="number">-1</span>] &lt; <span class="number">190</span> <span class="keyword">and</span> T[i] &gt;= <span class="number">190</span>):</span><br><span class="line">            t2 = t[i]</span><br><span class="line">        <span class="keyword">if</span> (T[i<span class="number">-1</span>] &lt; <span class="number">217</span> <span class="keyword">and</span> T[i] &gt;= <span class="number">217</span>):</span><br><span class="line">            t3 = t[i]</span><br><span class="line">        <span class="keyword">if</span> (T[i<span class="number">-1</span>] &gt;= <span class="number">217</span> <span class="keyword">and</span> T[i] &lt; <span class="number">217</span>):</span><br><span class="line">            t4 = t[i]</span><br><span class="line">    <span class="keyword">if</span> <span class="keyword">not</span> (<span class="number">60</span> &lt;= t2-t1 <span class="keyword">and</span> t2-t1 &lt;= <span class="number">120</span>):</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">False</span></span><br><span class="line">    <span class="keyword">if</span> <span class="keyword">not</span> (<span class="number">40</span> &lt;= t4-t3 <span class="keyword">and</span> t4-t3 &lt;= <span class="number">90</span>):</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">False</span></span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">True</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">printlim</span><span class="params">(t, T, tT, dt=<span class="number">0.5</span>)</span>:</span>  <span class="comment"># 输出各制程的极限值</span></span><br><span class="line">    maxT = np.max(T)</span><br><span class="line">    print(<span class="string">"maxT="</span>, maxT)</span><br><span class="line">    maxk = <span class="number">0</span></span><br><span class="line">    mink = <span class="number">0</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">1</span>, len(T)):</span><br><span class="line">        maxk = max((T[i]-T[i<span class="number">-1</span>])/dt, maxk)</span><br><span class="line">        mink = min((T[i]-T[i<span class="number">-1</span>])/dt, mink)</span><br><span class="line">        <span class="keyword">if</span> (T[i<span class="number">-1</span>] &lt; <span class="number">150</span> <span class="keyword">and</span> T[i] &gt;= <span class="number">150</span>):</span><br><span class="line">            t1 = t[i]</span><br><span class="line">        <span class="keyword">if</span> (T[i<span class="number">-1</span>] &lt; <span class="number">190</span> <span class="keyword">and</span> T[i] &gt;= <span class="number">190</span>):</span><br><span class="line">            t2 = t[i]</span><br><span class="line">        <span class="keyword">if</span> (T[i<span class="number">-1</span>] &lt; <span class="number">217</span> <span class="keyword">and</span> T[i] &gt;= <span class="number">217</span>):</span><br><span class="line">            t3 = t[i]</span><br><span class="line">        <span class="keyword">if</span> (T[i<span class="number">-1</span>] &gt;= <span class="number">217</span> <span class="keyword">and</span> T[i] &lt; <span class="number">217</span>):</span><br><span class="line">            t4 = t[i]</span><br><span class="line">    print(<span class="string">"maxk="</span>, maxk)</span><br><span class="line">    print(<span class="string">"mink="</span>, mink)</span><br><span class="line">    print(<span class="string">"t2-t1="</span>, t2-t1)</span><br><span class="line">    print(<span class="string">"t4-t3="</span>, t4-t3)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">    tem = np.array([<span class="number">25</span>, <span class="number">182</span>, <span class="number">182</span>, <span class="number">182</span>, <span class="number">182</span>, <span class="number">182</span>,</span><br><span class="line">                    <span class="number">203</span>, <span class="number">237</span>, <span class="number">254</span>, <span class="number">254</span>, <span class="number">25</span>, <span class="number">25</span>, <span class="number">25</span>])</span><br><span class="line">    maxv = <span class="number">0</span></span><br><span class="line">    dt = <span class="number">0.1</span></span><br><span class="line">    <span class="keyword">for</span> v <span class="keyword">in</span> np.linspace(<span class="number">65</span>/<span class="number">60</span>, <span class="number">100</span>/<span class="number">60</span>, num=<span class="number">35</span>*<span class="number">2</span>+<span class="number">1</span>):  <span class="comment"># 间隔0.5</span></span><br><span class="line">        t, T, tT = gettT(v=v, dt=dt, tem=tem)</span><br><span class="line">        <span class="comment"># print("v=&#123;&#125;".format(v))</span></span><br><span class="line">        <span class="keyword">if</span> (checkv(t, T, tT, dt)):</span><br><span class="line">            maxv = v</span><br><span class="line">    print(maxv*<span class="number">60</span>)</span><br><span class="line">    <span class="keyword">for</span> v <span class="keyword">in</span> np.linspace(<span class="number">70</span>/<span class="number">60</span>, <span class="number">75</span>/<span class="number">60</span>, num=<span class="number">5</span>*<span class="number">100</span>+<span class="number">1</span>):  <span class="comment"># 间隔0.01</span></span><br><span class="line">        t, T, tT = gettT(v=v, dt=dt, tem=tem)</span><br><span class="line">        <span class="comment"># print("v=&#123;&#125;".format(v))</span></span><br><span class="line">        <span class="keyword">if</span> (checkv(t, T, tT, dt)):</span><br><span class="line">            maxv = v</span><br><span class="line">    print(maxv*<span class="number">60</span>)</span><br><span class="line">    t, T, tT = gettT(v=maxv, dt=dt, tem=tem)</span><br><span class="line">    printlim(t, T, tT, dt=dt)</span><br><span class="line">    plt.plot(t, T)</span><br><span class="line">    plt.savefig(<span class="string">'sub2.png'</span>, dpi=<span class="number">500</span>)</span><br><span class="line">    plt.show()</span><br></pre></td></tr></table></figure>
+<p>得到的各参数：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">v1=72.0</span><br><span class="line">v2=72.33</span><br><span class="line">maxT= 240.00007138887304</span><br><span class="line">maxk= 2.658684542907963</span><br><span class="line">mink= -1.8523553812633509</span><br><span class="line">t2-t1= 103.69999999999999</span><br><span class="line">t4-t3= 82.90000000000006</span><br></pre></td></tr></table></figure>
+<p>在最大速度下的炉温曲线：</p>
+<p><img src="/posts/数模国赛2020A题/sub2.png"></p>
+<h1 id="第三问">第三问</h1>
+<p>把阴影面积作为估值函数，做模拟退火</p>
+<p>调了<code>scikit-opt</code>的库</p>
+<p>然后还画了最小面积随迭代次数变化的曲线</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> sko.SA <span class="keyword">import</span> SA, SABoltzmann, SAFast</span><br><span class="line"><span class="keyword">from</span> sub1 <span class="keyword">import</span> gettT</span><br><span class="line"><span class="keyword">from</span> sub2 <span class="keyword">import</span> checkv</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="keyword">import</span> pylab <span class="keyword">as</span> plt</span><br><span class="line">exc = pd.read_excel(<span class="string">"input.xlsx"</span>, usecols=range(<span class="number">0</span>, <span class="number">2</span>))</span><br><span class="line">data = exc.values</span><br><span class="line">data = data.T</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">getarea</span><span class="params">(dt, T)</span>:</span></span><br><span class="line">    res = <span class="number">0</span></span><br><span class="line">    maxT = max(T)</span><br><span class="line">    id = T.tolist().index(maxT)</span><br><span class="line">    <span class="keyword">for</span> (i, Ti) <span class="keyword">in</span> enumerate(T):</span><br><span class="line">        <span class="keyword">if</span> (Ti &gt;= <span class="number">217</span> <span class="keyword">and</span> i &lt;= id):</span><br><span class="line">            res += dt*(Ti<span class="number">-217</span>)</span><br><span class="line">    <span class="keyword">return</span> res</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">X2v</span><span class="params">(X)</span>:</span></span><br><span class="line">    <span class="keyword">return</span> (X[<span class="number">0</span>]*<span class="number">35</span>/<span class="number">20</span>+<span class="number">65</span>)/<span class="number">60</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">X2tem</span><span class="params">(X)</span>:</span></span><br><span class="line">    <span class="keyword">return</span> [<span class="number">25</span>]+[<span class="number">175</span>+X[<span class="number">1</span>]<span class="number">-10</span>]*<span class="number">5</span>+[<span class="number">195</span>+X[<span class="number">2</span>]<span class="number">-10</span>] + \</span><br><span class="line">           [<span class="number">235</span>+X[<span class="number">3</span>]<span class="number">-10</span>]+[<span class="number">255</span>+X[<span class="number">4</span>]<span class="number">-10</span>]*<span class="number">2</span>+[<span class="number">25</span>]*<span class="number">3</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">cost</span><span class="params">(X)</span>:</span>  <span class="comment"># 计算模拟退火的代价函数即阴影面积</span></span><br><span class="line">    <span class="keyword">if</span> (X.min() &lt; <span class="number">0</span> <span class="keyword">or</span> X.max() &gt; <span class="number">20</span>):  <span class="comment"># 判断输入向量是否合法</span></span><br><span class="line">        <span class="keyword">return</span> <span class="number">1e10</span>+np.abs(X.min()<span class="number">-0</span>)+np.abs(X.max()<span class="number">-20</span>)</span><br><span class="line">    v = X2v(X)</span><br><span class="line">    tem = X2tem(X)</span><br><span class="line">    t, T, tT = gettT(v=v, tem=tem, dt=<span class="number">0.1</span>)</span><br><span class="line">    <span class="keyword">if</span> (<span class="keyword">not</span> checkv(t, T, tT, dt=<span class="number">0.1</span>)):  <span class="comment"># 判断是否满足制程界限</span></span><br><span class="line">        <span class="keyword">return</span> <span class="number">1e5</span></span><br><span class="line">    <span class="keyword">return</span> getarea(dt=<span class="number">0.1</span>, T=T)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">    sa = SA(func=cost, x0=[<span class="number">0</span>]*<span class="number">5</span>, lb=<span class="number">0</span>, ub=<span class="number">20</span>, max_stay_counter=<span class="number">5000</span>, L=<span class="number">300</span>)</span><br><span class="line">    best_x, best_y = sa.run()</span><br><span class="line">    print(<span class="string">"best_x=&#123;&#125;\nminArea=&#123;&#125;"</span>.format(best_x, best_y))</span><br><span class="line">    v = X2v(best_x)</span><br><span class="line">    tem = X2tem(best_x)</span><br><span class="line">    print(<span class="string">"v=&#123;&#125;\ntem=&#123;&#125;\n"</span>.format(v*<span class="number">60</span>, tem))</span><br><span class="line">    t, T, tT = gettT(v=v, tem=tem, dt=<span class="number">0.1</span>)</span><br><span class="line">    plt.plot(t, T)</span><br><span class="line">    plt.show()</span><br><span class="line">    by_f = filter(<span class="keyword">lambda</span> x: x &lt; <span class="number">1e3</span>, sa.best_y_history)</span><br><span class="line">    by = list(by_f)</span><br><span class="line">    plt.plot(pd.DataFrame(by).cummin(axis=<span class="number">0</span>))  <span class="comment"># 画出最小面积随迭代次数变化的曲线</span></span><br><span class="line">    plt.show()</span><br><span class="line">    plt.savefig(<span class="string">'sub3_2.png'</span>, dpi=<span class="number">500</span>)</span><br></pre></td></tr></table></figure>
+<p><img src="/posts/数模国赛2020A题/sub3_2.png"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">best_x=[1.06929985e+01 1.97873914e+01 5.68152357e+00 8.90629441e-03 1.99983037e+01]</span><br><span class="line">minArea=446.4150721594619</span><br><span class="line">v=83.71274730906958</span><br><span class="line">tem=[25, 184.78739135418277, 184.78739135418277, 184.78739135418277, 184.78739135418277, 184.78739135418277, 190.68152356719315, 225.00890629441466, 264.99830371980664, 264.99830371980664, 25, 25, 25]</span><br></pre></td></tr></table></figure>
+<h1 id="第四问">第四问</h1>
+<p>把炉温曲线中相同温度的点的时间做平均值，与峰值时间的平方和作为对称性的衡量标准</p>
+<p>然后本问是多目标优化，即阴影面积和对称度</p>
+<p>这里采用的是线性组合作为估值函数，经过多次尝试，发现面积变化始终不大，而对称性比较敏感，最终选择了1:10的比例赋权</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> sko.SA <span class="keyword">import</span> SA</span><br><span class="line"><span class="keyword">from</span> sub1 <span class="keyword">import</span> gettT</span><br><span class="line"><span class="keyword">from</span> sub2 <span class="keyword">import</span> checkv</span><br><span class="line"><span class="keyword">from</span> sub3 <span class="keyword">import</span> getarea, X2tem, X2v</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="keyword">import</span> pylab <span class="keyword">as</span> plt</span><br><span class="line"><span class="keyword">from</span> bisect <span class="keyword">import</span> bisect</span><br><span class="line">exc = pd.read_excel(<span class="string">"input.xlsx"</span>, usecols=range(<span class="number">0</span>, <span class="number">2</span>))</span><br><span class="line">data = exc.values</span><br><span class="line">data = data.T</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">getsy</span><span class="params">(tT)</span>:</span>  <span class="comment"># 对称度估值</span></span><br><span class="line">    tT_f = filter(<span class="keyword">lambda</span> x: x[<span class="number">1</span>] &gt;= <span class="number">127</span>, tT)</span><br><span class="line">    tT = np.array(list(tT_f))</span><br><span class="line">    t, T = tT.T.tolist()</span><br><span class="line">    maxT = max(T)</span><br><span class="line">    id = T.index(maxT)</span><br><span class="line">    mt = t[id]</span><br><span class="line">    res = <span class="number">0</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(id+<span class="number">1</span>, len(T)):</span><br><span class="line">        j = bisect(T, T[i], <span class="number">0</span>, id)</span><br><span class="line">        res += ((t[i]+t[j])/<span class="number">2</span>-mt)**<span class="number">2</span></span><br><span class="line">    <span class="keyword">return</span> res</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">cost</span><span class="params">(X)</span>:</span></span><br><span class="line">    <span class="keyword">if</span> (X.min() &lt; <span class="number">0</span> <span class="keyword">or</span> X.max() &gt; <span class="number">20</span>):</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1e100</span>+np.abs(X.min()<span class="number">-0</span>)+np.abs(X.max()<span class="number">-20</span>)</span><br><span class="line">    v = X2v(X)</span><br><span class="line">    tem = X2tem(X)</span><br><span class="line">    t, T, tT = gettT(v=v, tem=tem, dt=dt)</span><br><span class="line">    <span class="keyword">if</span> (<span class="keyword">not</span> checkv(t, T, tT, dt=dt)):</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1e50</span></span><br><span class="line">    <span class="keyword">return</span> getarea(dt=dt, T=T)+getsy(tT)*<span class="number">1e1</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">    dt = <span class="number">0.1</span></span><br><span class="line">    sa = SA(func=cost, x0=[<span class="number">0</span>]*<span class="number">5</span>, lb=<span class="number">0</span>, ub=<span class="number">20</span>, max_stay_counter=<span class="number">5000</span>, L=<span class="number">300</span>)</span><br><span class="line">    best_x, best_y = sa.run()</span><br><span class="line">    print(<span class="string">"best_x=&#123;&#125;\nbest_y=&#123;&#125;"</span>.format(best_x, best_y))</span><br><span class="line">    v = X2v(best_x)</span><br><span class="line">    tem = X2tem(best_x)</span><br><span class="line">    print(<span class="string">"v=&#123;&#125;\ntem=&#123;&#125;\n"</span>.format(v*<span class="number">60</span>, tem))</span><br><span class="line">    t, T, tT = gettT(v=v, tem=tem, dt=<span class="number">0.1</span>)</span><br><span class="line">    print(<span class="string">"Area="</span>, getarea(dt, T))</span><br><span class="line">    print(<span class="string">"Sy="</span>, getsy(tT))</span><br><span class="line">    plt.plot(t, T)</span><br><span class="line">    plt.plot([<span class="number">0</span>, t.max()], [<span class="number">217</span>, <span class="number">217</span>], <span class="string">'--'</span>)</span><br><span class="line">    plt.savefig(<span class="string">'sub4.png'</span>, dpi=<span class="number">500</span>)</span><br><span class="line">    plt.show()</span><br><span class="line">    by_f = filter(<span class="keyword">lambda</span> x: x &lt; <span class="number">1e30</span>, sa.best_y_history)</span><br><span class="line">    by = list(by_f)</span><br><span class="line">    plt.plot(pd.DataFrame(by).cummin(axis=<span class="number">0</span>))  <span class="comment"># 画出最小面积随迭代次数变化的曲线</span></span><br><span class="line">    plt.show()</span><br><span class="line">    plt.savefig(<span class="string">'sub4_2.png'</span>, dpi=<span class="number">500</span>)</span><br></pre></td></tr></table></figure>
+<p><img src="/posts/数模国赛2020A题/sub4.png"></p>
+<p><img src="/posts/数模国赛2020A题/sub4_2.png"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">best_x=[12.12066253  2.29087199  0.94809455 19.92827282 19.99803738]</span><br><span class="line">best_y=167663.96859958651</span><br><span class="line">v=86.21115943067932</span><br><span class="line">tem=[25, 167.2908719854776, 167.2908719854776, 167.2908719854776, 167.2908719854776, 167.2908719854776, 185.94809454727962, 244.92827282463267, 264.998037383657, 264.998037383657, 25, 25, 25]</span><br><span class="line">Area= 446.41859958757425</span><br><span class="line">Sy= 16721.754999999896</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    <div class="article-footer">
+      <blockquote class="mt-2x">
+  <ul class="post-copyright list-unstyled">
+    
+    <li class="post-copyright-link hidden-xs">
+      <strong>本文链接：</strong>
+      <a href="http://oi.linkfqy.top/posts/数模国赛2020A题/" title="数模国赛2020A题" target="_blank" rel="external">http://oi.linkfqy.top/posts/数模国赛2020A题/</a>
+    </li>
+    
+    <li class="post-copyright-license">
+      <strong>版权声明： </strong> 本博客所有文章除特别声明外，均采用 <a href="http://creativecommons.org/licenses/by/4.0/deed.zh" target="_blank" rel="external">CC BY 4.0 CN协议</a> 许可协议。转载请注明出处！
+    </li>
+  </ul>
+</blockquote>
+
+
+<div class="panel panel-default panel-badger">
+  <div class="panel-body">
+    <figure class="media">
+      <div class="media-left">
+        <a href="http://linkfqy.github.io" target="_blank" class="img-burn thumb-sm visible-lg">
+          <img src="/images/avatar.jpg" class="img-rounded w-full" alt="">
+        </a>
+      </div>
+      <div class="media-body">
+        <h3 class="media-heading"><a href="http://linkfqy.github.io" target="_blank"><span class="text-dark">linkfqy</span><small class="ml-1x">A link to the past.</small></a></h3>
+        <div>咸鱼一条</div>
+      </div>
+    </figure>
+  </div>
+</div>
+
+
+    </div>
+  </article>
+  
+    
+  <section id="comments">
+  	
+       <div id="comment"></div>
+<script>
+    new Valine({
+    el: '#comment' ,
+    notify:false, 
+    verify:false, 
+    appId: 'rJeVBhWeHlb33cC9L26UE7y3-gzGzoHsz',
+    appKey: 'uU7rD0e4IaYyrk6vSdM6GoHX',
+    placeholder: '↑请在上面填写信息后评论↑',
+    path:window.location.pathname, 
+    avatar:'mm' 
+    });
+</script>      
+    
+  </section>
+
+
+  
+</div>
+
+  <nav class="bar bar-footer clearfix" data-stick-bottom>
+  <div class="bar-inner">
+  
+  <ul class="pager pull-left">
+    
+    
+    <li class="next">
+      <a href="/posts/SciPy求微分方程数值解/" title="SciPy求微分方程数值解"><span>下一篇&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
+    </li>
+    
+    
+    <li class="toggle-toc">
+      <a class="toggle-btn collapsed" data-toggle="collapse" href="#collapseToc" aria-expanded="false" title="文章目录" role="button">
+        <span>[&nbsp;</span><span>文章目录</span>
+        <i class="text-collapsed icon icon-anchor"></i>
+        <i class="text-in icon icon-close"></i>
+        <span>]</span>
+      </a>
+    </li>
+    
+  </ul>
+  
+  
+  <!-- Button trigger modal -->
+  <button type="button" class="btn btn-fancy btn-donate pop-onhover bg-gradient-warning" data-toggle="modal" data-target="#donateModal"><span>赏</span></button>
+  <!-- <div class="wave-icon wave-icon-danger btn-donate" data-toggle="modal" data-target="#donateModal">
+    <div class="wave-circle"><span class="icon"><i class="icon icon-bill"></i></span></div>
+  </div> -->
+  
+  
+  <div class="bar-right">
+    
+    <div class="share-component" data-sites="weibo,qq,wechat,facebook,twitter" data-mobile-sites="weibo,qq,qzone"></div>
+    
+  </div>
+  </div>
+</nav>
+  
+<!-- Modal -->
+<div class="modal modal-center modal-small modal-xs-full fade" id="donateModal" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content donate">
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      <div class="modal-body">
+        <div class="donate-box">
+          <div class="donate-head">
+            <p>感谢您的支持，我会继续努力的!</p>
+          </div>
+          <div class="tab-content">
+            <div role="tabpanel" class="tab-pane fade active in" id="alipay">
+              <div class="donate-payimg">
+                <img src="/images/donate/alipayimg.png" alt="扫码支持" title="扫一扫" />
+              </div>
+              <p class="text-muted mv">扫码打赏，你说多少就多少</p>
+              <p class="text-grey">打开支付宝扫一扫，即可进行扫码打赏哦</p>
+            </div>
+            <div role="tabpanel" class="tab-pane fade" id="wechatpay">
+              <div class="donate-payimg">
+                <img src="/images/donate/wechatpayimg.jpg" alt="扫码支持" title="扫一扫" />
+              </div>
+              <p class="text-muted mv">扫码打赏，你说多少就多少</p>
+              <p class="text-grey">打开微信扫一扫，即可进行扫码打赏哦</p>
+            </div>
+          </div>
+          <div class="donate-footer">
+            <ul class="nav nav-tabs nav-justified" role="tablist">
+              <li role="presentation" class="active">
+                <a href="#alipay" id="alipay-tab" role="tab" data-toggle="tab" aria-controls="alipay" aria-expanded="true"><i class="icon icon-alipay"></i> 支付宝</a>
+              </li>
+              <li role="presentation" class="">
+                <a href="#wechatpay" role="tab" id="wechatpay-tab" data-toggle="tab" aria-controls="wechatpay" aria-expanded="false"><i class="icon icon-wepay"></i> 微信支付</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+</main>
+
+  <footer class="footer" itemscope itemtype="http://schema.org/WPFooter">
+	
+	
+    <ul class="social-links">
+    	
+        <li><a href="https://github.com/linkfqy" target="_blank" title="Github" data-toggle=tooltip data-placement=top><i class="icon icon-github"></i></a></li>
+        
+        <li><a href="https://www.zhihu.com/people/linkfqy/activities" target="_blank" title="Zhihu" data-toggle=tooltip data-placement=top><i class="icon icon-zhihu"></i></a></li>
+        
+        <li><a href="https://twitter.com/linkfqy" target="_blank" title="Twitter" data-toggle=tooltip data-placement=top><i class="icon icon-twitter"></i></a></li>
+        
+        <li><a href="https://www.pinterest.com/linkfqy/" target="_blank" title="Pinterest" data-toggle=tooltip data-placement=top><i class="icon icon-pinterest"></i></a></li>
+        
+        <li><a href="/atom.xml" target="_blank" title="Rss" data-toggle=tooltip data-placement=top><i class="icon icon-rss"></i></a></li>
+        
+    </ul>
+
+    <div class="copyright">
+    	
+        Think twice,code once.
+    </div>
+</footer>
+  <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+<script>
+window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
+</script>
+<script src="/js/plugin.min.js"></script>
+<script src="/js/application.js"></script>
+  
+    
+    
+    
+        <script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: '文章',
+            PAGES: '页面',
+            CATEGORIES: '分类',
+            TAGS: '标签',
+            UNTITLED: '(未命名)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="/js/insight.js"></script>
+    
+    
+    
+        
+
+
+
+<script defer src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<script src="//cdn1.lncld.net/static/js/2.5.0/av-min.js"></script>
+<script>
+    var APP_ID = 'rJeVBhWeHlb33cC9L26UE7y3-gzGzoHsz';
+    var APP_KEY = 'uU7rD0e4IaYyrk6vSdM6GoHX';
+    AV.init({
+        appId: APP_ID,
+        appKey: APP_KEY
+    });
+    // 显示次数
+    function showTime(Counter) {
+        var query = new AV.Query("Counter");
+        if($(".leancloud_visitors").length > 0){
+            var url = $(".leancloud_visitors").attr('id').trim();
+            // where field
+            query.equalTo("words", url);
+            // count 
+            query.count().then(function (number) {
+                // There are number instances of MyClass where words equals url.
+                $(document.getElementById(url)).text(number?  number : '--');
+            }, function (error) {
+                // error is an instance of AVError.
+            });
+        }
+    }
+   // 追加pv
+    function addCount(Counter) {
+        var url = $(".leancloud_visitors").length > 0 ? $(".leancloud_visitors").attr('id').trim() : 'oi.linkfqy.top';
+        var Counter = AV.Object.extend("Counter");
+        var query = new Counter;
+        query.save({
+            words: url
+        }).then(function (object) {
+        })
+    }
+    $(function () {
+        var Counter = AV.Object.extend("Counter");
+        addCount(Counter);
+        showTime(Counter);
+    });
+</script>
+
+    
+    
+        
+    
+    
+        <script defer type="text/javascript">
+(function(i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-117106595-1', 'auto');
+ga('send', 'pageview');
+
+</script>
+
+
+    <script defer>
+var _hmt = _hmt || [];
+(function() {
+    var hm = document.createElement("script");
+    hm.src = "//hm.baidu.com/hm.js?39d7480ca7aecd618b1d194fd01aa4e7";
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/MathJax.js?config=TeX-MML-AM_CHTML"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+
+</body>
+
+      
+                <script type="text/javascript">
+                    AV.init({
+                        appId: 'rJeVBhWeHlb33cC9L26UE7y3-gzGzoHsz',
+                        appKey: 'uU7rD0e4IaYyrk6vSdM6GoHX'
+                    });
+                    var query = new AV.Query("Counter");
+                        query.equalTo("words", "oi.linkfqy.top");
+                        query.count().then(function (number) {
+                            $(document.getElementById("lalala")).text(number?  number : '0');
+                        }, function (error) {
+                            $(document.getElementById("lalala")).text('0');
+                        });
+                </script>
+      
+
+<script type="text/javascript" src="/js/la.js"></script>
+</html>
